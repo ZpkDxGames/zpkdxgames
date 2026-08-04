@@ -1,4 +1,4 @@
-<h1 align="center">Antônio José Tristão Neto</h1>
+<h1 align="center">Hey there, I'm Tonim 👋</h1>
 <p align="center">
   <code>Tonim</code> &nbsp;·&nbsp; <code>ZpkDxGames</code>
 </p>
@@ -18,9 +18,9 @@
   <img alt="Open to opportunities" src="https://img.shields.io/badge/Open_to-Opportunities-22c55e?style=for-the-badge">
 </p>
 <hr>
-<h2>👋 Who am I?</h2>
+<h2>ℹ️ Who am I?</h2>
 <p>
-  I’m <strong>Antônio José Tristão Neto</strong>, a Brazilian developer and Computer Science student from Uberaba, Minas Gerais. I also bring hands-on experience from financial and administrative operations, where accuracy, organization, documentation, and reliable processes matter every day.
+  I’m <strong>Tonim</strong>, a Brazilian developer and Computer Science student. I also bring hands-on experience from financial and administrative operations, where accuracy, organization, documentation, and reliable processes matter every day.
 </p>
 <p>
   Under the names <strong>Tonim</strong> and <strong>ZpkDxGames</strong>, I create Minecraft plugins and practical web tools focused on customization, usability, stability, and performance. I’m currently available for new opportunities in technology, software development, administration, finance, and roles that connect technical thinking with real operations.
