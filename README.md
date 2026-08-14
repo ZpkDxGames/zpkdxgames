@@ -1,129 +1,416 @@
-<h1 align="center">Hey there, I'm Tonim 👋</h1>
+<h1 align="center">⚡ Tonim — Reliable Tools, Playful Ideas</h1>
+
+
+
 <p align="center">
-  <code>Tonim</code> &nbsp;·&nbsp; <code>ZpkDxGames</code>
+
+&#x20; Brazilian Computer Science student and developer building performance-minded Minecraft plugins and practical web applications. I create for server owners, communities, users, and teams that value customization, stability, and thoughtful user experiences.
+
 </p>
+
+
+
 <p align="center">
-  Brazilian developer, Computer Science student, and creator of performance-minded Minecraft tools.
+
+&#x20; <a href="https://github.com/ZpkDxGames">
+
+&#x20;   <img alt="Primary Language: Java" src="https://img.shields.io/badge/Primary%20Language-Java-ED8B00?style=for-the-badge\&logo=openjdk\&logoColor=white">
+
+&#x20; </a>
+
+&#x20; <a href="https://papermc.io/">
+
+&#x20;   <img alt="Framework: Paper API" src="https://img.shields.io/badge/Framework-Paper%20API-222222?style=for-the-badge">
+
+&#x20; </a>
+
+&#x20; <a href="#-license">
+
+&#x20;   <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge">
+
+&#x20; </a>
+
+&#x20; <a href="https://github.com/ZpkDxGames">
+
+&#x20;   <img alt="Repository Status: Active" src="https://img.shields.io/badge/Status-Actively%20Maintained-38BDF8?style=for-the-badge">
+
+&#x20; </a>
+
 </p>
+
+
+
 <p align="center">
-  <a href="https://ajt-portfolio.vercel.app/">
-    <img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-Visit-0f766e?style=for-the-badge&amp;logo=vercel&amp;logoColor=white">
-  </a>
-  <a href="https://www.linkedin.com/in/antoniojtneto">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white">
-  </a>
-  <a href="mailto:antoniojtneto.corp@gmail.com">
-    <img alt="Email" src="https://img.shields.io/badge/Email-Contact-ea4335?style=for-the-badge&amp;logo=gmail&amp;logoColor=white">
-  </a>
-  <img alt="Open to opportunities" src="https://img.shields.io/badge/Open_to-Opportunities-22c55e?style=for-the-badge">
+
+&#x20; <a href="https://ajt-portfolio.vercel.app/">
+
+&#x20;   <img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-Visit-0F766E?style=flat-square\&logo=vercel\&logoColor=white">
+
+&#x20; </a>
+
+&#x20; <a href="https://www.linkedin.com/in/antoniojtneto">
+
+&#x20;   <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square\&logo=linkedin\&logoColor=white">
+
+&#x20; </a>
+
+&#x20; <a href="mailto:antoniojtneto.corp@gmail.com">
+
+&#x20;   <img alt="Email" src="https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square\&logo=gmail\&logoColor=white">
+
+&#x20; </a>
+
+&#x20; <a href="mailto:antoniojtneto.corp@gmail.com">
+
+&#x20;   <img alt="Open to Opportunities" src="https://img.shields.io/badge/Open%20to-Opportunities-22C55E?style=flat-square">
+
+&#x20; </a>
+
 </p>
-<hr>
-<h2>ℹ️ Who am I?</h2>
-<p>
-  I’m <strong>Tonim</strong>, a Brazilian developer and Computer Science student. I also bring hands-on experience from financial and administrative operations, where accuracy, organization, documentation, and reliable processes matter every day.
-</p>
-<p>
-  Under the names <strong>Tonim</strong> and <strong>ZpkDxGames</strong>, I create Minecraft plugins and practical web tools focused on customization, usability, stability, and performance. I’m currently available for new opportunities in technology, software development, administration, finance, and roles that connect technical thinking with real operations.
-</p>
-<blockquote>
-  Building practical tools with precision, curiosity, and a little bit of Minecraft.
-</blockquote>
-<h2>🚀 What am I currently working on?</h2>
-<table>
-  <thead>
-    <tr>
-      <th align="left">Project</th>
-      <th align="center">Status</th>
-      <th align="left">What I’m building</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><a href="https://github.com/ZpkDxGames/PlexonBackpacks"><strong>🎒 PlexonBackpacks</strong></a></td>
-      <td align="center"><img alt="Beta" src="https://img.shields.io/badge/Beta-f59e0b?style=flat-square"></td>
-      <td>Tiered custom-head backpacks with unique storage, owner binding, inventory safety, and batched persistence for Paper 26.2.</td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/ZpkDxGames/Plexon-DailyRewards"><strong>🎁 Plexon DailyRewards</strong></a></td>
-      <td align="center"><img alt="Beta" src="https://img.shields.io/badge/Beta-f59e0b?style=flat-square"></td>
-      <td>Group- and world-aware reward tracks, MiniMessage GUIs, CSV persistence, admin tools, and a public developer API.</td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/ZpkDxGames/GhostBlocks"><strong>🧱 GhostBlocks</strong></a></td>
-      <td align="center"><img alt="Released" src="https://img.shields.io/badge/Released-22c55e?style=flat-square"></td>
-      <td>Visible blocks without collision for creative building, with categorized GUIs, persistence, and performance-minded lookups.</td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/ZpkDxGames/PlexonChats"><strong>💬 PlexonChats</strong></a></td>
-      <td align="center"><img alt="Released" src="https://img.shields.io/badge/Released-22c55e?style=flat-square"></td>
-      <td>Local and global chat, private messages, mentions, interactive item sharing, announcements, and MiniMessage formatting.</td>
-    </tr>
-  </tbody>
-</table>
-<p>
-  I’m also continuing to refine my <a href="https://ajt-portfolio.vercel.app/"><strong>professional portfolio</strong></a> and responsive web projects built around useful, reliable workflows.
-</p>
-<h2>🧰 What tools do I use?</h2>
-<h3>Languages, frameworks, and workflow</h3>
+
+
+
+\---
+
+
+
+\## 👨‍💻 About Me
+
+
+
+I’m \*\*Tonim\*\*, also known online as \*\*ZpkDxGames\*\*. I combine software development with hands-on experience in financial and administrative operations, where organization, accuracy, documentation, and dependable processes are essential.
+
+
+
+\- \*\*Based in Brazil:\*\* Building projects for both Portuguese- and English-speaking users.
+
+\- \*\*Studying Computer Science:\*\* Continuously strengthening my software engineering foundations.
+
+\- \*\*Creating practical solutions:\*\* Developing Minecraft plugins, responsive websites, and workflow-focused tools.
+
+\- \*\*Prioritizing reliability:\*\* Designing around performance, maintainability, configuration, and real-world usage.
+
+\- \*\*Seeking new opportunities:\*\* Open to roles in technology, software development, administration, finance, and related operational areas.
+
+
+
+> \*\*My approach:\*\* Build useful tools with precision, curiosity, and a little bit of Minecraft.
+
+
+
+\## ✨ Key Features
+
+
+
+\- \*\*Builds extensible Minecraft tooling:\*\* Creates configurable Paper plugins that help server owners manage gameplay systems efficiently.
+
+\- \*\*Designs responsive web experiences:\*\* Produces polished, accessible interfaces for desktop and mobile users.
+
+\- \*\*Optimizes demanding workflows:\*\* Reduces unnecessary processing through caching, batched persistence, and focused event handling.
+
+\- \*\*Integrates established platforms:\*\* Connects projects with MiniMessage, Vault, LuckPerms, PlaceholderAPI, Google Sheets, and external APIs.
+
+\- \*\*Improves administrative usability:\*\* Provides clear configuration, informative interfaces, and practical management tools.
+
+\- \*\*Documents for maintainability:\*\* Structures projects so developers, contributors, and operators can understand and extend them confidently.
+
+
+
+\## 🚀 Featured Projects
+
+
+
+| Project | Status | Purpose |
+
+| :--- | :---: | :--- |
+
+| \[\*\*🎒 PlexonBackpacks\*\*](https://github.com/ZpkDxGames/PlexonBackpacks) | !\[Beta](https://img.shields.io/badge/Beta-F59E0B?style=flat-square) | Provides tiered custom-head backpacks with owner binding, inventory safety, and performance-minded persistence. |
+
+| \[\*\*🎁 Plexon DailyRewards\*\*](https://github.com/ZpkDxGames/Plexon-DailyRewards) | !\[Beta](https://img.shields.io/badge/Beta-F59E0B?style=flat-square) | Delivers group- and world-aware reward tracks, MiniMessage interfaces, administrative tools, and configurable persistence. |
+
+| \[\*\*🧱 GhostBlocks\*\*](https://github.com/ZpkDxGames/GhostBlocks) | !\[Released](https://img.shields.io/badge/Released-22C55E?style=flat-square) | Enables visible blocks without collision through categorized interfaces and efficient block lookups. |
+
+| \[\*\*💬 PlexonChats\*\*](https://github.com/ZpkDxGames/PlexonChats) | !\[Released](https://img.shields.io/badge/Released-22C55E?style=flat-square) | Adds local and global chat, private messages, mentions, item sharing, announcements, and MiniMessage formatting. |
+
+
+
+\- \*\*Current web focus:\*\* Refining my \[professional portfolio](https://ajt-portfolio.vercel.app/) and responsive applications built around reliable workflows.
+
+\- \*\*Current plugin focus:\*\* Improving scalability, customization, persistence, and administrator-facing tools across the Plexon project family.
+
+
+
+\## 🧰 Tech Stack
+
+
+
 <p align="center">
-  <img alt="Java, Maven, Git, GitHub, HTML, CSS, JavaScript, Next.js, and Vercel" src="https://skillicons.dev/icons?i=java,maven,git,github,html,css,js,nextjs,vercel&amp;perline=9">
+
+&#x20; <img
+
+&#x20;   alt="Java, Maven, Git, GitHub, HTML, CSS, JavaScript, Next.js, and Vercel"
+
+&#x20;   src="https://skillicons.dev/icons?i=java,maven,git,github,html,css,js,nextjs,vercel\&perline=9"
+
+&#x20; >
+
 </p>
+
+
+
+| Category | Technologies | Primary Use |
+
+| :--- | :--- | :--- |
+
+| \*\*Frontend\*\* | HTML, CSS, JavaScript, Next.js | Responsive interfaces, landing pages, portfolios, and web applications |
+
+| \*\*Backend\*\* | Java, Paper/Bukkit APIs, Maven, MiniMessage | Minecraft plugins, business logic, commands, events, and integrations |
+
+| \*\*Database \& Persistence\*\* | CSV, YAML, Google Sheets | Configuration, player data, cached records, and dynamic content |
+
+| \*\*DevOps\*\* | Git, GitHub, Vercel | Version control, collaboration, deployment, and release workflows |
+
+| \*\*Integrations\*\* | Vault, LuckPerms, PlaceholderAPI, third-party APIs | Permissions, economy, placeholders, and external services |
+
+
+
+\## ⚡ Quick Start
+
+
+
+The example below demonstrates the typical workflow for exploring and building one of my Maven-based Paper projects. \*\*Always check the selected repository’s README\*\* for its exact Java, Paper, dependency, and configuration requirements.
+
+
+
+\### Prerequisites
+
+
+
+```bash
+
+git --version
+
+java -version
+
+mvn -version
+
+```
+
+
+
+\### Installation
+
+
+
+```bash
+
+git clone "https://github.com/ZpkDxGames/<repository-name>.git"
+
+cd "<repository-name>"
+
+
+
+mvn clean package
+
+```
+
+
+
+\### Running the Project
+
+
+
+```bash
+
+\# Copy the compiled plugin into your Paper server
+
+cp "target/<plugin-name>-<version>.jar" "<paper-server>/plugins/"
+
+
+
+\# Start the server using its configured Paper JAR
+
+java -jar "<paper-server>/<paper-server-jar>.jar" --nogui
+
+```
+
+
+
+\- \*\*Replace `<repository-name>`\*\* with the repository you want to build.
+
+\- \*\*Replace `<plugin-name>` and `<version>`\*\* with the generated artifact name.
+
+\- \*\*Replace `<paper-server>` and `<paper-server-jar>`\*\* with your local server paths.
+
+\- \*\*Review the project documentation\*\* before deploying the plugin to a production server.
+
+
+
+\## 🧪 Usage Example
+
+
+
+The following example builds and installs \*\*PlexonBackpacks\*\*:
+
+
+
+```bash
+
+git clone https://github.com/ZpkDxGames/PlexonBackpacks.git
+
+cd PlexonBackpacks
+
+
+
+mvn clean package
+
+
+
+cp "target/PlexonBackpacks-<version>.jar" "<paper-server>/plugins/"
+
+java -jar "<paper-server>/<paper-server-jar>.jar" --nogui
+
+```
+
+
+
+\- \*\*Configure the plugin:\*\* Edit the generated files inside `<paper-server>/plugins/PlexonBackpacks/`.
+
+\- \*\*Apply changes safely:\*\* Restart the server or follow the plugin-specific reload instructions.
+
+\- \*\*Verify the installation:\*\* Review the startup console for enablement messages or dependency warnings.
+
+\- \*\*Test before production:\*\* Validate new builds on a separate development server first.
+
+
+
+\## 📊 GitHub Activity
+
+
+
 <p align="center">
-  <img alt="Paper" src="https://img.shields.io/badge/Paper-Minecraft-3b8526?style=flat-square">
-  <img alt="MiniMessage" src="https://img.shields.io/badge/MiniMessage-Gradients_%26_Components-a78bfa?style=flat-square">
-  <img alt="Vault" src="https://img.shields.io/badge/Vault-Integration-64748b?style=flat-square">
-  <img alt="LuckPerms" src="https://img.shields.io/badge/LuckPerms-Permissions-f59e0b?style=flat-square">
-  <img alt="PlaceholderAPI" src="https://img.shields.io/badge/PlaceholderAPI-Integration-38bdf8?style=flat-square">
-  <img alt="Google Sheets" src="https://img.shields.io/badge/Google_Sheets-Data-34a853?style=flat-square&amp;logo=googlesheets&amp;logoColor=white">
+
+&#x20; <a href="https://github.com/ZpkDxGames?tab=followers">
+
+&#x20;   <img alt="GitHub Followers" src="https://img.shields.io/github/followers/ZpkDxGames?style=for-the-badge\&logo=github\&label=Followers\&color=22D3EE">
+
+&#x20; </a>
+
+&#x20; <a href="https://github.com/ZpkDxGames?tab=repositories">
+
+&#x20;   <img alt="GitHub Stars" src="https://img.shields.io/github/stars/ZpkDxGames?affiliations=OWNER\&style=for-the-badge\&logo=github\&label=Stars\&color=A78BFA">
+
+&#x20; </a>
+
+&#x20; <img alt="Profile Views" src="https://komarev.com/ghpvc/?username=ZpkDxGames\&style=for-the-badge\&color=22D3EE\&label=PROFILE+VIEWS">
+
 </p>
-<ul>
-  <li><strong>Backend and plugins:</strong> Java, Paper/Bukkit APIs, Maven, MiniMessage, YAML, and CSV persistence.</li>
-  <li><strong>Web:</strong> HTML, CSS, JavaScript, Next.js, responsive interfaces, and Vercel deployments.</li>
-  <li><strong>Integrations:</strong> Vault, LuckPerms, PlaceholderAPI, Google Sheets-backed data flows, and third-party APIs.</li>
-  <li><strong>Workflow:</strong> Git, GitHub, performance profiling, configuration design, and iterative UI/UX refinement.</li>
-</ul>
-<h2>📊 GitHub activity & statistics</h2>
+
+
+
 <p align="center">
-  <a href="https://github.com/ZpkDxGames?tab=followers">
-    <img alt="GitHub followers" src="https://img.shields.io/github/followers/ZpkDxGames?style=for-the-badge&amp;logo=github&amp;label=Followers&amp;color=22d3ee">
-  </a>
-  <a href="https://github.com/ZpkDxGames?tab=repositories">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/ZpkDxGames?affiliations=OWNER&amp;style=for-the-badge&amp;logo=github&amp;label=Stars&amp;color=a78bfa">
-  </a>
-  <img alt="Profile views" src="https://komarev.com/ghpvc/?username=ZpkDxGames&amp;style=for-the-badge&amp;color=22d3ee&amp;label=PROFILE+VIEWS">
+
+&#x20; <a href="https://github.com/ZpkDxGames">
+
+&#x20;   <img
+
+&#x20;     width="96%"
+
+&#x20;     alt="ZpkDxGames contribution activity graph"
+
+&#x20;     src="https://github-readme-activity-graph.vercel.app/graph?username=ZpkDxGames\&bg\_color=0d1117\&color=c9d1d9\&line=22d3ee\&point=a78bfa\&area=true\&hide\_border=true"
+
+&#x20;   >
+
+&#x20; </a>
+
 </p>
+
+
+
 <p align="center">
-  <a href="https://github.com/ZpkDxGames">
-    <img width="96%" alt="ZpkDxGames contribution activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=ZpkDxGames&amp;bg_color=0d1117&amp;color=c9d1d9&amp;line=22d3ee&amp;point=a78bfa&amp;area=true&amp;hide_border=true">
-  </a>
+
+&#x20; <sub>Statistics are generated from public GitHub activity and update automatically.</sub>
+
 </p>
+
+
+
+\## 🤝 Contributing
+
+
+
+Contributions, bug reports, and constructive suggestions are welcome on repositories that accept community changes.
+
+
+
+\- \*\*Choose a project:\*\* Review its README, open issues, and existing contribution instructions.
+
+\- \*\*Discuss significant changes:\*\* Open an issue before implementing a large feature or architectural revision.
+
+\- \*\*Create a focused branch:\*\* Keep each branch limited to one fix or feature.
+
+\- \*\*Test your changes:\*\* Confirm the project builds successfully and preserves existing behavior.
+
+\- \*\*Document the impact:\*\* Explain what changed, why it changed, and how reviewers can verify it.
+
+\- \*\*Submit a pull request:\*\* Use a clear title and include screenshots, logs, or reproduction steps when relevant.
+
+
+
+```bash
+
+git checkout -b "feat/<short-description>"
+
+git add .
+
+git commit -m "feat: <concise-summary>"
+
+git push origin "feat/<short-description>"
+
+```
+
+
+
+\## 📄 License
+
+
+
+This profile README is available under the \*\*MIT License\*\*. Individual projects may define their own licenses, and each repository’s license takes precedence for its source code and distributed artifacts.
+
+
+
+\## 📫 Contact
+
+
+
+| Channel | Link |
+
+| :--- | :--- |
+
+| \*\*Professional portfolio\*\* | \[ajt-portfolio.vercel.app](https://ajt-portfolio.vercel.app/) |
+
+| \*\*Email\*\* | \[antoniojtneto.corp@gmail.com](mailto:antoniojtneto.corp@gmail.com) |
+
+| \*\*LinkedIn\*\* | \[linkedin.com/in/antoniojtneto](https://www.linkedin.com/in/antoniojtneto) |
+
+| \*\*GitHub\*\* | \[github.com/ZpkDxGames](https://github.com/ZpkDxGames) |
+
+| \*\*Modrinth\*\* | \[modrinth.com/user/ZpkDxGames](https://modrinth.com/user/ZpkDxGames) |
+
+| \*\*Discord community\*\* | \[discord.gg/DC3pFQSJy7](https://discord.gg/DC3pFQSJy7) |
+
+| \*\*WhatsApp\*\* | \[Send a message](https://wa.me/5534999953803) |
+
+
+
+\---
+
+
+
 <p align="center">
-  <sub>Statistics are generated from public GitHub activity and update automatically.</sub>
+
+&#x20; <strong>Open to thoughtful collaborations, useful software projects, Minecraft server tooling, and new professional opportunities.</strong>
+
 </p>
-<h2>📫 How to reach me</h2>
-<p align="center">
-  <a href="mailto:antoniojtneto.corp@gmail.com">
-    <img alt="Email" src="https://img.shields.io/badge/antoniojtneto.corp%40gmail.com-ea4335?style=for-the-badge&amp;logo=gmail&amp;logoColor=white">
-  </a>
-  <a href="https://www.linkedin.com/in/antoniojtneto">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/antoniojtneto-0a66c2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white">
-  </a>
-  <a href="https://wa.me/5534999953803">
-    <img alt="WhatsApp" src="https://img.shields.io/badge/WhatsApp-Message-25d366?style=for-the-badge&amp;logo=whatsapp&amp;logoColor=white">
-  </a>
-</p>
-<p align="center">
-  <a href="https://modrinth.com/user/ZpkDxGames">
-    <img alt="Modrinth" src="https://img.shields.io/badge/Modrinth-Projects-00af5c?style=for-the-badge&amp;logo=modrinth&amp;logoColor=white">
-  </a>
-  <a href="https://discord.gg/DC3pFQSJy7">
-    <img alt="Discord" src="https://img.shields.io/badge/Discord-Community-5865f2?style=for-the-badge&amp;logo=discord&amp;logoColor=white">
-  </a>
-  <a href="https://ajt-portfolio.vercel.app/">
-    <img alt="Portfolio" src="https://img.shields.io/badge/Professional_Portfolio-0f766e?style=for-the-badge&amp;logo=vercel&amp;logoColor=white">
-  </a>
-</p>
-<hr>
-<p align="center">
-  <sub>Open to thoughtful collaborations, useful software projects, Minecraft server tooling, and new professional opportunities.</sub>
-</p>
+
