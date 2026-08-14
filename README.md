@@ -1,11 +1,13 @@
 <!--
   GitHub profile README for ZpkDxGames / Tonim
-  Dynamic visuals: capsule-render, readme-typing-svg,
-  github-profile-summary-cards, github-readme-activity-graph, and Shields.io.
+  Dynamic visuals: readme-typing-svg, github-profile-summary-cards,
+  github-readme-activity-graph, and Shields.io.
 -->
 
+<h1 align="center">Tonim · ZpkDxGames</h1>
+
 <p align="center">
-  <img width="100%" alt="Tonim — ZpkDxGames profile banner" src="https://capsule-render.vercel.app/api?type=waving&amp;height=230&amp;color=0:020617,48:0f766e,100:7c3aed&amp;text=Tonim%20%7C%20ZpkDxGames&amp;fontColor=f8fafc&amp;fontSize=46&amp;fontAlignY=37&amp;desc=Java%20%26%20Paper%20Developer%20%E2%80%A2%20Web%20Experiences%20%E2%80%A2%20Reliable%20Systems&amp;descAlignY=58&amp;descSize=18&amp;animation=fadeIn">
+  <strong>Java &amp; Paper Developer · Web Experiences · Reliable Systems</strong>
 </p>
 
 <p align="center">
@@ -35,7 +37,6 @@
     <img alt="Stars across owned repositories" src="https://img.shields.io/github/stars/ZpkDxGames?affiliations=OWNER&amp;style=flat-square&amp;logo=github&amp;label=Stars&amp;color=a78bfa&amp;labelColor=0f172a">
   </a>
   <img alt="Profile views" src="https://komarev.com/ghpvc/?username=ZpkDxGames&amp;style=flat-square&amp;color=22d3ee&amp;label=Profile+views">
-  <img alt="Based in Brazil" src="https://img.shields.io/badge/Brazil-UTC--03:00-16a34a?style=flat-square&amp;labelColor=0f172a">
 </p>
 
 ---
@@ -47,7 +48,7 @@
     <td width="60%" valign="top">
       <h3>Developer mindset, operational discipline</h3>
       <p>
-        I'm <strong>Tonim</strong>, also known as <strong>ZpkDxGames</strong> — a Brazilian developer and Computer Science student building reliable Minecraft server tooling and responsive web experiences.
+        I'm <strong>Tonim</strong>, also known as <strong>ZpkDxGames</strong> — a developer and Computer Science student building reliable Minecraft server tooling and responsive web experiences.
       </p>
       <p>
         My work is centered on <strong>Java, Paper, configurable systems, safe persistence, and polished interfaces</strong>. Experience across finance, administration, logistics, and customer support also gives me a practical perspective on accuracy, documentation, and how software fits into real workflows.
@@ -59,8 +60,8 @@
     <td width="40%" valign="top">
       <h3>At a glance</h3>
       <ul>
-        <li>🎓 Computer Science at Uniube</li>
-        <li>🇧🇷 Based in Uberaba, Minas Gerais</li>
+        <li>🎓 Computer Science undergraduate</li>
+        <li>🌐 Open to remote collaboration</li>
         <li>🗣️ Portuguese native · English B2</li>
         <li>☕ Java and Paper plugin development</li>
         <li>🌐 Next.js and responsive web interfaces</li>
@@ -230,12 +231,6 @@
 ## 📊 Live GitHub dashboard
 
 <p align="center">
-  <a href="https://github.com/ZpkDxGames">
-    <img width="98%" alt="ZpkDxGames profile summary" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ZpkDxGames&amp;theme=github_dark&amp;title_color=22d3ee&amp;text_color=cbd5e1&amp;bg_color=0d1117&amp;border_color=1f2937&amp;icon_color=a78bfa&amp;chart_color=22d3ee&amp;animation=sequence&amp;duration=3">
-  </a>
-</p>
-
-<p align="center">
   <a href="https://github.com/ZpkDxGames?tab=repositories">
     <img width="48%" alt="ZpkDxGames repository statistics" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=ZpkDxGames&amp;theme=github_dark&amp;title_color=22d3ee&amp;text_color=cbd5e1&amp;bg_color=0d1117&amp;border_color=1f2937&amp;icon_color=a78bfa&amp;chart_color=22d3ee&amp;animation=load&amp;duration=2.4">
   </a>
@@ -262,13 +257,10 @@
 
 <p align="center">
   <a href="mailto:antoniojtneto.corp@gmail.com">
-    <img alt="Email Antonio" src="https://img.shields.io/badge/antoniojtneto.corp%40gmail.com-Email-ea4335?style=for-the-badge&amp;logo=gmail&amp;logoColor=white&amp;labelColor=0f172a">
+    <img alt="Send an email" src="https://img.shields.io/badge/Email-Contact-ea4335?style=for-the-badge&amp;logo=gmail&amp;logoColor=white&amp;labelColor=0f172a">
   </a>
   <a href="https://www.linkedin.com/in/antoniojtneto">
     <img alt="Antonio on LinkedIn" src="https://img.shields.io/badge/antoniojtneto-LinkedIn-0a66c2?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white&amp;labelColor=0f172a">
-  </a>
-  <a href="https://wa.me/5534999953803">
-    <img alt="Message Antonio on WhatsApp" src="https://img.shields.io/badge/WhatsApp-Message-25d366?style=for-the-badge&amp;logo=whatsapp&amp;logoColor=white&amp;labelColor=0f172a">
   </a>
 </p>
 
@@ -289,8 +281,4 @@
 
 <p align="center">
   <sub>Build with care · document with clarity · optimize with evidence</sub>
-</p>
-
-<p align="center">
-  <img width="100%" alt="Decorative footer" src="https://capsule-render.vercel.app/api?type=waving&amp;height=110&amp;color=0:020617,48:0f766e,100:7c3aed&amp;section=footer">
 </p>
