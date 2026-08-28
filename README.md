@@ -263,7 +263,7 @@
 
 <p align="center">
   <a href="https://github.com/ZpkDxGames">
-    <img width="98%" alt="ZpkDxGames contribution activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=ZpkDxGames&amp;bg_color=0d1117&amp;color=cbd5e1&amp;line=22d3ee&amp;point=a78bfa&amp;area=true&amp;area_color=164e63&amp;hide_border=true&amp;custom_title=Contribution%20activity">
+    <img width="98%" alt="ZpkDxGames GitHub activity summary" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=ZpkDxGames&amp;theme=github_dark">
   </a>
 </p>
 
