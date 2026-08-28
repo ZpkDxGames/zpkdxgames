@@ -92,7 +92,12 @@
 
 ---
 
-## 🚀 Featured project ecosystem
+## 🚀 Plexon project ecosystem
+
+<p align="center">
+  A growing family of production-minded Paper plugins with consistent GUI-driven workflows,
+  safe persistence, and optional ecosystem integrations.
+</p>
 
 <table>
   <tr>
@@ -164,6 +169,23 @@
           <img alt="PlexonChats Spigot downloads" src="https://img.shields.io/spiget/downloads/134032?style=flat-square&amp;label=Spigot%20downloads&amp;color=22d3ee&amp;labelColor=0f172a">
         </a>
         <img alt="PlexonChats latest commit" src="https://img.shields.io/github/last-commit/ZpkDxGames/PlexonChats?style=flat-square&amp;label=Updated&amp;color=a78bfa&amp;labelColor=0f172a">
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top">
+      <h3 align="center"><a href="https://github.com/ZpkDxGames/PlexonShops">🛒 PlexonShops</a></h3>
+      <p align="center"><strong>A GUI-first global player shop directory for Paper servers.</strong></p>
+      <ul>
+        <li>Lets players create, browse, filter, and manage shops through paginated inventory GUIs.</li>
+        <li>Supports shop states, categories, custom icons, locations, showcased items, labels, and MiniMessage text.</li>
+        <li>Tracks one-to-five-star ratings plus total and unique visitors.</li>
+        <li>Uses bounded asynchronous SQLite persistence, cancellable teleports, optional Vault fees with refunds, and PlaceholderAPI.</li>
+      </ul>
+      <p align="center">
+        <img alt="PlexonShops version" src="https://img.shields.io/badge/VERSION-1.0.0-22c55e?style=flat-square&amp;labelColor=0f172a">
+        <img alt="PlexonShops Paper support" src="https://img.shields.io/badge/Paper-1.21.x-22d3ee?style=flat-square&amp;labelColor=0f172a">
+        <img alt="PlexonShops latest commit" src="https://img.shields.io/github/last-commit/ZpkDxGames/PlexonShops?style=flat-square&amp;label=Updated&amp;color=a78bfa&amp;labelColor=0f172a">
       </p>
     </td>
   </tr>
