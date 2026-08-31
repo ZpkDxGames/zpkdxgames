@@ -52,7 +52,7 @@ A closer look at my public Minecraft projects, updated **August 2026**. Each pro
         <li>Level-based materials, enchantments, abilities, and detailed progress lore.</li>
         <li>Shared progression across dimensions, coalesced updates, and asynchronous SQLite persistence.</li>
       </ul>
-      <p><a href="https://github.com/ZpkDxGames/PlexonTools/tree/release/3.6.1"><strong>3.6.1 source</strong></a> · <a href="https://github.com/ZpkDxGames/PlexonTools/blob/release/3.6.1/docs/PLEXONTOOLS_3_6_1.md">Feature guide</a><br><sub>Source branch available; no GitHub release published at this update.</sub></p>
+      <p><a href="https://github.com/ZpkDxGames/PlexonTools/releases/tag/v3.6.1"><strong>3.6.1 release</strong></a> · <a href="https://github.com/ZpkDxGames/PlexonTools/releases/download/v3.6.1/PlexonTools-3.6.1.jar">Download JAR</a> · <a href="https://github.com/ZpkDxGames/PlexonTools/blob/release/3.6.1/docs/PLEXONTOOLS_3_6_1.md">Guide</a><br><sub>Paper 1.21.4 · Java 21</sub></p>
     </td>
   </tr>
   <tr>
