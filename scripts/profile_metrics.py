@@ -192,19 +192,105 @@ def svg(theme, width, height, title, description, body, draw_length=1000):
     return document
 
 
-def hero(theme):
-    body = '<rect x="600" y="1" width="399" height="238" rx="22" fill="url(#grid)"/>'
-    body += text(38, 40, "ZPKDXGAMES / BUILDER OF THE PLEXON ECOSYSTEM", 13, "accent", 650, 'letter-spacing="1.3"')
-    body += text(36, 115, "Tonim", 72, "text", 750, 'letter-spacing="-3"')
-    body += text(40, 155, "Thoughtful systems. Playful experiences.", 22, "muted", 450)
-    body += text(40, 203, "JAVA / PAPER / WEB", 14, "accent", 600, 'letter-spacing="2"')
-    body += '<path d="M677 82H729V155H781M729 111H920" fill="none" stroke="var(--border)" stroke-width="3"/>'
-    body += '<path class="flow" d="M677 82H729V155H781M729 111H920" fill="none" stroke="var(--accent)" stroke-width="2"/>'
-    for x, y, label, color in [(613, 52, "BUILD", "accent"), (782, 127, "REFINE", "green"), (836, 30, "SHIP", "blue")]:
-        body += rect(x, y, 128, 60, extra='stroke="var(--border)"')
-        body += f'<circle class="pulse" cx="{x + 19}" cy="{y + 30}" r="4" fill="var(--{color})"/>'
-        body += text(x + 34, y + 36, label, 14, color, 650, 'letter-spacing="1"')
-    return svg(theme, 1000, 240, "Tonim · ZpkDxGames", "Java, Paper plugins, and web experiences. Builder of the Plexon ecosystem.", body)
+def workspace_header(theme):
+    """An animated profile illustration, not a live terminal or interactive UI."""
+    typed_line = "building the Plexon ecosystem"
+    type_width = len(typed_line) * 8.4
+    body = '''
+    <defs>
+      <clipPath id="workspace-typing">
+        <rect class="workspace-type-mask" x="74" y="274" width="__TYPE_WIDTH__" height="24"/>
+      </clipPath>
+    </defs>
+    <style>
+      .workspace-mono {font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+      .workspace-edge {stroke-dasharray:110 2523.7;animation:workspace-border 14s linear infinite}
+      .workspace-scene {opacity:0;animation:workspace-scene 18s linear infinite}
+      .workspace-scene-0 {opacity:1}
+      .workspace-scene-1 {animation-delay:-12s}
+      .workspace-scene-2 {animation-delay:-6s}
+      .workspace-type-mask {width:__TYPE_WIDTH__px;animation:workspace-type 6s steps(__CHARS__,end) infinite}
+      .workspace-caret {transform:translateX(__TYPE_WIDTH__px);animation:workspace-caret 6s steps(__CHARS__,end) infinite,workspace-blink .8s step-end infinite}
+      .workspace-timer {width:344px;animation:workspace-timer 6s linear infinite}
+      .workspace-static-label {display:none}
+      @keyframes workspace-border {to{stroke-dashoffset:-2633.7}}
+      @keyframes workspace-scene {0%,28%{opacity:1}33.333%,94.667%{opacity:0}100%{opacity:1}}
+      @keyframes workspace-type {0%,8%{width:0}40%,82%{width:__TYPE_WIDTH__px}94%,100%{width:0}}
+      @keyframes workspace-caret {0%,8%{transform:translateX(0)}40%,82%{transform:translateX(__TYPE_WIDTH__px)}94%,100%{transform:translateX(0)}}
+      @keyframes workspace-blink {50%{opacity:0}}
+      @keyframes workspace-timer {from{width:0}to{width:344px}}
+      @media (prefers-reduced-motion:reduce) {
+        .workspace-edge,.workspace-scene,.workspace-type-mask,.workspace-caret,.workspace-timer {animation:none!important}
+        .workspace-scene {opacity:0!important}
+        .workspace-scene-0 {opacity:1!important}
+        .workspace-caret {opacity:1}
+        .workspace-cycle-label {display:none}
+        .workspace-static-label {display:inline}
+      }
+    </style>
+    '''.replace("__TYPE_WIDTH__", f"{type_width:.1f}").replace("__CHARS__", str(len(typed_line)))
+    body += '<path d="M23 1H977Q999 1 999 23V57H1V23Q1 1 23 1Z" fill="var(--panel)"/>'
+    body += '<path d="M1 57H999" stroke="var(--border)"/>'
+    for x, color in [(27, "border"), (41, "muted"), (55, "accent")]:
+        body += f'<circle cx="{x}" cy="29" r="3.5" fill="var(--{color})"/>'
+    body += text(77, 34, "tonim / developer.workspace", 13, "muted", 500, 'class="workspace-mono"')
+    body += rect(758, 17, 216, 25, "bg", 12)
+    body += '<circle cx="773" cy="29.5" r="3" fill="var(--green)"/>'
+    body += text(786, 33.5, "OPEN TO COLLABORATE", 10, "green", 650, 'letter-spacing=".8"')
+
+    body += rect(20, 109, 525, 29, radius=6, extra='opacity=".7"')
+    code_lines = [
+        [("const ", "blue"), ("profile", "text"), (" = {", "muted")],
+        [("  name", "text"), (": ", "muted"), ('"Tonim"', "accent"), (",", "muted")],
+        [("  handle", "text"), (": ", "muted"), ('"ZpkDxGames"', "accent"), (",", "muted")],
+        [("  focus", "text"), (": [", "muted"), ('"Java"', "green"), (", ", "muted"),
+         ('"Paper"', "green"), (", ", "muted"), ('"Web"', "green"), ("],", "muted")],
+        [("  ecosystem", "text"), (": ", "muted"), ('"Plexon"', "accent")],
+        [("};", "muted")],
+    ]
+    for i, segments in enumerate(code_lines):
+        y = 99 + i * 28
+        body += text(35, y, f"{i + 1:02d}", 12, "muted", extra='class="workspace-mono" opacity=".6"')
+        body += f'<text class="workspace-mono" x="74" y="{y}" font-size="16" xml:space="preserve">'
+        body += "".join(f'<tspan fill="var(--{color})">{escape(value)}</tspan>' for value, color in segments)
+        body += '</text>'
+    body += '<path d="M34 261H534" stroke="var(--border)"/>'
+    body += text(43, 291, ">", 18, "accent", 600, 'class="workspace-mono"')
+    body += text(74, 291, typed_line, 14, "muted", extra='class="workspace-mono" clip-path="url(#workspace-typing)"')
+    body += '<rect class="workspace-caret" x="74" y="277" width="8" height="17" rx="1" fill="var(--accent)"/>'
+
+    body += rect(570, 80, 402, 236, radius=16, extra='stroke="var(--border)"')
+    body += text(596, 110, "PROJECT SPOTLIGHT", 10, "muted", 650, 'letter-spacing="1.4"')
+    spotlights = [
+        ("PlexonTools", "accent", ["Custom tools with shared progression,", "world controls, and editable GUIs."],
+         ["PROGRESSION", "WORLD GUIs", "SQLITE"]),
+        ("GhostBlocks", "blue", ["Collision-free block models for", "creative builds and custom maps."],
+         ["BLOCK MODELS", "BUILDING", "MINIMESSAGE"]),
+        ("PlexonChats", "green", ["Configurable server chat, rich text,", "and optional Discord integration."],
+         ["CHAT", "ADMIN GUIs", "DISCORDSRV"]),
+    ]
+    for i, (name, color, description, labels) in enumerate(spotlights):
+        body += f'<g id="workspace-scene-{i}" class="workspace-scene workspace-scene-{i}">'
+        body += text(946, 110, f"0{i + 1} / 03", 11, color, 500, 'class="workspace-mono" text-anchor="end"')
+        body += text(596, 153, name, 28, color, 700, 'letter-spacing="-.5"')
+        for line, value in enumerate(description):
+            body += text(596, 183 + line * 20, value, 14, "muted")
+        x = 596
+        for label in labels:
+            width = len(label) * 6 + 20
+            body += rect(x, 225, width, 24, "bg", 6)
+            body += text(x + 10, 241, label, 9, color, 600, 'class="workspace-mono" letter-spacing=".3"')
+            x += width + 7
+        for dot in range(3):
+            body += f'<circle cx="{916 + dot * 13}" cy="275" r="3" fill="var(--{color if dot == i else "border"})"/>'
+        body += '</g>'
+    body += text(596, 279, "NEXT PROJECT", 9, "muted", 500, 'class="workspace-cycle-label" letter-spacing="1"')
+    body += text(596, 279, "FEATURED PROJECT", 9, "muted", 500, 'class="workspace-static-label" letter-spacing="1"')
+    body += rect(596, 296, 344, 2, "border", 1)
+    body += rect(596, 296, 344, 2, "accent", 1, 'class="workspace-timer"')
+    body += '<rect class="workspace-edge" x="1.5" y="1.5" width="997" height="337" rx="20" fill="none" stroke="var(--accent)" stroke-width="1.4" opacity=".65"/>'
+    return svg(theme, 1000, 340, "Tonim's developer workspace",
+               "Animated profile illustration for Tonim / ZpkDxGames: Java, Paper, and Web. Rotating project highlights feature PlexonTools, GhostBlocks, and PlexonChats. Not a live terminal. Reduced motion shows PlexonTools without animation.", body)
 
 
 def activity(data, theme):
@@ -326,7 +412,7 @@ def render(data, root=ROOT):
         raise ValueError("Daily and project totals do not agree")
     outputs = {"data/profile.json": json.dumps(data, indent=2, ensure_ascii=False) + "\n"}
     for theme in THEMES:
-        outputs[f"assets/profile/hero-{theme}.svg"] = hero(theme)
+        outputs[f"assets/profile/workspace-{theme}.svg"] = workspace_header(theme)
         for name, renderer in [("activity", activity), ("ecosystem", ecosystem), ("releases", release_radar)]:
             outputs[f"assets/profile/{name}-{theme}.svg"] = renderer(data, theme)
     # Generate and parse everything before replacing any last-known-good file.

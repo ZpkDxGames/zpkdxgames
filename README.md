@@ -2,8 +2,8 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/hero-dark.svg">
-    <img width="100%" src="assets/profile/hero-light.svg" alt="Tonim · ZpkDxGames — Java, Paper plugins, and web experiences. Builder of the Plexon ecosystem.">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/workspace-dark.svg">
+    <img width="100%" src="assets/profile/workspace-light.svg" alt="Tonim's animated developer workspace: a typing cursor, a moving border, and rotating PlexonTools, GhostBlocks, and PlexonChats highlights.">
   </picture>
 </p>
 

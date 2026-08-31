@@ -1,6 +1,6 @@
 # Profile visuals
 
-The profile uses small, repository-hosted SVGs instead of a shared statistics-card service. The hero has subtle animated paths; the charts animate when loaded. Every graphic has a light and dark variant, a descriptive title, and a reduced-motion fallback. No JavaScript, remote fonts, or external images are embedded in the SVGs.
+The profile uses small, repository-hosted SVGs instead of a shared statistics-card service. The header is a developer-workspace illustration with a moving outline, a typing cursor, and three Plexon project spotlights that rotate every six seconds. The profile code and project descriptions are illustrative editorial content, not a live terminal or current build status. Reduced motion displays the complete text and first spotlight without animation. The charts animate when loaded. Every graphic has a light and dark variant and a descriptive title. No JavaScript, remote fonts, or external images are embedded in the SVGs.
 
 ## Data boundaries
 

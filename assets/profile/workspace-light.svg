@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="340" viewBox="0 0 1000 340" role="img" aria-labelledby="title desc">
+  <title id="title">Tonim&#x27;s developer workspace</title>
+  <desc id="desc">Animated profile illustration for Tonim / ZpkDxGames: Java, Paper, and Web. Rotating project highlights feature PlexonTools, GhostBlocks, and PlexonChats. Not a live terminal. Reduced motion shows PlexonTools without animation.</desc>
+  <defs>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#087e98" stop-opacity=".32"/><stop offset="1" stop-color="#087e98" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#087e98"/><stop offset="1" stop-color="#168361"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6e3f2" stroke-opacity=".35"/></pattern>
+  </defs>
+  <style>
+    svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .frame {fill:#f5f9ff;stroke:#d6e3f2}
+    .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
+    .rise {animation:rise .8s ease-out both}
+    .fade {animation:fade .8s ease-out both}
+    .flow {stroke-dasharray:5 13;animation:flow 12s linear infinite}
+    .pulse {animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes draw {from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
+    @keyframes rise {from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fade {from{opacity:0}to{opacity:1}}
+    @keyframes flow {to{stroke-dashoffset:-108}}
+    @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
+    @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.flow,.pulse{animation:none!important}}
+  </style>
+  <rect class="frame" x=".5" y=".5" width="999" height="339" rx="22"/>
+  
+    <defs>
+      <clipPath id="workspace-typing">
+        <rect class="workspace-type-mask" x="74" y="274" width="243.6" height="24"/>
+      </clipPath>
+    </defs>
+    <style>
+      .workspace-mono {font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+      .workspace-edge {stroke-dasharray:110 2523.7;animation:workspace-border 14s linear infinite}
+      .workspace-scene {opacity:0;animation:workspace-scene 18s linear infinite}
+      .workspace-scene-0 {opacity:1}
+      .workspace-scene-1 {animation-delay:-12s}
+      .workspace-scene-2 {animation-delay:-6s}
+      .workspace-type-mask {width:243.6px;animation:workspace-type 6s steps(29,end) infinite}
+      .workspace-caret {transform:translateX(243.6px);animation:workspace-caret 6s steps(29,end) infinite,workspace-blink .8s step-end infinite}
+      .workspace-timer {width:344px;animation:workspace-timer 6s linear infinite}
+      .workspace-static-label {display:none}
+      @keyframes workspace-border {to{stroke-dashoffset:-2633.7}}
+      @keyframes workspace-scene {0%,28%{opacity:1}33.333%,94.667%{opacity:0}100%{opacity:1}}
+      @keyframes workspace-type {0%,8%{width:0}40%,82%{width:243.6px}94%,100%{width:0}}
+      @keyframes workspace-caret {0%,8%{transform:translateX(0)}40%,82%{transform:translateX(243.6px)}94%,100%{transform:translateX(0)}}
+      @keyframes workspace-blink {50%{opacity:0}}
+      @keyframes workspace-timer {from{width:0}to{width:344px}}
+      @media (prefers-reduced-motion:reduce) {
+        .workspace-edge,.workspace-scene,.workspace-type-mask,.workspace-caret,.workspace-timer {animation:none!important}
+        .workspace-scene {opacity:0!important}
+        .workspace-scene-0 {opacity:1!important}
+        .workspace-caret {opacity:1}
+        .workspace-cycle-label {display:none}
+        .workspace-static-label {display:inline}
+      }
+    </style>
+    <path d="M23 1H977Q999 1 999 23V57H1V23Q1 1 23 1Z" fill="#ffffff"/><path d="M1 57H999" stroke="#d6e3f2"/><circle cx="27" cy="29" r="3.5" fill="#d6e3f2"/><circle cx="41" cy="29" r="3.5" fill="#516980"/><circle cx="55" cy="29" r="3.5" fill="#087e98"/><text x="77" y="34" font-size="13" font-weight="500" fill="#516980" class="workspace-mono">tonim / developer.workspace</text><rect x="758" y="17" width="216" height="25" rx="12" fill="#f5f9ff" /><circle cx="773" cy="29.5" r="3" fill="#168361"/><text x="786" y="33.5" font-size="10" font-weight="650" fill="#168361" letter-spacing=".8">OPEN TO COLLABORATE</text><rect x="20" y="109" width="525" height="29" rx="6" fill="#ffffff" opacity=".7"/><text x="35" y="99" font-size="12" font-weight="400" fill="#516980" class="workspace-mono" opacity=".6">01</text><text class="workspace-mono" x="74" y="99" font-size="16" xml:space="preserve"><tspan fill="#526eb5">const </tspan><tspan fill="#183149">profile</tspan><tspan fill="#516980"> = {</tspan></text><text x="35" y="127" font-size="12" font-weight="400" fill="#516980" class="workspace-mono" opacity=".6">02</text><text class="workspace-mono" x="74" y="127" font-size="16" xml:space="preserve"><tspan fill="#183149">  name</tspan><tspan fill="#516980">: </tspan><tspan fill="#087e98">&quot;Tonim&quot;</tspan><tspan fill="#516980">,</tspan></text><text x="35" y="155" font-size="12" font-weight="400" fill="#516980" class="workspace-mono" opacity=".6">03</text><text class="workspace-mono" x="74" y="155" font-size="16" xml:space="preserve"><tspan fill="#183149">  handle</tspan><tspan fill="#516980">: </tspan><tspan fill="#087e98">&quot;ZpkDxGames&quot;</tspan><tspan fill="#516980">,</tspan></text><text x="35" y="183" font-size="12" font-weight="400" fill="#516980" class="workspace-mono" opacity=".6">04</text><text class="workspace-mono" x="74" y="183" font-size="16" xml:space="preserve"><tspan fill="#183149">  focus</tspan><tspan fill="#516980">: [</tspan><tspan fill="#168361">&quot;Java&quot;</tspan><tspan fill="#516980">, </tspan><tspan fill="#168361">&quot;Paper&quot;</tspan><tspan fill="#516980">, </tspan><tspan fill="#168361">&quot;Web&quot;</tspan><tspan fill="#516980">],</tspan></text><text x="35" y="211" font-size="12" font-weight="400" fill="#516980" class="workspace-mono" opacity=".6">05</text><text class="workspace-mono" x="74" y="211" font-size="16" xml:space="preserve"><tspan fill="#183149">  ecosystem</tspan><tspan fill="#516980">: </tspan><tspan fill="#087e98">&quot;Plexon&quot;</tspan></text><text x="35" y="239" font-size="12" font-weight="400" fill="#516980" class="workspace-mono" opacity=".6">06</text><text class="workspace-mono" x="74" y="239" font-size="16" xml:space="preserve"><tspan fill="#516980">};</tspan></text><path d="M34 261H534" stroke="#d6e3f2"/><text x="43" y="291" font-size="18" font-weight="600" fill="#087e98" class="workspace-mono">&gt;</text><text x="74" y="291" font-size="14" font-weight="400" fill="#516980" class="workspace-mono" clip-path="url(#workspace-typing)">building the Plexon ecosystem</text><rect class="workspace-caret" x="74" y="277" width="8" height="17" rx="1" fill="#087e98"/><rect x="570" y="80" width="402" height="236" rx="16" fill="#ffffff" stroke="#d6e3f2"/><text x="596" y="110" font-size="10" font-weight="650" fill="#516980" letter-spacing="1.4">PROJECT SPOTLIGHT</text><g id="workspace-scene-0" class="workspace-scene workspace-scene-0"><text x="946" y="110" font-size="11" font-weight="500" fill="#087e98" class="workspace-mono" text-anchor="end">01 / 03</text><text x="596" y="153" font-size="28" font-weight="700" fill="#087e98" letter-spacing="-.5">PlexonTools</text><text x="596" y="183" font-size="14" font-weight="400" fill="#516980" >Custom tools with shared progression,</text><text x="596" y="203" font-size="14" font-weight="400" fill="#516980" >world controls, and editable GUIs.</text><rect x="596" y="225" width="86" height="24" rx="6" fill="#f5f9ff" /><text x="606" y="241" font-size="9" font-weight="600" fill="#087e98" class="workspace-mono" letter-spacing=".3">PROGRESSION</text><rect x="689" y="225" width="80" height="24" rx="6" fill="#f5f9ff" /><text x="699" y="241" font-size="9" font-weight="600" fill="#087e98" class="workspace-mono" letter-spacing=".3">WORLD GUIs</text><rect x="776" y="225" width="56" height="24" rx="6" fill="#f5f9ff" /><text x="786" y="241" font-size="9" font-weight="600" fill="#087e98" class="workspace-mono" letter-spacing=".3">SQLITE</text><circle cx="916" cy="275" r="3" fill="#087e98"/><circle cx="929" cy="275" r="3" fill="#d6e3f2"/><circle cx="942" cy="275" r="3" fill="#d6e3f2"/></g><g id="workspace-scene-1" class="workspace-scene workspace-scene-1"><text x="946" y="110" font-size="11" font-weight="500" fill="#526eb5" class="workspace-mono" text-anchor="end">02 / 03</text><text x="596" y="153" font-size="28" font-weight="700" fill="#526eb5" letter-spacing="-.5">GhostBlocks</text><text x="596" y="183" font-size="14" font-weight="400" fill="#516980" >Collision-free block models for</text><text x="596" y="203" font-size="14" font-weight="400" fill="#516980" >creative builds and custom maps.</text><rect x="596" y="225" width="92" height="24" rx="6" fill="#f5f9ff" /><text x="606" y="241" font-size="9" font-weight="600" fill="#526eb5" class="workspace-mono" letter-spacing=".3">BLOCK MODELS</text><rect x="695" y="225" width="68" height="24" rx="6" fill="#f5f9ff" /><text x="705" y="241" font-size="9" font-weight="600" fill="#526eb5" class="workspace-mono" letter-spacing=".3">BUILDING</text><rect x="770" y="225" width="86" height="24" rx="6" fill="#f5f9ff" /><text x="780" y="241" font-size="9" font-weight="600" fill="#526eb5" class="workspace-mono" letter-spacing=".3">MINIMESSAGE</text><circle cx="916" cy="275" r="3" fill="#d6e3f2"/><circle cx="929" cy="275" r="3" fill="#526eb5"/><circle cx="942" cy="275" r="3" fill="#d6e3f2"/></g><g id="workspace-scene-2" class="workspace-scene workspace-scene-2"><text x="946" y="110" font-size="11" font-weight="500" fill="#168361" class="workspace-mono" text-anchor="end">03 / 03</text><text x="596" y="153" font-size="28" font-weight="700" fill="#168361" letter-spacing="-.5">PlexonChats</text><text x="596" y="183" font-size="14" font-weight="400" fill="#516980" >Configurable server chat, rich text,</text><text x="596" y="203" font-size="14" font-weight="400" fill="#516980" >and optional Discord integration.</text><rect x="596" y="225" width="44" height="24" rx="6" fill="#f5f9ff" /><text x="606" y="241" font-size="9" font-weight="600" fill="#168361" class="workspace-mono" letter-spacing=".3">CHAT</text><rect x="647" y="225" width="80" height="24" rx="6" fill="#f5f9ff" /><text x="657" y="241" font-size="9" font-weight="600" fill="#168361" class="workspace-mono" letter-spacing=".3">ADMIN GUIs</text><rect x="734" y="225" width="80" height="24" rx="6" fill="#f5f9ff" /><text x="744" y="241" font-size="9" font-weight="600" fill="#168361" class="workspace-mono" letter-spacing=".3">DISCORDSRV</text><circle cx="916" cy="275" r="3" fill="#d6e3f2"/><circle cx="929" cy="275" r="3" fill="#d6e3f2"/><circle cx="942" cy="275" r="3" fill="#168361"/></g><text x="596" y="279" font-size="9" font-weight="500" fill="#516980" class="workspace-cycle-label" letter-spacing="1">NEXT PROJECT</text><text x="596" y="279" font-size="9" font-weight="500" fill="#516980" class="workspace-static-label" letter-spacing="1">FEATURED PROJECT</text><rect x="596" y="296" width="344" height="2" rx="1" fill="#d6e3f2" /><rect x="596" y="296" width="344" height="2" rx="1" fill="#087e98" class="workspace-timer"/><rect class="workspace-edge" x="1.5" y="1.5" width="997" height="337" rx="20" fill="none" stroke="#087e98" stroke-width="1.4" opacity=".65"/>
+</svg>
