@@ -459,6 +459,14 @@
   },
   "releases": [
     {
+      "project": "PlexonTools",
+      "version": "3.6.1",
+      "tag": "v3.6.1",
+      "published_at": "2026-08-31T03:32:19Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v3.6.1"
+    },
+    {
       "project": "GhostBlocks",
       "version": "7.0.0",
       "tag": "v7.0.0",
