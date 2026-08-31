@@ -76,7 +76,7 @@
     {
       "name": "PlexonTools",
       "url": "https://github.com/ZpkDxGames/PlexonTools",
-      "commits": 23,
+      "commits": 24,
       "languages": {
         "Java": 309718
       }
@@ -449,7 +449,7 @@
     },
     {
       "date": "2026-08-31",
-      "commits": 3
+      "commits": 4
     }
   ],
   "languages": {
@@ -458,6 +458,62 @@
     "HTML": 8774
   },
   "releases": [
+    {
+      "project": "PlexonTools",
+      "version": "3.6.0",
+      "tag": "v3.6.0",
+      "published_at": "2026-08-31T11:26:10Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v3.6.0"
+    },
+    {
+      "project": "PlexonTools",
+      "version": "3.5.1",
+      "tag": "v3.5.1",
+      "published_at": "2026-08-31T11:26:06Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v3.5.1"
+    },
+    {
+      "project": "PlexonTools",
+      "version": "3.5.0",
+      "tag": "v3.5.0",
+      "published_at": "2026-08-31T11:26:04Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v3.5.0"
+    },
+    {
+      "project": "PlexonTools",
+      "version": "3.0.0",
+      "tag": "v3.0.0",
+      "published_at": "2026-08-31T11:26:02Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v3.0.0"
+    },
+    {
+      "project": "PlexonTools",
+      "version": "2.0.0",
+      "tag": "v2.0.0",
+      "published_at": "2026-08-31T11:25:59Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v2.0.0"
+    },
+    {
+      "project": "PlexonTools",
+      "version": "1.0.0-beta.2",
+      "tag": "v1.0.0-beta.2",
+      "published_at": "2026-08-31T11:25:57Z",
+      "prerelease": true,
+      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v1.0.0-beta.2"
+    },
+    {
+      "project": "PlexonTools",
+      "version": "1.0.0-beta.1",
+      "tag": "v1.0.0-beta.1",
+      "published_at": "2026-08-31T11:25:54Z",
+      "prerelease": true,
+      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v1.0.0-beta.1"
+    },
     {
       "project": "PlexonTools",
       "version": "3.6.1",
