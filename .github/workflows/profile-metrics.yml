@@ -1,0 +1,52 @@
+name: Refresh profile visuals
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/profile_metrics.py'
+      - 'tests/**'
+      - '.github/workflows/profile-metrics.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-metrics
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'ZpkDxGames/zpkdxgames'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    permissions:
+      contents: write
+    steps:
+      - name: Check out the profile repository
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          ref: main
+
+      - name: Check metric calculations and public-data boundaries
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Generate charts from public GitHub data
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/profile_metrics.py
+
+      - name: Publish changed snapshots
+        run: |
+          git add -- assets/profile/*.svg data/profile.json
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m 'chore: refresh public profile visuals'
+          # A normal push fails safely if main moved; never overwrite concurrent edits.
+          git push origin HEAD:main

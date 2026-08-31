@@ -1,0 +1,534 @@
+{
+  "schema": 1,
+  "owner": "ZpkDxGames",
+  "as_of": "2026-08-31",
+  "days": 90,
+  "start": "2026-06-03",
+  "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
+  "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
+  "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
+  "projects": [
+    {
+      "name": "DropsEditor",
+      "url": "https://github.com/ZpkDxGames/DropsEditor",
+      "commits": 0,
+      "languages": {
+        "Java": 73836
+      }
+    },
+    {
+      "name": "GhostBlocks",
+      "url": "https://github.com/ZpkDxGames/GhostBlocks",
+      "commits": 1,
+      "languages": {
+        "Java": 41318
+      }
+    },
+    {
+      "name": "Plexon-DailyRewards",
+      "url": "https://github.com/ZpkDxGames/Plexon-DailyRewards",
+      "commits": 4,
+      "languages": {
+        "Java": 123239
+      }
+    },
+    {
+      "name": "PlexonBackpacks",
+      "url": "https://github.com/ZpkDxGames/PlexonBackpacks",
+      "commits": 4,
+      "languages": {
+        "Java": 62382
+      }
+    },
+    {
+      "name": "PlexonChats",
+      "url": "https://github.com/ZpkDxGames/PlexonChats",
+      "commits": 2,
+      "languages": {
+        "Java": 93321
+      }
+    },
+    {
+      "name": "PlexonKeys",
+      "url": "https://github.com/ZpkDxGames/PlexonKeys",
+      "commits": 6,
+      "languages": {
+        "Java": 139533
+      }
+    },
+    {
+      "name": "PlexonPanel",
+      "url": "https://github.com/ZpkDxGames/PlexonPanel",
+      "commits": 8,
+      "languages": {
+        "Java": 139237,
+        "JavaScript": 13465
+      }
+    },
+    {
+      "name": "PlexonShops",
+      "url": "https://github.com/ZpkDxGames/PlexonShops",
+      "commits": 2,
+      "languages": {
+        "Java": 156397
+      }
+    },
+    {
+      "name": "PlexonTools",
+      "url": "https://github.com/ZpkDxGames/PlexonTools",
+      "commits": 23,
+      "languages": {
+        "Java": 309718
+      }
+    },
+    {
+      "name": "Triangle-Area",
+      "url": "https://github.com/ZpkDxGames/Triangle-Area",
+      "commits": 3,
+      "languages": {
+        "HTML": 8774
+      }
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-06-03",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-04",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-05",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-06",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-07",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-08",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-09",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-10",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-11",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-12",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-13",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-14",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-15",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-16",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-17",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-18",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-19",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-20",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-21",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-22",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-23",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-24",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-25",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-26",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-27",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-28",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-29",
+      "commits": 0
+    },
+    {
+      "date": "2026-06-30",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-01",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-02",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-03",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-04",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-05",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-06",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-07",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-08",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-09",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-10",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-11",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-12",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-13",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-14",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-15",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-16",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-17",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-18",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-19",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-20",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-21",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-22",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-23",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-24",
+      "commits": 4
+    },
+    {
+      "date": "2026-07-25",
+      "commits": 4
+    },
+    {
+      "date": "2026-07-26",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-27",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-28",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-29",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-30",
+      "commits": 0
+    },
+    {
+      "date": "2026-07-31",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-01",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-02",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-03",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-04",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-05",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-06",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-07",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-08",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-09",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-10",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-11",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-12",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-13",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-14",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-15",
+      "commits": 6
+    },
+    {
+      "date": "2026-08-16",
+      "commits": 2
+    },
+    {
+      "date": "2026-08-17",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-18",
+      "commits": 3
+    },
+    {
+      "date": "2026-08-19",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-20",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-21",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-22",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-23",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-24",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-25",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-26",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-27",
+      "commits": 0
+    },
+    {
+      "date": "2026-08-28",
+      "commits": 11
+    },
+    {
+      "date": "2026-08-29",
+      "commits": 8
+    },
+    {
+      "date": "2026-08-30",
+      "commits": 12
+    },
+    {
+      "date": "2026-08-31",
+      "commits": 3
+    }
+  ],
+  "languages": {
+    "Java": 1138981,
+    "JavaScript": 13465,
+    "HTML": 8774
+  },
+  "releases": [
+    {
+      "project": "GhostBlocks",
+      "version": "7.0.0",
+      "tag": "v7.0.0",
+      "published_at": "2026-08-31T02:51:32Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/GhostBlocks/releases/tag/v7.0.0"
+    },
+    {
+      "project": "PlexonKeys",
+      "version": "1.1.0",
+      "tag": "v1.1.0",
+      "published_at": "2026-08-30T21:54:30Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonKeys/releases/tag/v1.1.0"
+    },
+    {
+      "project": "PlexonKeys",
+      "version": "1.0.0",
+      "tag": "v1.0.0",
+      "published_at": "2026-08-30T21:54:13Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonKeys/releases/tag/v1.0.0"
+    },
+    {
+      "project": "PlexonChats",
+      "version": "3.0",
+      "tag": "v3.0",
+      "published_at": "2026-08-30T18:04:38Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.0"
+    },
+    {
+      "project": "PlexonShops",
+      "version": "1.0.0",
+      "tag": "Beta-1.0",
+      "published_at": "2026-08-28T05:30:12Z",
+      "prerelease": true,
+      "url": "https://github.com/ZpkDxGames/PlexonShops/releases/tag/Beta-1.0"
+    },
+    {
+      "project": "PlexonPanel",
+      "version": "0.1.0",
+      "tag": "v0.1.0",
+      "published_at": "2026-08-15T14:21:56Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v0.1.0"
+    },
+    {
+      "project": "Plexon-DailyRewards",
+      "version": "1.2.0",
+      "tag": "Enhancements",
+      "published_at": "2026-07-25T03:32:57Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/Plexon-DailyRewards/releases/tag/Enhancements"
+    },
+    {
+      "project": "Plexon-DailyRewards",
+      "version": "1.1.0",
+      "tag": "Release",
+      "published_at": "2026-07-25T02:54:56Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/Plexon-DailyRewards/releases/tag/Release"
+    },
+    {
+      "project": "PlexonBackpacks",
+      "version": "1.1.0",
+      "tag": "Release",
+      "published_at": "2026-07-25T02:30:27Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonBackpacks/releases/tag/Release"
+    }
+  ]
+}
