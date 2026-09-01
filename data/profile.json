@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-08-31",
+  "as_of": "2026-09-01",
   "days": 90,
-  "start": "2026-06-03",
+  "start": "2026-06-04",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -66,6 +66,14 @@
       }
     },
     {
+      "name": "PlexonRanks",
+      "url": "https://github.com/ZpkDxGames/PlexonRanks",
+      "commits": 5,
+      "languages": {
+        "Java": 232769
+      }
+    },
+    {
       "name": "PlexonShops",
       "url": "https://github.com/ZpkDxGames/PlexonShops",
       "commits": 2,
@@ -82,6 +90,14 @@
       }
     },
     {
+      "name": "Rankup-1.2Fixer",
+      "url": "https://github.com/ZpkDxGames/Rankup-1.2Fixer",
+      "commits": 27,
+      "languages": {
+        "Java": 37344
+      }
+    },
+    {
       "name": "Triangle-Area",
       "url": "https://github.com/ZpkDxGames/Triangle-Area",
       "commits": 3,
@@ -91,10 +107,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-06-03",
-      "commits": 0
-    },
     {
       "date": "2026-06-04",
       "commits": 0
@@ -449,15 +461,59 @@
     },
     {
       "date": "2026-08-31",
-      "commits": 4
+      "commits": 33
+    },
+    {
+      "date": "2026-09-01",
+      "commits": 3
     }
   ],
   "languages": {
-    "Java": 1138981,
+    "Java": 1409094,
     "JavaScript": 13465,
     "HTML": 8774
   },
   "releases": [
+    {
+      "project": "PlexonRanks",
+      "version": "2.0.2",
+      "tag": "v2.0.2",
+      "published_at": "2026-09-01T02:28:36Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v2.0.2"
+    },
+    {
+      "project": "PlexonRanks",
+      "version": "2.0.1",
+      "tag": "v2.0.1",
+      "published_at": "2026-09-01T01:43:17Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v2.0.1"
+    },
+    {
+      "project": "PlexonRanks",
+      "version": "2.0.0",
+      "tag": "v2.0.0",
+      "published_at": "2026-09-01T01:00:51Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v2.0.0"
+    },
+    {
+      "project": "PlexonRanks",
+      "version": "1.0.0",
+      "tag": "v1.0.0",
+      "published_at": "2026-08-31T23:03:01Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v1.0.0"
+    },
+    {
+      "project": "Rankup-1.2Fixer",
+      "version": "1.2-Fixer",
+      "tag": "v1.2-Fixer",
+      "published_at": "2026-08-31T21:03:10Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/Rankup-1.2Fixer/releases/tag/v1.2-Fixer"
+    },
     {
       "project": "PlexonTools",
       "version": "3.6.0",
