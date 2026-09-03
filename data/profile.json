@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-09-02",
+  "as_of": "2026-09-03",
   "days": 90,
-  "start": "2026-06-05",
+  "start": "2026-06-06",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -76,9 +76,9 @@
     {
       "name": "PlexonQuests",
       "url": "https://github.com/ZpkDxGames/PlexonQuests",
-      "commits": 15,
+      "commits": 20,
       "languages": {
-        "Java": 475471
+        "Java": 492626
       }
     },
     {
@@ -95,6 +95,14 @@
       "commits": 7,
       "languages": {
         "Java": 178656
+      }
+    },
+    {
+      "name": "PlexonSpawners",
+      "url": "https://github.com/ZpkDxGames/PlexonSpawners",
+      "commits": 37,
+      "languages": {
+        "Java": 63271
       }
     },
     {
@@ -123,10 +131,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-06-05",
-      "commits": 0
-    },
     {
       "date": "2026-06-06",
       "commits": 0
@@ -481,15 +485,43 @@
     },
     {
       "date": "2026-09-02",
-      "commits": 15
+      "commits": 20
+    },
+    {
+      "date": "2026-09-03",
+      "commits": 37
     }
   ],
   "languages": {
-    "Java": 2384588,
+    "Java": 2465014,
     "JavaScript": 13465,
     "HTML": 8774
   },
   "releases": [
+    {
+      "project": "PlexonSpawners",
+      "version": "2.0.0",
+      "tag": "v2.0.0",
+      "published_at": "2026-09-03T04:58:41Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v2.0.0"
+    },
+    {
+      "project": "PlexonSpawners",
+      "version": "1.0.0",
+      "tag": "v1.0.0",
+      "published_at": "2026-09-03T04:07:26Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v1.0.0"
+    },
+    {
+      "project": "PlexonQuests",
+      "version": "2.0.0",
+      "tag": "v2.0.0",
+      "published_at": "2026-09-02T15:45:23Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v2.0.0"
+    },
     {
       "project": "PlexonCrates",
       "version": "2.0.0",
