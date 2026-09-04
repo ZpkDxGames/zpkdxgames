@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-09-03",
+  "as_of": "2026-09-04",
   "days": 90,
-  "start": "2026-06-06",
+  "start": "2026-06-07",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -57,6 +57,12 @@
       }
     },
     {
+      "name": "PlexonGriefPreventionAddon",
+      "url": "https://github.com/ZpkDxGames/PlexonGriefPreventionAddon",
+      "commits": 9,
+      "languages": {}
+    },
+    {
       "name": "PlexonKeys",
       "url": "https://github.com/ZpkDxGames/PlexonKeys",
       "commits": 6,
@@ -100,9 +106,9 @@
     {
       "name": "PlexonSpawners",
       "url": "https://github.com/ZpkDxGames/PlexonSpawners",
-      "commits": 37,
+      "commits": 68,
       "languages": {
-        "Java": 63271
+        "Java": 76657
       }
     },
     {
@@ -131,10 +137,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-06-06",
-      "commits": 0
-    },
     {
       "date": "2026-06-07",
       "commits": 0
@@ -489,15 +491,51 @@
     },
     {
       "date": "2026-09-03",
-      "commits": 37
+      "commits": 77
+    },
+    {
+      "date": "2026-09-04",
+      "commits": 0
     }
   ],
   "languages": {
-    "Java": 2465014,
+    "Java": 2478400,
     "JavaScript": 13465,
     "HTML": 8774
   },
   "releases": [
+    {
+      "project": "PlexonGriefPreventionAddon",
+      "version": "1.0.0",
+      "tag": "v1.0.0",
+      "published_at": "2026-09-03T21:14:36Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonGriefPreventionAddon/releases/tag/v1.0.0"
+    },
+    {
+      "project": "PlexonSpawners",
+      "version": "2.1.0",
+      "tag": "v2.1.0",
+      "published_at": "2026-09-03T16:57:17Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v2.1.0"
+    },
+    {
+      "project": "PlexonSpawners",
+      "version": "2.0.2",
+      "tag": "v2.0.2",
+      "published_at": "2026-09-03T16:22:42Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v2.0.2"
+    },
+    {
+      "project": "PlexonSpawners",
+      "version": "2.0.1",
+      "tag": "v2.0.1",
+      "published_at": "2026-09-03T15:42:07Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v2.0.1"
+    },
     {
       "project": "PlexonSpawners",
       "version": "2.0.0",
