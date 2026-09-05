@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-09-04",
+  "as_of": "2026-09-05",
   "days": 90,
-  "start": "2026-06-07",
+  "start": "2026-06-08",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -51,7 +51,7 @@
     {
       "name": "PlexonCrates",
       "url": "https://github.com/ZpkDxGames/PlexonCrates",
-      "commits": 11,
+      "commits": 60,
       "languages": {
         "Java": 477764
       }
@@ -82,17 +82,17 @@
     {
       "name": "PlexonQuests",
       "url": "https://github.com/ZpkDxGames/PlexonQuests",
-      "commits": 20,
+      "commits": 25,
       "languages": {
-        "Java": 492626
+        "Java": 543488
       }
     },
     {
       "name": "PlexonRanks",
       "url": "https://github.com/ZpkDxGames/PlexonRanks",
-      "commits": 5,
+      "commits": 7,
       "languages": {
-        "Java": 232769
+        "Java": 233200
       }
     },
     {
@@ -137,10 +137,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-06-07",
-      "commits": 0
-    },
     {
       "date": "2026-06-08",
       "commits": 0
@@ -495,15 +491,35 @@
     },
     {
       "date": "2026-09-04",
-      "commits": 0
+      "commits": 7
+    },
+    {
+      "date": "2026-09-05",
+      "commits": 49
     }
   ],
   "languages": {
-    "Java": 2478400,
+    "Java": 2529693,
     "JavaScript": 13465,
     "HTML": 8774
   },
   "releases": [
+    {
+      "project": "PlexonRanks",
+      "version": "2.0.3",
+      "tag": "v2.0.3",
+      "published_at": "2026-09-05T05:27:35Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v2.0.3"
+    },
+    {
+      "project": "PlexonQuests",
+      "version": "2.0.1",
+      "tag": "v2.0.1",
+      "published_at": "2026-09-05T01:41:37Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v2.0.1"
+    },
     {
       "project": "PlexonGriefPreventionAddon",
       "version": "1.0.0",
