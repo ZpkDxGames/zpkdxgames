@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-09-05",
+  "as_of": "2026-09-06",
   "days": 90,
-  "start": "2026-06-08",
+  "start": "2026-06-09",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -51,7 +51,7 @@
     {
       "name": "PlexonCrates",
       "url": "https://github.com/ZpkDxGames/PlexonCrates",
-      "commits": 60,
+      "commits": 81,
       "languages": {
         "Java": 477764
       }
@@ -73,10 +73,11 @@
     {
       "name": "PlexonPanel",
       "url": "https://github.com/ZpkDxGames/PlexonPanel",
-      "commits": 8,
+      "commits": 14,
       "languages": {
-        "Java": 139237,
-        "JavaScript": 13465
+        "Java": 323254,
+        "Python": 1681,
+        "JavaScript": 126
       }
     },
     {
@@ -137,10 +138,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-06-08",
-      "commits": 0
-    },
     {
       "date": "2026-06-09",
       "commits": 0
@@ -495,15 +492,28 @@
     },
     {
       "date": "2026-09-05",
-      "commits": 49
+      "commits": 65
+    },
+    {
+      "date": "2026-09-06",
+      "commits": 11
     }
   ],
   "languages": {
-    "Java": 2529693,
-    "JavaScript": 13465,
-    "HTML": 8774
+    "Java": 2713710,
+    "HTML": 8774,
+    "Python": 1681,
+    "JavaScript": 126
   },
   "releases": [
+    {
+      "project": "PlexonPanel",
+      "version": "2.0.0-rc.1",
+      "tag": "v2.0.0-rc.1",
+      "published_at": "2026-09-06T00:21:17Z",
+      "prerelease": true,
+      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v2.0.0-rc.1"
+    },
     {
       "project": "PlexonRanks",
       "version": "2.0.3",
