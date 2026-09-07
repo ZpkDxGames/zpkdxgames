@@ -73,7 +73,7 @@
     {
       "name": "PlexonKeys",
       "url": "https://github.com/ZpkDxGames/PlexonKeys",
-      "commits": 6,
+      "commits": 34,
       "languages": {
         "Java": 139533
       }
@@ -81,10 +81,10 @@
     {
       "name": "PlexonPanel",
       "url": "https://github.com/ZpkDxGames/PlexonPanel",
-      "commits": 22,
+      "commits": 62,
       "languages": {
-        "Java": 419248,
-        "Python": 4108,
+        "Java": 429284,
+        "Python": 4158,
         "JavaScript": 126
       }
     },
@@ -504,13 +504,13 @@
     },
     {
       "date": "2026-09-07",
-      "commits": 110
+      "commits": 178
     }
   ],
   "languages": {
-    "Java": 2997405,
+    "Java": 3007441,
     "HTML": 8774,
-    "Python": 4108,
+    "Python": 4158,
     "JavaScript": 126
   },
   "releases": [
