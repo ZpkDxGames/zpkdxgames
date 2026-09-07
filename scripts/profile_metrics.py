@@ -189,108 +189,146 @@ def svg(theme, width, height, title, description, body, draw_length=1000):
     # Concrete paint values also work in SVG thumbnailers without CSS-variable support.
     for key, value in THEMES[theme].items():
         document = document.replace(f"var(--{key})", value)
-    return document
+    return "\n".join(line.rstrip() for line in document.splitlines()) + "\n"
 
 
-def workspace_header(theme):
-    """An animated profile illustration, not a live terminal or interactive UI."""
-    typed_line = "building the Plexon ecosystem"
-    type_width = len(typed_line) * 8.4
-    body = '''
-    <defs>
-      <clipPath id="workspace-typing">
-        <rect class="workspace-type-mask" x="74" y="274" width="__TYPE_WIDTH__" height="24"/>
-      </clipPath>
-    </defs>
+def cube(x, y, size=70):
+    """A decorative isometric voxel, not a screenshot or a telemetry value."""
+    s = size
+    return (f'<g transform="translate({x} {y})"><g class="showcase-float">'
+            f'<path d="M0 {-s}L{s} {-s/2}V{s/2}L0 {s}L{-s} {s/2}V{-s/2}Z" '
+            'fill="var(--panel)" stroke="var(--accent)" stroke-width="2"/>'
+            f'<path d="M0 {-s}L{s} {-s/2}L0 0L{-s} {-s/2}Z" fill="url(#line)" opacity=".24"/>'
+            f'<path d="M0 0L{s} {-s/2}V{s/2}L0 {s}Z" fill="var(--blue)" opacity=".13"/>'
+            f'<path d="M{-s} {-s/2}L0 0L{s} {-s/2}M0 0V{s}" '
+            'fill="none" stroke="var(--accent)" stroke-width="2"/>'
+            f'<path d="M{-s*.57} {-s*.71}L{s*.44} {-s*.2}V{s*.7}" '
+            'fill="none" stroke="var(--green)" stroke-width="2.5"/>'
+            '</g></g>')
+
+
+def showcase_style():
+    return '''
     <style>
-      .workspace-mono {font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
-      .workspace-edge {stroke-dasharray:110 2523.7;animation:workspace-border 14s linear infinite}
-      .workspace-scene {opacity:0;animation:workspace-scene 18s linear infinite}
-      .workspace-scene-0 {opacity:1}
-      .workspace-scene-1 {animation-delay:-12s}
-      .workspace-scene-2 {animation-delay:-6s}
-      .workspace-type-mask {width:__TYPE_WIDTH__px;animation:workspace-type 6s steps(__CHARS__,end) infinite}
-      .workspace-caret {transform:translateX(__TYPE_WIDTH__px);animation:workspace-caret 6s steps(__CHARS__,end) infinite,workspace-blink .8s step-end infinite}
-      .workspace-timer {width:344px;animation:workspace-timer 6s linear infinite}
-      .workspace-static-label {display:none}
-      @keyframes workspace-border {to{stroke-dashoffset:-2633.7}}
-      @keyframes workspace-scene {0%,28%{opacity:1}33.333%,94.667%{opacity:0}100%{opacity:1}}
-      @keyframes workspace-type {0%,8%{width:0}40%,82%{width:__TYPE_WIDTH__px}94%,100%{width:0}}
-      @keyframes workspace-caret {0%,8%{transform:translateX(0)}40%,82%{transform:translateX(__TYPE_WIDTH__px)}94%,100%{transform:translateX(0)}}
-      @keyframes workspace-blink {50%{opacity:0}}
-      @keyframes workspace-timer {from{width:0}to{width:344px}}
+      .showcase-float {animation:showcase-float 7s ease-in-out infinite}
+      .showcase-orbit {animation:showcase-orbit 36s linear infinite}
+      .showcase-trace {stroke-dasharray:36 90;animation:showcase-trace 12s linear infinite}
+      .showcase-glow {opacity:.8;animation:showcase-glow 6s ease-in-out infinite}
+      @keyframes showcase-float {50%{transform:translateY(-7px)}}
+      @keyframes showcase-orbit {to{transform:rotate(360deg)}}
+      @keyframes showcase-trace {to{stroke-dashoffset:-252}}
+      @keyframes showcase-glow {50%{opacity:.35}}
       @media (prefers-reduced-motion:reduce) {
-        .workspace-edge,.workspace-scene,.workspace-type-mask,.workspace-caret,.workspace-timer {animation:none!important}
-        .workspace-scene {opacity:0!important}
-        .workspace-scene-0 {opacity:1!important}
-        .workspace-caret {opacity:1}
-        .workspace-cycle-label {display:none}
-        .workspace-static-label {display:inline}
+        .showcase-float,.showcase-orbit,.showcase-trace,.showcase-glow {animation:none!important}
       }
     </style>
-    '''.replace("__TYPE_WIDTH__", f"{type_width:.1f}").replace("__CHARS__", str(len(typed_line)))
-    body += '<path d="M23 1H977Q999 1 999 23V57H1V23Q1 1 23 1Z" fill="var(--panel)"/>'
-    body += '<path d="M1 57H999" stroke="var(--border)"/>'
-    for x, color in [(27, "border"), (41, "muted"), (55, "accent")]:
-        body += f'<circle cx="{x}" cy="29" r="3.5" fill="var(--{color})"/>'
-    body += text(77, 34, "tonim / developer.workspace", 13, "muted", 500, 'class="workspace-mono"')
-    body += rect(758, 17, 216, 25, "bg", 12)
-    body += '<circle cx="773" cy="29.5" r="3" fill="var(--green)"/>'
-    body += text(786, 33.5, "OPEN TO COLLABORATE", 10, "green", 650, 'letter-spacing=".8"')
+    '''
 
-    body += rect(20, 109, 525, 29, radius=6, extra='opacity=".7"')
-    code_lines = [
-        [("const ", "blue"), ("profile", "text"), (" = {", "muted")],
-        [("  name", "text"), (": ", "muted"), ('"Tonim"', "accent"), (",", "muted")],
-        [("  handle", "text"), (": ", "muted"), ('"ZpkDxGames"', "accent"), (",", "muted")],
-        [("  focus", "text"), (": [", "muted"), ('"Java"', "green"), (", ", "muted"),
-         ('"Paper"', "green"), (", ", "muted"), ('"Web"', "green"), ("],", "muted")],
-        [("  ecosystem", "text"), (": ", "muted"), ('"Plexon"', "accent")],
-        [("};", "muted")],
-    ]
-    for i, segments in enumerate(code_lines):
-        y = 99 + i * 28
-        body += text(35, y, f"{i + 1:02d}", 12, "muted", extra='class="workspace-mono" opacity=".6"')
-        body += f'<text class="workspace-mono" x="74" y="{y}" font-size="16" xml:space="preserve">'
-        body += "".join(f'<tspan fill="var(--{color})">{escape(value)}</tspan>' for value, color in segments)
-        body += '</text>'
-    body += '<path d="M34 261H534" stroke="var(--border)"/>'
-    body += text(43, 291, ">", 18, "accent", 600, 'class="workspace-mono"')
-    body += text(74, 291, typed_line, 14, "muted", extra='class="workspace-mono" clip-path="url(#workspace-typing)"')
-    body += '<rect class="workspace-caret" x="74" y="277" width="8" height="17" rx="1" fill="var(--accent)"/>'
 
-    body += rect(570, 80, 402, 236, radius=16, extra='stroke="var(--border)"')
-    body += text(596, 110, "PROJECT SPOTLIGHT", 10, "muted", 650, 'letter-spacing="1.4"')
-    spotlights = [
-        ("PlexonTools", "accent", ["Custom tools with shared progression,", "world controls, and editable GUIs."],
-         ["PROGRESSION", "WORLD GUIs", "SQLITE"]),
-        ("GhostBlocks", "blue", ["Collision-free block models for", "creative builds and custom maps."],
-         ["BLOCK MODELS", "BUILDING", "MINIMESSAGE"]),
-        ("PlexonChats", "green", ["Configurable server chat, rich text,", "and optional Discord integration."],
-         ["CHAT", "ADMIN GUIs", "DISCORDSRV"]),
-    ]
-    for i, (name, color, description, labels) in enumerate(spotlights):
-        body += f'<g id="workspace-scene-{i}" class="workspace-scene workspace-scene-{i}">'
-        body += text(946, 110, f"0{i + 1} / 03", 11, color, 500, 'class="workspace-mono" text-anchor="end"')
-        body += text(596, 153, name, 28, color, 700, 'letter-spacing="-.5"')
-        for line, value in enumerate(description):
-            body += text(596, 183 + line * 20, value, 14, "muted")
-        x = 596
-        for label in labels:
-            width = len(label) * 6 + 20
-            body += rect(x, 225, width, 24, "bg", 6)
-            body += text(x + 10, 241, label, 9, color, 600, 'class="workspace-mono" letter-spacing=".3"')
-            x += width + 7
-        for dot in range(3):
-            body += f'<circle cx="{916 + dot * 13}" cy="275" r="3" fill="var(--{color if dot == i else "border"})"/>'
+def workspace_header(theme, mobile=False):
+    """Theme-aware portfolio cover; the mobile composition keeps text readable."""
+    width, height = (600, 644) if mobile else (1000, 460)
+    x = 40 if mobile else 50
+    body = showcase_style()
+    body += '''
+    <defs>
+      <radialGradient id="halo">
+        <stop stop-color="var(--accent)" stop-opacity=".2"/>
+        <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
+      </radialGradient>
+      <clipPath id="cover-clip"><rect width="100%" height="100%" rx="22"/></clipPath>
+    </defs>
+    '''
+    cx, cy = (300, 453) if mobile else (798, 229)
+    body += f'<g clip-path="url(#cover-clip)"><circle cx="{cx}" cy="{cy}" r="270" fill="url(#halo)"/>'
+    body += f'<rect x="{0 if mobile else 615}" y="60" width="600" height="{height}" fill="url(#grid)" opacity=".55"/></g>'
+    body += text(x, 44, "ZPKDXGAMES", 15, "accent", 750, 'letter-spacing="3"')
+    if not mobile:
+        body += text(950, 44, "PUBLIC PROJECTS / PORTFOLIO", 11, "muted", 600,
+                     'text-anchor="end" letter-spacing="1.4"')
+    body += text(x - 3, 145, "TONIM", 86 if not mobile else 82, weight=800, extra='letter-spacing="-4"')
+    body += text(x, 211, "Code with purpose.", 43 if not mobile else 37, weight=700, extra='letter-spacing="-1.6"')
+    body += text(x, 264, "Worlds with character.", 43 if not mobile else 37, "accent", 700, 'letter-spacing="-1.6"')
+    body += text(x + 1, 311, "Minecraft systems & web experiences.", 19, "muted")
+
+    ring = 128 if mobile else 153
+    body += f'<circle cx="{cx}" cy="{cy}" r="{ring}" fill="none" stroke="var(--border)"/>'
+    body += f'<circle cx="{cx}" cy="{cy}" r="{ring-25}" fill="none" stroke="var(--border)" stroke-dasharray="2 10"/>'
+    body += f'<g transform="translate({cx} {cy})"><g class="showcase-orbit">'
+    body += f'<circle r="{ring}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="55 900"/>'
+    body += f'<circle cx="{ring}" r="5" fill="var(--green)"/>'
+    body += '</g></g>'
+    body += cube(cx, cy, 73 if mobile else 84)
+    for dx, dy, color in [(-120, -88, "green"), (122, 83, "blue"), (116, -100, "accent")]:
+        body += f'<rect x="{cx+dx}" y="{cy+dy}" width="12" height="12" rx="3" fill="var(--panel)" stroke="var(--{color})"/>'
+    if not mobile:
+        body += '<path d="M620 355H671L700 326" fill="none" stroke="var(--border)" stroke-width="2"/>'
+        body += '<path class="showcase-trace" d="M620 355H671L700 326" fill="none" stroke="var(--green)" stroke-width="2"/>'
+        body += text(798, 415, "THE PLEXON ECOSYSTEM", 11, "muted", 600,
+                     'text-anchor="middle" letter-spacing="1.8"')
+
+    labels = [("JAVA + PAPER", 155, "accent"), ("WEB + UI", 121, "blue"), ("PLEXON", 110, "green")]
+    bx, by = (90, 592) if mobile else (50, 365)
+    for label, bw, color in labels:
+        body += rect(bx, by, bw, 34, "panel", 9, 'stroke="var(--border)"')
+        body += text(bx + bw / 2, by + 22, label, 11, color, 650,
+                     'text-anchor="middle" letter-spacing="1"')
+        bx += bw + 10
+    if not mobile:
+        body += text(51, 434, "CONFIGURABLE SYSTEMS. EXPRESSIVE INTERFACES.", 10, "muted", 550,
+                     'letter-spacing="1.4"')
+    return svg(theme, width, height, "Tonim / ZpkDxGames — public project showcase",
+               "Code with purpose. Worlds with character. Minecraft systems and web experiences. "
+               "An animated isometric voxel represents the Plexon ecosystem. Decorative artwork; no live status is implied.",
+               body)
+
+
+def spotlight(theme, kind):
+    """Small editorial illustrations; README text supplies real project details."""
+    names = {"panel": ("CONTROL", "accent"), "tools": ("PROGRESSION", "green"),
+             "quests": ("DISCOVERY", "blue"), "crates": ("REWARDS", "amber")}
+    label, color = names[kind]
+    body = showcase_style()
+    body += '<rect x="16" y="16" width="428" height="148" rx="16" fill="url(#grid)" opacity=".5"/>'
+    body += text(24, 32, label, 10, color, 650, 'letter-spacing="2"')
+    body += '<path d="M24 151H109M351 151H436" stroke="var(--border)"/>'
+    body += f'<circle class="showcase-glow" cx="426" cy="28" r="3" fill="var(--{color})"/>'
+    if kind == "panel":
+        for y in (59, 92, 125):
+            body += rect(160, y - 13, 140, 26, "panel", 7, 'stroke="var(--border)"')
+            body += f'<circle cx="176" cy="{y}" r="3" fill="var(--accent)"/>'
+            body += f'<path d="M190 {y}h60M270 {y}h14" stroke="var(--muted)" stroke-width="2" opacity=".65"/>'
+        body += '<path d="M68 92H142M318 92H392M230 138V158" fill="none" stroke="var(--border)" stroke-width="2"/>'
+        body += '<path class="showcase-trace" d="M68 92H142M318 92H392" fill="none" stroke="var(--accent)" stroke-width="2"/>'
+        for cx in (58, 402):
+            body += f'<rect x="{cx-9}" y="83" width="18" height="18" rx="5" fill="var(--panel)" stroke="var(--accent)"/>'
+    elif kind == "tools":
+        body += '<circle cx="230" cy="95" r="62" fill="none" stroke="var(--border)" stroke-width="3" stroke-dasharray="4 9"/>'
+        body += '<g transform="translate(230 95)"><g class="showcase-orbit"><path d="M0-62A62 62 0 0 1 62 0" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round"/></g></g>'
+        body += '<g class="showcase-float"><path d="M206 126L242 84" stroke="var(--green)" stroke-width="11" stroke-linecap="square"/>'
+        body += '<path d="M211 67L242 62L267 85L265 110L251 84L228 77L213 82Z" fill="var(--panel)" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/></g>'
+        body += '<path d="M106 90h28m-14-14v28M326 105h18m-9-9v18" stroke="var(--green)" opacity=".6"/>'
+    elif kind == "quests":
+        body += '<g class="showcase-float">'
+        body += rect(170, 43, 121, 103, "panel", 10, 'stroke="var(--blue)" stroke-width="2"')
+        body += '<path d="M186 44V145" stroke="var(--border)" stroke-width="2"/>'
+        for y in (66, 93, 120):
+            body += f'<rect x="200" y="{y-6}" width="11" height="11" rx="3" fill="none" stroke="var(--blue)"/>'
+            body += f'<path d="M222 {y}H273" stroke="var(--muted)" stroke-width="3" opacity=".7"/>'
+        body += '<path class="showcase-glow" d="M201 64l4 4 9-10" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+        body += '</g><path d="M112 84h20m-10-10v20M326 118h18m-9-9v18" stroke="var(--blue)" opacity=".7"/>'
+    else:
+        body += '<g class="showcase-float">'
+        body += '<path d="M230 44L288 73V128L230 158L172 128V73Z" fill="var(--panel)" stroke="var(--amber)" stroke-width="2"/>'
+        body += '<path d="M172 73L230 103L288 73M230 103V158" fill="none" stroke="var(--amber)" stroke-width="2"/>'
+        body += '<path d="M201 59L259 89V143M201 88L258 60" fill="none" stroke="var(--amber)" stroke-width="7" opacity=".6"/>'
+        body += '<path d="M230 44L288 73L230 103L172 73Z" fill="var(--amber)" opacity=".13"/>'
+        body += '</g><g class="showcase-glow">'
+        for cx, cy, size in [(126, 66, 9), (327, 92, 11), (302, 48, 5), (140, 122, 5)]:
+            body += f'<path d="M{cx-size} {cy}H{cx+size}M{cx} {cy-size}V{cy+size}" stroke="var(--amber)" stroke-width="2" stroke-linecap="round"/>'
         body += '</g>'
-    body += text(596, 279, "NEXT PROJECT", 9, "muted", 500, 'class="workspace-cycle-label" letter-spacing="1"')
-    body += text(596, 279, "FEATURED PROJECT", 9, "muted", 500, 'class="workspace-static-label" letter-spacing="1"')
-    body += rect(596, 296, 344, 2, "border", 1)
-    body += rect(596, 296, 344, 2, "accent", 1, 'class="workspace-timer"')
-    body += '<rect class="workspace-edge" x="1.5" y="1.5" width="997" height="337" rx="20" fill="none" stroke="var(--accent)" stroke-width="1.4" opacity=".65"/>'
-    return svg(theme, 1000, 340, "Tonim's developer workspace",
-               "Animated profile illustration for Tonim / ZpkDxGames: Java, Paper, and Web. Rotating project highlights feature PlexonTools, GhostBlocks, and PlexonChats. Not a live terminal. Reduced motion shows PlexonTools without animation.", body)
+    return svg(theme, 460, 180, f"Plexon {label.lower()} illustration",
+               "Decorative project artwork, not a product screenshot. Animation respects reduced-motion preferences.", body)
 
 
 def activity(data, theme):
@@ -325,7 +363,7 @@ def activity(data, theme):
         for index in sorted({0, len(values) // 3, len(values) * 2 // 3, len(values) - 1}):
             label = date.fromisoformat(data["daily"][index]["date"]).strftime("%d %b")
             body += text(points[index][0], 419, label, 12, "muted", extra='text-anchor="middle"')
-    body += text(32, 457, "Public originals only · all authors except bots · UTC · profile repository excluded", 12, "muted")
+    body += text(32, 457, "Public owned projects · all authors except bots · UTC · profile repository excluded", 12, "muted")
     draw_length = sum(math.hypot(b[0] - a[0], b[1] - a[1]) for a, b in zip(points, points[1:])) + 1
     return svg(theme, 1000, 480, "Public project activity over 90 days",
                f"{total} commits across {active} active projects; {len(data['releases'])} published releases. As of {data['as_of']}. This is project activity, not the personal contribution calendar.", body, draw_length)
@@ -413,6 +451,9 @@ def render(data, root=ROOT):
     outputs = {"data/profile.json": json.dumps(data, indent=2, ensure_ascii=False) + "\n"}
     for theme in THEMES:
         outputs[f"assets/profile/workspace-{theme}.svg"] = workspace_header(theme)
+        outputs[f"assets/profile/workspace-mobile-{theme}.svg"] = workspace_header(theme, mobile=True)
+        for kind in ("panel", "tools", "quests", "crates"):
+            outputs[f"assets/profile/spotlight-{kind}-{theme}.svg"] = spotlight(theme, kind)
         for name, renderer in [("activity", activity), ("ecosystem", ecosystem), ("releases", release_radar)]:
             outputs[f"assets/profile/{name}-{theme}.svg"] = renderer(data, theme)
     # Generate and parse everything before replacing any last-known-good file.

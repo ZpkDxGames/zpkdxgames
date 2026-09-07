@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="180" viewBox="0 0 460 180" role="img" aria-labelledby="title desc">
+  <title id="title">Plexon control illustration</title>
+  <desc id="desc">Decorative project artwork, not a product screenshot. Animation respects reduced-motion preferences.</desc>
+  <defs>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#40d6ee" stop-opacity=".32"/><stop offset="1" stop-color="#40d6ee" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#40d6ee"/><stop offset="1" stop-color="#66e2bb"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22354b" stroke-opacity=".35"/></pattern>
+  </defs>
+  <style>
+    svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .frame {fill:#0b111b;stroke:#22354b}
+    .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
+    .rise {animation:rise .8s ease-out both}
+    .fade {animation:fade .8s ease-out both}
+    .flow {stroke-dasharray:5 13;animation:flow 12s linear infinite}
+    .pulse {animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes draw {from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
+    @keyframes rise {from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fade {from{opacity:0}to{opacity:1}}
+    @keyframes flow {to{stroke-dashoffset:-108}}
+    @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
+    @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.flow,.pulse{animation:none!important}}
+  </style>
+  <rect class="frame" x=".5" y=".5" width="459" height="179" rx="22"/>
+
+    <style>
+      .showcase-float {animation:showcase-float 7s ease-in-out infinite}
+      .showcase-orbit {animation:showcase-orbit 36s linear infinite}
+      .showcase-trace {stroke-dasharray:36 90;animation:showcase-trace 12s linear infinite}
+      .showcase-glow {opacity:.8;animation:showcase-glow 6s ease-in-out infinite}
+      @keyframes showcase-float {50%{transform:translateY(-7px)}}
+      @keyframes showcase-orbit {to{transform:rotate(360deg)}}
+      @keyframes showcase-trace {to{stroke-dashoffset:-252}}
+      @keyframes showcase-glow {50%{opacity:.35}}
+      @media (prefers-reduced-motion:reduce) {
+        .showcase-float,.showcase-orbit,.showcase-trace,.showcase-glow {animation:none!important}
+      }
+    </style>
+    <rect x="16" y="16" width="428" height="148" rx="16" fill="url(#grid)" opacity=".5"/><text x="24" y="32" font-size="10" font-weight="650" fill="#40d6ee" letter-spacing="2">CONTROL</text><path d="M24 151H109M351 151H436" stroke="#22354b"/><circle class="showcase-glow" cx="426" cy="28" r="3" fill="#40d6ee"/><rect x="160" y="46" width="140" height="26" rx="7" fill="#111c2b" stroke="#22354b"/><circle cx="176" cy="59" r="3" fill="#40d6ee"/><path d="M190 59h60M270 59h14" stroke="#9fb2c9" stroke-width="2" opacity=".65"/><rect x="160" y="79" width="140" height="26" rx="7" fill="#111c2b" stroke="#22354b"/><circle cx="176" cy="92" r="3" fill="#40d6ee"/><path d="M190 92h60M270 92h14" stroke="#9fb2c9" stroke-width="2" opacity=".65"/><rect x="160" y="112" width="140" height="26" rx="7" fill="#111c2b" stroke="#22354b"/><circle cx="176" cy="125" r="3" fill="#40d6ee"/><path d="M190 125h60M270 125h14" stroke="#9fb2c9" stroke-width="2" opacity=".65"/><path d="M68 92H142M318 92H392M230 138V158" fill="none" stroke="#22354b" stroke-width="2"/><path class="showcase-trace" d="M68 92H142M318 92H392" fill="none" stroke="#40d6ee" stroke-width="2"/><rect x="49" y="83" width="18" height="18" rx="5" fill="#111c2b" stroke="#40d6ee"/><rect x="393" y="83" width="18" height="18" rx="5" fill="#111c2b" stroke="#40d6ee"/>
+</svg>

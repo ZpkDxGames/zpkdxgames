@@ -131,7 +131,7 @@ class ProfileMetricsTests(unittest.TestCase):
         data = metrics.collect("ZpkDxGames", date(2026, 8, 31), api)
         with tempfile.TemporaryDirectory() as temporary:
             outputs = metrics.render(data, Path(temporary))
-        self.assertEqual(len(outputs), 9)
+        self.assertEqual(len(outputs), 19)
         self.assertIn("No published releases", outputs["assets/profile/releases-dark.svg"])
 
     def test_svg_is_valid_accessible_and_deterministic(self):

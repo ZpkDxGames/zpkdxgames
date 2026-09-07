@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="180" viewBox="0 0 460 180" role="img" aria-labelledby="title desc">
+  <title id="title">Plexon rewards illustration</title>
+  <desc id="desc">Decorative project artwork, not a product screenshot. Animation respects reduced-motion preferences.</desc>
+  <defs>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#087e98" stop-opacity=".32"/><stop offset="1" stop-color="#087e98" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#087e98"/><stop offset="1" stop-color="#168361"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6e3f2" stroke-opacity=".35"/></pattern>
+  </defs>
+  <style>
+    svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .frame {fill:#f5f9ff;stroke:#d6e3f2}
+    .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
+    .rise {animation:rise .8s ease-out both}
+    .fade {animation:fade .8s ease-out both}
+    .flow {stroke-dasharray:5 13;animation:flow 12s linear infinite}
+    .pulse {animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes draw {from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
+    @keyframes rise {from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fade {from{opacity:0}to{opacity:1}}
+    @keyframes flow {to{stroke-dashoffset:-108}}
+    @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
+    @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.flow,.pulse{animation:none!important}}
+  </style>
+  <rect class="frame" x=".5" y=".5" width="459" height="179" rx="22"/>
+
+    <style>
+      .showcase-float {animation:showcase-float 7s ease-in-out infinite}
+      .showcase-orbit {animation:showcase-orbit 36s linear infinite}
+      .showcase-trace {stroke-dasharray:36 90;animation:showcase-trace 12s linear infinite}
+      .showcase-glow {opacity:.8;animation:showcase-glow 6s ease-in-out infinite}
+      @keyframes showcase-float {50%{transform:translateY(-7px)}}
+      @keyframes showcase-orbit {to{transform:rotate(360deg)}}
+      @keyframes showcase-trace {to{stroke-dashoffset:-252}}
+      @keyframes showcase-glow {50%{opacity:.35}}
+      @media (prefers-reduced-motion:reduce) {
+        .showcase-float,.showcase-orbit,.showcase-trace,.showcase-glow {animation:none!important}
+      }
+    </style>
+    <rect x="16" y="16" width="428" height="148" rx="16" fill="url(#grid)" opacity=".5"/><text x="24" y="32" font-size="10" font-weight="650" fill="#a16a14" letter-spacing="2">REWARDS</text><path d="M24 151H109M351 151H436" stroke="#d6e3f2"/><circle class="showcase-glow" cx="426" cy="28" r="3" fill="#a16a14"/><g class="showcase-float"><path d="M230 44L288 73V128L230 158L172 128V73Z" fill="#ffffff" stroke="#a16a14" stroke-width="2"/><path d="M172 73L230 103L288 73M230 103V158" fill="none" stroke="#a16a14" stroke-width="2"/><path d="M201 59L259 89V143M201 88L258 60" fill="none" stroke="#a16a14" stroke-width="7" opacity=".6"/><path d="M230 44L288 73L230 103L172 73Z" fill="#a16a14" opacity=".13"/></g><g class="showcase-glow"><path d="M117 66H135M126 57V75" stroke="#a16a14" stroke-width="2" stroke-linecap="round"/><path d="M316 92H338M327 81V103" stroke="#a16a14" stroke-width="2" stroke-linecap="round"/><path d="M297 48H307M302 43V53" stroke="#a16a14" stroke-width="2" stroke-linecap="round"/><path d="M135 122H145M140 117V127" stroke="#a16a14" stroke-width="2" stroke-linecap="round"/></g>
+</svg>

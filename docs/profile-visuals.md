@@ -1,6 +1,10 @@
 # Profile visuals
 
-The profile uses small, repository-hosted SVGs instead of a shared statistics-card service. The header is a developer-workspace illustration with a moving outline, a typing cursor, and three Plexon project spotlights that rotate every six seconds. The profile code and project descriptions are illustrative editorial content, not a live terminal or current build status. Reduced motion displays the complete text and first spotlight without animation. The charts animate when loaded. Every graphic has a light and dark variant and a descriptive title. No JavaScript, remote fonts, or external images are embedded in the SVGs.
+The profile uses repository-hosted SVG artwork and charts. Its cover pairs large typography with a floating isometric voxel, a slowly orbiting accent, and a moving signal trace. A separate mobile composition keeps the headline readable below 600px. Four project illustrations represent PlexonPanel, PlexonTools, PlexonQuests, and PlexonCrates with server nodes, a custom pickaxe, a quest journal, and a reward crate.
+
+All artwork is illustrative, not a product screenshot or live status indicator. Essential text is always visible. Every SVG has a light and dark variant, a descriptive title, and a reduced-motion fallback. No JavaScript, remote fonts, or external images are embedded in the SVGs. The README supplies ordinary text descriptions and links beside the illustrations; the artwork is never the only source of project information.
+
+The cover uses GitHub's supported [`picture` element](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-images) for theme selection and a compact mobile source. The four project cards use native HTML tables and remain two columns on GitHub; their text wraps at narrow widths. Additional charts and background information use native expandable sections. External Shields.io badges are supplemental navigation; normal text links remain available.
 
 ## Data boundaries
 
@@ -13,7 +17,9 @@ The profile uses small, repository-hosted SVGs instead of a shared statistics-ca
 - A numeric tag supplies the displayed version. For tags such as `Release`, the version is read from the published JAR filename when possible. A source branch without a GitHub release is never counted as one. `PUBLISHED` means a GitHub release exists; it does not certify production readiness.
 - `data/profile.json` contains only public project names, links, aggregate counts, language bytes, and published release metadata. It stores no tokens, commit messages, author emails, or private repository details.
 
-The accompanying README project descriptions are an editorial snapshot from August 2026. Their links intentionally point to the documented release or source branch, which may differ from the default branch. Daily generation updates **only** the charts and their data, not the project descriptions.
+The accompanying README project descriptions were checked against public repositories on **7 September 2026**. The showcase covers all 18 public repositories besides the profile, with upstream-based work explicitly credited. A repository being public is not a claim that its author owns every component or that it has a stable installable release. PlexonPanel 3.0.1 is identified as a review candidate. PlexonTools links to its documented 3.6.1 release branch, and GhostBlocks links to its 7.0 tag, because their default branches contain older documentation.
+
+Fork exclusion in the charts uses GitHub's repository metadata. Upstream-derived projects that GitHub does not mark as forks can therefore remain in the aggregate; the README identifies known upstream-based work separately. Daily generation refreshes charts and regenerates artwork, but does **not** rewrite editorial project descriptions or links.
 
 ## Refresh behavior
 
