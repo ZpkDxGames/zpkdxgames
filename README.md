@@ -17,6 +17,7 @@
   <a href="#selected-work">Selected work</a> &nbsp; / &nbsp;
   <a href="#the-plexon-ecosystem">The ecosystem</a> &nbsp; / &nbsp;
   <a href="#public-project-pulse">Project pulse</a> &nbsp; / &nbsp;
+  <a href="#developer-toolkit">Toolkit</a> &nbsp; / &nbsp;
   <a href="#lets-build-something">Connect</a>
 </p>
 
@@ -118,36 +119,114 @@ Each plugin has a focused role. **[PlexonCore](https://github.com/ZpkDxGames/Ple
 
 ## Public project pulse
 
-A dated snapshot of activity across my public projects, refreshed by GitHub Actions.
+Animated views of my public repositories, refreshed daily. The date on each snapshot shows when the data was collected.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/profile/activity-dark.svg">
   <img width="100%" src="assets/profile/activity-light.svg" alt="Public project activity over 90 days, including project counts, commits, published releases, and the snapshot date.">
 </picture>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/ecosystem-dark.svg">
+  <img width="100%" src="assets/profile/ecosystem-light.svg" alt="Animated project momentum bars and a source-language donut chart, measured from public repository data.">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/heatmap-dark.svg">
+  <img width="100%" src="assets/profile/heatmap-light.svg" alt="A 90-day public project activity heatmap, with active-day totals, peak daily commits, and a fixed color legend.">
+</picture>
+
 <details>
-  <summary><strong>Explore project momentum, language mix &amp; recent releases</strong></summary>
+  <summary><strong>Recent releases &amp; how these graphs work</strong></summary>
   <br>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/ecosystem-dark.svg">
-    <img width="100%" src="assets/profile/ecosystem-light.svg" alt="The most active public projects by commit count and their default-branch source language mix.">
-  </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/profile/releases-dark.svg">
-    <img width="100%" src="assets/profile/releases-light.svg" alt="The six most recently published GitHub releases in the snapshot window, with dates and pre-release labels.">
-  </picture>
-  <p>Activity counts project commits from all authors except bots, deduplicated across current branches within each repository. Private repositories, GitHub-marked forks, archived projects, and this profile are excluded. This measures project activity; language percentages measure source bytes.</p>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/releases-dark.svg">
+  <img width="100%" src="assets/profile/releases-light.svg" alt="The six most recently published GitHub releases in the snapshot window, with dates and pre-release labels.">
+</picture>
+  <p>Activity counts project commits from all authors except bots, deduplicated across current branches within each repository. Private repositories, GitHub-marked forks, archived projects, and this profile are excluded. The heatmap measures project activity; the language chart measures source bytes.</p>
   <p><a href="data/profile.json">Snapshot data</a> · <a href="docs/profile-visuals.md">Method &amp; visual design</a> · <a href="https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/profile-metrics.yml">Refresh history</a></p>
 </details>
 
-## How I build
+## Developer toolkit
 
-| Layer | Tools & approach |
-| :--- | :--- |
-| **Player experience** | Java · Paper/Bukkit · Adventure MiniMessage · inventory GUIs · progress feedback |
-| **State & integrations** | SQLite · YAML · bounded asynchronous writes · Vault · LuckPerms · PlaceholderAPI |
-| **Web & presentation** | HTML · CSS · JavaScript · Next.js · responsive layouts · SVG motion |
-| **Build & delivery** | Gradle · Maven · Git · GitHub Actions · Python · Vercel |
+The tools behind my gameplay systems, web interfaces, and automation.
+
+<p align="center"><strong>Languages</strong></p>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-java-dark.svg">
+  <img width="76" src="assets/profile/toolkit-java-light.svg" alt="Java">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-javascript-dark.svg">
+  <img width="76" src="assets/profile/toolkit-javascript-light.svg" alt="JavaScript">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-html-dark.svg">
+  <img width="76" src="assets/profile/toolkit-html-light.svg" alt="HTML">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-css-dark.svg">
+  <img width="76" src="assets/profile/toolkit-css-light.svg" alt="CSS">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-python-dark.svg">
+  <img width="76" src="assets/profile/toolkit-python-light.svg" alt="Python">
+</picture>
+</p>
+
+<p align="center"><strong>Developer tools &amp; delivery</strong></p>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-git-dark.svg">
+  <img width="76" src="assets/profile/toolkit-git-light.svg" alt="Git">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-github-dark.svg">
+  <img width="76" src="assets/profile/toolkit-github-light.svg" alt="GitHub">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-actions-dark.svg">
+  <img width="76" src="assets/profile/toolkit-actions-light.svg" alt="GitHub Actions">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-gradle-dark.svg">
+  <img width="76" src="assets/profile/toolkit-gradle-light.svg" alt="Gradle">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-maven-dark.svg">
+  <img width="76" src="assets/profile/toolkit-maven-light.svg" alt="Maven">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-vercel-dark.svg">
+  <img width="76" src="assets/profile/toolkit-vercel-light.svg" alt="Vercel">
+</picture>
+</p>
+
+<p align="center"><strong>Server &amp; web kits</strong></p>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-paper-dark.svg">
+  <img width="76" src="assets/profile/toolkit-paper-light.svg" alt="Paper">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-minimessage-dark.svg">
+  <img width="76" src="assets/profile/toolkit-minimessage-light.svg" alt="Adventure MiniMessage">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-nextjs-dark.svg">
+  <img width="76" src="assets/profile/toolkit-nextjs-light.svg" alt="Next.js">
+</picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/toolkit-sqlite-dark.svg">
+  <img width="76" src="assets/profile/toolkit-sqlite-light.svg" alt="SQLite">
+</picture>
+</p>
+
+<p align="center"><sub>Server integrations: Vault · LuckPerms · PlaceholderAPI</sub></p>
 
 <details>
   <summary><strong>A little more about me</strong></summary>

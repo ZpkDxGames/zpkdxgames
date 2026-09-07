@@ -4,13 +4,18 @@ The profile uses repository-hosted SVG artwork and charts. Its cover pairs large
 
 All artwork is illustrative, not a product screenshot or live status indicator. Essential text is always visible. Every SVG has a light and dark variant, a descriptive title, and a reduced-motion fallback. No JavaScript, remote fonts, or external images are embedded in the SVGs. The README supplies ordinary text descriptions and links beside the illustrations; the artwork is never the only source of project information.
 
-The cover uses GitHub's supported [`picture` element](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-images) for theme selection and a compact mobile source. The four project cards use native HTML tables and remain two columns on GitHub; their text wraps at narrow widths. Additional charts and background information use native expandable sections. External Shields.io badges are supplemental navigation; normal text links remain available.
+The cover uses GitHub's supported [`picture` element](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-images) for theme selection and a compact mobile source. The four project cards use native HTML tables and remain two columns on GitHub; their text wraps at narrow widths. Activity, momentum/language mix, and the new 90-day heatmap are visible without expanding a section. Release history and background information remain expandable. External Shields.io badges are supplemental navigation; normal text links remain available.
+
+The developer toolkit contains 15 individually labelled, gently floating icons across languages, developer tools/delivery, and server/web kits. Individual 76px images wrap naturally on narrow screens. Light/dark variants and reduced motion are supported. Thirteen logos come from the vendored MIT-licensed Skill Icons set; Paper and MiniMessage use original illustrative glyphs. See [icon credits and source details](toolkit-icons.md).
+
+Graph animation never invents activity: the line draws to its recorded shape, the final snapshot point pulses, project bars grow to their actual lengths, and heatmap cells enter in week order. The underlying values change only when the daily snapshot refreshes. The language donut retains its measured proportions. All animation can stop without concealing data.
 
 ## Data boundaries
 
 - Only **public, owned, non-fork, non-archived, enabled repositories** are included. The profile repository is excluded so its refresh commits and Python generator do not distort the graphs.
 - The window contains **90 UTC calendar days**, including the snapshot date. The last day can be incomplete.
 - Activity counts **project commits**, not personal GitHub contributions. All authors are included except identifiable bot authors. Each SHA is counted once per repository across its current branch histories. Deleted branches and unreferenced commits are not reconstructed.
+- The heatmap uses the same 90 daily totals as the line chart, arranged in Monday-first UTC weeks. Dates outside the window are omitted. Its fixed bins are **0, 1–2, 3–5, 6–10, and 11+ commits**; active days count totals above zero, and the peak is the maximum daily total. Neither metric is a coding streak or a personal-contribution count.
 - Branch tips are resolved to immutable SHAs before commits are fetched. The UTC **committer date** determines the day. Repositories not pushed since the window began skip commit lookups.
 - Language mix comes from GitHub's language byte totals on each repository's **default branch**. Release branches may contain newer code. Language percentages describe public source volume, not skill or time spent.
 - The release count includes published releases and pre-releases within the window. Drafts are excluded. The timeline shows the most recent six, sorted by **publication timestamp**, not tag name or API response order.

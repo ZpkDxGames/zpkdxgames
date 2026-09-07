@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="104" viewBox="0 0 76 104" role="img" aria-labelledby="title desc">
+  <title id="title">MiniMessage toolkit icon</title>
+  <desc id="desc">MiniMessage. Decorative motion; no proficiency rating is implied.</desc>
+  <defs>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#40d6ee" stop-opacity=".32"/><stop offset="1" stop-color="#40d6ee" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#40d6ee"/><stop offset="1" stop-color="#66e2bb"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22354b" stroke-opacity=".35"/></pattern>
+  </defs>
+  <style>
+    svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .frame {fill:#0b111b;stroke:#22354b}
+    .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
+    .rise {animation:rise .8s ease-out both}
+    .fade {animation:fade .8s ease-out both}
+    .grow {transform-box:fill-box;transform-origin:left center;animation:grow 1.3s ease-out both}
+    .flow {stroke-dasharray:5 13;animation:flow 12s linear infinite}
+    .pulse {animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes draw {from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
+    @keyframes rise {from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fade {from{opacity:0}to{opacity:1}}
+    @keyframes grow {from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    @keyframes flow {to{stroke-dashoffset:-108}}
+    @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
+    @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.grow,.flow,.pulse{animation:none!important}}
+  </style>
+  <style>
+      .toolkit-float {animation:toolkit-float 6s ease-in-out infinite;animation-delay:-1.24s}
+      @keyframes toolkit-float {50%{transform:translateY(-3px)}}
+      @media (prefers-reduced-motion:reduce) {.toolkit-float{animation:none!important}}
+    </style>
+    <ellipse cx="38" cy="78" rx="22" ry="2" fill="#9fb2c9" opacity=".13"/>
+    <g class="toolkit-float"><rect x="6" y="8" width="64" height="64" rx="14" fill="#111c2b" stroke="#22354b"/><path d="M27 29L17 40L27 51M49 29L59 40L49 51M43 26L33 54" fill="none" stroke="#66e2bb" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g><text x="38" y="96" font-size="10.5" font-weight="550" fill="#edf5ff" text-anchor="middle">MiniMessage</text>
+</svg>

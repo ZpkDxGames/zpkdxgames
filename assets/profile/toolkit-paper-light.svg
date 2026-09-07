@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="76" height="104" viewBox="0 0 76 104" role="img" aria-labelledby="title desc">
+  <title id="title">Paper toolkit icon</title>
+  <desc id="desc">Paper. Decorative motion; no proficiency rating is implied.</desc>
+  <defs>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#087e98" stop-opacity=".32"/><stop offset="1" stop-color="#087e98" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#087e98"/><stop offset="1" stop-color="#168361"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6e3f2" stroke-opacity=".35"/></pattern>
+  </defs>
+  <style>
+    svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .frame {fill:#f5f9ff;stroke:#d6e3f2}
+    .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
+    .rise {animation:rise .8s ease-out both}
+    .fade {animation:fade .8s ease-out both}
+    .grow {transform-box:fill-box;transform-origin:left center;animation:grow 1.3s ease-out both}
+    .flow {stroke-dasharray:5 13;animation:flow 12s linear infinite}
+    .pulse {animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes draw {from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
+    @keyframes rise {from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fade {from{opacity:0}to{opacity:1}}
+    @keyframes grow {from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    @keyframes flow {to{stroke-dashoffset:-108}}
+    @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
+    @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.grow,.flow,.pulse{animation:none!important}}
+  </style>
+  <style>
+      .toolkit-float {animation:toolkit-float 6s ease-in-out infinite;animation-delay:-2.48s}
+      @keyframes toolkit-float {50%{transform:translateY(-3px)}}
+      @media (prefers-reduced-motion:reduce) {.toolkit-float{animation:none!important}}
+    </style>
+    <ellipse cx="38" cy="78" rx="22" ry="2" fill="#516980" opacity=".13"/>
+    <g class="toolkit-float"><rect x="6" y="8" width="64" height="64" rx="14" fill="#ffffff" stroke="#d6e3f2"/><path d="M24 20H43L55 32V59H24Z" fill="none" stroke="#087e98" stroke-width="2.5" stroke-linejoin="round"/><path d="M43 20V32H55M31 40H47M31 48H43" fill="none" stroke="#087e98" stroke-width="2.5" stroke-linejoin="round"/></g><text x="38" y="96" font-size="11.5" font-weight="550" fill="#183149" text-anchor="middle">Paper</text>
+</svg>

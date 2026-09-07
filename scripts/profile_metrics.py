@@ -173,14 +173,16 @@ def svg(theme, width, height, title, description, body, draw_length=1000):
     .draw {{stroke-dasharray:{draw_length:.2f};stroke-dashoffset:0;animation:draw 1.8s ease-out both}}
     .rise {{animation:rise .8s ease-out both}}
     .fade {{animation:fade .8s ease-out both}}
+    .grow {{transform-box:fill-box;transform-origin:left center;animation:grow 1.3s ease-out both}}
     .flow {{stroke-dasharray:5 13;animation:flow 12s linear infinite}}
     .pulse {{animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}}
     @keyframes draw {{from{{stroke-dashoffset:{draw_length:.2f}}}to{{stroke-dashoffset:0}}}}
     @keyframes rise {{from{{opacity:0;transform:translateY(7px)}}to{{opacity:1;transform:translateY(0)}}}}
     @keyframes fade {{from{{opacity:0}}to{{opacity:1}}}}
+    @keyframes grow {{from{{transform:scaleX(0)}}to{{transform:scaleX(1)}}}}
     @keyframes flow {{to{{stroke-dashoffset:-108}}}}
     @keyframes pulse {{50%{{opacity:.45;transform:scale(.9)}}}}
-    @media (prefers-reduced-motion:reduce) {{.draw,.rise,.fade,.flow,.pulse{{animation:none!important}}}}
+    @media (prefers-reduced-motion:reduce) {{.draw,.rise,.fade,.grow,.flow,.pulse{{animation:none!important}}}}
   </style>
   <rect class="frame" x=".5" y=".5" width="{width - 1}" height="{height - 1}" rx="22"/>
   {body}
@@ -357,6 +359,8 @@ def activity(data, theme):
     if points:
         body += f'<path class="rise" d="{line} L{x0 + width} {y0 + height} L{x0} {y0 + height}Z" fill="url(#area)"/>'
         body += f'<path class="draw" d="{line}" fill="none" stroke="url(#line)" stroke-width="3" stroke-linejoin="round"/>'
+        last_x, last_y = points[-1]
+        body += f'<circle class="pulse" cx="{last_x:.2f}" cy="{last_y:.2f}" r="7" fill="none" stroke="var(--accent)" stroke-width="2"><title>Latest snapshot day: {values[-1]} commits</title></circle>'
         for (x, y), row in zip(points, data["daily"]):
             if row["commits"]:
                 body += f'<circle cx="{x:.2f}" cy="{y:.2f}" r="3.5" fill="var(--accent)"><title>{row["date"]}: {row["commits"]} commits</title></circle>'
@@ -383,7 +387,7 @@ def ecosystem(data, theme):
         body += text(32, y, project["name"], 14, weight=550)
         body += text(475, y, project["commits"], 14, "accent", 650, 'text-anchor="end"')
         body += rect(32, y + 9, 442, 7, radius=3)
-        body += rect(32, y + 9, round(442 * project["commits"] / maximum, 2), 7, "accent", 3, 'class="rise"')
+        body += rect(32, y + 9, round(442 * project["commits"] / maximum, 2), 7, "accent", 3, f'class="grow" style="animation-delay:{i*.1:.1f}s"')
     if not projects:
         body += text(32, 160, "No qualifying commits in this window.", 15, "muted")
     languages = list(data["languages"].items())
@@ -443,6 +447,118 @@ def release_radar(data, theme):
                "; ".join(f"{r['project']} {r['version']} on {r['published_at'][:10]}" for r in releases) or "No releases in this period.", body)
 
 
+TOOLKIT = {
+    "java": ("Java", "Java"),
+    "javascript": ("JavaScript", "JavaScript"),
+    "html": ("HTML", "HTML"),
+    "css": ("CSS", "CSS"),
+    "python": ("Python", "Python"),
+    "git": ("Git", "Git"),
+    "github": ("GitHub", "Github"),
+    "actions": ("Actions", "GithubActions"),
+    "gradle": ("Gradle", "Gradle"),
+    "maven": ("Maven", "Maven"),
+    "vercel": ("Vercel", "Vercel"),
+    "nextjs": ("Next.js", "NextJS"),
+    "sqlite": ("SQLite", "SQLite"),
+    "paper": ("Paper", None),
+    "minimessage": ("MiniMessage", None),
+}
+
+
+def toolkit_icon(theme, key):
+    """Labelled, gently floating technology icon; source logos are vendored."""
+    label, source = TOOLKIT[key]
+    if source:
+        folder = ROOT / "assets/vendor/skill-icons"
+        path = folder / f"{source}-{theme.title()}.svg"
+        if not path.exists():
+            path = folder / f"{source}.svg"
+        root = ET.fromstring(path.read_text(encoding="utf-8"))
+        root.set("x", "6")
+        root.set("y", "8")
+        root.set("width", "64")
+        root.set("height", "64")
+        ET.register_namespace("", "http://www.w3.org/2000/svg")
+        artwork = ET.tostring(root, encoding="unicode")
+    else:
+        artwork = rect(6, 8, 64, 64, "panel", 14, 'stroke="var(--border)"')
+        if key == "paper":
+            artwork += '<path d="M24 20H43L55 32V59H24Z" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>'
+            artwork += '<path d="M43 20V32H55M31 40H47M31 48H43" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/>'
+        else:
+            artwork += '<path d="M27 29L17 40L27 51M49 29L59 40L49 51M43 26L33 54" fill="none" stroke="var(--green)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>'
+    delay = -(sum(map(ord, key)) % 11) * .31
+    body = f'''<style>
+      .toolkit-float {{animation:toolkit-float 6s ease-in-out infinite;animation-delay:{delay:.2f}s}}
+      @keyframes toolkit-float {{50%{{transform:translateY(-3px)}}}}
+      @media (prefers-reduced-motion:reduce) {{.toolkit-float{{animation:none!important}}}}
+    </style>
+    <ellipse cx="38" cy="78" rx="22" ry="2" fill="var(--muted)" opacity=".13"/>
+    <g class="toolkit-float">{artwork}</g>'''
+    body += text(38, 96, label, 10.5 if len(label) > 10 else 11.5, "text", 550, 'text-anchor="middle"')
+    title = "GitHub Actions" if key == "actions" else label
+    document = svg(theme, 76, 104, title + " toolkit icon",
+                   title + ". Decorative motion; no proficiency rating is implied.", body)
+    # Standalone icons wrap naturally in README paragraphs, without a frame.
+    document = re.sub(r'  <rect class="frame"[^>]*/>\n', '', document)
+    return document
+
+
+def heatmap(data, theme):
+    """A 90-day project-commit calendar with Monday-first UTC weeks."""
+    rows = data["daily"]
+    first = date.fromisoformat(rows[0]["date"])
+    monday = first - timedelta(days=first.weekday())
+    last = date.fromisoformat(rows[-1]["date"])
+    columns = (last - monday).days // 7 + 1
+    by_date = {row["date"]: row["commits"] for row in rows}
+    active_days = sum(row["commits"] > 0 for row in rows)
+    peak = max((row["commits"] for row in rows), default=0)
+    body = text(32, 36, "BUILD RHYTHM", 13, "accent", 650, 'letter-spacing="1.8"')
+    body += text(32, 72, "Every day leaves a trace", 26, weight=700)
+    body += text(968, 36, "AS OF " + data["as_of"], 12, "muted", 500, 'text-anchor="end"')
+    body += text(32, 99, "90 days of public project commits · UTC", 14, "muted")
+    x0, y0, pitch, cell = 82, 137, 37, 28
+    for i, day_name in enumerate(["M", "T", "W", "T", "F", "S", "S"]):
+        body += text(51, y0 + i * pitch + 19, day_name, 12, "muted")
+    for column in range(columns):
+        for weekday in range(7):
+            day = monday + timedelta(days=column * 7 + weekday)
+            if day.isoformat() not in by_date:
+                continue
+            value = by_date[day.isoformat()]
+            level = 0 if value == 0 else 1 if value <= 2 else 2 if value <= 5 else 3 if value <= 10 else 4
+            x, y = x0 + column * pitch, y0 + weekday * pitch
+            body += rect(x, y, cell, cell, "panel", 5, 'stroke="var(--border)"')
+            if level:
+                opacity = [.0, .25, .48, .72, 1.0][level]
+                body += (f'<rect class="fade" x="{x}" y="{y}" width="{cell}" height="{cell}" rx="5" '
+                         f'fill="var(--green)" fill-opacity="{opacity}" style="animation-delay:{column*.045:.3f}s">'
+                         f'<title>{day.isoformat()}: {value} commits</title></rect>')
+            else:
+                body += f'<g><title>{day.isoformat()}: 0 commits</title></g>'
+    body += text(x0, 418, first.strftime("%d %b"), 12, "muted")
+    body += text(x0 + (columns - 1) * pitch + cell, 418, last.strftime("%d %b"), 12, "muted",
+                 extra='text-anchor="end"')
+    body += '<path d="M646 131V396" stroke="var(--border)"/>'
+    body += text(681, 174, active_days, 42, "green", 700)
+    body += text(681, 202, "active days in this window", 14, "muted")
+    body += text(681, 267, peak, 42, "accent", 700)
+    body += text(681, 295, "peak commits in one day", 14, "muted")
+    body += text(681, 341, "COMMITS PER DAY", 10, "muted", 650, 'letter-spacing="1.2"')
+    for i, label in enumerate(["0", "1–2", "3–5", "6–10", "11+"]):
+        x = 681 + i * 56
+        body += rect(x, 355, 36, 17, "panel", 4, 'stroke="var(--border)"')
+        if i:
+            body += rect(x, 355, 36, 17, "green", 4, f'fill-opacity="{[0,.25,.48,.72,1][i]}"')
+        body += text(x + 18, 391, label, 11, "muted", extra='text-anchor="middle"')
+    body += text(32, 457, "Project activity across current branches · all authors except bots · not a personal contribution calendar", 12, "muted")
+    return svg(theme, 1000, 480, "90-day public project activity heatmap",
+               f"{active_days} active days; peak {peak} project commits in one UTC day. "
+               "Cells show real daily totals, with fixed bins of 0, 1–2, 3–5, 6–10, and 11 or more commits.", body)
+
+
 def render(data, root=ROOT):
     if data.get("schema") != 1 or len(data.get("daily", [])) != DAYS:
         raise ValueError("Unexpected profile snapshot format")
@@ -456,6 +572,9 @@ def render(data, root=ROOT):
             outputs[f"assets/profile/spotlight-{kind}-{theme}.svg"] = spotlight(theme, kind)
         for name, renderer in [("activity", activity), ("ecosystem", ecosystem), ("releases", release_radar)]:
             outputs[f"assets/profile/{name}-{theme}.svg"] = renderer(data, theme)
+        outputs[f"assets/profile/heatmap-{theme}.svg"] = heatmap(data, theme)
+        for key in TOOLKIT:
+            outputs[f"assets/profile/toolkit-{key}-{theme}.svg"] = toolkit_icon(theme, key)
     # Generate and parse everything before replacing any last-known-good file.
     for name, contents in outputs.items():
         if name.endswith(".svg"):
