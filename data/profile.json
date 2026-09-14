@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-09-13",
+  "as_of": "2026-09-14",
   "days": 90,
-  "start": "2026-06-16",
+  "start": "2026-06-17",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -52,9 +52,9 @@
     {
       "name": "PlexonChats",
       "url": "https://github.com/ZpkDxGames/PlexonChats",
-      "commits": 228,
+      "commits": 259,
       "languages": {
-        "Java": 582881
+        "Java": 668279
       }
     },
     {
@@ -117,21 +117,21 @@
     {
       "name": "PlexonPanel",
       "url": "https://github.com/ZpkDxGames/PlexonPanel",
-      "commits": 134,
+      "commits": 249,
       "languages": {
-        "Java": 481192,
-        "Python": 5708,
+        "Java": 662562,
+        "Python": 14249,
         "JavaScript": 126
       }
     },
     {
       "name": "PlexonPanel-Dashboard",
       "url": "https://github.com/ZpkDxGames/PlexonPanel-Dashboard",
-      "commits": 245,
+      "commits": 363,
       "languages": {
-        "TypeScript": 550583,
-        "CSS": 214787,
-        "JavaScript": 116011
+        "TypeScript": 737628,
+        "CSS": 218455,
+        "JavaScript": 181000
       }
     },
     {
@@ -169,7 +169,7 @@
     {
       "name": "PlexonSpawners",
       "url": "https://github.com/ZpkDxGames/PlexonSpawners",
-      "commits": 233,
+      "commits": 234,
       "languages": {
         "Java": 387243,
         "Shell": 644
@@ -219,10 +219,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-06-16",
-      "commits": 0
-    },
     {
       "date": "2026-06-17",
       "commits": 0
@@ -577,19 +573,63 @@
     },
     {
       "date": "2026-09-13",
-      "commits": 168
+      "commits": 361
+    },
+    {
+      "date": "2026-09-14",
+      "commits": 72
     }
   ],
   "languages": {
-    "Java": 8921664,
-    "TypeScript": 550583,
-    "CSS": 214787,
-    "JavaScript": 116137,
-    "Python": 23196,
+    "Java": 9188432,
+    "TypeScript": 737628,
+    "CSS": 218455,
+    "JavaScript": 181126,
+    "Python": 31737,
     "HTML": 8774,
     "Shell": 8613
   },
   "releases": [
+    {
+      "project": "PlexonPanel",
+      "version": "3.4.0",
+      "tag": "v3.4.0",
+      "published_at": "2026-09-13T18:48:04Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.4.0"
+    },
+    {
+      "project": "PlexonChats",
+      "version": "4.0.1",
+      "tag": "v4.0.1",
+      "published_at": "2026-09-13T18:08:27Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v4.0.1"
+    },
+    {
+      "project": "PlexonChats",
+      "version": "4.0.0",
+      "tag": "v4.0.0",
+      "published_at": "2026-09-13T16:57:05Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v4.0.0"
+    },
+    {
+      "project": "PlexonPanel",
+      "version": "3.3.0",
+      "tag": "v3.3.0",
+      "published_at": "2026-09-13T16:54:07Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.3.0"
+    },
+    {
+      "project": "PlexonChats",
+      "version": "3.6.2",
+      "tag": "v3.6.2",
+      "published_at": "2026-09-13T12:27:18Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.6.2"
+    },
     {
       "project": "PlexonChats",
       "version": "3.6.1",
