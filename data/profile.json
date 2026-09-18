@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-09-17",
+  "as_of": "2026-09-18",
   "days": 90,
-  "start": "2026-06-20",
+  "start": "2026-06-21",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -60,9 +60,9 @@
     {
       "name": "PlexonCore",
       "url": "https://github.com/ZpkDxGames/PlexonCore",
-      "commits": 110,
+      "commits": 165,
       "languages": {
-        "Java": 172659
+        "Java": 286116
       }
     },
     {
@@ -117,9 +117,9 @@
     {
       "name": "PlexonPanel",
       "url": "https://github.com/ZpkDxGames/PlexonPanel",
-      "commits": 513,
+      "commits": 521,
       "languages": {
-        "Java": 773271,
+        "Java": 779819,
         "Python": 23980,
         "JavaScript": 126
       }
@@ -127,11 +127,11 @@
     {
       "name": "PlexonPanel-Dashboard",
       "url": "https://github.com/ZpkDxGames/PlexonPanel-Dashboard",
-      "commits": 454,
+      "commits": 472,
       "languages": {
-        "TypeScript": 729512,
+        "TypeScript": 742023,
         "CSS": 228050,
-        "JavaScript": 191439
+        "JavaScript": 205619
       }
     },
     {
@@ -196,7 +196,7 @@
     {
       "name": "PlexonUtility",
       "url": "https://github.com/ZpkDxGames/PlexonUtility",
-      "commits": 125,
+      "commits": 149,
       "languages": {
         "Java": 450734
       }
@@ -219,10 +219,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-06-20",
-      "commits": 0
-    },
     {
       "date": "2026-06-21",
       "commits": 0
@@ -577,19 +573,31 @@
     },
     {
       "date": "2026-09-17",
-      "commits": 20
+      "commits": 93
+    },
+    {
+      "date": "2026-09-18",
+      "commits": 32
     }
   ],
   "languages": {
-    "Java": 9299141,
-    "TypeScript": 729512,
+    "Java": 9419146,
+    "TypeScript": 742023,
     "CSS": 228050,
-    "JavaScript": 191565,
+    "JavaScript": 205745,
     "Python": 41468,
     "HTML": 8774,
     "Shell": 8613
   },
   "releases": [
+    {
+      "project": "PlexonCore",
+      "version": "2.1.0",
+      "tag": "v2.1.0",
+      "published_at": "2026-09-17T23:14:16Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonCore/releases/tag/v2.1.0"
+    },
     {
       "project": "PlexonPanel",
       "version": "3.4.0",
