@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-09-19",
+  "as_of": "2026-09-20",
   "days": 90,
-  "start": "2026-06-22",
+  "start": "2026-06-23",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -109,7 +109,7 @@
     {
       "name": "PlexonKeys",
       "url": "https://github.com/ZpkDxGames/PlexonKeys",
-      "commits": 134,
+      "commits": 171,
       "languages": {
         "Java": 303391
       }
@@ -117,7 +117,7 @@
     {
       "name": "PlexonPanel",
       "url": "https://github.com/ZpkDxGames/PlexonPanel",
-      "commits": 521,
+      "commits": 523,
       "languages": {
         "Java": 779819,
         "Python": 23980,
@@ -127,7 +127,7 @@
     {
       "name": "PlexonPanel-Dashboard",
       "url": "https://github.com/ZpkDxGames/PlexonPanel-Dashboard",
-      "commits": 472,
+      "commits": 473,
       "languages": {
         "TypeScript": 742023,
         "CSS": 228050,
@@ -169,10 +169,10 @@
     {
       "name": "PlexonSpawners",
       "url": "https://github.com/ZpkDxGames/PlexonSpawners",
-      "commits": 234,
+      "commits": 246,
       "languages": {
-        "Java": 387243,
-        "Shell": 644
+        "Java": 226299,
+        "Python": 3846
       }
     },
     {
@@ -196,7 +196,7 @@
     {
       "name": "PlexonUtility",
       "url": "https://github.com/ZpkDxGames/PlexonUtility",
-      "commits": 246,
+      "commits": 257,
       "languages": {
         "Java": 561656
       }
@@ -219,10 +219,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-06-22",
-      "commits": 0
-    },
     {
       "date": "2026-06-23",
       "commits": 0
@@ -577,19 +573,39 @@
     },
     {
       "date": "2026-09-19",
+      "commits": 63
+    },
+    {
+      "date": "2026-09-20",
       "commits": 0
     }
   ],
   "languages": {
-    "Java": 9530068,
+    "Java": 9369124,
     "TypeScript": 742023,
     "CSS": 228050,
     "JavaScript": 205745,
-    "Python": 41468,
+    "Python": 45314,
     "HTML": 8774,
-    "Shell": 8613
+    "Shell": 7969
   },
   "releases": [
+    {
+      "project": "PlexonSpawners",
+      "version": "4.0.0",
+      "tag": "v4.0.0",
+      "published_at": "2026-09-19T16:51:27Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v4.0.0"
+    },
+    {
+      "project": "PlexonUtility",
+      "version": "3.5.0",
+      "tag": "v3.5.0",
+      "published_at": "2026-09-19T12:31:20Z",
+      "prerelease": false,
+      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v3.5.0"
+    },
     {
       "project": "PlexonCore",
       "version": "2.1.0",
