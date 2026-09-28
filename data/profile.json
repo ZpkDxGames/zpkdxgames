@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-09-27",
+  "as_of": "2026-09-28",
   "days": 90,
-  "start": "2026-06-30",
+  "start": "2026-07-01",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -212,8 +212,12 @@
     {
       "name": "Trabalho-III-Eng.-Prompt",
       "url": "https://github.com/ZpkDxGames/Trabalho-III-Eng.-Prompt",
-      "commits": 0,
-      "languages": {}
+      "commits": 7,
+      "languages": {
+        "TypeScript": 88106,
+        "CSS": 51371,
+        "JavaScript": 380
+      }
     },
     {
       "name": "Triangle-Area",
@@ -225,10 +229,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-06-30",
-      "commits": 0
-    },
     {
       "date": "2026-07-01",
       "commits": 0
@@ -583,14 +583,18 @@
     },
     {
       "date": "2026-09-27",
+      "commits": 7
+    },
+    {
+      "date": "2026-09-28",
       "commits": 0
     }
   ],
   "languages": {
     "Java": 9369124,
-    "TypeScript": 742023,
-    "CSS": 228050,
-    "JavaScript": 205745,
+    "TypeScript": 830129,
+    "CSS": 279421,
+    "JavaScript": 206125,
     "Python": 45314,
     "HTML": 8774,
     "Shell": 7969
