@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-09-28",
+  "as_of": "2026-09-29",
   "days": 90,
-  "start": "2026-07-01",
+  "start": "2026-07-02",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -229,10 +229,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-07-01",
-      "commits": 0
-    },
     {
       "date": "2026-07-02",
       "commits": 0
@@ -587,6 +583,10 @@
     },
     {
       "date": "2026-09-28",
+      "commits": 0
+    },
+    {
+      "date": "2026-09-29",
       "commits": 0
     }
   ],
