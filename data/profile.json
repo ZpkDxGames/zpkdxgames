@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-10-04",
+  "as_of": "2026-10-07",
   "days": 90,
-  "start": "2026-07-07",
+  "start": "2026-07-10",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -135,21 +135,21 @@
     {
       "name": "PlexonPanel",
       "url": "https://github.com/ZpkDxGames/PlexonPanel",
-      "commits": 567,
+      "commits": 575,
       "languages": {
-        "Java": 1001862,
-        "Python": 45999,
+        "Java": 1013496,
+        "Python": 52541,
         "JavaScript": 2338
       }
     },
     {
       "name": "PlexonPanel-Dashboard",
       "url": "https://github.com/ZpkDxGames/PlexonPanel-Dashboard",
-      "commits": 507,
+      "commits": 531,
       "languages": {
-        "TypeScript": 802450,
-        "JavaScript": 273562,
-        "CSS": 233791
+        "TypeScript": 677612,
+        "JavaScript": 335439,
+        "CSS": 176375
       }
     },
     {
@@ -247,18 +247,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-07-07",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-08",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-09",
-      "commits": 0
-    },
     {
       "date": "2026-07-10",
       "commits": 0
@@ -605,15 +593,27 @@
     },
     {
       "date": "2026-10-04",
+      "commits": 17
+    },
+    {
+      "date": "2026-10-05",
+      "commits": 11
+    },
+    {
+      "date": "2026-10-06",
+      "commits": 4
+    },
+    {
+      "date": "2026-10-07",
       "commits": 0
     }
   ],
   "languages": {
-    "Java": 9591167,
-    "TypeScript": 890556,
-    "Python": 498047,
-    "JavaScript": 387959,
-    "CSS": 349963,
+    "Java": 9602801,
+    "TypeScript": 765718,
+    "Python": 504589,
+    "JavaScript": 449836,
+    "CSS": 292547,
     "HTML": 110742,
     "Shell": 7969
   },
