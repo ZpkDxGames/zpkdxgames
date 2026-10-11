@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-10-10",
+  "as_of": "2026-10-11",
   "days": 90,
-  "start": "2026-07-13",
+  "start": "2026-07-14",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -145,11 +145,11 @@
     {
       "name": "PlexonPanel-Dashboard",
       "url": "https://github.com/ZpkDxGames/PlexonPanel-Dashboard",
-      "commits": 553,
+      "commits": 563,
       "languages": {
-        "TypeScript": 678434,
-        "JavaScript": 371584,
-        "CSS": 58527
+        "TypeScript": 223547,
+        "JavaScript": 3464,
+        "HTML": 443
       }
     },
     {
@@ -247,10 +247,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-07-13",
-      "commits": 0
-    },
     {
       "date": "2026-07-14",
       "commits": 0
@@ -605,16 +601,20 @@
     },
     {
       "date": "2026-10-10",
-      "commits": 0
+      "commits": 5
+    },
+    {
+      "date": "2026-10-11",
+      "commits": 5
     }
   ],
   "languages": {
     "Java": 9602801,
-    "TypeScript": 766540,
     "Python": 504589,
-    "JavaScript": 485981,
-    "CSS": 174699,
-    "HTML": 110742,
+    "TypeScript": 311653,
+    "JavaScript": 117861,
+    "CSS": 116172,
+    "HTML": 111185,
     "Shell": 7969
   },
   "releases": [
