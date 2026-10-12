@@ -9,6 +9,12 @@
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
   "projects": [
     {
+      "name": "AI-Desktop-Companion",
+      "url": "https://github.com/ZpkDxGames/AI-Desktop-Companion",
+      "commits": 0,
+      "languages": {}
+    },
+    {
       "name": "ConanGrayBot-Core",
       "url": "https://github.com/ZpkDxGames/ConanGrayBot-Core",
       "commits": 17,
