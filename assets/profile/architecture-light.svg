@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="314" viewBox="0 0 1000 314" role="img" aria-labelledby="title desc">
+  <title id="title">Plexon ecosystem overview</title>
+  <desc id="desc">Progression: Tools, Quests, Ranks. Rewards: Keys, Crates, DailyRewards. Community: Chats and Shops. PlexonCore offers shared infrastructure; adoption varies by module.</desc>
+  <defs>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#08788e" stop-opacity=".32"/><stop offset="1" stop-color="#08788e" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#08788e"/><stop offset="1" stop-color="#12785b"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6ddef" stroke-opacity=".35"/></pattern>
+  </defs>
+  <style>
+    svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    .frame {fill:#f6f8ff;stroke:#d6ddef}
+    .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
+    .rise {animation:rise .8s ease-out both}
+    .fade {animation:fade .8s ease-out both}
+    .grow {transform-box:fill-box;transform-origin:left center;animation:grow 1.3s ease-out both}
+    .flow {stroke-dasharray:5 13;animation:flow 12s linear infinite}
+    .pulse {animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes draw {from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
+    @keyframes rise {from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes fade {from{opacity:0}to{opacity:1}}
+    @keyframes grow {from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    @keyframes flow {to{stroke-dashoffset:-108}}
+    @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
+    @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.grow,.flow,.pulse{animation:none!important}}
+  </style>
+  <rect class="frame" x=".5" y=".5" width="999" height="313" rx="18"/>
+  <path d="M24 1H110" stroke="#08788e" stroke-width="2" opacity=".8"/>
+
+    <style>
+      .showcase-float {animation:showcase-float 7s ease-in-out infinite}
+      .showcase-orbit {animation:showcase-orbit 36s linear infinite}
+      .showcase-trace {stroke-dasharray:36 90;animation:showcase-trace 12s linear infinite}
+      .showcase-glow {opacity:.8;animation:showcase-glow 6s ease-in-out infinite}
+      @keyframes showcase-float {50%{transform:translateY(-7px)}}
+      @keyframes showcase-orbit {to{transform:rotate(360deg)}}
+      @keyframes showcase-trace {to{stroke-dashoffset:-252}}
+      @keyframes showcase-glow {50%{opacity:.35}}
+      @media (prefers-reduced-motion:reduce) {
+        .showcase-float,.showcase-orbit,.showcase-trace,.showcase-glow {animation:none!important}
+      }
+    </style>
+    <text x="28" y="37" font-size="13" font-weight="650" fill="#08788e" letter-spacing="1.6">ONE ECOSYSTEM. FOCUSED MODULES.</text><text x="28" y="70" font-size="26" font-weight="700" fill="#18233e" >Designed to work together.</text><rect x="28" y="98" width="304" height="105" rx="10" fill="#ffffff" stroke="#d6ddef"/><path d="M29 118v64" stroke="#08788e" stroke-width="2"/><text x="46" y="123" font-size="11" font-weight="650" fill="#08788e" letter-spacing="1.1">01 / PROGRESSION</text><text x="46" y="153" font-size="17" font-weight="650" fill="#18233e" >Tools · Quests · Ranks</text><text x="46" y="179" font-size="13" font-weight="400" fill="#53637e" >Player goals &amp; long-term growth</text><rect x="348" y="98" width="304" height="105" rx="10" fill="#ffffff" stroke="#d6ddef"/><path d="M349 118v64" stroke="#12785b" stroke-width="2"/><text x="366" y="123" font-size="11" font-weight="650" fill="#12785b" letter-spacing="1.1">02 / REWARDS</text><text x="366" y="153" font-size="17" font-weight="650" fill="#18233e" >Keys · Crates · DailyRewards</text><text x="366" y="179" font-size="13" font-weight="400" fill="#53637e" >Earn, unlock &amp; discover</text><rect x="668" y="98" width="304" height="105" rx="10" fill="#ffffff" stroke="#d6ddef"/><path d="M669 118v64" stroke="#7051c1" stroke-width="2"/><text x="686" y="123" font-size="11" font-weight="650" fill="#7051c1" letter-spacing="1.1">03 / COMMUNITY</text><text x="686" y="153" font-size="17" font-weight="650" fill="#18233e" >Chats · Shops</text><text x="686" y="179" font-size="13" font-weight="400" fill="#53637e" >Connection &amp; player exchange</text><rect x="28" y="230" width="944" height="59" rx="10" fill="#ffffff" stroke="#d6ddef"/><text x="46" y="254" font-size="11" font-weight="650" fill="#7051c1" letter-spacing="1">PLEXONCORE / SHARED FOUNDATION</text><text x="46" y="275" font-size="14" font-weight="400" fill="#53637e" >Configuration · UI helpers · storage · diagnostics</text>
+</svg>

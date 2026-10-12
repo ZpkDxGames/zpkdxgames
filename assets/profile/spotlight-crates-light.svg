@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="180" viewBox="0 0 460 180" role="img" aria-labelledby="title desc">
-  <title id="title">Plexon rewards illustration</title>
-  <desc id="desc">Decorative project artwork, not a product screenshot. Animation respects reduced-motion preferences.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="200" viewBox="0 0 460 200" role="img" aria-labelledby="title desc">
+  <title id="title">Plexon reward design illustration</title>
+  <desc id="desc">Conceptual project illustration, not a screenshot or measured data.</desc>
   <defs>
-    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#087e98" stop-opacity=".32"/><stop offset="1" stop-color="#087e98" stop-opacity=".01"/></linearGradient>
-    <linearGradient id="line"><stop stop-color="#087e98"/><stop offset="1" stop-color="#168361"/></linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6e3f2" stroke-opacity=".35"/></pattern>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#08788e" stop-opacity=".32"/><stop offset="1" stop-color="#08788e" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#08788e"/><stop offset="1" stop-color="#12785b"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6ddef" stroke-opacity=".35"/></pattern>
   </defs>
   <style>
     svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    .frame {fill:#f5f9ff;stroke:#d6e3f2}
+    .frame {fill:#f6f8ff;stroke:#d6ddef}
     .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
     .rise {animation:rise .8s ease-out both}
     .fade {animation:fade .8s ease-out both}
@@ -23,7 +23,8 @@
     @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
     @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.grow,.flow,.pulse{animation:none!important}}
   </style>
-  <rect class="frame" x=".5" y=".5" width="459" height="179" rx="22"/>
+  <rect class="frame" x=".5" y=".5" width="459" height="199" rx="18"/>
+  <path d="M24 1H110" stroke="#08788e" stroke-width="2" opacity=".8"/>
 
     <style>
       .showcase-float {animation:showcase-float 7s ease-in-out infinite}
@@ -38,5 +39,5 @@
         .showcase-float,.showcase-orbit,.showcase-trace,.showcase-glow {animation:none!important}
       }
     </style>
-    <rect x="16" y="16" width="428" height="148" rx="16" fill="url(#grid)" opacity=".5"/><text x="24" y="32" font-size="10" font-weight="650" fill="#a16a14" letter-spacing="2">REWARDS</text><path d="M24 151H109M351 151H436" stroke="#d6e3f2"/><circle class="showcase-glow" cx="426" cy="28" r="3" fill="#a16a14"/><g class="showcase-float"><path d="M230 44L288 73V128L230 158L172 128V73Z" fill="#ffffff" stroke="#a16a14" stroke-width="2"/><path d="M172 73L230 103L288 73M230 103V158" fill="none" stroke="#a16a14" stroke-width="2"/><path d="M201 59L259 89V143M201 88L258 60" fill="none" stroke="#a16a14" stroke-width="7" opacity=".6"/><path d="M230 44L288 73L230 103L172 73Z" fill="#a16a14" opacity=".13"/></g><g class="showcase-glow"><path d="M117 66H135M126 57V75" stroke="#a16a14" stroke-width="2" stroke-linecap="round"/><path d="M316 92H338M327 81V103" stroke="#a16a14" stroke-width="2" stroke-linecap="round"/><path d="M297 48H307M302 43V53" stroke="#a16a14" stroke-width="2" stroke-linecap="round"/><path d="M135 122H145M140 117V127" stroke="#a16a14" stroke-width="2" stroke-linecap="round"/></g>
+    <rect x="16" y="16" width="428" height="168" rx="10" fill="url(#grid)"/><text x="24" y="34" font-size="11" font-weight="650" fill="#966016" letter-spacing="1.6">04 / REWARD DESIGN</text><g class="showcase-float"><path d="M230 54L282 80V132L230 158L178 132V80Z" fill="#ffffff" stroke="#966016" stroke-width="2"/><path d="M178 80L230 107L282 80M230 107V158M204 67L256 94V145" fill="none" stroke="#966016" stroke-width="2"/><path d="M230 54L282 80L230 107L178 80Z" fill="#966016" opacity=".16"/></g><path class="showcase-glow" d="M139 92h10M144 87v10" stroke="#966016" stroke-width="2"/><path class="showcase-glow" d="M309 119h10M314 114v10" stroke="#966016" stroke-width="2"/><path class="showcase-glow" d="M296 67h10M301 62v10" stroke="#966016" stroke-width="2"/><path class="showcase-glow" d="M160 146h10M165 141v10" stroke="#966016" stroke-width="2"/><path class="showcase-trace" d="M89 166H153L179 140M281 140L308 166H371" fill="none" stroke="#966016" stroke-opacity=".5"/>
 </svg>

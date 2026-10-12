@@ -2,13 +2,13 @@
   <title id="title">Paper toolkit icon</title>
   <desc id="desc">Paper. Decorative motion; no proficiency rating is implied.</desc>
   <defs>
-    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#087e98" stop-opacity=".32"/><stop offset="1" stop-color="#087e98" stop-opacity=".01"/></linearGradient>
-    <linearGradient id="line"><stop stop-color="#087e98"/><stop offset="1" stop-color="#168361"/></linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6e3f2" stroke-opacity=".35"/></pattern>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#08788e" stop-opacity=".32"/><stop offset="1" stop-color="#08788e" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#08788e"/><stop offset="1" stop-color="#12785b"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6ddef" stroke-opacity=".35"/></pattern>
   </defs>
   <style>
     svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    .frame {fill:#f5f9ff;stroke:#d6e3f2}
+    .frame {fill:#f6f8ff;stroke:#d6ddef}
     .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
     .rise {animation:rise .8s ease-out both}
     .fade {animation:fade .8s ease-out both}
@@ -28,6 +28,6 @@
       @keyframes toolkit-float {50%{transform:translateY(-3px)}}
       @media (prefers-reduced-motion:reduce) {.toolkit-float{animation:none!important}}
     </style>
-    <ellipse cx="38" cy="78" rx="22" ry="2" fill="#516980" opacity=".13"/>
-    <g class="toolkit-float"><rect x="6" y="8" width="64" height="64" rx="14" fill="#ffffff" stroke="#d6e3f2"/><path d="M24 20H43L55 32V59H24Z" fill="none" stroke="#087e98" stroke-width="2.5" stroke-linejoin="round"/><path d="M43 20V32H55M31 40H47M31 48H43" fill="none" stroke="#087e98" stroke-width="2.5" stroke-linejoin="round"/></g><text x="38" y="96" font-size="11.5" font-weight="550" fill="#183149" text-anchor="middle">Paper</text>
+    <ellipse cx="38" cy="78" rx="22" ry="2" fill="#53637e" opacity=".13"/>
+    <g class="toolkit-float"><rect x="6" y="8" width="64" height="64" rx="14" fill="#ffffff" stroke="#d6ddef"/><path d="M24 20H43L55 32V59H24Z" fill="none" stroke="#08788e" stroke-width="2.5" stroke-linejoin="round"/><path d="M43 20V32H55M31 40H47M31 48H43" fill="none" stroke="#08788e" stroke-width="2.5" stroke-linejoin="round"/></g><text x="38" y="96" font-size="11.5" font-weight="550" fill="#18233e" text-anchor="middle">Paper</text>
 </svg>

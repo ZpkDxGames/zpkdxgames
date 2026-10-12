@@ -2,13 +2,13 @@
   <title id="title">GitHub Actions toolkit icon</title>
   <desc id="desc">GitHub Actions. Decorative motion; no proficiency rating is implied.</desc>
   <defs>
-    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#087e98" stop-opacity=".32"/><stop offset="1" stop-color="#087e98" stop-opacity=".01"/></linearGradient>
-    <linearGradient id="line"><stop stop-color="#087e98"/><stop offset="1" stop-color="#168361"/></linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6e3f2" stroke-opacity=".35"/></pattern>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#08788e" stop-opacity=".32"/><stop offset="1" stop-color="#08788e" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#08788e"/><stop offset="1" stop-color="#12785b"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6ddef" stroke-opacity=".35"/></pattern>
   </defs>
   <style>
     svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    .frame {fill:#f5f9ff;stroke:#d6e3f2}
+    .frame {fill:#f6f8ff;stroke:#d6ddef}
     .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
     .rise {animation:rise .8s ease-out both}
     .fade {animation:fade .8s ease-out both}
@@ -28,7 +28,7 @@
       @keyframes toolkit-float {50%{transform:translateY(-3px)}}
       @media (prefers-reduced-motion:reduce) {.toolkit-float{animation:none!important}}
     </style>
-    <ellipse cx="38" cy="78" rx="22" ry="2" fill="#516980" opacity=".13"/>
+    <ellipse cx="38" cy="78" rx="22" ry="2" fill="#53637e" opacity=".13"/>
     <g class="toolkit-float"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 256 256" fill="none" x="6" y="8">
 <rect width="256" height="256" rx="60" fill="#F4F4ED" />
 <path fill-rule="evenodd" clip-rule="evenodd" d="M76.0652 43C94.3271 43 109.13 57.8034 109.13 76.0652C109.13 94.3271 94.3271 109.13 76.0652 109.13C57.8034 109.13 43 94.3271 43 76.0652C43 57.8034 57.8034 43 76.0652 43Z" stroke="#2088FF" stroke-width="7.34783" stroke-linecap="round" stroke-linejoin="round" />
@@ -45,5 +45,5 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M116.478 186.283C118.505 186.283 120.152 187.929 120.152 189.957C120.152 191.987 118.505 193.631 116.478 193.631C114.451 193.631 112.804 191.987 112.804 189.957C112.804 187.929 114.451 186.283 116.478 186.283Z" fill="#79B8FF" />
 <path fill-rule="evenodd" clip-rule="evenodd" d="M131.174 186.283C133.201 186.283 134.848 187.929 134.848 189.957C134.848 191.987 133.201 193.631 131.174 193.631C129.147 193.631 127.5 191.987 127.5 189.957C127.5 187.929 129.147 186.283 131.174 186.283Z" fill="#79B8FF" />
 <path d="M164.257 189.981L160.537 190.103" stroke="#79B8FF" stroke-width="7.34783" stroke-linecap="round" />
-</svg></g><text x="38" y="96" font-size="11.5" font-weight="550" fill="#183149" text-anchor="middle">Actions</text>
+</svg></g><text x="38" y="96" font-size="11.5" font-weight="550" fill="#18233e" text-anchor="middle">Actions</text>
 </svg>

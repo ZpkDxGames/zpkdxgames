@@ -21,10 +21,10 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 DAYS = 90
 THEMES = {
-    "dark": dict(bg="#0b111b", panel="#111c2b", border="#22354b", text="#edf5ff",
-                 muted="#9fb2c9", accent="#40d6ee", green="#66e2bb", blue="#9db7ff", amber="#ffd08c"),
-    "light": dict(bg="#f5f9ff", panel="#ffffff", border="#d6e3f2", text="#183149",
-                  muted="#516980", accent="#087e98", green="#168361", blue="#526eb5", amber="#a16a14"),
+    "dark": dict(bg="#0d111c", panel="#151c2e", border="#2b3650", text="#f1f5ff",
+                 muted="#a5b2cc", accent="#68e1f4", green="#6be5bb", blue="#b2a0ff", amber="#ffc780"),
+    "light": dict(bg="#f6f8ff", panel="#ffffff", border="#d6ddef", text="#18233e",
+                  muted="#53637e", accent="#08788e", green="#12785b", blue="#7051c1", amber="#966016"),
 }
 
 
@@ -184,7 +184,8 @@ def svg(theme, width, height, title, description, body, draw_length=1000):
     @keyframes pulse {{50%{{opacity:.45;transform:scale(.9)}}}}
     @media (prefers-reduced-motion:reduce) {{.draw,.rise,.fade,.grow,.flow,.pulse{{animation:none!important}}}}
   </style>
-  <rect class="frame" x=".5" y=".5" width="{width - 1}" height="{height - 1}" rx="22"/>
+  <rect class="frame" x=".5" y=".5" width="{width - 1}" height="{height - 1}" rx="18"/>
+  <path d="M24 1H{min(110, width-24)}" stroke="{THEMES[theme]['accent']}" stroke-width="2" opacity=".8"/>
   {body}
 </svg>
 '''
@@ -192,21 +193,6 @@ def svg(theme, width, height, title, description, body, draw_length=1000):
     for key, value in THEMES[theme].items():
         document = document.replace(f"var(--{key})", value)
     return "\n".join(line.rstrip() for line in document.splitlines()) + "\n"
-
-
-def cube(x, y, size=70):
-    """A decorative isometric voxel, not a screenshot or a telemetry value."""
-    s = size
-    return (f'<g transform="translate({x} {y})"><g class="showcase-float">'
-            f'<path d="M0 {-s}L{s} {-s/2}V{s/2}L0 {s}L{-s} {s/2}V{-s/2}Z" '
-            'fill="var(--panel)" stroke="var(--accent)" stroke-width="2"/>'
-            f'<path d="M0 {-s}L{s} {-s/2}L0 0L{-s} {-s/2}Z" fill="url(#line)" opacity=".24"/>'
-            f'<path d="M0 0L{s} {-s/2}V{s/2}L0 {s}Z" fill="var(--blue)" opacity=".13"/>'
-            f'<path d="M{-s} {-s/2}L0 0L{s} {-s/2}M0 0V{s}" '
-            'fill="none" stroke="var(--accent)" stroke-width="2"/>'
-            f'<path d="M{-s*.57} {-s*.71}L{s*.44} {-s*.2}V{s*.7}" '
-            'fill="none" stroke="var(--green)" stroke-width="2.5"/>'
-            '</g></g>')
 
 
 def showcase_style():
@@ -228,109 +214,84 @@ def showcase_style():
 
 
 def workspace_header(theme, mobile=False):
-    """Theme-aware portfolio cover; the mobile composition keeps text readable."""
-    width, height = (600, 644) if mobile else (1000, 460)
-    x = 40 if mobile else 50
+    """An editorial cover with a decorative animated circuit core."""
+    width, height = (600, 690) if mobile else (1000, 430)
+    x, cx, cy = (32, 300, 488) if mobile else (44, 797, 220)
     body = showcase_style()
-    body += '''
-    <defs>
-      <radialGradient id="halo">
-        <stop stop-color="var(--accent)" stop-opacity=".2"/>
-        <stop offset="1" stop-color="var(--accent)" stop-opacity="0"/>
-      </radialGradient>
-      <clipPath id="cover-clip"><rect width="100%" height="100%" rx="22"/></clipPath>
-    </defs>
-    '''
-    cx, cy = (300, 453) if mobile else (798, 229)
-    body += f'<g clip-path="url(#cover-clip)"><circle cx="{cx}" cy="{cy}" r="270" fill="url(#halo)"/>'
-    body += f'<rect x="{0 if mobile else 615}" y="60" width="600" height="{height}" fill="url(#grid)" opacity=".55"/></g>'
-    body += text(x, 44, "ZPKDXGAMES", 15, "accent", 750, 'letter-spacing="3"')
-    if not mobile:
-        body += text(950, 44, "PUBLIC PROJECTS / PORTFOLIO", 11, "muted", 600,
-                     'text-anchor="end" letter-spacing="1.4"')
-    body += text(x - 3, 145, "TONIM", 86 if not mobile else 82, weight=800, extra='letter-spacing="-4"')
-    body += text(x, 211, "Code with purpose.", 43 if not mobile else 37, weight=700, extra='letter-spacing="-1.6"')
-    body += text(x, 264, "Worlds with character.", 43 if not mobile else 37, "accent", 700, 'letter-spacing="-1.6"')
-    body += text(x + 1, 311, "Minecraft systems & web experiences.", 19, "muted")
-
-    ring = 128 if mobile else 153
-    body += f'<circle cx="{cx}" cy="{cy}" r="{ring}" fill="none" stroke="var(--border)"/>'
-    body += f'<circle cx="{cx}" cy="{cy}" r="{ring-25}" fill="none" stroke="var(--border)" stroke-dasharray="2 10"/>'
-    body += f'<g transform="translate({cx} {cy})"><g class="showcase-orbit">'
-    body += f'<circle r="{ring}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="55 900"/>'
-    body += f'<circle cx="{ring}" r="5" fill="var(--green)"/>'
-    body += '</g></g>'
-    body += cube(cx, cy, 73 if mobile else 84)
-    for dx, dy, color in [(-120, -88, "green"), (122, 83, "blue"), (116, -100, "accent")]:
-        body += f'<rect x="{cx+dx}" y="{cy+dy}" width="12" height="12" rx="3" fill="var(--panel)" stroke="var(--{color})"/>'
-    if not mobile:
-        body += '<path d="M620 355H671L700 326" fill="none" stroke="var(--border)" stroke-width="2"/>'
-        body += '<path class="showcase-trace" d="M620 355H671L700 326" fill="none" stroke="var(--green)" stroke-width="2"/>'
-        body += text(798, 415, "THE PLEXON ECOSYSTEM", 11, "muted", 600,
-                     'text-anchor="middle" letter-spacing="1.8"')
-
-    labels = [("JAVA + PAPER", 155, "accent"), ("WEB + UI", 121, "blue"), ("PLEXON", 110, "green")]
-    bx, by = (90, 592) if mobile else (50, 365)
-    for label, bw, color in labels:
-        body += rect(bx, by, bw, 34, "panel", 9, 'stroke="var(--border)"')
-        body += text(bx + bw / 2, by + 22, label, 11, color, 650,
-                     'text-anchor="middle" letter-spacing="1"')
-        bx += bw + 10
-    if not mobile:
-        body += text(51, 434, "CONFIGURABLE SYSTEMS. EXPRESSIVE INTERFACES.", 10, "muted", 550,
-                     'letter-spacing="1.4"')
-    return svg(theme, width, height, "Tonim / ZpkDxGames — public project showcase",
-               "Code with purpose. Worlds with character. Minecraft systems and web experiences. "
-               "An animated isometric voxel represents the Plexon ecosystem. Decorative artwork; no live status is implied.",
-               body)
+    body += '<defs><radialGradient id="halo"><stop stop-color="var(--blue)" stop-opacity=".2"/><stop offset="1" stop-color="var(--blue)" stop-opacity="0"/></radialGradient></defs>'
+    body += f'<circle cx="{cx}" cy="{cy}" r="195" fill="url(#halo)"/>'
+    body += f'<rect x="{18 if mobile else 602}" y="{335 if mobile else 66}" width="{564 if mobile else 380}" height="300" rx="16" fill="url(#grid)"/>'
+    body += text(x, 39, 'ZPKDXGAMES / DEVELOPER PROFILE', 12, 'accent', 650, 'letter-spacing="1.8"')
+    body += text(x-3, 126, 'Tonim.', 84, weight=800, extra='letter-spacing="-4"')
+    body += text(x, 182, 'Engineering systems.', 36, weight=700, extra='letter-spacing="-1.4"')
+    body += text(x, 228, 'Crafting experiences.', 36, 'blue', 700, 'letter-spacing="-1.4"')
+    body += text(x, 267, 'Minecraft plugins. Web interfaces. Useful tools.', 17, 'muted')
+    for i, (label, color) in enumerate([('JAVA / PAPER', 'accent'), ('WEB / UI', 'blue'), ('AUTOMATION', 'green')]):
+        bx = x + i*166
+        body += rect(bx, 296, 154, 31, radius=7, extra='stroke="var(--border)"')
+        body += text(bx+77, 316, label, 11, color, 600, 'text-anchor="middle" letter-spacing="1"')
+    body += f'<g transform="translate({cx} {cy})">'
+    body += '<circle r="121" fill="none" stroke="var(--border)"/><circle r="101" fill="none" stroke="var(--border)" stroke-dasharray="2 9"/>'
+    body += '<g class="showcase-orbit"><circle r="121" fill="none" stroke="var(--blue)" stroke-width="2" stroke-dasharray="95 665"/><circle cx="121" r="4" fill="var(--accent)"/></g>'
+    body += '<g class="showcase-float"><path d="M0-76L66-38V38L0 76L-66 38V-38Z" fill="var(--panel)" stroke="var(--blue)" stroke-width="2"/>'
+    body += '<path d="M0-58L50-29V29L0 58L-50 29V-29Z" fill="none" stroke="var(--border)"/>'
+    body += '<path d="M-25 22L-45 0L-25-22M25-22L45 0L25 22M10-28L-10 28" fill="none" stroke="var(--accent)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g></g>'
+    for dx, dy, label, color in [(-125,-110,'BUILD','accent'),(70,-83,'CRAFT','blue'),(-126,95,'SHIP','green')]:
+        px, py = cx+dx, cy+dy
+        body += f'<path d="M{px+36} {py+12}L{cx} {cy}" fill="none" stroke="var(--border)"/>'
+        body += f'<path class="showcase-trace" d="M{px+36} {py+12}L{cx} {cy}" fill="none" stroke="var(--{color})" stroke-opacity=".5"/>'
+        body += rect(px,py,76,25,radius=6,extra='stroke="var(--border)"')
+        body += text(px+38,py+17,label,10,color,650,'text-anchor="middle" letter-spacing="1.4"')
+    fy = height-35
+    body += f'<path d="M{x} {fy-23}H{width-x}" stroke="var(--border)"/>'
+    body += text(x,fy,'01 / IDEAS INTO INTERFACES',10,'muted',600,'letter-spacing="1.5"')
+    body += text(width-x,fy,'THE PLEXON ECOSYSTEM',10,'blue',600,'text-anchor="end" letter-spacing="1.2"')
+    return svg(theme,width,height,'Tonim / ZpkDxGames — engineering systems, crafting experiences',
+               'Minecraft plugins, web interfaces, and automation. Animated circuit artwork is decorative, not live telemetry.',body)
 
 
 def spotlight(theme, kind):
-    """Small editorial illustrations; README text supplies real project details."""
-    names = {"panel": ("CONTROL", "accent"), "tools": ("PROGRESSION", "green"),
-             "quests": ("DISCOVERY", "blue"), "crates": ("REWARDS", "amber")}
-    label, color = names[kind]
+    """Miniature technical illustrations; actual capabilities live in README text."""
+    names = {'panel':('01','OPERATIONS','accent'), 'tools':('02','PROGRESSION','green'),
+             'quests':('03','PLAYER JOURNEYS','blue'), 'crates':('04','REWARD DESIGN','amber')}
+    number,label,color = names[kind]
     body = showcase_style()
-    body += '<rect x="16" y="16" width="428" height="148" rx="16" fill="url(#grid)" opacity=".5"/>'
-    body += text(24, 32, label, 10, color, 650, 'letter-spacing="2"')
-    body += '<path d="M24 151H109M351 151H436" stroke="var(--border)"/>'
-    body += f'<circle class="showcase-glow" cx="426" cy="28" r="3" fill="var(--{color})"/>'
-    if kind == "panel":
-        for y in (59, 92, 125):
-            body += rect(160, y - 13, 140, 26, "panel", 7, 'stroke="var(--border)"')
-            body += f'<circle cx="176" cy="{y}" r="3" fill="var(--accent)"/>'
-            body += f'<path d="M190 {y}h60M270 {y}h14" stroke="var(--muted)" stroke-width="2" opacity=".65"/>'
-        body += '<path d="M68 92H142M318 92H392M230 138V158" fill="none" stroke="var(--border)" stroke-width="2"/>'
-        body += '<path class="showcase-trace" d="M68 92H142M318 92H392" fill="none" stroke="var(--accent)" stroke-width="2"/>'
-        for cx in (58, 402):
-            body += f'<rect x="{cx-9}" y="83" width="18" height="18" rx="5" fill="var(--panel)" stroke="var(--accent)"/>'
-    elif kind == "tools":
-        body += '<circle cx="230" cy="95" r="62" fill="none" stroke="var(--border)" stroke-width="3" stroke-dasharray="4 9"/>'
-        body += '<g transform="translate(230 95)"><g class="showcase-orbit"><path d="M0-62A62 62 0 0 1 62 0" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round"/></g></g>'
-        body += '<g class="showcase-float"><path d="M206 126L242 84" stroke="var(--green)" stroke-width="11" stroke-linecap="square"/>'
-        body += '<path d="M211 67L242 62L267 85L265 110L251 84L228 77L213 82Z" fill="var(--panel)" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/></g>'
-        body += '<path d="M106 90h28m-14-14v28M326 105h18m-9-9v18" stroke="var(--green)" opacity=".6"/>'
-    elif kind == "quests":
-        body += '<g class="showcase-float">'
-        body += rect(170, 43, 121, 103, "panel", 10, 'stroke="var(--blue)" stroke-width="2"')
-        body += '<path d="M186 44V145" stroke="var(--border)" stroke-width="2"/>'
-        for y in (66, 93, 120):
-            body += f'<rect x="200" y="{y-6}" width="11" height="11" rx="3" fill="none" stroke="var(--blue)"/>'
-            body += f'<path d="M222 {y}H273" stroke="var(--muted)" stroke-width="3" opacity=".7"/>'
-        body += '<path class="showcase-glow" d="M201 64l4 4 9-10" fill="none" stroke="var(--green)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
-        body += '</g><path d="M112 84h20m-10-10v20M326 118h18m-9-9v18" stroke="var(--blue)" opacity=".7"/>'
+    body += '<rect x="16" y="16" width="428" height="168" rx="10" fill="url(#grid)"/>'
+    body += text(24,34,number+' / '+label,11,color,650,'letter-spacing="1.6"')
+    if kind == 'panel':
+        body += rect(97,54,266,117,radius=10,extra='stroke="var(--border)"')
+        body += '<path d="M97 76H363M155 77V170" stroke="var(--border)"/>'
+        for x in (109,119,129):
+            body += f'<circle cx="{x}" cy="65" r="2" fill="var(--muted)"/>'
+        for y in (91,108,125,142):
+            body += f'<path d="M109 {y}H141" stroke="var(--border)" stroke-width="4"/>'
+        for i in range(3):
+            body += rect(168+i*61,87,51,24,'bg',5)
+            body += f'<path d="M{178+i*61} 99h20" stroke="var(--{color})" stroke-width="3"/>'
+        body += '<path d="M168 149L187 144L202 149L219 127L237 135L256 119L272 138L290 127L307 133L344 117" fill="none" stroke="var(--accent)" stroke-width="2.5" class="draw"/>'
+    elif kind == 'tools':
+        for i in range(4):
+            x=108+i*71; y=139-i*21
+            body += rect(x,y,49,160-y,'panel',5,extra='stroke="var(--border)"')
+        body += '<path d="M93 145L165 124L236 103L307 82L353 67" fill="none" stroke="var(--green)" stroke-width="2" class="draw"/>'
+        for x,y in [(93,145),(165,124),(236,103),(307,82)]:
+            body += f'<circle cx="{x}" cy="{y}" r="5" fill="var(--bg)" stroke="var(--green)" stroke-width="2"/>'
+        body += '<g class="showcase-float"><path d="M205 119L239 78" stroke="var(--green)" stroke-width="9"/><path d="M209 65L239 58L266 81L264 100L248 78L222 74L211 80Z" fill="var(--panel)" stroke="var(--green)" stroke-width="2"/></g>'
+    elif kind == 'quests':
+        body += '<path d="M102 112H358" stroke="var(--border)" stroke-width="2"/><path class="showcase-trace" d="M102 112H358" stroke="var(--blue)" stroke-width="2"/>'
+        for i in range(3):
+            x=103+i*87
+            body += rect(x,67, 70,91,radius=9,extra='stroke="var(--border)"')
+            body += f'<circle cx="{x+35}" cy="94" r="12" fill="var(--bg)" stroke="var(--blue)"/>'
+            body += f'<path d="M{x+29} 94l4 4 8-9" fill="none" stroke="var(--green)" stroke-width="2"/>'
+            body += f'<path d="M{x+16} 123h38M{x+16} 134h25" stroke="var(--muted)" stroke-opacity=".5" stroke-width="3"/>'
     else:
-        body += '<g class="showcase-float">'
-        body += '<path d="M230 44L288 73V128L230 158L172 128V73Z" fill="var(--panel)" stroke="var(--amber)" stroke-width="2"/>'
-        body += '<path d="M172 73L230 103L288 73M230 103V158" fill="none" stroke="var(--amber)" stroke-width="2"/>'
-        body += '<path d="M201 59L259 89V143M201 88L258 60" fill="none" stroke="var(--amber)" stroke-width="7" opacity=".6"/>'
-        body += '<path d="M230 44L288 73L230 103L172 73Z" fill="var(--amber)" opacity=".13"/>'
-        body += '</g><g class="showcase-glow">'
-        for cx, cy, size in [(126, 66, 9), (327, 92, 11), (302, 48, 5), (140, 122, 5)]:
-            body += f'<path d="M{cx-size} {cy}H{cx+size}M{cx} {cy-size}V{cy+size}" stroke="var(--amber)" stroke-width="2" stroke-linecap="round"/>'
-        body += '</g>'
-    return svg(theme, 460, 180, f"Plexon {label.lower()} illustration",
-               "Decorative project artwork, not a product screenshot. Animation respects reduced-motion preferences.", body)
+        body += '<g class="showcase-float"><path d="M230 54L282 80V132L230 158L178 132V80Z" fill="var(--panel)" stroke="var(--amber)" stroke-width="2"/><path d="M178 80L230 107L282 80M230 107V158M204 67L256 94V145" fill="none" stroke="var(--amber)" stroke-width="2"/><path d="M230 54L282 80L230 107L178 80Z" fill="var(--amber)" opacity=".16"/></g>'
+        for x,y in [(144,92),(314,119),(301,67),(165,146)]:
+            body += f'<path class="showcase-glow" d="M{x-5} {y}h10M{x} {y-5}v10" stroke="var(--amber)" stroke-width="2"/>'
+        body += '<path class="showcase-trace" d="M89 166H153L179 140M281 140L308 166H371" fill="none" stroke="var(--amber)" stroke-opacity=".5"/>'
+    return svg(theme,460,200,'Plexon '+label.lower()+' illustration',
+               'Conceptual project illustration, not a screenshot or measured data.',body)
 
 
 def activity(data, theme):
@@ -343,7 +304,8 @@ def activity(data, theme):
     for i, (value, label) in enumerate([(len(data["projects"]), "public projects"), (total, "project commits"),
                                        (active, "active projects"), (len(data["releases"]), "published releases")]):
         x = 32 + i * 238
-        body += rect(x, 96, 222, 86)
+        body += rect(x, 96, 222, 86, radius=10, extra='stroke="var(--border)"')
+        body += rect(x + 180, 111, 22, 2, ["blue", "accent", "green", "amber"][i], 1)
         body += text(x + 18, 136, f"{value:,}", 32, "accent" if i == 1 else "text", 700)
         body += text(x + 18, 160, label, 14, "muted")
     body += text(32, 215, "Commits per day", 16, weight=600)
@@ -374,19 +336,20 @@ def activity(data, theme):
 
 
 def ecosystem(data, theme):
-    body = text(32, 36, "WHERE THE WORK HAPPENS", 13, "accent", 650, 'letter-spacing="1.8"')
+    body = rect(16, 16, 482, 385, radius=12, extra='stroke="var(--border)"')
+    body += rect(514, 16, 470, 385, radius=12, extra='stroke="var(--border)"')
+    body += text(32, 36, "WHERE THE WORK HAPPENS", 13, "accent", 650, 'letter-spacing="1.8"')
     body += text(32, 72, "Project momentum", 26, weight=700)
     body += text(32, 99, "Most active public projects · last 90 days", 14, "muted")
     body += text(545, 72, "Source language mix", 26, weight=700)
     body += text(545, 99, "Code bytes · public default branches", 14, "muted")
-    body += '<path d="M510 46V391" stroke="var(--border)"/>'
     projects = sorted((p for p in data["projects"] if p["commits"]), key=lambda p: (-p["commits"], p["name"]))[:6]
     maximum = max((p["commits"] for p in projects), default=1)
     for i, project in enumerate(projects):
         y = 137 + i * 43
         body += text(32, y, project["name"], 14, weight=550)
         body += text(475, y, project["commits"], 14, "accent", 650, 'text-anchor="end"')
-        body += rect(32, y + 9, 442, 7, radius=3)
+        body += rect(32, y + 9, 442, 7, "bg", radius=3)
         body += rect(32, y + 9, round(442 * project["commits"] / maximum, 2), 7, "accent", 3, f'class="grow" style="animation-delay:{i*.1:.1f}s"')
     if not projects:
         body += text(32, 160, "No qualifying commits in this window.", 15, "muted")
@@ -502,6 +465,7 @@ def toolkit_icon(theme, key):
                    title + ". Decorative motion; no proficiency rating is implied.", body)
     # Standalone icons wrap naturally in README paragraphs, without a frame.
     document = re.sub(r'  <rect class="frame"[^>]*/>\n', '', document)
+    document = re.sub(r'  <path d="M24 1H[^\n]+\n', '', document)
     return document
 
 
@@ -559,6 +523,122 @@ def heatmap(data, theme):
                "Cells show real daily totals, with fixed bins of 0, 1–2, 3–5, 6–10, and 11 or more commits.", body)
 
 
+def architecture(theme, mobile=False):
+    width, height = (600, 604) if mobile else (1000, 314)
+    body = showcase_style()
+    body += text(28, 37, 'ONE ECOSYSTEM. FOCUSED MODULES.', 13, 'accent', 650, 'letter-spacing="1.6"')
+    body += text(28, 70, 'Designed to work together.', 26, weight=700)
+    groups = [('01 / PROGRESSION', 'Tools · Quests · Ranks', 'Player goals & long-term growth', 'accent'),
+              ('02 / REWARDS', 'Keys · Crates · DailyRewards', 'Earn, unlock & discover', 'green'),
+              ('03 / COMMUNITY', 'Chats · Shops', 'Connection & player exchange', 'blue')]
+    for i, (title, projects, subtitle, color) in enumerate(groups):
+        x, y, w = (28, 94+i*121, 544) if mobile else (28+i*320, 98, 304)
+        body += rect(x,y,w,105,radius=10,extra='stroke="var(--border)"')
+        body += f'<path d="M{x+1} {y+20}v64" stroke="var(--{color})" stroke-width="2"/>'
+        body += text(x+18,y+25,title,11,color,650,'letter-spacing="1.1"')
+        body += text(x+18,y+55,projects,17,weight=650)
+        body += text(x+18,y+81,subtitle,13,'muted')
+    y=477 if mobile else 230
+    body += rect(28,y,width-56,59,radius=10,extra='stroke="var(--border)"')
+    body += text(46,y+24,'PLEXONCORE / SHARED FOUNDATION',11,'blue',650,'letter-spacing="1"')
+    body += text(46,y+45,'Configuration · UI helpers · storage · diagnostics',14,'muted')
+    if mobile:
+        body += text(28,575,'A conceptual map. Integration varies by module.',12,'muted')
+    return svg(theme,width,height,'Plexon ecosystem overview',
+               'Progression: Tools, Quests, Ranks. Rewards: Keys, Crates, DailyRewards. Community: Chats and Shops. PlexonCore offers shared infrastructure; adoption varies by module.',body)
+
+
+def mobile_chart(data, theme, kind):
+    """Dedicated narrow-screen compositions; metrics retain the desktop meaning."""
+    width=600
+    body=text(28,37,'PUBLIC PROJECTS / '+data['as_of'],12,'accent',650,'letter-spacing="1.3"')
+    if kind == 'activity':
+        height=630
+        body+=text(28,77,'The last 90 days',30,weight=700)
+        values=[d['commits'] for d in data['daily']]
+        stats=[(len(data['projects']),'public projects'),(sum(values),'project commits'),
+               (sum(p['commits']>0 for p in data['projects']),'active projects'),(len(data['releases']),'published releases')]
+        for i,(value,label) in enumerate(stats):
+            x,y=28+(i%2)*280,104+(i//2)*98
+            body+=rect(x,y,264,82,radius=10,extra='stroke="var(--border)"')
+            body+=text(x+18,y+36,f'{value:,}',30,'accent' if i==1 else 'text',700)
+            body+=text(x+18,y+62,label,15,'muted')
+        body+=text(28,331,'Commits per day',17,weight=600)
+        maximum=max(4,math.ceil(max(values,default=0)/4)*4)
+        x0,y0,w,h=61,360,503,170
+        for i in range(5):
+            y=y0+h*(1-i/4)
+            body+=f'<path d="M{x0} {y}h{w}" stroke="var(--border)" stroke-dasharray="3 6"/>'
+            body+=text(49,y+4,int(maximum*i/4),12,'muted',extra='text-anchor="end"')
+        points=[(x0+i*w/(len(values)-1),y0+h*(1-v/maximum)) for i,v in enumerate(values)]
+        line='M'+' L'.join(f'{x:.2f} {y:.2f}' for x,y in points)
+        body+=f'<path d="{line} L564 530L61 530Z" fill="url(#area)"/>'
+        body+=f'<path class="fade" d="{line}" fill="none" stroke="url(#line)" stroke-width="2.5" stroke-linejoin="round"/>'
+        body+=text(61,553,data['start'],12,'muted')+text(564,553,data['as_of'],12,'muted',extra='text-anchor="end"')
+        body+=text(28,591,'All authors except bots · deduplicated across branches',13,'muted')
+        body+=text(28,612,'UTC · profile repository excluded',13,'muted')
+    elif kind == 'ecosystem':
+        height=820
+        body+=text(28,77,'Project momentum',30,weight=700)
+        body+=text(28,105,'Project commits · last 90 days',15,'muted')
+        projects=sorted((p for p in data['projects'] if p['commits']),key=lambda p:(-p['commits'],p['name']))[:6]
+        maximum=max((p['commits'] for p in projects),default=1)
+        for i,p in enumerate(projects):
+            y=146+i*44
+            body+=text(28,y,p['name'],16,weight=550)+text(572,y,p['commits'],16,'accent',650,'text-anchor="end"')
+            body+=rect(28,y+10,544,7,radius=3)
+            body+=rect(28,y+10,round(544*p['commits']/maximum,2),7,'accent',3,'class="grow"')
+        if not projects:
+            body+=text(28,153,'No qualifying commits in this window.',16,'muted')
+        body+='<path d="M28 427H572" stroke="var(--border)"/>'
+        body+=text(28,471,'Source language mix',27,weight=700)
+        body+=text(28,499,'Code bytes · public default branches',15,'muted')
+        languages=list(data['languages'].items())
+        if len(languages)>5:
+            languages=languages[:4]+[('Other',sum(v for _,v in languages[4:]))]
+        total=sum(v for _,v in languages)
+        colors=['accent','green','blue','amber','muted']
+        offset=0
+        for i,(language,amount) in enumerate(languages):
+            fraction=amount/total if total else 0
+            body+=rect(28+offset*544,526,fraction*544,18,colors[i],0)
+            offset+=fraction
+            y=580+i*36
+            body+=f'<circle cx="35" cy="{y-5}" r="5" fill="var(--{colors[i]})"/>'
+            body+=text(52,y,language,16,weight=550)
+            percentage=f'{fraction*100:.1f}%' if fraction>=.001 else '<0.1%'
+            body+=text(572,y,percentage,16,'muted',extra='text-anchor="end"')
+        body+=text(28,786,'Source volume, not a skill rating. Forks excluded.',13,'muted')
+    elif kind == 'heatmap':
+        height=554
+        rows=data['daily']; first=date.fromisoformat(rows[0]['date'])
+        monday=first-timedelta(days=first.weekday())
+        columns=(date.fromisoformat(rows[-1]['date'])-monday).days//7+1
+        body+=text(28,77,'Build rhythm',30,weight=700)
+        body+=text(28,105,'90 days of project activity · UTC',15,'muted')
+        for i,label in enumerate(['M','T','W','T','F','S','S']):
+            body+=text(28,151+i*32,label,12,'muted')
+        for row in rows:
+            day=date.fromisoformat(row['date']); col=(day-monday).days//7
+            v=row['commits']; level=0 if v==0 else 1 if v<=2 else 2 if v<=5 else 3 if v<=10 else 4
+            x,y=56+col*36,134+day.weekday()*32
+            body+=rect(x,y,27,25,radius=4,extra='stroke="var(--border)"')
+            if level:
+                body+=rect(x,y,27,25,'green',4,f'fill-opacity="{[0,.25,.48,.72,1][level]}" class="fade"')
+        body+=text(56,380,f"{sum(r['commits']>0 for r in rows)} active days",21,'green',700)
+        body+=text(322,380,f"{max(r['commits'] for r in rows)} peak / day",21,'accent',700)
+        for i,label in enumerate(['0','1–2','3–5','6–10','11+']):
+            x=56+i*100
+            body+=rect(x,417,38,17,radius=4,extra='stroke="var(--border)"')
+            if i:
+                body+=rect(x,417,38,17,'green',4,f'fill-opacity="{[0,.25,.48,.72,1][i]}"')
+            body+=text(x+19,458,label,13,'muted',extra='text-anchor="middle"')
+        body+=text(28,506,'Commits per day · fixed color bins',13,'muted')
+        body+=text(28,531,'Project activity, not a personal contribution calendar.',13,'muted')
+    return svg(theme,width,height,'Public project '+kind+' — mobile',
+               f"90-day public project snapshot as of {data['as_of']}. All authors except bots. Full values in data/profile.json.",body)
+
+
 def render(data, root=ROOT):
     if data.get("schema") != 1 or len(data.get("daily", [])) != DAYS:
         raise ValueError("Unexpected profile snapshot format")
@@ -573,6 +653,10 @@ def render(data, root=ROOT):
         for name, renderer in [("activity", activity), ("ecosystem", ecosystem), ("releases", release_radar)]:
             outputs[f"assets/profile/{name}-{theme}.svg"] = renderer(data, theme)
         outputs[f"assets/profile/heatmap-{theme}.svg"] = heatmap(data, theme)
+        for name in ('activity', 'ecosystem', 'heatmap'):
+            outputs[f"assets/profile/{name}-mobile-{theme}.svg"] = mobile_chart(data, theme, name)
+        outputs[f"assets/profile/architecture-{theme}.svg"] = architecture(theme)
+        outputs[f"assets/profile/architecture-mobile-{theme}.svg"] = architecture(theme, mobile=True)
         for key in TOOLKIT:
             outputs[f"assets/profile/toolkit-{key}-{theme}.svg"] = toolkit_icon(theme, key)
     # Generate and parse everything before replacing any last-known-good file.

@@ -1,155 +1,174 @@
-<!-- Public repository showcase for Tonim / ZpkDxGames. Editorial review: 2026-09-07. -->
+<!-- Profile design: October 2026. Charts use the dated public snapshot in data/profile.json. -->
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile/workspace-mobile-dark.svg">
   <source media="(max-width: 600px)" srcset="assets/profile/workspace-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/profile/workspace-dark.svg">
-  <img width="100%" src="assets/profile/workspace-light.svg" alt="Tonim · ZpkDxGames. Code with purpose. Worlds with character. Java, Paper, and web development for the Plexon ecosystem.">
+  <img width="100%" src="assets/profile/workspace-light.svg" alt="Tonim / ZpkDxGames. Engineering systems. Crafting experiences. Minecraft plugins, web interfaces, and useful tools.">
 </picture>
 
 <p align="center">
-  <a href="https://ajt-portfolio.vercel.app/"><img alt="Visit my portfolio" src="https://img.shields.io/badge/Portfolio-Explore-0891b2?style=for-the-badge&amp;logo=vercel&amp;logoColor=white&amp;labelColor=111c2b"></a>
-  <a href="https://www.spigotmc.org/resources/authors/tonim.2341103/"><img alt="Browse my SpigotMC resources" src="https://img.shields.io/badge/SpigotMC-Plugins-168361?style=for-the-badge&amp;labelColor=111c2b"></a>
-  <a href="https://modrinth.com/user/ZpkDxGames"><img alt="Find me on Modrinth" src="https://img.shields.io/badge/Modrinth-Projects-168361?style=for-the-badge&amp;logo=modrinth&amp;logoColor=white&amp;labelColor=111c2b"></a>
+  <a href="https://ajt-portfolio.vercel.app/"><strong>Portfolio ↗</strong></a> &nbsp; · &nbsp;
+  <a href="https://www.spigotmc.org/resources/authors/tonim.2341103/">SpigotMC</a> &nbsp; · &nbsp;
+  <a href="https://modrinth.com/user/ZpkDxGames">Modrinth</a> &nbsp; · &nbsp;
+  <a href="mailto:antoniojtneto.corp@gmail.com">Get in touch</a>
 </p>
 
 <p align="center">
   <a href="#selected-work">Selected work</a> &nbsp; / &nbsp;
-  <a href="#the-plexon-ecosystem">The ecosystem</a> &nbsp; / &nbsp;
-  <a href="#public-project-pulse">Project pulse</a> &nbsp; / &nbsp;
-  <a href="#developer-toolkit">Toolkit</a> &nbsp; / &nbsp;
-  <a href="#lets-build-something">Connect</a>
+  <a href="#the-plexon-ecosystem">Ecosystem</a> &nbsp; / &nbsp;
+  <a href="#project-observatory">Observatory</a> &nbsp; / &nbsp;
+  <a href="#developer-toolkit">Toolkit</a>
 </p>
 
-I'm **Tonim**, also known as **ZpkDxGames** — a developer and Computer Science student building Minecraft server systems and responsive web experiences. **Plexon** is where that work comes together: custom gameplay, expressive interfaces, and tools that make a server easier to run.
+I'm **Tonim**, also known as **ZpkDxGames** — a developer and Computer Science student building **Minecraft server systems and web experiences**. My work connects the logic behind a feature with the experience of using it: clear interfaces, meaningful progression, and tools that make complex systems easier to operate.
 
-I care about the details players notice: a readable item description, a satisfying reward reveal, a useful progress indicator, and a menu that makes the next action obvious. Behind those details are configurable systems, careful persistence, and attention to performance.
+**Plexon** is where those ideas come together. I work across gameplay plugins, shared infrastructure, dashboards, and automation, with attention to persistence, performance, and the small details players notice.
 
 ## Selected work
 
-Four entry points into what I build. Explore each repository for its source, documentation, and release requirements.
+From the server room to the player experience.
 
 <table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/ZpkDxGames/PlexonPanel">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="assets/profile/spotlight-panel-dark.svg">
-          <img width="100%" src="assets/profile/spotlight-panel-light.svg" alt="Abstract server nodes connected by animated signal paths.">
-        </picture>
-      </a>
-      <h3><a href="https://github.com/ZpkDxGames/PlexonPanel">PlexonPanel</a></h3>
-      <p><strong>A control room for your server.</strong></p>
-      <p>Paper telemetry, player presence, console workflows, and an optional Linux host companion. Device grants, local policies, and audit trails define who can do what.</p>
-      <p><code>Paper + Host</code> <code>Telemetry</code></p>
-      <p><a href="https://github.com/ZpkDxGames/PlexonPanel">Explore</a> · <a href="https://github.com/ZpkDxGames/PlexonPanel/blob/main/docs/OPERATIONS.md">Operations</a></p>
-      <p><sub>3.0.1 is a review candidate; live acceptance checks remain pending.</sub></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/ZpkDxGames/PlexonTools/tree/release/3.6.1">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="assets/profile/spotlight-tools-dark.svg">
-          <img width="100%" src="assets/profile/spotlight-tools-light.svg" alt="A floating custom pickaxe surrounded by a progression ring.">
-        </picture>
-      </a>
-      <h3><a href="https://github.com/ZpkDxGames/PlexonTools/tree/release/3.6.1">PlexonTools</a></h3>
-      <p><strong>Tools with a story to level up.</strong></p>
-      <p>Custom materials, enchantments, per-level objectives, and dynamic progress lore. World activation menus keep shared progression connected across dimensions.</p>
-      <p><code>Progression</code> <code>SQLite</code></p>
-      <p><a href="https://github.com/ZpkDxGames/PlexonTools/tree/release/3.6.1">Explore</a> · <a href="https://github.com/ZpkDxGames/PlexonTools/releases">Releases</a></p>
-      <p><sub>Linked source: the documented 3.6.1 release branch.</sub></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://github.com/ZpkDxGames/PlexonQuests">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="assets/profile/spotlight-quests-dark.svg">
-          <img width="100%" src="assets/profile/spotlight-quests-light.svg" alt="An illustrated quest journal with a glowing completion check.">
-        </picture>
-      </a>
-      <h3><a href="https://github.com/ZpkDxGames/PlexonQuests">PlexonQuests</a></h3>
-      <p><strong>Give every session a direction.</strong></p>
-      <p>Daily and weekly quests, milestones, and stable rotations in a visual journal. Players can pin goals, inspect rewards, reroll eligible quests, and follow their progress.</p>
-      <p><code>Quest journal</code> <code>Core-aware</code></p>
-      <p><a href="https://github.com/ZpkDxGames/PlexonQuests">Explore</a> · <a href="https://github.com/ZpkDxGames/PlexonQuests/releases">Releases</a></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://github.com/ZpkDxGames/PlexonCrates">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="assets/profile/spotlight-crates-dark.svg">
-          <img width="100%" src="assets/profile/spotlight-crates-light.svg" alt="An isometric reward crate with gently animated sparkle accents.">
-        </picture>
-      </a>
-      <h3><a href="https://github.com/ZpkDxGames/PlexonCrates">PlexonCrates</a></h3>
-      <p><strong>Make the reveal part of the reward.</strong></p>
-      <p>Roulette and reveal animations, holograms, particles, and guided reward editing. Exact physical keys, reward limits, pity rules, and opening history support the experience.</p>
-      <p><code>Reward effects</code> <code>Visual editor</code></p>
-      <p><a href="https://github.com/ZpkDxGames/PlexonCrates">Explore</a> · <a href="https://github.com/ZpkDxGames/PlexonCrates/releases">Releases</a></p>
-    </td>
-  </tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/ZpkDxGames/PlexonPanel">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/spotlight-panel-dark.svg">
+  <img width="100%" src="assets/profile/spotlight-panel-light.svg" alt="Operations: an illustrated server dashboard. Decorative, not live telemetry.">
+</picture>
+</a>
+<h3><a href="https://github.com/ZpkDxGames/PlexonPanel">PlexonPanel</a></h3>
+<p><strong>A clearer view of your servers.</strong></p>
+<p>Paper and host telemetry, pairing, console workflows, and a dedicated browser command center.</p>
+<p><code>Java</code> <code>Paper</code> <code>React / TypeScript</code></p>
+<p><a href="https://github.com/ZpkDxGames/PlexonPanel">Server &amp; host ↗</a> &nbsp; <a href="https://github.com/ZpkDxGames/PlexonPanel-Dashboard">Dashboard ↗</a></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/ZpkDxGames/PlexonTools">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/spotlight-tools-dark.svg">
+  <img width="100%" src="assets/profile/spotlight-tools-light.svg" alt="Progression: a custom pickaxe and an illustrative upgrade path.">
+</picture>
+</a>
+<h3><a href="https://github.com/ZpkDxGames/PlexonTools">PlexonTools</a></h3>
+<p><strong>Tools that grow with the player.</strong></p>
+<p>Unique tool identities, world activation, persistent progression, and SQLite-backed provenance.</p>
+<p><code>Java</code> <code>Progression</code> <code>SQLite</code></p>
+<p><a href="https://github.com/ZpkDxGames/PlexonTools">Explore source ↗</a> &nbsp; <a href="https://github.com/ZpkDxGames/PlexonTools/releases">Releases ↗</a></p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<a href="https://github.com/ZpkDxGames/PlexonQuests">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/spotlight-quests-dark.svg">
+  <img width="100%" src="assets/profile/spotlight-quests-light.svg" alt="Player journeys: illustrated quest milestones connected by a moving signal.">
+</picture>
+</a>
+<h3><a href="https://github.com/ZpkDxGames/PlexonQuests">PlexonQuests</a></h3>
+<p><strong>Give every session a direction.</strong></p>
+<p>Daily and weekly quests, milestones, rewards, and a visual journal that keeps the next goal in reach.</p>
+<p><code>Java</code> <code>Quest journal</code> <code>Player UX</code></p>
+<p><a href="https://github.com/ZpkDxGames/PlexonQuests">Explore source ↗</a> &nbsp; <a href="https://github.com/ZpkDxGames/PlexonQuests/releases">Releases ↗</a></p>
+</td>
+<td width="50%" valign="top">
+<a href="https://github.com/ZpkDxGames/PlexonCrates">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/spotlight-crates-dark.svg">
+  <img width="100%" src="assets/profile/spotlight-crates-light.svg" alt="Reward design: an animated isometric crate with circuit traces and sparkle accents.">
+</picture>
+</a>
+<h3><a href="https://github.com/ZpkDxGames/PlexonCrates">PlexonCrates</a></h3>
+<p><strong>Make the reveal part of the reward.</strong></p>
+<p>Animated openings, visual reward editing, physical keys, and configurable reward rules.</p>
+<p><code>Java</code> <code>Animation</code> <code>Reward systems</code></p>
+<p><a href="https://github.com/ZpkDxGames/PlexonCrates">Explore source ↗</a> &nbsp; <a href="https://github.com/ZpkDxGames/PlexonCrates/releases">Releases ↗</a></p>
+</td>
+</tr>
 </table>
+
+<sub>Project illustrations are conceptual. Each repository documents its requirements and release status; PlexonPanel's coordinated rollout remains subject to its documented acceptance gates.</sub>
 
 ## The Plexon ecosystem
 
-Each plugin has a focused role. **[PlexonCore](https://github.com/ZpkDxGames/PlexonCore)** provides shared configuration, text, GUI, storage, and diagnostic helpers for modules that adopt its API; individual plugins continue to own their gameplay and data.
+Focused modules with their own gameplay and data. **[PlexonCore](https://github.com/ZpkDxGames/PlexonCore)** supplies shared configuration, UI helpers, storage, and diagnostics for modules that adopt its API.
 
-| Focus | Projects & purpose |
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile/architecture-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/profile/architecture-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/architecture-dark.svg">
+  <img width="100%" src="assets/profile/architecture-light.svg" alt="Plexon ecosystem: progression, rewards, and community modules, with PlexonCore providing shared infrastructure where adopted.">
+</picture>
+
+| Area | Explore |
 | :--- | :--- |
-| **Foundation** | [PlexonCore](https://github.com/ZpkDxGames/PlexonCore) · [PlexonPanel](https://github.com/ZpkDxGames/PlexonPanel)<br>Shared infrastructure, module diagnostics, telemetry, and administration |
-| **Progression** | [PlexonTools](https://github.com/ZpkDxGames/PlexonTools/tree/release/3.6.1) · [PlexonQuests](https://github.com/ZpkDxGames/PlexonQuests) · [PlexonRanks](https://github.com/ZpkDxGames/PlexonRanks)<br>Evolving tools, quest journals, rank requirements, rewards, and visual editors |
-| **Rewards** | [PlexonKeys](https://github.com/ZpkDxGames/PlexonKeys) · [PlexonCrates](https://github.com/ZpkDxGames/PlexonCrates) · [DailyRewards](https://github.com/ZpkDxGames/Plexon-DailyRewards)<br>Activity-earned keys, animated crate openings, and configurable reward calendars |
-| **Community** | [PlexonChats](https://github.com/ZpkDxGames/PlexonChats) · [PlexonShops](https://github.com/ZpkDxGames/PlexonShops)<br>Rich chat, item sharing, player shop discovery, ratings, and sub-shops |
-| **World & items** | [PlexonBackpacks](https://github.com/ZpkDxGames/PlexonBackpacks) · [PlexonSpawners](https://github.com/ZpkDxGames/PlexonSpawners) · [ClaimFlags](https://github.com/ZpkDxGames/PlexonGriefPreventionAddon)<br>Persistent backpacks, typed spawners and Essence, plus claim and subclaim flags |
+| **Operations & infrastructure** | [Core](https://github.com/ZpkDxGames/PlexonCore) · [Panel](https://github.com/ZpkDxGames/PlexonPanel) · [Dashboard](https://github.com/ZpkDxGames/PlexonPanel-Dashboard) |
+| **Progression** | [Tools](https://github.com/ZpkDxGames/PlexonTools) · [Quests](https://github.com/ZpkDxGames/PlexonQuests) · [Ranks](https://github.com/ZpkDxGames/PlexonRanks) |
+| **Rewards** | [Keys](https://github.com/ZpkDxGames/PlexonKeys) · [Crates](https://github.com/ZpkDxGames/PlexonCrates) · [DailyRewards](https://github.com/ZpkDxGames/Plexon-DailyRewards) |
+| **Community** | [Chats](https://github.com/ZpkDxGames/PlexonChats) · [Shops](https://github.com/ZpkDxGames/PlexonShops) |
+| **World & inventory** | [Backpacks](https://github.com/ZpkDxGames/PlexonBackpacks) · [Spawners](https://github.com/ZpkDxGames/PlexonSpawners) · [Claim flags](https://github.com/ZpkDxGames/PlexonGriefPreventionAddon) |
 
-### More to explore
-
-**[GhostBlocks](https://github.com/ZpkDxGames/GhostBlocks/tree/v7.0.0)** brings collision-free decoration to creative builds: BlockDisplay models, preserved block states, searchable categories, and management menus. Its 7.0 release documents **896 selectable block models** with the default configuration on Paper 26.2 build 121. [Explore the release →](https://github.com/ZpkDxGames/GhostBlocks/releases/tag/v7.0.0)
-
-**[Triangle Area](https://github.com/ZpkDxGames/Triangle-Area)** is a collaborative coursework project built with HTML, CSS, and JavaScript: enter coordinates, calculate an area, and see the triangle on a 2D plane. [Try the live demo →](https://tonim-triangle-area-activity.vercel.app/)
+**Beyond Plexon** — [GhostBlocks](https://github.com/ZpkDxGames/GhostBlocks) brings collision-free decoration to Minecraft with state-preserving BlockDisplay models and a searchable catalog. [Triangle Area](https://github.com/ZpkDxGames/Triangle-Area) turns coordinate geometry into a visual web experience: [try the demo ↗](https://tonim-triangle-area-activity.vercel.app/).
 
 <details>
-  <summary><strong>Earlier code &amp; upstream-based work</strong></summary>
-  <ul>
-    <li><a href="https://github.com/ZpkDxGames/Rankup-1.2Fixer"><strong>Rankup 1.2 Fixer</strong></a> — a compatibility fork of comonier's Rankup, with configurable rank-menu lore for PlexonCraft.</li>
-    <li><a href="https://github.com/ZpkDxGames/FluffyMachines"><strong>FluffyMachines</strong></a> — a public fork of the Slimefun machines and tools addon.</li>
-    <li><a href="https://github.com/ZpkDxGames/DropsEditor"><strong>DropsEditor</strong></a> — older custom-drop plugin code; its plugin metadata credits cubito_verde.</li>
-  </ul>
+<summary><strong>Earlier projects &amp; upstream credits</strong></summary>
+
+- [Rankup 1.2 Fixer](https://github.com/ZpkDxGames/Rankup-1.2Fixer) — a compatibility fork of comonier's Rankup, with configurable rank-menu lore for PlexonCraft.
+- [FluffyMachines](https://github.com/ZpkDxGames/FluffyMachines) — a public fork of the Slimefun machines and tools addon.
+- [DropsEditor](https://github.com/ZpkDxGames/DropsEditor) — earlier custom-drop plugin code; its plugin metadata credits cubito_verde.
+
 </details>
 
-## Public project pulse
+## Project observatory
 
-Animated views of my public repositories, refreshed daily. The date on each snapshot shows when the data was collected.
+A measured view of my **public projects**, using a rolling 90-day snapshot. These are project-wide commits from all authors except bots, not my personal contribution count. The collection date appears on the activity card.
 
 <picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile/activity-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/profile/activity-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/profile/activity-dark.svg">
-  <img width="100%" src="assets/profile/activity-light.svg" alt="Public project activity over 90 days, including project counts, commits, published releases, and the snapshot date.">
+  <img width="100%" src="assets/profile/activity-light.svg" alt="90-day public project activity: repository count, commits, active projects, releases, and daily commit totals.">
 </picture>
 
 <picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile/ecosystem-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/profile/ecosystem-mobile-light.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/profile/ecosystem-dark.svg">
-  <img width="100%" src="assets/profile/ecosystem-light.svg" alt="Animated project momentum bars and a source-language donut chart, measured from public repository data.">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/heatmap-dark.svg">
-  <img width="100%" src="assets/profile/heatmap-light.svg" alt="A 90-day public project activity heatmap, with active-day totals, peak daily commits, and a fixed color legend.">
+  <img width="100%" src="assets/profile/ecosystem-light.svg" alt="Most active public projects and source-language share, measured from GitHub data. Language share is not a skill rating.">
 </picture>
 
 <details>
-  <summary><strong>Recent releases &amp; how these graphs work</strong></summary>
-  <br>
-  <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/releases-dark.svg">
-  <img width="100%" src="assets/profile/releases-light.svg" alt="The six most recently published GitHub releases in the snapshot window, with dates and pre-release labels.">
+<summary><strong>Build rhythm · 90-day activity calendar</strong></summary>
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile/heatmap-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/profile/heatmap-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/heatmap-dark.svg">
+  <img width="100%" src="assets/profile/heatmap-light.svg" alt="90-day project commit calendar, active days, peak daily commits, and a fixed color legend.">
 </picture>
-  <p>Activity counts project commits from all authors except bots, deduplicated across current branches within each repository. Private repositories, GitHub-marked forks, archived projects, and this profile are excluded. The heatmap measures project activity; the language chart measures source bytes.</p>
-  <p><a href="data/profile.json">Snapshot data</a> · <a href="docs/profile-visuals.md">Method &amp; visual design</a> · <a href="https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/profile-metrics.yml">Refresh history</a></p>
+
 </details>
+
+<details>
+<summary><strong>Release radar · recent published milestones</strong></summary>
+<br>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile/releases-dark.svg">
+  <img width="100%" src="assets/profile/releases-light.svg" alt="The six most recently published GitHub releases in the snapshot window, with publication dates and prerelease labels.">
+</picture>
+
+</details>
+
+<sub>Scheduled daily · public, owned, non-fork, non-archived projects · profile automation excluded. Language share measures source bytes on default branches.</sub>
+
+[Snapshot data](data/profile.json) · [How the visuals work](docs/profile-visuals.md) · [Refresh history](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/profile-metrics.yml)
 
 ## Developer toolkit
 
-The tools behind my gameplay systems, web interfaces, and automation.
+The tools behind the systems. Java for server work; web technologies for interfaces; automation for repeatable delivery.
 
 <p align="center"><strong>Languages</strong></p>
 
@@ -226,23 +245,28 @@ The tools behind my gameplay systems, web interfaces, and automation.
 </picture>
 </p>
 
-<p align="center"><sub>Server integrations: Vault · LuckPerms · PlaceholderAPI</sub></p>
+<p align="center"><sub>Dashboard frontend: React · TypeScript · Vite<br>Server integrations: Vault · LuckPerms · PlaceholderAPI</sub></p>
 
 <details>
-  <summary><strong>A little more about me</strong></summary>
-  <p>My experience in finance, administration, logistics, and customer support shapes how I approach software: clear workflows, useful feedback, and documentation people can follow.</p>
-  <p>Portuguese native · English B2 · Open to remote collaboration and opportunities.</p>
-  <p>More web work: <a href="https://ajt-portfolio.vercel.app/">professional portfolio</a> · <a href="https://tonim-lp.vercel.app/">creator hub</a>.</p>
+<summary><strong>Background &amp; approach</strong></summary>
+
+My experience in finance, administration, logistics, and customer support shapes how I build software: clear workflows, useful feedback, and documentation people can follow.
+
+Portuguese native · English B2 · Open to remote collaboration and opportunities.
+
+More web work: [professional portfolio](https://ajt-portfolio.vercel.app/) · [creator hub](https://tonim-lp.vercel.app/).
+
 </details>
 
 ## Let's build something
 
-Interested in Minecraft tooling, a web experience, or a collaboration? I'd love to hear what you have in mind.
+Minecraft tooling, a thoughtful web interface, or an idea worth exploring — **let's talk**.
 
 <p align="center">
-  <a href="mailto:antoniojtneto.corp@gmail.com"><img alt="Contact me by email" src="https://img.shields.io/badge/Email-Let's_talk-0891b2?style=for-the-badge&amp;logo=gmail&amp;logoColor=white&amp;labelColor=111c2b"></a>
-  <a href="https://www.linkedin.com/in/antoniojtneto"><img alt="Connect on LinkedIn" src="https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&amp;labelColor=111c2b"></a>
-  <a href="https://discord.gg/DC3pFQSJy7"><img alt="Join the Discord community" src="https://img.shields.io/badge/Discord-Community-5865f2?style=for-the-badge&amp;logo=discord&amp;logoColor=white&amp;labelColor=111c2b"></a>
+  <a href="mailto:antoniojtneto.corp@gmail.com"><strong>Email ↗</strong></a> &nbsp; · &nbsp;
+  <a href="https://www.linkedin.com/in/antoniojtneto">LinkedIn ↗</a> &nbsp; · &nbsp;
+  <a href="https://discord.gg/DC3pFQSJy7">Discord ↗</a> &nbsp; · &nbsp;
+  <a href="https://ajt-portfolio.vercel.app/">Portfolio ↗</a>
 </p>
 
-<p align="center"><sub>Tonim / ZpkDxGames &nbsp; · &nbsp; Thoughtful systems. Expressive worlds.</sub></p>
+<p align="center"><sub>TONIM / ZPKDXGAMES &nbsp; — &nbsp; Thoughtful systems. Expressive worlds.</sub></p>

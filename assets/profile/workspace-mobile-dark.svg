@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="644" viewBox="0 0 600 644" role="img" aria-labelledby="title desc">
-  <title id="title">Tonim / ZpkDxGames — public project showcase</title>
-  <desc id="desc">Code with purpose. Worlds with character. Minecraft systems and web experiences. An animated isometric voxel represents the Plexon ecosystem. Decorative artwork; no live status is implied.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="690" viewBox="0 0 600 690" role="img" aria-labelledby="title desc">
+  <title id="title">Tonim / ZpkDxGames — engineering systems, crafting experiences</title>
+  <desc id="desc">Minecraft plugins, web interfaces, and automation. Animated circuit artwork is decorative, not live telemetry.</desc>
   <defs>
-    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#40d6ee" stop-opacity=".32"/><stop offset="1" stop-color="#40d6ee" stop-opacity=".01"/></linearGradient>
-    <linearGradient id="line"><stop stop-color="#40d6ee"/><stop offset="1" stop-color="#66e2bb"/></linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#22354b" stroke-opacity=".35"/></pattern>
+    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#68e1f4" stop-opacity=".32"/><stop offset="1" stop-color="#68e1f4" stop-opacity=".01"/></linearGradient>
+    <linearGradient id="line"><stop stop-color="#68e1f4"/><stop offset="1" stop-color="#6be5bb"/></linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#2b3650" stroke-opacity=".35"/></pattern>
   </defs>
   <style>
     svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    .frame {fill:#0b111b;stroke:#22354b}
+    .frame {fill:#0d111c;stroke:#2b3650}
     .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
     .rise {animation:rise .8s ease-out both}
     .fade {animation:fade .8s ease-out both}
@@ -23,7 +23,8 @@
     @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
     @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.grow,.flow,.pulse{animation:none!important}}
   </style>
-  <rect class="frame" x=".5" y=".5" width="599" height="643" rx="22"/>
+  <rect class="frame" x=".5" y=".5" width="599" height="689" rx="18"/>
+  <path d="M24 1H110" stroke="#68e1f4" stroke-width="2" opacity=".8"/>
 
     <style>
       .showcase-float {animation:showcase-float 7s ease-in-out infinite}
@@ -38,13 +39,5 @@
         .showcase-float,.showcase-orbit,.showcase-trace,.showcase-glow {animation:none!important}
       }
     </style>
-
-    <defs>
-      <radialGradient id="halo">
-        <stop stop-color="#40d6ee" stop-opacity=".2"/>
-        <stop offset="1" stop-color="#40d6ee" stop-opacity="0"/>
-      </radialGradient>
-      <clipPath id="cover-clip"><rect width="100%" height="100%" rx="22"/></clipPath>
-    </defs>
-    <g clip-path="url(#cover-clip)"><circle cx="300" cy="453" r="270" fill="url(#halo)"/><rect x="0" y="60" width="600" height="644" fill="url(#grid)" opacity=".55"/></g><text x="40" y="44" font-size="15" font-weight="750" fill="#40d6ee" letter-spacing="3">ZPKDXGAMES</text><text x="37" y="145" font-size="82" font-weight="800" fill="#edf5ff" letter-spacing="-4">TONIM</text><text x="40" y="211" font-size="37" font-weight="700" fill="#edf5ff" letter-spacing="-1.6">Code with purpose.</text><text x="40" y="264" font-size="37" font-weight="700" fill="#40d6ee" letter-spacing="-1.6">Worlds with character.</text><text x="41" y="311" font-size="19" font-weight="400" fill="#9fb2c9" >Minecraft systems &amp; web experiences.</text><circle cx="300" cy="453" r="128" fill="none" stroke="#22354b"/><circle cx="300" cy="453" r="103" fill="none" stroke="#22354b" stroke-dasharray="2 10"/><g transform="translate(300 453)"><g class="showcase-orbit"><circle r="128" fill="none" stroke="#40d6ee" stroke-width="2" stroke-dasharray="55 900"/><circle cx="128" r="5" fill="#66e2bb"/></g></g><g transform="translate(300 453)"><g class="showcase-float"><path d="M0 -73L73 -36.5V36.5L0 73L-73 36.5V-36.5Z" fill="#111c2b" stroke="#40d6ee" stroke-width="2"/><path d="M0 -73L73 -36.5L0 0L-73 -36.5Z" fill="url(#line)" opacity=".24"/><path d="M0 0L73 -36.5V36.5L0 73Z" fill="#9db7ff" opacity=".13"/><path d="M-73 -36.5L0 0L73 -36.5M0 0V73" fill="none" stroke="#40d6ee" stroke-width="2"/><path d="M-41.61 -51.83L32.12 -14.600000000000001V51.099999999999994" fill="none" stroke="#66e2bb" stroke-width="2.5"/></g></g><rect x="180" y="365" width="12" height="12" rx="3" fill="#111c2b" stroke="#66e2bb"/><rect x="422" y="536" width="12" height="12" rx="3" fill="#111c2b" stroke="#9db7ff"/><rect x="416" y="353" width="12" height="12" rx="3" fill="#111c2b" stroke="#40d6ee"/><rect x="90" y="592" width="155" height="34" rx="9" fill="#111c2b" stroke="#22354b"/><text x="167.5" y="614" font-size="11" font-weight="650" fill="#40d6ee" text-anchor="middle" letter-spacing="1">JAVA + PAPER</text><rect x="255" y="592" width="121" height="34" rx="9" fill="#111c2b" stroke="#22354b"/><text x="315.5" y="614" font-size="11" font-weight="650" fill="#9db7ff" text-anchor="middle" letter-spacing="1">WEB + UI</text><rect x="386" y="592" width="110" height="34" rx="9" fill="#111c2b" stroke="#22354b"/><text x="441.0" y="614" font-size="11" font-weight="650" fill="#66e2bb" text-anchor="middle" letter-spacing="1">PLEXON</text>
+    <defs><radialGradient id="halo"><stop stop-color="#b2a0ff" stop-opacity=".2"/><stop offset="1" stop-color="#b2a0ff" stop-opacity="0"/></radialGradient></defs><circle cx="300" cy="488" r="195" fill="url(#halo)"/><rect x="18" y="335" width="564" height="300" rx="16" fill="url(#grid)"/><text x="32" y="39" font-size="12" font-weight="650" fill="#68e1f4" letter-spacing="1.8">ZPKDXGAMES / DEVELOPER PROFILE</text><text x="29" y="126" font-size="84" font-weight="800" fill="#f1f5ff" letter-spacing="-4">Tonim.</text><text x="32" y="182" font-size="36" font-weight="700" fill="#f1f5ff" letter-spacing="-1.4">Engineering systems.</text><text x="32" y="228" font-size="36" font-weight="700" fill="#b2a0ff" letter-spacing="-1.4">Crafting experiences.</text><text x="32" y="267" font-size="17" font-weight="400" fill="#a5b2cc" >Minecraft plugins. Web interfaces. Useful tools.</text><rect x="32" y="296" width="154" height="31" rx="7" fill="#151c2e" stroke="#2b3650"/><text x="109" y="316" font-size="11" font-weight="600" fill="#68e1f4" text-anchor="middle" letter-spacing="1">JAVA / PAPER</text><rect x="198" y="296" width="154" height="31" rx="7" fill="#151c2e" stroke="#2b3650"/><text x="275" y="316" font-size="11" font-weight="600" fill="#b2a0ff" text-anchor="middle" letter-spacing="1">WEB / UI</text><rect x="364" y="296" width="154" height="31" rx="7" fill="#151c2e" stroke="#2b3650"/><text x="441" y="316" font-size="11" font-weight="600" fill="#6be5bb" text-anchor="middle" letter-spacing="1">AUTOMATION</text><g transform="translate(300 488)"><circle r="121" fill="none" stroke="#2b3650"/><circle r="101" fill="none" stroke="#2b3650" stroke-dasharray="2 9"/><g class="showcase-orbit"><circle r="121" fill="none" stroke="#b2a0ff" stroke-width="2" stroke-dasharray="95 665"/><circle cx="121" r="4" fill="#68e1f4"/></g><g class="showcase-float"><path d="M0-76L66-38V38L0 76L-66 38V-38Z" fill="#151c2e" stroke="#b2a0ff" stroke-width="2"/><path d="M0-58L50-29V29L0 58L-50 29V-29Z" fill="none" stroke="#2b3650"/><path d="M-25 22L-45 0L-25-22M25-22L45 0L25 22M10-28L-10 28" fill="none" stroke="#68e1f4" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g></g><path d="M211 390L300 488" fill="none" stroke="#2b3650"/><path class="showcase-trace" d="M211 390L300 488" fill="none" stroke="#68e1f4" stroke-opacity=".5"/><rect x="175" y="378" width="76" height="25" rx="6" fill="#151c2e" stroke="#2b3650"/><text x="213" y="395" font-size="10" font-weight="650" fill="#68e1f4" text-anchor="middle" letter-spacing="1.4">BUILD</text><path d="M406 417L300 488" fill="none" stroke="#2b3650"/><path class="showcase-trace" d="M406 417L300 488" fill="none" stroke="#b2a0ff" stroke-opacity=".5"/><rect x="370" y="405" width="76" height="25" rx="6" fill="#151c2e" stroke="#2b3650"/><text x="408" y="422" font-size="10" font-weight="650" fill="#b2a0ff" text-anchor="middle" letter-spacing="1.4">CRAFT</text><path d="M210 595L300 488" fill="none" stroke="#2b3650"/><path class="showcase-trace" d="M210 595L300 488" fill="none" stroke="#6be5bb" stroke-opacity=".5"/><rect x="174" y="583" width="76" height="25" rx="6" fill="#151c2e" stroke="#2b3650"/><text x="212" y="600" font-size="10" font-weight="650" fill="#6be5bb" text-anchor="middle" letter-spacing="1.4">SHIP</text><path d="M32 632H568" stroke="#2b3650"/><text x="32" y="655" font-size="10" font-weight="600" fill="#a5b2cc" letter-spacing="1.5">01 / IDEAS INTO INTERFACES</text><text x="568" y="655" font-size="10" font-weight="600" fill="#b2a0ff" text-anchor="end" letter-spacing="1.2">THE PLEXON ECOSYSTEM</text>
 </svg>
