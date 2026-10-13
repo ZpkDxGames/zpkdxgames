@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "owner": "ZpkDxGames",
-  "as_of": "2026-10-12",
+  "as_of": "2026-10-13",
   "days": 90,
-  "start": "2026-07-15",
+  "start": "2026-07-16",
   "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
   "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
   "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
@@ -11,8 +11,14 @@
     {
       "name": "AI-Desktop-Companion",
       "url": "https://github.com/ZpkDxGames/AI-Desktop-Companion",
-      "commits": 0,
-      "languages": {}
+      "commits": 162,
+      "languages": {
+        "JavaScript": 142118,
+        "HTML": 18016,
+        "CSS": 16820,
+        "Rust": 3443,
+        "Python": 2747
+      }
     },
     {
       "name": "ConanGrayBot-Core",
@@ -47,6 +53,16 @@
       "languages": {
         "Java": 108439,
         "Python": 6371
+      }
+    },
+    {
+      "name": "Neural-Core-Dashboard",
+      "url": "https://github.com/ZpkDxGames/Neural-Core-Dashboard",
+      "commits": 0,
+      "languages": {
+        "TypeScript": 42336,
+        "JavaScript": 2535,
+        "PLpgSQL": 2054
       }
     },
     {
@@ -141,9 +157,9 @@
     {
       "name": "PlexonPanel",
       "url": "https://github.com/ZpkDxGames/PlexonPanel",
-      "commits": 575,
+      "commits": 592,
       "languages": {
-        "Java": 1013496,
+        "Java": 1016877,
         "Python": 52541,
         "JavaScript": 2338
       }
@@ -151,7 +167,7 @@
     {
       "name": "PlexonPanel-Dashboard",
       "url": "https://github.com/ZpkDxGames/PlexonPanel-Dashboard",
-      "commits": 470,
+      "commits": 582,
       "languages": {
         "TypeScript": 235967,
         "JavaScript": 3464,
@@ -253,10 +269,6 @@
     }
   ],
   "daily": [
-    {
-      "date": "2026-07-15",
-      "commits": 0
-    },
     {
       "date": "2026-07-16",
       "commits": 0
@@ -611,17 +623,23 @@
     },
     {
       "date": "2026-10-12",
-      "commits": 7
+      "commits": 246
+    },
+    {
+      "date": "2026-10-13",
+      "commits": 52
     }
   ],
   "languages": {
-    "Java": 9602801,
-    "Python": 504589,
-    "TypeScript": 324073,
-    "JavaScript": 117861,
-    "CSS": 116172,
-    "HTML": 111185,
-    "Shell": 7969
+    "Java": 9606182,
+    "Python": 507336,
+    "TypeScript": 366409,
+    "JavaScript": 262514,
+    "CSS": 132992,
+    "HTML": 129201,
+    "Shell": 7969,
+    "Rust": 3443,
+    "PLpgSQL": 2054
   },
   "releases": [
     {
