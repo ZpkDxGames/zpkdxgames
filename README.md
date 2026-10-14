@@ -13,8 +13,8 @@ I'm **Tonim** (ZpkDxGames), a programmer based in Brazil. I build Minecraft serv
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-mobile.svg?v=08c9c044f4b0">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-wide.svg?v=533d3ceb2528" width="100%" alt="32 public repos · 30 original repos · 3,782 contributions · 54 active days. Profile calendar: 2025-10-15 through 2026-10-14.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-mobile.svg?v=23af80b0cc68">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-wide.svg?v=69d7d843500a" width="100%" alt="32 public repos · 30 original repos · 3,782 contributions · 54 active days. Profile calendar: 2025-10-15 through 2026-10-14.">
 </picture>
 </p>
 
@@ -75,7 +75,7 @@ Minecraft infrastructure, desktop interaction, and useful web interfaces. Open a
 <details>
 <summary>Dashboard data and project descriptions</summary>
 
-Snapshot: **2026-10-14T15:56:11Z**. Profile calendar: **2025-10-15–2026-10-14**.
+Snapshot: **2026-10-14T16:07:36Z**. Profile calendar: **2025-10-15–2026-10-14**.
 
 | Metric | Value |
 | :--- | ---: |
@@ -117,4 +117,4 @@ Make the interface clear. Keep state explicit. Validate the real behavior. Leave
 </a>
 </p>
 
-<sub>GitHub snapshot · 2026-10-14T15:56:11Z · [Refresh status](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/dashboard-sync.yml)</sub>
+<sub>GitHub snapshot · 2026-10-14T16:07:36Z · [Refresh status](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/dashboard-sync.yml)</sub>
