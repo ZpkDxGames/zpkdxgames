@@ -1,43 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="200" viewBox="0 0 460 200" role="img" aria-labelledby="title desc">
-  <title id="title">Plexon progression illustration</title>
-  <desc id="desc">Conceptual project illustration, not a screenshot or measured data.</desc>
-  <defs>
-    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#68e1f4" stop-opacity=".32"/><stop offset="1" stop-color="#68e1f4" stop-opacity=".01"/></linearGradient>
-    <linearGradient id="line"><stop stop-color="#68e1f4"/><stop offset="1" stop-color="#6be5bb"/></linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#2b3650" stroke-opacity=".35"/></pattern>
-  </defs>
-  <style>
-    svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    .frame {fill:#0d111c;stroke:#2b3650}
-    .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
-    .rise {animation:rise .8s ease-out both}
-    .fade {animation:fade .8s ease-out both}
-    .grow {transform-box:fill-box;transform-origin:left center;animation:grow 1.3s ease-out both}
-    .flow {stroke-dasharray:5 13;animation:flow 12s linear infinite}
-    .pulse {animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-    @keyframes draw {from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
-    @keyframes rise {from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes fade {from{opacity:0}to{opacity:1}}
-    @keyframes grow {from{transform:scaleX(0)}to{transform:scaleX(1)}}
-    @keyframes flow {to{stroke-dashoffset:-108}}
-    @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
-    @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.grow,.flow,.pulse{animation:none!important}}
-  </style>
-  <rect class="frame" x=".5" y=".5" width="459" height="199" rx="18"/>
-  <path d="M24 1H110" stroke="#68e1f4" stroke-width="2" opacity=".8"/>
-
-    <style>
-      .showcase-float {animation:showcase-float 7s ease-in-out infinite}
-      .showcase-orbit {animation:showcase-orbit 36s linear infinite}
-      .showcase-trace {stroke-dasharray:36 90;animation:showcase-trace 12s linear infinite}
-      .showcase-glow {opacity:.8;animation:showcase-glow 6s ease-in-out infinite}
-      @keyframes showcase-float {50%{transform:translateY(-7px)}}
-      @keyframes showcase-orbit {to{transform:rotate(360deg)}}
-      @keyframes showcase-trace {to{stroke-dashoffset:-252}}
-      @keyframes showcase-glow {50%{opacity:.35}}
-      @media (prefers-reduced-motion:reduce) {
-        .showcase-float,.showcase-orbit,.showcase-trace,.showcase-glow {animation:none!important}
-      }
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="256" viewBox="0 0 500 256" role="img" aria-labelledby="title desc">
+<title id="title">PlexonTools — conceptual illustration and measured vitals</title>
+<desc id="desc">Conceptual illustration for PlexonTools, not a screenshot. As of 2026-10-13, latest stable in the 90-day snapshot window: 4.3.0; project-wide commits: 199; primary source language by byte volume: Java. Not proficiency or production-readiness evidence.</desc>
+<style>svg{font-family:"Inter","Segoe UI",system-ui,-apple-system,sans-serif}
+    .reveal{animation:reveal 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .grow{transform-box:fill-box;transform-origin:left center;animation:grow 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .bar-y{transform-box:fill-box;transform-origin:center bottom;animation:bar-y 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .draw{stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .signal{stroke-dasharray:40 340;animation:signal 24s linear infinite}
+    @keyframes reveal{from{opacity:0}to{opacity:1}}
+    @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    @keyframes bar-y{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+    @keyframes draw{from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
+    @keyframes signal{to{stroke-dashoffset:-760}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}.draw{stroke-dashoffset:0!important}}
     </style>
-    <rect x="16" y="16" width="428" height="168" rx="10" fill="url(#grid)"/><text x="24" y="34" font-size="11" font-weight="650" fill="#6be5bb" letter-spacing="1.6">02 / PROGRESSION</text><rect x="108" y="139" width="49" height="21" rx="5" fill="#151c2e" stroke="#2b3650"/><rect x="179" y="118" width="49" height="42" rx="5" fill="#151c2e" stroke="#2b3650"/><rect x="250" y="97" width="49" height="63" rx="5" fill="#151c2e" stroke="#2b3650"/><rect x="321" y="76" width="49" height="84" rx="5" fill="#151c2e" stroke="#2b3650"/><path d="M93 145L165 124L236 103L307 82L353 67" fill="none" stroke="#6be5bb" stroke-width="2" class="draw"/><circle cx="93" cy="145" r="5" fill="#0d111c" stroke="#6be5bb" stroke-width="2"/><circle cx="165" cy="124" r="5" fill="#0d111c" stroke="#6be5bb" stroke-width="2"/><circle cx="236" cy="103" r="5" fill="#0d111c" stroke="#6be5bb" stroke-width="2"/><circle cx="307" cy="82" r="5" fill="#0d111c" stroke="#6be5bb" stroke-width="2"/><g class="showcase-float"><path d="M205 119L239 78" stroke="#6be5bb" stroke-width="9"/><path d="M209 65L239 58L266 81L264 100L248 78L222 74L211 80Z" fill="#151c2e" stroke="#6be5bb" stroke-width="2"/></g>
+<rect x=".5" y=".5" width="499" height="255" rx="16" fill="#0D111C" stroke="#2B3650"/>
+<text x="20.00" y="27.00" font-size="13.00" font-weight="650" fill="#B2A0FF" text-anchor="start" letter-spacing="1.4">PROGRESSION</text><text x="480.00" y="27.00" font-size="12.00" font-weight="500" fill="#A5B2CC" text-anchor="end" >CONCEPTUAL</text><path d="M145 133L208 63" fill="none" stroke="#B2A0FF" stroke-width="13" stroke-linecap="square"/><path d="M171 49H223L251 77V96L209 66H179Z" fill="#151C2E" stroke="#68E1F4" stroke-width="3"/><path d="M285 54H431M285 90H393M285 126H357" fill="none" stroke="#2B3650" stroke-width="3" /><rect x="283.00" y="47.00" width="14.00" height="14.00" rx="3" fill="#B2A0FF" /><rect x="283.00" y="83.00" width="14.00" height="14.00" rx="3" fill="#B2A0FF" /><rect x="283.00" y="119.00" width="14.00" height="14.00" rx="3" fill="#B2A0FF" /><path d="M20 156H480" fill="none" stroke="#2B3650" stroke-width="1" /><text x="20.00" y="184.00" font-size="13.00" font-weight="500" fill="#A5B2CC" text-anchor="start" >STABLE¹</text><text x="20.00" y="214.00" font-size="24.00" font-weight="650" fill="#F1F5FF" text-anchor="start" >4.3.0</text><text x="181.00" y="184.00" font-size="13.00" font-weight="500" fill="#A5B2CC" text-anchor="start" >COMMITS²</text><text x="181.00" y="214.00" font-size="24.00" font-weight="650" fill="#B2A0FF" text-anchor="start" >199</text><text x="341.00" y="184.00" font-size="13.00" font-weight="500" fill="#A5B2CC" text-anchor="start" >LANGUAGE</text><text x="341.00" y="214.00" font-size="19.00" font-weight="650" fill="#F1F5FF" text-anchor="start" >Java</text><text x="20.00" y="242.00" font-size="12.00" font-weight="400" fill="#A5B2CC" text-anchor="start" >¹ In snapshot window · ² Project-wide, 90 days</text><text x="480.00" y="242.00" font-size="12.00" font-weight="400" fill="#A5B2CC" text-anchor="end" >2026-10-13</text>
 </svg>

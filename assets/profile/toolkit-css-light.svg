@@ -1,39 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="76" height="104" viewBox="0 0 76 104" role="img" aria-labelledby="title desc">
-  <title id="title">CSS toolkit icon</title>
-  <desc id="desc">CSS. Decorative motion; no proficiency rating is implied.</desc>
-  <defs>
-    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#08788e" stop-opacity=".32"/><stop offset="1" stop-color="#08788e" stop-opacity=".01"/></linearGradient>
-    <linearGradient id="line"><stop stop-color="#08788e"/><stop offset="1" stop-color="#12785b"/></linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6ddef" stroke-opacity=".35"/></pattern>
-  </defs>
-  <style>
-    svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    .frame {fill:#f6f8ff;stroke:#d6ddef}
-    .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
-    .rise {animation:rise .8s ease-out both}
-    .fade {animation:fade .8s ease-out both}
-    .grow {transform-box:fill-box;transform-origin:left center;animation:grow 1.3s ease-out both}
-    .flow {stroke-dasharray:5 13;animation:flow 12s linear infinite}
-    .pulse {animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-    @keyframes draw {from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
-    @keyframes rise {from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes fade {from{opacity:0}to{opacity:1}}
-    @keyframes grow {from{transform:scaleX(0)}to{transform:scaleX(1)}}
-    @keyframes flow {to{stroke-dashoffset:-108}}
-    @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
-    @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.grow,.flow,.pulse{animation:none!important}}
-  </style>
-  <style>
-      .toolkit-float {animation:toolkit-float 6s ease-in-out infinite;animation-delay:-3.10s}
-      @keyframes toolkit-float {50%{transform:translateY(-3px)}}
-      @media (prefers-reduced-motion:reduce) {.toolkit-float{animation:none!important}}
+<title id="title">CSS toolkit icon</title>
+<desc id="desc">CSS. Static technology identifier, not a proficiency rating. Original marks and license retained.</desc>
+<style>svg{font-family:"Inter","Segoe UI",system-ui,-apple-system,sans-serif}
+    .reveal{animation:reveal 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .grow{transform-box:fill-box;transform-origin:left center;animation:grow 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .bar-y{transform-box:fill-box;transform-origin:center bottom;animation:bar-y 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .draw{stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .signal{stroke-dasharray:40 340;animation:signal 24s linear infinite}
+    @keyframes reveal{from{opacity:0}to{opacity:1}}
+    @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    @keyframes bar-y{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+    @keyframes draw{from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
+    @keyframes signal{to{stroke-dashoffset:-760}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}.draw{stroke-dashoffset:0!important}}
     </style>
-    <ellipse cx="38" cy="78" rx="22" ry="2" fill="#53637e" opacity=".13"/>
-    <g class="toolkit-float"><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 256 256" fill="none" x="6" y="8">
+<rect x=".5" y=".5" width="75" height="103" rx="16" fill="#F6F8FF" stroke="#D6DDEF"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 256 256" fill="none" x="6" y="7">
 <rect width="256" height="256" rx="60" fill="#0277BD" />
 <path d="M53.7527 102.651L56.6155 134.593H128.096V102.651H53.7527Z" fill="#EBEBEB" />
 <path d="M128.095 38H127.985H48L50.9036 69.9423H128.095V38Z" fill="#EBEBEB" />
 <path d="M128.095 218.841V185.608L127.955 185.645L92.3813 176.04L90.1072 150.564H72.821H58.0425L62.5175 200.718L127.948 218.882L128.095 218.841Z" fill="#EBEBEB" />
 <path d="M167.318 134.593L163.61 176.019L127.985 185.635V218.866L193.468 200.718L193.948 195.321L201.454 111.229L202.233 102.651L208 38H127.985V69.9423H172.994L170.088 102.651H127.985V134.593H167.318Z" fill="white" />
-</svg></g><text x="38" y="96" font-size="11.5" font-weight="550" fill="#18233e" text-anchor="middle">CSS</text>
+</svg><text x="38.00" y="94.00" font-size="11.50" font-weight="550" fill="#18233E" text-anchor="middle" >CSS</text>
 </svg>

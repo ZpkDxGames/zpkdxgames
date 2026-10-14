@@ -1,33 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="76" height="104" viewBox="0 0 76 104" role="img" aria-labelledby="title desc">
-  <title id="title">MiniMessage toolkit icon</title>
-  <desc id="desc">MiniMessage. Decorative motion; no proficiency rating is implied.</desc>
-  <defs>
-    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#08788e" stop-opacity=".32"/><stop offset="1" stop-color="#08788e" stop-opacity=".01"/></linearGradient>
-    <linearGradient id="line"><stop stop-color="#08788e"/><stop offset="1" stop-color="#12785b"/></linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#d6ddef" stroke-opacity=".35"/></pattern>
-  </defs>
-  <style>
-    svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    .frame {fill:#f6f8ff;stroke:#d6ddef}
-    .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
-    .rise {animation:rise .8s ease-out both}
-    .fade {animation:fade .8s ease-out both}
-    .grow {transform-box:fill-box;transform-origin:left center;animation:grow 1.3s ease-out both}
-    .flow {stroke-dasharray:5 13;animation:flow 12s linear infinite}
-    .pulse {animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-    @keyframes draw {from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
-    @keyframes rise {from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes fade {from{opacity:0}to{opacity:1}}
-    @keyframes grow {from{transform:scaleX(0)}to{transform:scaleX(1)}}
-    @keyframes flow {to{stroke-dashoffset:-108}}
-    @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
-    @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.grow,.flow,.pulse{animation:none!important}}
-  </style>
-  <style>
-      .toolkit-float {animation:toolkit-float 6s ease-in-out infinite;animation-delay:-1.24s}
-      @keyframes toolkit-float {50%{transform:translateY(-3px)}}
-      @media (prefers-reduced-motion:reduce) {.toolkit-float{animation:none!important}}
+<title id="title">MiniMessage toolkit icon</title>
+<desc id="desc">MiniMessage. Static technology identifier, not a proficiency rating. Original marks and license retained.</desc>
+<style>svg{font-family:"Inter","Segoe UI",system-ui,-apple-system,sans-serif}
+    .reveal{animation:reveal 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .grow{transform-box:fill-box;transform-origin:left center;animation:grow 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .bar-y{transform-box:fill-box;transform-origin:center bottom;animation:bar-y 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .draw{stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .signal{stroke-dasharray:40 340;animation:signal 24s linear infinite}
+    @keyframes reveal{from{opacity:0}to{opacity:1}}
+    @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    @keyframes bar-y{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+    @keyframes draw{from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
+    @keyframes signal{to{stroke-dashoffset:-760}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}.draw{stroke-dashoffset:0!important}}
     </style>
-    <ellipse cx="38" cy="78" rx="22" ry="2" fill="#53637e" opacity=".13"/>
-    <g class="toolkit-float"><rect x="6" y="8" width="64" height="64" rx="14" fill="#ffffff" stroke="#d6ddef"/><path d="M27 29L17 40L27 51M49 29L59 40L49 51M43 26L33 54" fill="none" stroke="#12785b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g><text x="38" y="96" font-size="10.5" font-weight="550" fill="#18233e" text-anchor="middle">MiniMessage</text>
+<rect x=".5" y=".5" width="75" height="103" rx="16" fill="#F6F8FF" stroke="#D6DDEF"/>
+<rect x="6.00" y="7.00" width="64.00" height="64.00" rx="12" fill="#EEF0FA" stroke="#D6DDEF" /><path d="M28 29L18 39L28 49M48 29L58 39L48 49M43 26L33 52" fill="none" stroke="#08788E" stroke-width="3" /><text x="38.00" y="94.00" font-size="10.50" font-weight="550" fill="#18233E" text-anchor="middle" >MiniMessage</text>
 </svg>

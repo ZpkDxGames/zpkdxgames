@@ -1,33 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="76" height="104" viewBox="0 0 76 104" role="img" aria-labelledby="title desc">
-  <title id="title">Paper toolkit icon</title>
-  <desc id="desc">Paper. Decorative motion; no proficiency rating is implied.</desc>
-  <defs>
-    <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#68e1f4" stop-opacity=".32"/><stop offset="1" stop-color="#68e1f4" stop-opacity=".01"/></linearGradient>
-    <linearGradient id="line"><stop stop-color="#68e1f4"/><stop offset="1" stop-color="#6be5bb"/></linearGradient>
-    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#2b3650" stroke-opacity=".35"/></pattern>
-  </defs>
-  <style>
-    svg {font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-    .frame {fill:#0d111c;stroke:#2b3650}
-    .draw {stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 1.8s ease-out both}
-    .rise {animation:rise .8s ease-out both}
-    .fade {animation:fade .8s ease-out both}
-    .grow {transform-box:fill-box;transform-origin:left center;animation:grow 1.3s ease-out both}
-    .flow {stroke-dasharray:5 13;animation:flow 12s linear infinite}
-    .pulse {animation:pulse 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
-    @keyframes draw {from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
-    @keyframes rise {from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes fade {from{opacity:0}to{opacity:1}}
-    @keyframes grow {from{transform:scaleX(0)}to{transform:scaleX(1)}}
-    @keyframes flow {to{stroke-dashoffset:-108}}
-    @keyframes pulse {50%{opacity:.45;transform:scale(.9)}}
-    @media (prefers-reduced-motion:reduce) {.draw,.rise,.fade,.grow,.flow,.pulse{animation:none!important}}
-  </style>
-  <style>
-      .toolkit-float {animation:toolkit-float 6s ease-in-out infinite;animation-delay:-2.48s}
-      @keyframes toolkit-float {50%{transform:translateY(-3px)}}
-      @media (prefers-reduced-motion:reduce) {.toolkit-float{animation:none!important}}
+<title id="title">Paper toolkit icon</title>
+<desc id="desc">Paper. Static technology identifier, not a proficiency rating. Original marks and license retained.</desc>
+<style>svg{font-family:"Inter","Segoe UI",system-ui,-apple-system,sans-serif}
+    .reveal{animation:reveal 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .grow{transform-box:fill-box;transform-origin:left center;animation:grow 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .bar-y{transform-box:fill-box;transform-origin:center bottom;animation:bar-y 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .draw{stroke-dasharray:1000.00;stroke-dashoffset:0;animation:draw 900ms cubic-bezier(0.22, 1, 0.36, 1) both}
+    .signal{stroke-dasharray:40 340;animation:signal 24s linear infinite}
+    @keyframes reveal{from{opacity:0}to{opacity:1}}
+    @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    @keyframes bar-y{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+    @keyframes draw{from{stroke-dashoffset:1000.00}to{stroke-dashoffset:0}}
+    @keyframes signal{to{stroke-dashoffset:-760}}
+    @media (prefers-reduced-motion:reduce){*{animation:none!important}.draw{stroke-dashoffset:0!important}}
     </style>
-    <ellipse cx="38" cy="78" rx="22" ry="2" fill="#a5b2cc" opacity=".13"/>
-    <g class="toolkit-float"><rect x="6" y="8" width="64" height="64" rx="14" fill="#151c2e" stroke="#2b3650"/><path d="M24 20H43L55 32V59H24Z" fill="none" stroke="#68e1f4" stroke-width="2.5" stroke-linejoin="round"/><path d="M43 20V32H55M31 40H47M31 48H43" fill="none" stroke="#68e1f4" stroke-width="2.5" stroke-linejoin="round"/></g><text x="38" y="96" font-size="11.5" font-weight="550" fill="#f1f5ff" text-anchor="middle">Paper</text>
+<rect x=".5" y=".5" width="75" height="103" rx="16" fill="#0D111C" stroke="#2B3650"/>
+<rect x="6.00" y="7.00" width="64.00" height="64.00" rx="12" fill="#172043" stroke="#2B3650" /><path d="M25 21H43L54 32V58H25ZM43 21V32H54M32 41H47M32 49H43" fill="none" stroke="#B2A0FF" stroke-width="2.5" /><text x="38.00" y="94.00" font-size="11.50" font-weight="550" fill="#F1F5FF" text-anchor="middle" >Paper</text>
 </svg>
