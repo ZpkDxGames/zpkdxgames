@@ -50,6 +50,15 @@ class DataTests(unittest.TestCase):
         self.assertEqual(weeks[-1]["days"],[4,7,0,None,None,None,None])
         self.assertEqual(weeks[-1]["count"],11)
 
+    def test_weekday_totals_cross_year_and_preserve_calendar_sum(self):
+        snapshot={"days":[{"date":"2025-12-28","count":8},
+                          {"date":"2025-12-29","count":3},
+                          {"date":"2026-01-03","count":11},
+                          {"date":"2026-01-04","count":5}]}
+        totals=dashboard.weekday_totals(snapshot)
+        self.assertEqual(totals,[3,0,0,0,0,11,13])
+        self.assertEqual(sum(totals),sum(day['count'] for day in snapshot['days']))
+
     def test_language_other_preserves_denominator(self):
         snapshot={"language_bytes":dict(zip("ABCDEFG",[100,70,50,30,20,10,5]))}
         shares=dashboard.language_shares(snapshot)

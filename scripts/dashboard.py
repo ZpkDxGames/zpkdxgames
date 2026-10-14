@@ -382,67 +382,117 @@ def chart_tile(c, x, y, size, color, future=False):
 
 def activity(snapshot, mobile):
     weeks=weekly_activity(snapshot)
-    total=sum(week['count'] for week in weeks)
-    c=Canvas(420 if mobile else 900,816 if mobile else 480,"Contribution rhythm",f"Twelve calendar weeks of real GitHub profile contributions through {snapshot['calendar_end']}. {total} contributions. Current week is incomplete. Beveled bars and raised daily tiles show the same calendar; moving highlights are decorative.")
+    total=sum(w['count'] for w in weeks)
+    peak=max(w['count'] for w in weeks)
+    c=Canvas(420 if mobile else 900,504 if mobile else 428,"Weekly contribution totals",f"Twelve calendar weeks through {snapshot['calendar_end']}: {total} contributions. Columns only, with a linear zero-based scale. Current week is incomplete.")
     pad=26 if mobile else 36
-    c.text(pad,47 if mobile else 43,"Contribution rhythm",28 if mobile else 26,weight=600)
+    c.text(pad,47 if mobile else 43,"Weekly contributions",28 if mobile else 26,weight=600)
     c.text(pad,79 if mobile else 76,"12 weeks · current week in progress",20 if mobile else 18,MUTED)
     if mobile:
         c.text(pad,132,pretty(total),38,CYAN,weight=600,spacing=-1)
         c.text(394,132,"contributions",20,MUTED,anchor="end")
-        c.rect(26,156,368,300,fill="url(#glass)",stroke="url(#edge)",radius=12)
-        c.rect(26,480,368,280,fill="url(#glass)",stroke="url(#edge)",radius=12)
-        c.text(46,190,"Weekly contributions",20,MUTED)
-        x,y,pw,ph=100,216,272,174
-        hx,hy,step,cell=82,540,24,17
-        c.text(46,516,"Daily density",20,MUTED)
+        c.rect(26,156,368,280,fill="url(#glass)",stroke="url(#edge)",radius=12)
+        x,y,pw,ph=100,196,272,176
     else:
         c.text(864,76,pretty(total)+" contributions",23,CYAN,weight=600,anchor="end")
-        c.rect(36,104,500,316,fill="url(#glass)",stroke="url(#edge)",radius=12)
-        c.rect(552,104,312,316,fill="url(#glass)",stroke="url(#edge)",radius=12)
-        c.text(56,138,"WEEKLY CONTRIBUTIONS",16,MUTED,cls="mono")
-        c.text(572,138,"DAILY DENSITY",16,MUTED,cls="mono")
-        x,y,pw,ph=92,176,416,184
-        hx,hy,step,cell=596,178,20,15
-    maximum=max(max(week['count'] for week in weeks),1)
-    cap=max(4,math.ceil(maximum/4)*4)
+        c.rect(36,104,828,252,fill="url(#glass)",stroke="url(#edge)",radius=12)
+        x,y,pw,ph=100,144,740,166
+    cap=max(4,math.ceil(max(peak,1)/4)*4)
     for tick in range(5):
         gy=y+ph-ph*tick/4
         c.line(x,gy,x+pw,gy,"#30465f",.8,'stroke-dasharray="2 6"')
         value=round(cap*tick/4)
         label=f"{value/1000:.1f}k" if value>=1000 else str(value)
-        c.text(x-10,gy+6,label,20 if mobile else 16,MUTED,anchor="end")
-    points=[(x+(i+.5)*pw/12,y+ph-ph*week['count']/cap) for i,week in enumerate(weeks)]
-    coords=' '.join(f"{px:.3f},{py:.3f}" for px,py in points)
-    c.add(f'<path d="M{points[0][0]},{y+ph} L'+coords.replace(' ',' L')+f' L{points[-1][0]},{y+ph} Z" fill="url(#area)" class="reveal"/>')
-    for i,week in enumerate(weeks):
-        bx,by=points[i]; bh=ph*week['count']/cap; bw=14 if mobile else 20
-        # No minimum height: a zero remains zero; bevels stay within the bar face.
-        c.rect(bx-bw/2,by,bw,bh,fill="url(#bar)",stroke="none",radius=min(3,bh/2),extra=f'data-count="{week["count"]}" data-cap="{cap}" data-scale="{ph}"')
+        c.text(x-12,gy+6,label,20 if mobile else 16,MUTED,anchor="end")
+    for i,w in enumerate(weeks):
+        bx=x+(i+.5)*pw/12;bh=ph*w['count']/cap;by=y+ph-bh;bw=14 if mobile else 30
+        c.rect(bx-bw/2,by,bw,bh,fill="url(#bar)",stroke="none",radius=min(3,bh/2),extra=f'data-count="{w["count"]}" data-cap="{cap}" data-scale="{ph}"')
         if bh>0:
             c.rect(bx+bw/2-3,by,3,bh,fill="#0a2948",stroke="none",radius=0,extra='opacity=".3"')
-            c.rect(bx-bw/2+2,by,bw-4,min(2,bh),fill="#b7f5ff",stroke="none",radius=1,extra='opacity=".65"')
-        if i in ((0,5,11) if mobile else (0,4,8,11)):
-            c.text(x+pw if mobile and i==11 else bx,y+ph+34,week['date'].strftime('%d %b'),20 if mobile else 16,MUTED,anchor='end' if mobile and i==11 else 'middle')
-    c.add(f'<polyline points="{coords}" fill="none" stroke="{CYAN}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>')
-    c.add(f'<polyline points="{coords}" pathLength="1000" fill="none" stroke="#e6fcff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" class="trace" opacity=".7"/>')
-    c.circle(*points[-1],11,fill=CYAN,stroke="none",extra='filter="url(#glow)" class="halo" opacity=".3"')
-    c.circle(*points[-1],4,fill="url(#sphere)",stroke="#c6f7ff",width=1)
-    day_max=max([v for week in weeks for v in week['days'] if v is not None]+[1])
-    tones=["#20334a","#1c4f77","#2779a8","#35accd",CYAN]
-    for wi,week in enumerate(weeks):
-        for di,count in enumerate(week['days']):
-            level=0 if not count else 1+min(3,int(math.log1p(count)/math.log1p(day_max)*3))
-            chart_tile(c,hx+wi*step,hy+di*step,cell,NAVY if count is None else tones[level],count is None)
-    for di,label in [(0,"M"),(2,"W"),(4,"F")]:
-        c.text(hx-14,hy+di*step+cell-2,label,20 if mobile else 16,MUTED,anchor="end")
-    ly=736 if mobile else 356
+            c.rect(bx-bw/2+2,by,bw-4,min(2,bh),fill="#b7f5ff",stroke="none",radius=1,extra='opacity=".65" class="soft"')
+        if not mobile:
+            c.text(bx,by-10,pretty(w['count']),16,CYAN if w['count']==peak else MUTED,anchor="middle")
+        if not mobile or i in (0,5,11):
+            c.text(x+pw if mobile and i==11 else bx,y+ph+32,w['date'].strftime('%d %b'),20 if mobile else 16,MUTED,anchor='end' if mobile and i==11 else 'middle')
+    c.text(pad,474 if mobile else 398,'Peak week: '+pretty(peak)+' contributions',20 if mobile else 18,MUTED)
+    return c.finish()
+
+
+def calendar(snapshot, mobile):
+    weeks=weekly_activity(snapshot)
+    observed=[v for w in weeks for v in w['days'] if v is not None]
+    active=sum(v>0 for v in observed)
+    c=Canvas(420 if mobile else 900,440 if mobile else 420,"Daily contribution calendar",f"Daily contributions across twelve calendar weeks through {snapshot['calendar_end']}. {active} of {len(observed)} elapsed days have contributions. Future dates are unfilled. Color intensity uses a logarithmic scale.")
+    pad=26 if mobile else 36
+    c.text(pad,47 if mobile else 43,"Daily contribution map",27 if mobile else 26,weight=600)
+    c.text(pad,79 if mobile else 76,"One tile per day · 12-week window",20 if mobile else 18,MUTED)
+    if mobile:
+        c.rect(26,104,368,258,fill="url(#glass)",stroke="url(#edge)",radius=12)
+        hx,hy,step,cell=82,150,24,17
+    else:
+        c.rect(304,104,560,268,fill="url(#glass)",stroke="url(#edge)",radius=12)
+        hx,hy,step,cell=392,152,36,26
+        c.text(36,166,str(active),56,CYAN,weight=600,spacing=-1)
+        c.text(36,201,"active days",22,MUTED)
+        c.line(36,229,268,229)
+        c.text(36,271,str(len(observed)),40,weight=600)
+        c.text(36,305,"elapsed days",20,MUTED)
+    maximum=max(observed+[1]);tones=["#20334a","#1c4f77","#2779a8","#35accd",CYAN]
+    # Desktop uses shorter rows to keep its calendar compact.
+    rowstep=24 if mobile else 25
+    for wi,w in enumerate(weeks):
+        for di,count in enumerate(w['days']):
+            level=0 if not count else 1+min(3,int(math.log1p(count)/math.log1p(maximum)*3))
+            chart_tile(c,hx+wi*step,hy+di*rowstep,cell if mobile else 19,NAVY if count is None else tones[level],count is None)
+        if wi in ((0,5,11) if mobile else (0,4,8,11)):
+            c.text(hx+wi*step+(cell/2),hy-18,w['date'].strftime('%d %b'),20 if mobile else 16,MUTED,anchor='middle')
+    for di,label in enumerate(['Mon','Tue','Wed','Thu','Fri','Sat','Sun']):
+        if not mobile or di in (0,2,4,6):c.text(hx-14,hy+di*rowstep+15,label,20 if mobile else 16,MUTED,anchor="end")
+    ly=342 if mobile else 348
     c.text(hx,ly,"Less",20 if mobile else 16,MUTED)
-    for i,tone in enumerate(tones):chart_tile(c,hx+(51 if mobile else 46)+i*21,ly-16,15,tone)
-    c.text(hx+(164 if mobile else 160),ly,"More",20 if mobile else 16,MUTED)
-    if not mobile: c.text(572,394,"MONDAY → SUNDAY",16,MUTED,cls="mono")
-    start=weeks[0]['date'].strftime('%d %b');end=dt.date.fromisoformat(snapshot['calendar_end']).strftime('%d %b %Y')
-    c.text(pad,792 if mobile else 456,f"{start} — {end}"+('' if mobile else ' / GitHub profile calendar'),20 if mobile else 16,MUTED)
+    for i,tone in enumerate(tones):chart_tile(c,hx+51+i*21,ly-16,15,tone)
+    c.text(hx+166,ly,"More",20 if mobile else 16,MUTED)
+    if mobile:
+        c.text(pad,394,f"{active} active / {len(observed)} elapsed days",20,MUTED)
+        c.text(pad,422,"Future dates remain unfilled.",20,MUTED)
+    else:
+        c.text(pad,398,"COLOR INTENSITY / LOG SCALE · FUTURE DATES UNFILLED",16,MUTED,cls="mono")
+    return c.finish()
+
+
+def weekday_totals(snapshot):
+    totals=[0]*7
+    for day in snapshot['days']:
+        totals[dt.date.fromisoformat(day['date']).weekday()]+=day['count']
+    return totals
+
+
+def weekdays(snapshot, mobile):
+    totals=weekday_totals(snapshot);maximum=max(max(totals),1)
+    cap=max(4,math.ceil(maximum/4)*4)
+    c=Canvas(420 if mobile else 900,524 if mobile else 436,"Contributions by weekday","Contribution totals grouped by weekday across the same 365-day calendar as the headline metrics. "+'; '.join(f"{n}: {v}" for n,v in zip(['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],totals))+". Dot positions use a linear scale starting at zero; these are contributions, not hours worked.")
+    pad=26 if mobile else 36
+    c.text(pad,47 if mobile else 43,"Activity by weekday",28 if mobile else 26,weight=600)
+    c.text(pad,79 if mobile else 76,"Contribution totals · past 365 days",20 if mobile else 18,MUTED)
+    c.rect(pad,104,368 if mobile else 828,326 if mobile else 264,fill="url(#glass)",stroke="url(#edge)",radius=12)
+    x,pw,first,step=(106,192,164,38) if mobile else (216,514,162,30)
+    for fraction in [0,.5,1]:
+        gx=x+fraction*pw
+        c.line(gx,first-16,gx,first+6*step+14,"#30465f",.8,'stroke-dasharray="2 6"')
+        v=round(cap*fraction);label=f'{v/1000:.1f}k' if v>=1000 else str(v)
+        c.text(gx,132,label,20 if mobile else 16,MUTED,anchor='middle')
+    names=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'] if mobile else ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+    for i,(name,count) in enumerate(zip(names,totals)):
+        yy=first+i*step;px=x+pw*count/cap
+        c.text(46 if mobile else 56,yy+6,name,20,MUTED)
+        c.line(x,yy,x+pw,yy,"#2a4058",1)
+        c.circle(px,yy,6,fill='url(#sphere)',stroke='#b8f5ff',width=.8,extra=f'data-weekday="{i}" data-count="{count}" data-cap="{cap}"')
+        c.text(374 if mobile else 840,yy+6,pretty(count),20,CYAN if count==max(totals) else MUTED,anchor='end')
+    if mobile:
+        c.text(pad,468,"Each dot = a weekday total.",20,MUTED)
+        c.text(pad,499,"Contributions, not hours worked.",20,MUTED)
+    else:
+        c.text(pad,408,"ONE DOT PER WEEKDAY / CONTRIBUTIONS, NOT HOURS WORKED",16,MUTED,cls="mono")
     return c.finish()
 
 
@@ -625,7 +675,8 @@ def render(snapshot, config):
     for mobile in [False, True]:
         variant = "mobile" if mobile else "wide"
         for name, builder in [("hero",lambda:hero(config,mobile)), ("metrics",lambda:metrics(snapshot,mobile)),
-                              ("activity",lambda:activity(snapshot,mobile)), ("languages",lambda:languages(snapshot,mobile)),
+                              ("activity",lambda:activity(snapshot,mobile)), ("calendar",lambda:calendar(snapshot,mobile)),
+                              ("weekdays",lambda:weekdays(snapshot,mobile)), ("languages",lambda:languages(snapshot,mobile)),
                               ("footer",lambda:footer(mobile))]:
             all_assets[f"{name}-{variant}.svg"] = builder()
         for project in config["projects"]:
@@ -640,7 +691,9 @@ def render(snapshot, config):
         f"I'm **{config['name']}** ({login}), a programmer based in Brazil. {config['bio']}",
         f"[Explore repositories](https://github.com/{login}?tab=repositories) · [Portfolio]({config['portfolio']}) · [Follow the work](https://github.com/{login}?tab=followers)",
         picture("metrics", overview + f". Profile calendar: {snapshot['calendar_start']} through {snapshot['calendar_end']}.", config),
-        picture("activity", "Real GitHub contributions: twelve weekly totals and a matching daily heatmap. Current week is in progress.", config),
+        picture("activity", "Weekly contribution totals: twelve columns on a linear scale. Current week is in progress.", config),
+        picture("calendar", "Daily contribution calendar: one tile per day, with future dates unfilled.", config),
+        picture("weekdays", "Contributions by weekday: seven dots comparing totals across the past 365 days.", config),
         picture("languages", "Code language share across public original repositories: " + ", ".join(f"{name} {percent(share)}" for name,share in language_shares(snapshot)) + ".", config),
         "## Selected projects", "Minecraft infrastructure, desktop interaction, and useful web interfaces. Open a card to explore its source."]
     for project in config["projects"]:
@@ -652,6 +705,8 @@ def render(snapshot, config):
         f"| Profile contributions (365 days) | {pretty(snapshot['contributions'])} |", f"| Active days (365 days) | {snapshot['active_days']} |", "",
         "| Language | Share of code bytes |", "| :--- | ---: |"]
     details += [f"| {name} | {percent(share)} |" for name, share in language_shares(snapshot)]
+    details += ["", "| Weekday | Contributions (365 days) |", "| :--- | ---: |"]
+    details += [f"| {name} | {pretty(value)} |" for name,value in zip(['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],weekday_totals(snapshot))]
     details += ["", "Language share measures checked-in code, not proficiency. The calendar uses GitHub's contribution definition, which may include anonymized private activity displayed on the public profile. The current activity week is incomplete. Project artwork is conceptual.", ""]
     details += [f"- **[{project['title']}](https://github.com/{login}/{project['repo']}):** {project['description']}" for project in config["projects"]]
     details += ["", "[Metric definitions and maintenance](docs/DASHBOARD.md)", "", "</details>"]
@@ -671,7 +726,7 @@ def check():
     assert len(snapshot["repositories"]) == snapshot["public_repos"]
     svg_paths = list(ASSETS.glob("*.svg"))
     config = json.loads((ROOT/"config/dashboard.json").read_text())
-    assert len(svg_paths) == (5+len(config["projects"]))*2
+    assert len(svg_paths) == (7+len(config["projects"]))*2
     for path in svg_paths:
         root = ET.fromstring(path.read_text())
         viewbox = root.attrib["viewBox"].split()
@@ -687,7 +742,7 @@ def check():
     readme = (ROOT/"README.md").read_text()
     for name, digest in re.findall(r"/assets/([\w-]+\.svg)\?v=([a-f0-9]+)", readme):
         assert hashlib.sha256((ASSETS/name).read_bytes()).hexdigest().startswith(digest)
-    assert readme.count('<source media="(max-width: 600px)"') == 5+len(config["projects"])
+    assert readme.count('<source media="(max-width: 600px)"') == 7+len(config["projects"])
     print(f"Validated {len(svg_paths)} SVGs, full calendar coverage, metric totals, motion fallbacks, and README references.")
 
 

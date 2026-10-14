@@ -20,8 +20,22 @@ I'm **Tonim** (ZpkDxGames), a programmer based in Brazil. I build Minecraft serv
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-mobile.svg?v=61f8a9f680f5">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-wide.svg?v=b5bf75ef6907" width="100%" alt="Real GitHub contributions: twelve weekly totals and a matching daily heatmap. Current week is in progress.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-mobile.svg?v=476a2f81a8e2">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-wide.svg?v=bd91dc3120f0" width="100%" alt="Weekly contribution totals: twelve columns on a linear scale. Current week is in progress.">
+</picture>
+</p>
+
+<p align="center">
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-mobile.svg?v=8b9e0aa21de1">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-wide.svg?v=c97d995a6155" width="100%" alt="Daily contribution calendar: one tile per day, with future dates unfilled.">
+</picture>
+</p>
+
+<p align="center">
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/weekdays-mobile.svg?v=2361361ecdd2">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/weekdays-wide.svg?v=87f622f046c5" width="100%" alt="Contributions by weekday: seven dots comparing totals across the past 365 days.">
 </picture>
 </p>
 
@@ -92,6 +106,16 @@ Snapshot: **2026-10-14T16:07:36Z**. Profile calendar: **2025-10-15–2026-10-14*
 | TypeScript | 3.3% |
 | CSS | 1.2% |
 | Other | 1.4% |
+
+| Weekday | Contributions (365 days) |
+| :--- | ---: |
+| Monday | 655 |
+| Tuesday | 315 |
+| Wednesday | 417 |
+| Thursday | 443 |
+| Friday | 658 |
+| Saturday | 751 |
+| Sunday | 543 |
 
 Language share measures checked-in code, not proficiency. The calendar uses GitHub's contribution definition, which may include anonymized private activity displayed on the public profile. The current activity week is incomplete. Project artwork is conceptual.
 
