@@ -54,4 +54,4 @@ A · exact KPI strip, including verified 30-day active projects. B · square-roo
 
 Every chart has its window/as-of date, accessible title/description, static final state and light/dark/mobile variants. Commits remain project-wide, not personal contributions; byte shares remain volume, not proficiency. Add only aggregate `commits_30d` in schema 2. Keep all other collection boundaries unchanged.
 
-**Defaults:** conceptual art; existing public contacts retained; English only; bio suggestion only. No GitHub publishing is part of the requested ZIP delivery.
+**Defaults:** conceptual art; existing public contacts retained; English only; bio suggestion only. The redesign is published directly to `main` at the owner's request; the GitHub bio remains unchanged.

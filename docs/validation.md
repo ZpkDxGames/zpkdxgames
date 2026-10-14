@@ -1,6 +1,6 @@
 # Validation notes
 
-Baseline: `9927d83cdc06538a8ed2d98b38875f193d1c68cb`. Snapshot: **2026-10-13**.
+Baseline: `9927d83cdc06538a8ed2d98b38875f193d1c68cb`. Redesign published on `main` at `3a81cf38e93e963806850d0887d25a3e3f3c653d`. Snapshot: **2026-10-13**.
 
 | Check | Result |
 | --- | --- |
@@ -26,7 +26,7 @@ Baseline: `9927d83cdc06538a8ed2d98b38875f193d1c68cb`. Snapshot: **2026-10-13**.
 - Stable shelf/vitals versions are publications **inside this rolling window**, not necessarily the current default-branch version or an approved live deployment. AI Desktop Companion has no stable publication in the window.
 - Conan Gray Bot's advertised demo returned 404. The source link is kept; no replacement demo URL is guessed. LinkedIn remains an existing owner-provided contact link and needs a manual check because it rejects automation.
 - The current public bio still says “Just an ordinary amateur programmer.” A suggested replacement appears in the changelog; it was not changed.
-- Previews use a local GitHub-style GFM renderer. GitHub sanitization constraints are respected, but the new tree has not been published to the profile. Site chrome, installed system fonts and GitHub layout can vary. Cover display lettering uses paths.
+- Previews use a local GitHub-style GFM renderer. GitHub sanitization constraints are respected, and the redesigned tree is published on the profile repository's `main` branch. Site chrome, installed system fonts and GitHub layout can vary. Cover display lettering uses paths.
 - Native Windows behavior, Minecraft runtime performance and production readiness of linked projects are outside this README task and are never inferred from commits or release labels.
 
 ## Commands

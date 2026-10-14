@@ -13,16 +13,18 @@ Built from `main` at `9927d83cdc06538a8ed2d98b38875f193d1c68cb`, following the s
 
 The repository's Conan Gray Bot demo homepage returned 404 and is omitted; its verified source remains linked. LinkedIn blocks automated requests, so its existing contact link is retained with that verification limit recorded.
 
-## Apply
+## Deployment
 
-Copy this ZIP's repository-root files into `ZpkDxGames/zpkdxgames`, then run:
+The redesign is published directly to `ZpkDxGames/zpkdxgames` on `main`. The profile README, generated assets, refactored generator, tests and documentation are now the live repository state.
+
+Offline verification remains:
 
 ```sh
 python3 -m unittest discover -s tests -v
 python3 scripts/profile_metrics.py --snapshot data/profile.json
 ```
 
-This delivery does not publish or change the GitHub bio. Six obsolete SVG files are intentionally retired: `ecosystem-{light,dark}.svg`, `ecosystem-mobile-{light,dark}.svg`, and `spotlight-crates-{light,dark}.svg`. The generator removes them after successful rendering, so copying over an existing tree is sufficient. Review the diff and commit the resulting tree normally.
+This deployment does not change the GitHub bio. Six obsolete SVG files are intentionally retired: `ecosystem-{light,dark}.svg`, `ecosystem-mobile-{light,dark}.svg`, and `spotlight-crates-{light,dark}.svg`. The generator removes them after successful rendering.
 
 ## Owner choices for later · defaults already applied
 
