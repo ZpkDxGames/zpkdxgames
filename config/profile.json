@@ -1,0 +1,61 @@
+{
+  "username": "ZpkDxGames",
+  "display_name": "ZpkDxGames",
+  "tagline": "Minecraft plugin engineer // Java backend // custom mechanics",
+  "timezone": "America/Sao_Paulo",
+
+  "boot_lines": [
+    "$ ./start.sh --profile zpkdxgames --nogui",
+    "[INFO] Loading modules: java, spigot-api, paper-api, backend",
+    "[INFO] Done (0.42s)! For help, type \"help\""
+  ],
+
+  "stack": [
+    "Java",
+    "Spigot API",
+    "Paper API",
+    "Gradle",
+    "Maven",
+    "SQL",
+    "REST / backend",
+    "Git",
+    "GitHub Actions"
+  ],
+
+  "sections": [
+    { "key": "about",     "index": "01", "title": "ABOUT",       "cmd": "cat profile.yml" },
+    { "key": "telemetry", "index": "02", "title": "TELEMETRY",   "cmd": "tail -f latest.log" },
+    { "key": "plugins",   "index": "03", "title": "PLUGINS",     "cmd": "plugins --list" },
+    { "key": "analytics", "index": "04", "title": "ANALYTICS",   "cmd": "timings report" },
+    { "key": "activity",  "index": "05", "title": "ACTIVITY",    "cmd": "./snake.sh --run" },
+    { "key": "contact",   "index": "06", "title": "CONNECT",     "cmd": "/msg zpkdxgames" }
+  ],
+
+  "plugin_repo_topics": ["minecraft", "minecraft-plugin", "spigot", "paper", "papermc", "bukkit", "spigot-plugin", "paper-plugin", "bukkit-plugin"],
+  "plugin_repo_name_hints": ["plugin", "spigot", "paper", "bukkit", "minecraft", "mc"],
+  "exclude_repos": ["zpkdxgames"],
+
+  "hosting": {
+    "_comment": "Optional. Fill any of these to light up the DOWNLOADS / SERVERS tiles. Leave empty to show n/a.",
+    "modrinth_user": "",
+    "spiget_author_id": null,
+    "bstats_plugin_ids": []
+  },
+
+  "palette": {
+    "bg":        "#0d1117",
+    "panel":     "#111820",
+    "panel_alt": "#0f151c",
+    "border":    "#1f2a37",
+    "grid":      "#16202b",
+    "text":      "#e6edf3",
+    "muted":     "#8b949e",
+    "emerald":   "#00ff66",
+    "lime":      "#55ff55",
+    "green":     "#00aa00",
+    "gh_green":  "#2ea043",
+    "cyan":      "#00f0ff",
+    "gold":      "#ffaa00",
+    "redstone":  "#ff3b30"
+  }
+}
