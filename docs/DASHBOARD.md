@@ -27,11 +27,13 @@ The collector paginates repositories, never includes private repositories, and c
 
 ## Geometry and composition
 
-Architectural illustrations use a shared 30-degree isometric projection. Hardware faces, stacked platforms, and voxel character parts derive from the same coordinates so perspective remains consistent. Project artwork occupies a separate framed area; text and badges use aligned margins across cards. The mobile hero has its own illustration space instead of placing graphics behind the biography.
+Architectural illustrations use a shared 30-degree isometric projection. Hardware faces, stacked platforms, and voxel character parts derive from the same coordinates so perspective remains consistent. Project artwork occupies a separate framed area; text and badges use aligned margins across cards. The mobile hero has its own illustration space. Native paragraph containers give neighboring panels the same GitHub spacing; chart wells, metrics, and project text zones share aligned margins.
+
+Graph bars retain exact heights, including zero, with highlights contained inside their faces. The ring remains circular and its segment angles retain exact code shares; a lowered dark rim supplies depth. Heatmap tile shadows and highlights are decorative, and future dates remain unfilled. Mobile time axes use fewer date labels to keep the chart legible.
 
 ## Rendering and motion
 
-SVGs contain only self-contained vector shapes, text, gradients, and CSS animations. There is no script, `foreignObject`, embedded HTML, external font, or external image. Fonts use Arial/Helvetica with a monospace system fallback for labels. All meaningful values appear immediately; motion is limited to decorative signal paths, floating hardware, and soft highlights. `prefers-reduced-motion: reduce` disables motion and preserves the full design.
+SVGs contain only self-contained vector shapes, text, gradients, and CSS animations. There is no script, `foreignObject`, embedded HTML, external font, or external image. Fonts use Arial/Helvetica with a monospace system fallback for labels. All meaningful values appear immediately; motion is limited to decorative signal paths, floating hardware, and soft highlights. Chart tracing loops smoothly over a fixed series; an outer ring accent rotates independently of the fixed language segments. Surface lighting fades in once, while all data values are present immediately. Breath and float effects use slower shared easing. `prefers-reduced-motion: reduce` disables motion and preserves the full design.
 
 Minimum mobile body size is 20 units on a 420-unit artboard (about 16px at 336px display width). Desktop labels are at least 16 units. Clickable project cards link to their actual repository. The README includes a native text version of the metrics and descriptions for accessibility.
 

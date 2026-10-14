@@ -206,6 +206,8 @@ class Canvas:
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111e31"/><stop offset=".55" stop-color="{NAVY}"/><stop offset="1" stop-color="#102337"/></linearGradient>
   <linearGradient id="accent"><stop stop-color="{BLUE}"/><stop offset="1" stop-color="{CYAN}"/></linearGradient>
   <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="{CYAN}"/></linearGradient>
+  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#67e8f9" stop-opacity=".19"/><stop offset="1" stop-color="#5698ff" stop-opacity=".015"/></linearGradient>
+  <linearGradient id="polish" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".28"/><stop offset=".45" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#06101f" stop-opacity=".20"/></linearGradient>
   <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".17"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
   <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#203c58"/><stop offset="1" stop-color="#112238"/></linearGradient>
   <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22364f" stop-opacity=".75"/><stop offset="1" stop-color="#0b1526" stop-opacity=".9"/></linearGradient>
@@ -219,14 +221,20 @@ class Canvas:
 text{{font-family:Arial,'Helvetica Neue',sans-serif;fill:{WHITE};}}
 .mono{{font-family:Consolas,'Liberation Mono',monospace;letter-spacing:.7px;}}
 .spin{{transform-box:fill-box;transform-origin:center;animation:orbit 48s linear infinite;}}
-.flow{{stroke-dasharray:28 180;animation:flow 8s linear infinite;}}
-.soft{{animation:soft 5s ease-in-out infinite;}}
-.float{{animation:float 6s ease-in-out infinite;}}
+.flow{{stroke-dasharray:28 180;animation:flow 12s linear infinite;}}
+.trace{{stroke-dasharray:70 930;animation:trace 16s linear infinite;}}
+.halo{{animation:halo 7s cubic-bezier(.45,0,.55,1) infinite;}}
+.reveal{{animation:reveal 1.4s cubic-bezier(.22,1,.36,1) both;}}
+.soft{{animation:soft 7s cubic-bezier(.45,0,.55,1) infinite;}}
+.float{{animation:float 8s cubic-bezier(.45,0,.55,1) infinite;}}
+@keyframes trace{{to{{stroke-dashoffset:-1000;}}}}
+@keyframes halo{{0%,100%{{opacity:.2;}}50%{{opacity:.65;}}}}
+@keyframes reveal{{from{{opacity:0;}}to{{opacity:1;}}}}
 @keyframes orbit{{to{{transform:rotate(360deg);}}}}
 @keyframes flow{{to{{stroke-dashoffset:-416;}}}}
 @keyframes soft{{0%,100%{{opacity:.45;}}50%{{opacity:1;}}}}
 @keyframes float{{0%,100%{{transform:translateY(0);}}50%{{transform:translateY(-4px);}}}}
-@media (prefers-reduced-motion:reduce){{.spin,.flow,.soft,.float{{animation:none;}}}}
+@media (prefers-reduced-motion:reduce){{.spin,.flow,.soft,.float,.trace,.halo,.reveal{{animation:none;}}}}
 </style>
 <rect x="1" y="1" width="{width-2}" height="{height-2}" rx="18" fill="url(#bg)" stroke="url(#edge)"/>
 <g clip-path="url(#panel)"><rect width="{width}" height="{height}" fill="url(#grid)" opacity=".045"/>
@@ -346,112 +354,141 @@ def metric_icon(c, x, y, index):
 
 
 def metrics(snapshot, mobile):
-    c=Canvas(420 if mobile else 900,492 if mobile else 276,"GitHub at a glance", f"{snapshot['public_repos']} public repositories; {snapshot['original_repos']} original repositories excluding the profile; {snapshot['contributions']} profile contributions and {snapshot['active_days']} active days in the last 365 calendar days. Snapshot {snapshot['captured_at']}.")
+    c=Canvas(420 if mobile else 900,496 if mobile else 288,"GitHub at a glance", f"{snapshot['public_repos']} public repositories; {snapshot['original_repos']} original repositories excluding the profile; {snapshot['contributions']} profile contributions and {snapshot['active_days']} active days in the last 365 calendar days. Snapshot {snapshot['captured_at']}.")
     date=dt.date.fromisoformat(snapshot['calendar_end']).strftime('%d %b %Y').upper()
     c.text(26 if mobile else 36,47 if mobile else 43,"GitHub at a glance",28 if mobile else 26,weight=600)
     c.text(26 if mobile else 864,79 if mobile else 43,date+' / UTC',20 if mobile else 16,MUTED,cls='mono',anchor='start' if mobile else 'end')
     labels=[('public_repos','Public repos','Owned + forks'),('original_repos','Original repos','Excludes profile'),('contributions','Contributions','Past 365 days'),('active_days','Active days','Past 365 days')]
     for i,(key,label,sub) in enumerate(labels):
-        x=24+i%2*194 if mobile else 36+i*210
-        y=108+i//2*177 if mobile else 76
-        width,height=(178,161) if mobile else (198,163)
+        x=26+i%2*192 if mobile else 36+i*212
+        y=108+i//2*178 if mobile else 84
+        width,height=(176,162) if mobile else (192,162)
         c.rect(x,y,width,height,fill='url(#glass)',stroke='url(#edge)',radius=10)
         metric_icon(c,x+width-24,y+25,i)
         c.text(x+16,y+65,pretty(snapshot[key]),40 if mobile else 45,weight=600,spacing=-1.7)
         c.text(x+16,y+105,label,20,weight=500)
-        c.text(x+16,y+139,sub,20 if mobile else 16,MUTED)
-    c.text(26 if mobile else 36,477 if mobile else 261,'Dated GitHub snapshot' if mobile else 'PUBLIC REPOSITORIES / PROFILE CONTRIBUTION CALENDAR',20 if mobile else 16,MUTED,cls='' if mobile else 'mono')
+        c.text(x+16,y+139,'Excl. profile' if mobile and key=='original_repos' else sub,20 if mobile else 16,MUTED)
+    c.text(26 if mobile else 36,476 if mobile else 274,'Dated GitHub snapshot' if mobile else 'PUBLIC REPOSITORIES / PROFILE CONTRIBUTION CALENDAR',20 if mobile else 16,MUTED,cls='' if mobile else 'mono')
     return c.finish()
 
 
+def chart_tile(c, x, y, size, color, future=False):
+    """Depth is decorative; face color alone encodes the contribution bucket."""
+    c.rect(x,y+2,size,size,fill="#050b14",stroke="none",radius=3)
+    c.rect(x,y,size,size,fill=color,stroke=BORDER if future else "none",radius=3)
+    if not future:
+        c.line(x+3,y+1.5,x+size-3,y+1.5,"#d9f7ff",.8,'opacity=".18"')
+
+
 def activity(snapshot, mobile):
-    weeks = weekly_activity(snapshot)
-    total = sum(week["count"] for week in weeks)
-    c = Canvas(420 if mobile else 900, 595 if mobile else 400,
-               "Contribution rhythm", f"Twelve calendar weeks of real GitHub profile contributions, from {weeks[0]['date']} through {snapshot['calendar_end']}. {total} contributions in this interval. Current week is in progress. Weekly bars and daily heatmap use identical calendar data.")
-    c.text(26 if mobile else 36, 47 if mobile else 43, "Contribution rhythm", 28 if mobile else 26, weight=600)
-    c.text(26 if mobile else 36, 79 if mobile else 76, "12 weeks · current week in progress", 20 if mobile else 18, MUTED)
+    weeks=weekly_activity(snapshot)
+    total=sum(week['count'] for week in weeks)
+    c=Canvas(420 if mobile else 900,816 if mobile else 480,"Contribution rhythm",f"Twelve calendar weeks of real GitHub profile contributions through {snapshot['calendar_end']}. {total} contributions. Current week is incomplete. Beveled bars and raised daily tiles show the same calendar; moving highlights are decorative.")
+    pad=26 if mobile else 36
+    c.text(pad,47 if mobile else 43,"Contribution rhythm",28 if mobile else 26,weight=600)
+    c.text(pad,79 if mobile else 76,"12 weeks · current week in progress",20 if mobile else 18,MUTED)
     if mobile:
-        c.text(26, 130, pretty(total), 36, CYAN, weight=650)
-        c.text(394, 130, "contributions", 20, MUTED, anchor="end")
-        x, y, pw, ph = 75, 187, 312, 146
-        c.text(26, 165, "Weekly contributions", 20, MUTED)
+        c.text(pad,132,pretty(total),38,CYAN,weight=600,spacing=-1)
+        c.text(394,132,"contributions",20,MUTED,anchor="end")
+        c.rect(26,156,368,300,fill="url(#glass)",stroke="url(#edge)",radius=12)
+        c.rect(26,480,368,280,fill="url(#glass)",stroke="url(#edge)",radius=12)
+        c.text(46,190,"Weekly contributions",20,MUTED)
+        x,y,pw,ph=100,216,272,174
+        hx,hy,step,cell=82,540,24,17
+        c.text(46,516,"Daily density",20,MUTED)
     else:
-        c.text(864, 74, pretty(total) + " contributions", 23, CYAN, weight=600, anchor="end")
-        x, y, pw, ph = 76, 131, 479, 181
-        c.text(36, 110, "WEEKLY CONTRIBUTIONS", 16, MUTED, cls="mono")
-    maximum = max(max(week["count"] for week in weeks), 1)
-    cap = max(4, math.ceil(maximum / 4) * 4)
+        c.text(864,76,pretty(total)+" contributions",23,CYAN,weight=600,anchor="end")
+        c.rect(36,104,500,316,fill="url(#glass)",stroke="url(#edge)",radius=12)
+        c.rect(552,104,312,316,fill="url(#glass)",stroke="url(#edge)",radius=12)
+        c.text(56,138,"WEEKLY CONTRIBUTIONS",16,MUTED,cls="mono")
+        c.text(572,138,"DAILY DENSITY",16,MUTED,cls="mono")
+        x,y,pw,ph=92,176,416,184
+        hx,hy,step,cell=596,178,20,15
+    maximum=max(max(week['count'] for week in weeks),1)
+    cap=max(4,math.ceil(maximum/4)*4)
     for tick in range(5):
-        gy = y + ph - ph * tick / 4
-        c.line(x, gy, x+pw, gy, BORDER, .8, 'stroke-dasharray="3 6"')
-        value = round(cap * tick / 4)
-        label = f"{value / 1000:.1f}k" if value >= 1000 else str(value)
-        c.text(x-10, gy+6, label, 20 if mobile else 16, MUTED, anchor="end")
-    points = []
-    for i, week in enumerate(weeks):
-        bx = x + (i + .5) * pw / 12
-        bh = ph * week["count"] / cap
-        c.rect(bx-(8 if mobile else 12), y+ph-bh, 16 if mobile else 24, bh, fill="url(#bar)", stroke="none", radius=3, extra='opacity=".85"')
-        points.append((bx, y+ph-bh))
-        if i in (0, 4, 8, 11):
-            c.text(bx, y+ph+30, week["date"].strftime("%d %b"), 20 if mobile else 16, MUTED, anchor="middle")
-    c.add('<polyline points="' + " ".join(f"{px:.2f},{py:.2f}" for px, py in points) + f'" fill="none" stroke="{CYAN}" stroke-width="2" stroke-linejoin="round"/>')
-    c.circle(*points[-1], 5, CYAN, NAVY, 2, extra='class="soft"')
-    hx, hy, step, cell = (112, 411, 22, 17) if mobile else (616, 143, 20, 15)
-    c.text(26 if mobile else hx, 394 if mobile else 117, "Daily density" if mobile else "DAILY DENSITY", 20 if mobile else 16, MUTED, cls="" if mobile else "mono")
-    day_max = max([value for week in weeks for value in week["days"] if value is not None] + [1])
-    tones = ["#12233a", "#1c4f77", "#2779a8", "#35accd", CYAN]
-    for wi, week in enumerate(weeks):
-        for di, count in enumerate(week["days"]):
-            if count is None:
-                fill, stroke = NAVY, BORDER
-            else:
-                level = 0 if count == 0 else 1 + min(3, int(math.log1p(count) / math.log1p(day_max) * 3))
-                fill, stroke = tones[level], "none"
-            c.rect(hx+wi*step, hy+di*step, cell, cell, fill, stroke, 3)
-    for di, label in [(0, "M"), (2, "W"), (4, "F")]:
-        c.text(hx-14, hy+di*step+cell-2, label, 20 if mobile else 16, MUTED, anchor="end")
-    ly = 582 if mobile else 317
-    c.text(112 if mobile else 616, ly, "Less", 20 if mobile else 16, MUTED)
-    for i, tone in enumerate(tones):
-        c.rect((163 if mobile else 662)+i*21, ly-16, 16, 16, tone, "none", 3)
-    c.text(276 if mobile else 776, ly, "More", 20 if mobile else 16, MUTED)
-    if not mobile:
-        c.text(36, 378, f"{weeks[0]['date'].strftime('%d %b')} — {dt.date.fromisoformat(snapshot['calendar_end']).strftime('%d %b %Y')} / GitHub profile calendar", 16, MUTED)
+        gy=y+ph-ph*tick/4
+        c.line(x,gy,x+pw,gy,"#30465f",.8,'stroke-dasharray="2 6"')
+        value=round(cap*tick/4)
+        label=f"{value/1000:.1f}k" if value>=1000 else str(value)
+        c.text(x-10,gy+6,label,20 if mobile else 16,MUTED,anchor="end")
+    points=[(x+(i+.5)*pw/12,y+ph-ph*week['count']/cap) for i,week in enumerate(weeks)]
+    coords=' '.join(f"{px:.3f},{py:.3f}" for px,py in points)
+    c.add(f'<path d="M{points[0][0]},{y+ph} L'+coords.replace(' ',' L')+f' L{points[-1][0]},{y+ph} Z" fill="url(#area)" class="reveal"/>')
+    for i,week in enumerate(weeks):
+        bx,by=points[i]; bh=ph*week['count']/cap; bw=14 if mobile else 20
+        # No minimum height: a zero remains zero; bevels stay within the bar face.
+        c.rect(bx-bw/2,by,bw,bh,fill="url(#bar)",stroke="none",radius=min(3,bh/2),extra=f'data-count="{week["count"]}" data-cap="{cap}" data-scale="{ph}"')
+        if bh>0:
+            c.rect(bx+bw/2-3,by,3,bh,fill="#0a2948",stroke="none",radius=0,extra='opacity=".3"')
+            c.rect(bx-bw/2+2,by,bw-4,min(2,bh),fill="#b7f5ff",stroke="none",radius=1,extra='opacity=".65"')
+        if i in ((0,5,11) if mobile else (0,4,8,11)):
+            c.text(x+pw if mobile and i==11 else bx,y+ph+34,week['date'].strftime('%d %b'),20 if mobile else 16,MUTED,anchor='end' if mobile and i==11 else 'middle')
+    c.add(f'<polyline points="{coords}" fill="none" stroke="{CYAN}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>')
+    c.add(f'<polyline points="{coords}" pathLength="1000" fill="none" stroke="#e6fcff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" class="trace" opacity=".7"/>')
+    c.circle(*points[-1],11,fill=CYAN,stroke="none",extra='filter="url(#glow)" class="halo" opacity=".3"')
+    c.circle(*points[-1],4,fill="url(#sphere)",stroke="#c6f7ff",width=1)
+    day_max=max([v for week in weeks for v in week['days'] if v is not None]+[1])
+    tones=["#20334a","#1c4f77","#2779a8","#35accd",CYAN]
+    for wi,week in enumerate(weeks):
+        for di,count in enumerate(week['days']):
+            level=0 if not count else 1+min(3,int(math.log1p(count)/math.log1p(day_max)*3))
+            chart_tile(c,hx+wi*step,hy+di*step,cell,NAVY if count is None else tones[level],count is None)
+    for di,label in [(0,"M"),(2,"W"),(4,"F")]:
+        c.text(hx-14,hy+di*step+cell-2,label,20 if mobile else 16,MUTED,anchor="end")
+    ly=736 if mobile else 356
+    c.text(hx,ly,"Less",20 if mobile else 16,MUTED)
+    for i,tone in enumerate(tones):chart_tile(c,hx+(51 if mobile else 46)+i*21,ly-16,15,tone)
+    c.text(hx+(164 if mobile else 160),ly,"More",20 if mobile else 16,MUTED)
+    if not mobile: c.text(572,394,"MONDAY → SUNDAY",16,MUTED,cls="mono")
+    start=weeks[0]['date'].strftime('%d %b');end=dt.date.fromisoformat(snapshot['calendar_end']).strftime('%d %b %Y')
+    c.text(pad,792 if mobile else 456,f"{start} — {end}"+('' if mobile else ' / GitHub profile calendar'),20 if mobile else 16,MUTED)
     return c.finish()
 
 
 def languages(snapshot, mobile):
-    rows = language_shares(snapshot)
-    c = Canvas(420 if mobile else 900, 620 if mobile else 346,
-               "Repository language mix", "Language bytes from public original repositories, excluding this profile. " + "; ".join(f"{name}: {percent(share)}" for name, share in rows) + ". This is code share, not proficiency.")
-    c.text(26 if mobile else 36, 47 if mobile else 43, "Repository language mix", 27 if mobile else 26, weight=600)
-    c.text(26 if mobile else 36, 80 if mobile else 76, "Code bytes · public original repos" if mobile else "Share of code bytes · public original repositories", 20 if mobile else 18, MUTED)
-    cx, cy, radius = (210, 192, 79) if mobile else (171, 190, 83)
-    c.circle(cx, cy, radius, stroke="#162c44", width=23)
-    length, offset = math.tau * radius, 0
-    for i, (_, share) in enumerate(rows):
-        c.circle(cx, cy, radius, stroke=LANG_COLORS[i], width=23,
-                 extra=f'stroke-dasharray="{share*length:.4f} {length:.4f}" stroke-dashoffset="{-offset:.4f}" transform="rotate(-90 {cx} {cy})"')
-        offset += share * length
-    c.circle(cx, cy, radius+27, stroke=BLUE, extra='stroke-dasharray="1 9" opacity=".5"')
-    c.circle(cx, cy, radius-22, fill="url(#glass)", stroke="#29415a")
-    c.text(cx, cy-6, "CODE", 22 if mobile else 19, MUTED, cls="mono", anchor="middle")
-    c.text(cx, cy+31, "100%", 34, weight=600, anchor="middle")
-    for i, (name, share) in enumerate(rows):
-        yy = 324+i*43 if mobile else 118+i*34
-        tx = 26 if mobile else 350
-        c.circle(tx+5, yy-7, 5, LANG_COLORS[i], "none")
-        c.text(tx+20, yy, name, 20, weight=500)
-        c.text(394 if mobile else 864, yy, percent(share), 20, MUTED, anchor="end")
-        if mobile:
-            c.rect(26, yy+9, 368, 5, fill="#193149", stroke="none", radius=2)
-            c.rect(26, yy+9, 368*share, 5, fill=LANG_COLORS[i], stroke="none", radius=2)
-        else:
-            c.rect(570, yy-10, 187, 7, fill="#193149", stroke="none", radius=3)
-            c.rect(570, yy-10, 187*share, 7, fill=LANG_COLORS[i], stroke="none", radius=3)
-    c.text(26 if mobile else 350, 599 if mobile else 326, "Language share, not proficiency.", 20 if mobile else 16, MUTED)
+    rows=language_shares(snapshot)
+    c=Canvas(420 if mobile else 900,800 if mobile else 496,"Repository language mix","Language bytes from public original repositories, excluding this profile. "+'; '.join(f"{n}: {percent(v)}" for n,v in rows)+". Ring angles and bar lengths encode exact shares; motion is decorative.")
+    pad=26 if mobile else 36
+    c.text(pad,47 if mobile else 43,"Repository language mix",27 if mobile else 26,weight=600)
+    c.text(pad,79 if mobile else 76,"Code bytes · public original repos" if mobile else "Share of code bytes · public original repositories",20 if mobile else 18,MUTED)
+    if mobile:
+        c.rect(26,104,368,258,fill="url(#glass)",stroke="url(#edge)",radius=12)
+        cx,cy,radius=210,229,86
+    else:
+        c.rect(36,104,292,316,fill="url(#glass)",stroke="url(#edge)",radius=12)
+        cx,cy,radius=182,254,94
+    # Fixed circular data face; the lowered dark rim supplies depth without distorting angles.
+    c.circle(cx,cy+7,radius,stroke="#050c16",width=30)
+    c.circle(cx,cy,radius+21,stroke="#2d465e",width=1)
+    c.circle(cx,cy,radius-21,fill="url(#glass)",stroke="#35536d",width=1)
+    c.circle(cx,cy,radius,stroke="#172c43",width=26)
+    length,offset=math.tau*radius,0
+    for i,(_,share) in enumerate(rows):
+        c.circle(cx,cy,radius,stroke=LANG_COLORS[i],width=26,extra=f'data-share="{share}" stroke-dasharray="{share*length:.6f} {length:.6f}" stroke-dashoffset="{-offset:.6f}" transform="rotate(-90 {cx} {cy})"')
+        offset+=share*length
+    c.add(f'<defs><mask id="ring-face"><circle cx="{cx}" cy="{cy}" r="{radius}" fill="none" stroke="white" stroke-width="26"/></mask></defs>')
+    c.circle(cx,cy,radius+14,fill="url(#polish)",stroke="none",extra='mask="url(#ring-face)" class="reveal"')
+    c.circle(cx,cy,radius+14,stroke="#b9efff",width=.7,extra='opacity=".35"')
+    # The orbit is outside the data ring, so its motion cannot imply changing shares.
+    c.add(f'<g transform="translate({cx},{cy})"><g class="spin">')
+    c.circle(0,0,radius+21,stroke=CYAN,width=2,extra=f'stroke-dasharray="30 {math.tau*(radius+21)-30}" opacity=".8"')
+    c.add('</g></g>')
+    leader,share=rows[0] if rows else ('No code',0)
+    c.text(cx,cy-9,leader,22,MUTED,anchor="middle")
+    c.text(cx,cy+32,percent(share),36,weight=600,anchor="middle",spacing=-1)
+    if not mobile:c.text(cx,394,"LEADING LANGUAGE",16,MUTED,cls="mono",anchor="middle")
+    for i,(name,share) in enumerate(rows):
+        rx,ry,rw=(26,386+i*58,368) if mobile else (352,104+i*54,512)
+        c.rect(rx,ry,rw,48 if mobile else 46,fill="url(#glass)",stroke="#263c53",radius=7)
+        c.circle(rx+16,ry+18,4.5,fill=LANG_COLORS[i],stroke="none")
+        c.text(rx+30,ry+25,name,20,weight=500)
+        c.text(rx+rw-14,ry+25,percent(share),20,MUTED,anchor="end")
+        bw=rw-28;by=ry+35
+        c.rect(rx+14,by,bw,5,fill="#071322",stroke="none",radius=2)
+        c.rect(rx+14,by,bw*share,5,fill=LANG_COLORS[i],stroke="none",radius=2,extra=f'data-language-share="{share}"')
+        if share>0:c.rect(rx+14,by,bw*share,1.2,fill="#e0faff",stroke="none",radius=1,extra='opacity=".35"')
+    c.text(pad,772 if mobile else 468,"Language share, not proficiency.",20 if mobile else 16,MUTED)
     return c.finish()
 
 
@@ -518,21 +555,25 @@ def project_art(c, kind, x, y, scale=1):
 
 
 def project_card(config, project, mobile):
-    c=Canvas(420 if mobile else 900,560 if mobile else 300, project['title'],project['description']+' Built with '+', '.join(project['tags'])+'. Conceptual vector illustration; open the card to see the source repository.')
+    title_lines=textwrap.wrap(project['title'],width=18) if len(project['title'])>20 else [project['title']]
+    body_lines=textwrap.wrap(project['description'],width=35,break_long_words=False,break_on_hyphens=False)
+    mobile_description_y=350+36*(len(title_lines)-1)
+    mobile_tag_y=mobile_description_y+27*(len(body_lines)-1)+26
+    c=Canvas(420 if mobile else 900,mobile_tag_y+56 if mobile else 300, project['title'],project['description']+' Built with '+', '.join(project['tags'])+'. Conceptual vector illustration; open the card to see the source repository.')
     pad=26 if mobile else 36
     c.text(pad,40,project['category'],20 if mobile else 16,CYAN,cls='mono')
     if mobile:
         c.rect(26,61,368,204,fill='url(#glass)',stroke='#294057',radius=10)
-        project_art(c,project['visual'],210,168,.78)
+        project_art(c,project['visual'],210,163,.74)
         if len(project['title'])>20:
             for i,line in enumerate(textwrap.wrap(project['title'],width=18)):
                 c.text(pad,309+i*36,line,31,weight=600,spacing=-.8)
-            desc_y=382
+            desc_y=mobile_description_y
         else:
-            c.text(pad,318,project['title'],32,weight=600,spacing=-.8)
-            desc_y=358
+            c.text(pad,309,project['title'],32,weight=600,spacing=-.8)
+            desc_y=mobile_description_y
         c.lines(pad,desc_y,project['description'],35,20,27)
-        ty=507
+        ty=mobile_tag_y
     else:
         c.rect(601,60,263,210,fill='url(#glass)',stroke='#2c435a',radius=11)
         project_art(c,project['visual'],733,163,.75)
@@ -574,7 +615,8 @@ def picture(name, alt, config, href=None):
   <source media="(max-width: 600px)" srcset="{url('mobile')}">
   <img src="{url('wide')}" width="100%" alt="{escape(alt, quote=True)}">
 </picture>'''
-    return f'<a href="{href}">\n{html}\n</a>' if href else html
+    content = f'<a href="{href}">\n{html}\n</a>' if href else html
+    return f'<p align="center">\n{content}\n</p>'
 
 
 def render(snapshot, config):

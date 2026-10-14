@@ -1,9 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="276" viewBox="0 0 900 276" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="288" viewBox="0 0 900 288" role="img" aria-labelledby="title desc">
 <title id="title">GitHub at a glance</title><desc id="desc">32 public repositories; 30 original repositories excluding the profile; 3782 profile contributions and 54 active days in the last 365 calendar days. Snapshot 2026-10-14T15:56:11Z.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111e31"/><stop offset=".55" stop-color="#080e1a"/><stop offset="1" stop-color="#102337"/></linearGradient>
   <linearGradient id="accent"><stop stop-color="#5698ff"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
   <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
+  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#67e8f9" stop-opacity=".19"/><stop offset="1" stop-color="#5698ff" stop-opacity=".015"/></linearGradient>
+  <linearGradient id="polish" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ffffff" stop-opacity=".28"/><stop offset=".45" stop-color="#ffffff" stop-opacity="0"/><stop offset="1" stop-color="#06101f" stop-opacity=".20"/></linearGradient>
   <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".17"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
   <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#203c58"/><stop offset="1" stop-color="#112238"/></linearGradient>
   <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22364f" stop-opacity=".75"/><stop offset="1" stop-color="#0b1526" stop-opacity=".9"/></linearGradient>
@@ -11,52 +13,58 @@
   <radialGradient id="sphere" cx=".3" cy=".2" r=".8"><stop stop-color="#e0fbff"/><stop offset=".3" stop-color="#67e8f9"/><stop offset="1" stop-color="#2064a3"/></radialGradient>
   <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
   <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 H 0 V 32" fill="none" stroke="#1d3753" stroke-width=".65"/></pattern>
-  <clipPath id="panel"><rect x="1" y="1" width="898" height="274" rx="18"/></clipPath>
+  <clipPath id="panel"><rect x="1" y="1" width="898" height="286" rx="18"/></clipPath>
 </defs>
 <style>
 text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 .mono{font-family:Consolas,'Liberation Mono',monospace;letter-spacing:.7px;}
 .spin{transform-box:fill-box;transform-origin:center;animation:orbit 48s linear infinite;}
-.flow{stroke-dasharray:28 180;animation:flow 8s linear infinite;}
-.soft{animation:soft 5s ease-in-out infinite;}
-.float{animation:float 6s ease-in-out infinite;}
+.flow{stroke-dasharray:28 180;animation:flow 12s linear infinite;}
+.trace{stroke-dasharray:70 930;animation:trace 16s linear infinite;}
+.halo{animation:halo 7s cubic-bezier(.45,0,.55,1) infinite;}
+.reveal{animation:reveal 1.4s cubic-bezier(.22,1,.36,1) both;}
+.soft{animation:soft 7s cubic-bezier(.45,0,.55,1) infinite;}
+.float{animation:float 8s cubic-bezier(.45,0,.55,1) infinite;}
+@keyframes trace{to{stroke-dashoffset:-1000;}}
+@keyframes halo{0%,100%{opacity:.2;}50%{opacity:.65;}}
+@keyframes reveal{from{opacity:0;}to{opacity:1;}}
 @keyframes orbit{to{transform:rotate(360deg);}}
 @keyframes flow{to{stroke-dashoffset:-416;}}
 @keyframes soft{0%,100%{opacity:.45;}50%{opacity:1;}}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
-@media (prefers-reduced-motion:reduce){.spin,.flow,.soft,.float{animation:none;}}
+@media (prefers-reduced-motion:reduce){.spin,.flow,.soft,.float,.trace,.halo,.reveal{animation:none;}}
 </style>
-<rect x="1" y="1" width="898" height="274" rx="18" fill="url(#bg)" stroke="url(#edge)"/>
-<g clip-path="url(#panel)"><rect width="900" height="276" fill="url(#grid)" opacity=".045"/>
-<ellipse cx="819.0" cy="0" rx="423.0" ry="242.88" fill="url(#aura)"/>
+<rect x="1" y="1" width="898" height="286" rx="18" fill="url(#bg)" stroke="url(#edge)"/>
+<g clip-path="url(#panel)"><rect width="900" height="288" fill="url(#grid)" opacity=".045"/>
+<ellipse cx="819.0" cy="0" rx="423.0" ry="253.44" fill="url(#aura)"/>
 <path d="M24,1 H225" stroke="url(#accent)" stroke-opacity=".7"/>
-<path d="M24,275 H876" stroke="#15293c"/>
+<path d="M24,287 H876" stroke="#15293c"/>
 </g>
 <text x="36" y="43" font-size="26" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff">GitHub at a glance</text>
 <text x="864" y="43" font-size="16" font-weight="400" class="mono" text-anchor="end" style="fill:#a5b6cc">14 OCT 2026 / UTC</text>
-<rect x="36" y="76" width="198" height="163" rx="10" fill="url(#glass)" stroke="url(#edge)" />
-<g transform="translate(210,101)" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<rect x="36" y="84" width="192" height="162" rx="10" fill="url(#glass)" stroke="url(#edge)" />
+<g transform="translate(204,109)" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 <path d="M-7,-9 H5 L9,-5 V9 H-7 Z M5,-9 V-5 H9 M-3,-1 H5 M-3,3 H5"/></g>
-<text x="52" y="141" font-size="45" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff" letter-spacing="-1.7">32</text>
-<text x="52" y="181" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">Public repos</text>
-<text x="52" y="215" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Owned + forks</text>
-<rect x="246" y="76" width="198" height="163" rx="10" fill="url(#glass)" stroke="url(#edge)" />
-<g transform="translate(420,101)" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<text x="52" y="149" font-size="45" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff" letter-spacing="-1.7">32</text>
+<text x="52" y="189" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">Public repos</text>
+<text x="52" y="223" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Owned + forks</text>
+<rect x="248" y="84" width="192" height="162" rx="10" fill="url(#glass)" stroke="url(#edge)" />
+<g transform="translate(416,109)" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 <path d="M-8,-7 V6 Q-8,9 -5,9 H8 V-4 H-8 M-8,-7 H0 L3,-4"/></g>
-<text x="262" y="141" font-size="45" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff" letter-spacing="-1.7">30</text>
-<text x="262" y="181" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">Original repos</text>
-<text x="262" y="215" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Excludes profile</text>
-<rect x="456" y="76" width="198" height="163" rx="10" fill="url(#glass)" stroke="url(#edge)" />
-<g transform="translate(630,101)" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<text x="264" y="149" font-size="45" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff" letter-spacing="-1.7">30</text>
+<text x="264" y="189" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">Original repos</text>
+<text x="264" y="223" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Excludes profile</text>
+<rect x="460" y="84" width="192" height="162" rx="10" fill="url(#glass)" stroke="url(#edge)" />
+<g transform="translate(628,109)" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 <path d="M-10,1 H-6 L-2,-7 L2,8 L6,-2 H10"/></g>
-<text x="472" y="141" font-size="45" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff" letter-spacing="-1.7">3,782</text>
-<text x="472" y="181" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">Contributions</text>
-<text x="472" y="215" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Past 365 days</text>
-<rect x="666" y="76" width="198" height="163" rx="10" fill="url(#glass)" stroke="url(#edge)" />
-<g transform="translate(840,101)" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<text x="476" y="149" font-size="45" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff" letter-spacing="-1.7">3,782</text>
+<text x="476" y="189" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">Contributions</text>
+<text x="476" y="223" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Past 365 days</text>
+<rect x="672" y="84" width="192" height="162" rx="10" fill="url(#glass)" stroke="url(#edge)" />
+<g transform="translate(840,109)" fill="none" stroke="#67e8f9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
 <path d="M-8,-7 H8 V9 H-8 Z M-8,-2 H8 M-4,-10 V-5 M4,-10 V-5 M-4,3 H0"/></g>
-<text x="682" y="141" font-size="45" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff" letter-spacing="-1.7">54</text>
-<text x="682" y="181" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">Active days</text>
-<text x="682" y="215" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Past 365 days</text>
-<text x="36" y="261" font-size="16" font-weight="400" class="mono" text-anchor="start" style="fill:#a5b6cc">PUBLIC REPOSITORIES / PROFILE CONTRIBUTION CALENDAR</text>
+<text x="688" y="149" font-size="45" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff" letter-spacing="-1.7">54</text>
+<text x="688" y="189" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">Active days</text>
+<text x="688" y="223" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Past 365 days</text>
+<text x="36" y="274" font-size="16" font-weight="400" class="mono" text-anchor="start" style="fill:#a5b6cc">PUBLIC REPOSITORIES / PROFILE CONTRIBUTION CALENDAR</text>
 </svg>
