@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" role="img" aria-label="ZpkDxGames — engineering reliable systems for persistent worlds">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101625"/><stop offset="1" stop-color="#080B12"/></linearGradient>
+  <linearGradient id="signal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8B7CFF"/><stop offset="0.52" stop-color="#54D8E8"/><stop offset="1" stop-color="#67E8A5"/></linearGradient>
+  <linearGradient id="cubeA" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9B8FFF"/><stop offset="1" stop-color="#5E51D8"/></linearGradient>
+  <linearGradient id="cubeB" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#70E6F0"/><stop offset="1" stop-color="#198CA0"/></linearGradient>
+  <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity=".32"/></filter>
+</defs>
+<style>
+  text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+  .eyebrow{font-size:18px;font-weight:700;letter-spacing:1.8px}
+  .title{font-size:42px;font-weight:760;letter-spacing:-1.2px}
+  .section{font-size:30px;font-weight:740;letter-spacing:-.5px}
+  .card-title{font-size:26px;font-weight:720}
+  .body{font-size:21px;font-weight:450}
+  .small{font-size:18px;font-weight:650;letter-spacing:.8px}
+  .metric{font-size:44px;font-weight:760;letter-spacing:-1px}
+  .float{animation:float 6s ease-in-out infinite;transform-origin:center}
+  .pulse{animation:pulse 3s ease-in-out infinite}
+  .dash{stroke-dasharray:10 12;animation:dash 10s linear infinite}
+  .bar{transform-box:fill-box;transform-origin:center bottom;animation:rise .85s cubic-bezier(.2,.75,.3,1) both}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+  @keyframes pulse{0%,100%{opacity:.48}50%{opacity:1}}
+  @keyframes dash{to{stroke-dashoffset:-220}}
+  @keyframes rise{from{transform:scaleY(.08);opacity:.2}to{transform:scaleY(1);opacity:1}}
+  @media(prefers-reduced-motion:reduce){.float,.pulse,.dash,.bar{animation:none!important}}
+</style>
+<rect x="1" y="1" width="758" height="418" rx="28" fill="url(#bg)" stroke="#26334A"/><path d="M30 392H730" stroke="#26334A" stroke-width="2"/><path d="M30 392H280" stroke="url(#signal)" stroke-width="3" class="dash"/><circle cx="633" cy="118" r="112" fill="#8B7CFF" opacity=".08" filter="url(#glow)"/><circle cx="566" cy="260" r="78" fill="#54D8E8" opacity=".06" filter="url(#glow)"/><text x="44" y="58" class="eyebrow" fill="#54D8E8">MINECRAFT SYSTEMS · BACKEND · OPERATIONS</text><text x="44" y="126" class="title" fill="#F4F7FB">Reliable systems</text><text x="44" y="180" class="title" fill="#F4F7FB">for persistent worlds.</text><text x="44" y="232" class="body" fill="#A9B4C8">Gameplay engineering · resilient services</text><text x="44" y="262" class="body" fill="#A9B4C8">Operator-first tooling · deliberate delivery</text><rect x="44" y="306" width="222" height="50" rx="25" fill="#141D2E" stroke="#354664"/><circle cx="70" cy="331" r="7" fill="#67E8A5" class="pulse" filter="url(#glow)"/><text x="89" y="338" class="small" fill="#F4F7FB">32 PUBLIC REPOSITORIES</text><path d="M390 325C470 325 475 278 532 278" fill="none" stroke="#354664" stroke-width="2" class="dash"/><g class="float" filter="url(#shadow)"><path d="M560 78l72-38 72 38-72 39z" fill="url(#cubeA)"/><path d="M560 78l72 39v78l-72-40z" fill="#5146B8"/><path d="M704 78l-72 39v78l72-40z" fill="#342C7A"/><path d="M524 184l58-31 58 31-58 32z" fill="url(#cubeB)"/><path d="M524 184l58 32v64l-58-33z" fill="#197E91"/><path d="M640 184l-58 32v64l58-33z" fill="#10515F"/><path d="M620 236l43-23 43 23-43 24z" fill="#67E8A5"/><path d="M620 236l43 24v48l-43-25z" fill="#318B64"/><path d="M706 236l-43 24v48l43-25z" fill="#205C45"/></g><circle cx="632" cy="118" r="6" fill="#F4F7FB" class="pulse" filter="url(#glow)"/><circle cx="582" cy="216" r="5" fill="#54D8E8" class="pulse" filter="url(#glow)"/><circle cx="663" cy="260" r="5" fill="#67E8A5" class="pulse" filter="url(#glow)"/><text x="716" y="384" text-anchor="end" class="small" fill="#69758A">BUILD · OBSERVE · ITERATE</text></svg>
