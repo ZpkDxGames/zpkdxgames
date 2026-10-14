@@ -6,10 +6,11 @@ Outputs (all written under ./assets, plus stubs under ./metrics):
   assets/header.svg            animated server-console banner (typewriter boot log, redstone circuits)
   assets/divider.svg           redstone wire divider with travelling pulse
   assets/section-<key>.svg     numbered section banners (from config/profile.json -> sections)
-  assets/stack.svg             "loadout" chips (from config/profile.json -> stack)
+  assets/overview.svg          engineering pillars and animated delivery loop
+  assets/stack.svg             compact engineering loadout rail
   assets/mc-stats.svg          live telemetry dashboard (GitHub GraphQL/REST + optional Modrinth/Spiget/bStats)
   assets/footer.svg            /tps style footer with build timestamp
-  metrics/<name>.svg           "awaiting first sync" stubs, created ONLY if the file does not exist yet
+  metrics/<name>.svg           live public-data fallbacks or intentional token-gated states
 
 Standard library only (Python 3.9+). Network is optional: with --offline, or when an API call fails,
 the dashboard degrades to "n/a" values instead of crashing.
@@ -38,7 +39,7 @@ except ImportError:  # pragma: no cover
     ZoneInfo = None  # type: ignore
 
 ROOT = Path(__file__).resolve().parent.parent
-UA = "zpkdxgames-profile-builder/2.0"
+UA = "zpkdxgames-profile-builder/2.1"
 FONT = "ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, 'Liberation Mono', monospace"
 
 METRIC_STUBS = [
@@ -103,9 +104,10 @@ def write(path: Path, content: str) -> None:
     log(f"[write] {path.relative_to(ROOT)} ({len(content):,} bytes)")
 
 
-def svg_open(w: int, h: int, label: str) -> str:
+def svg_open(w: int, h: int, label: str, extra: str = "") -> str:
+    attrs = f" {extra.strip()}" if extra.strip() else ""
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}" '
-            f'role="img" aria-label="{escape(label, quote=True)}">'
+            f'role="img" aria-label="{escape(label, quote=True)}"{attrs}>'
             f'<style>text{{font-family:{FONT};}}</style>')
 
 
@@ -172,9 +174,9 @@ LEVELS = {"NONE": 0, "FIRST_QUARTER": 1, "SECOND_QUARTER": 2, "THIRD_QUARTER": 3
 def collect_github(cfg: dict, token: str | None, offline: bool) -> dict:
     out = {
         "ok": False, "followers": None, "public_repos": None, "stars": None, "forks": None,
-        "plugin_repos": None, "top_repos": [], "commits_total": None, "commits_year": None,
+        "plugin_repos": None, "jvm_repos": None, "top_repos": [], "commits_total": None, "commits_year": None,
         "prs_year": None, "streak_now": None, "streak_best": None, "contribs_year": None,
-        "weeks": [], "events": [],
+        "weeks": [], "events": [], "languages": [],
     }
     if offline:
         return out
@@ -212,8 +214,22 @@ def collect_github(cfg: dict, token: str | None, offline: bool) -> dict:
             if by_topic or by_hint:
                 plugin_like.append(r)
         out["plugin_repos"] = len(plugin_like)
+        out["jvm_repos"] = sum(1 for r in own if r.get("language") in ("Java", "Kotlin"))
         ranked = sorted(own, key=lambda r: (r.get("stargazers_count", 0), r.get("pushed_at") or ""), reverse=True)
-        out["top_repos"] = [(r["name"], r.get("stargazers_count", 0)) for r in ranked[:5]]
+        out["top_repos"] = [
+            {
+                "name": r["name"],
+                "stars": r.get("stargazers_count", 0),
+                "language": r.get("language") or "Other",
+                "description": r.get("description") or "",
+            }
+            for r in ranked[:6]
+        ]
+        lang_counts: dict[str, int] = {}
+        for repo in own:
+            language = repo.get("language") or "Other"
+            lang_counts[language] = lang_counts.get(language, 0) + 1
+        out["languages"] = sorted(lang_counts.items(), key=lambda item: (-item[1], item[0]))
 
     now = dt.datetime.now(dt.timezone.utc)
     data = gh_graphql(GQL, {"login": user, "from": (now - dt.timedelta(days=364)).strftime("%Y-%m-%dT00:00:00Z"),
@@ -420,6 +436,24 @@ def build_header(cfg: dict, P: dict) -> str:
                         (830, 236, P["cyan"]), (660, 108, P["emerald"]), (596, 160, P["emerald"])]:
         s.append(f'<rect x="{x - 4}" y="{y - 4}" width="8" height="8" fill="{P["bg"]}" stroke="{col}" stroke-width="1.5" opacity=".85"/>')
 
+    # compact architecture map: enough structure to read as a systems dashboard without competing with the identity
+    s.append(f'<text x="690" y="70" font-size="10.5" fill="{P["muted"]}" letter-spacing="2.2">RUNTIME TOPOLOGY</text>')
+    nodes = [
+        (690, 82, 112, "PAPER", P["emerald"]),
+        (842, 82, 112, "PLUGINS", P["cyan"]),
+        (690, 166, 112, "DATA", P["cyan"]),
+        (842, 166, 112, "CI / CD", P["emerald"]),
+    ]
+    for i, (nx, ny, nw, label, col) in enumerate(nodes):
+        s.append(f'<g>{fade_in(.35 + i * .12, .45)}'
+                 f'<rect x="{nx}" y="{ny}" width="{nw}" height="28" rx="6" fill="{P["panel"]}" stroke="{col}" stroke-opacity=".45"/>'
+                 f'<circle cx="{nx + 15}" cy="{ny + 14}" r="3.5" fill="{col}"><animate attributeName="opacity" values="1;.35;1" dur="{1.7 + i * .2:.1f}s" repeatCount="indefinite"/></circle>'
+                 f'<text x="{nx + 27}" y="{ny + 18}" font-size="10.5" fill="{P["text"]}" letter-spacing="1.1">{label}</text></g>')
+    s.append(f'<path d="M802 96H842M746 110V166M898 110V166M802 180H842" fill="none" stroke="{P["border"]}" stroke-width="2"/>')
+    s.append(f'<circle r="3.5" fill="{P["cyan"]}" filter="url(#glow)"><animateMotion path="M802 96H842V180H802" dur="3.8s" repeatCount="indefinite"/></circle>')
+    s.append(f'<rect x="0" y="40" width="1000" height="20" fill="{P["cyan"]}" opacity=".025">'
+             f'<animate attributeName="y" values="40;260;40" dur="7s" repeatCount="indefinite"/></rect>')
+
     # window chrome
     s.append(f'<rect width="{W}" height="40" fill="{P["panel_alt"]}"/><rect y="40" width="{W}" height="1" fill="{P["border"]}"/>')
     for i, col in enumerate(["#ff5f56", "#ffbd2e", "#27c93f"]):
@@ -441,7 +475,7 @@ def build_header(cfg: dict, P: dict) -> str:
     s.append(f'<text x="38" y="204" font-size="64" font-weight="800" fill="{P["emerald"]}" opacity=".55" filter="url(#blur)">{name}</text>')
     s.append(f'<text x="38" y="204" font-size="64" font-weight="800" fill="url(#nameG)" letter-spacing="-1">{name}'
              f'{fade_in(0.1, 0.8)}</text>')
-    s.append(f'<text x="40" y="238" font-size="17" fill="{P["text"]}" letter-spacing=".4">{tagline}{fade_in(1.0, 0.8)}</text>')
+    s.append(f'<text x="40" y="238" font-size="15" fill="{P["text"]}" letter-spacing=".35">{tagline}{fade_in(1.0, 0.8)}</text>')
     s.append(f'<rect x="40" y="258" width="520" height="2" fill="url(#lineG)"/>')
     s.append('</g>')
     s.append(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="14" fill="none" stroke="{P["border"]}"/>')
@@ -485,29 +519,75 @@ def build_section(sec: dict, P: dict) -> str:
     return "".join(s)
 
 
+def build_overview(cfg: dict, P: dict) -> str:
+    W, H = 1000, 286
+    s = [svg_open(W, H, "Engineering profile and delivery loop")]
+    s.append(f'''<defs>
+<linearGradient id="ovLine" x1="0" x2="1"><stop offset="0" stop-color="{P['emerald']}"/><stop offset=".55" stop-color="{P['cyan']}"/><stop offset="1" stop-color="{P['cyan']}" stop-opacity="0"/></linearGradient>
+<filter id="ovGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="ovGrid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="{P['grid']}" stroke-width="1"/></pattern>
+</defs>''')
+    s.append(f'<rect width="{W}" height="{H}" rx="14" fill="{P["bg"]}"/>'
+             f'<rect width="{W}" height="{H}" rx="14" fill="url(#ovGrid)" opacity=".35"/>'
+             f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="14" fill="none" stroke="{P["border"]}"/>')
+    s.append(f'<text x="24" y="32" font-size="11" fill="{P["cyan"]}" letter-spacing="2.4">SYSTEM PROFILE</text>'
+             f'<text x="145" y="32" font-size="11" fill="{P["muted"]}">// ENGINEERING OPERATING MODEL</text>')
+    pillars = cfg.get("pillars") or []
+    cols = [P["emerald"], P["cyan"], P["gold"]]
+    for i, pillar in enumerate(pillars[:3]):
+        x = 20 + i * 326
+        col = cols[i]
+        s.append(f'<g>{fade_in(.12 * i, .5)}'
+                 f'<rect x="{x + .5}" y="50.5" width="306" height="112" rx="10" fill="{P["panel"]}" stroke="{P["border"]}"/>'
+                 f'<rect x="{x + .5}" y="66" width="3" height="80" rx="1.5" fill="{col}"/>'
+                 f'<text x="{x + 20}" y="77" font-size="10.5" fill="{col}" letter-spacing="1.8">0{i + 1} / {escape(pillar["title"])}</text>'
+                 f'<text x="{x + 20}" y="108" font-size="18" font-weight="700" fill="{P["text"]}">{escape(pillar["subtitle"])}</text>'
+                 f'<text x="{x + 20}" y="136" font-size="11.5" fill="{P["muted"]}">{escape(pillar["detail"])}</text>'
+                 f'<rect x="{x + 264}" y="69" width="20" height="20" rx="4" fill="{col}" opacity=".08" stroke="{col}" stroke-opacity=".55"/>'
+                 f'<path d="M{x + 270} 79h8M{x + 274} 75v8" stroke="{col}" stroke-width="1.5"/></g>')
+
+    s.append(f'<text x="24" y="196" font-size="10.5" fill="{P["muted"]}" letter-spacing="2">DELIVERY LOOP</text>')
+    stages = cfg.get("workflow") or ["DESIGN", "BUILD", "OBSERVE", "ITERATE"]
+    base_x, y, step = 176, 182, 202
+    s.append(f'<path d="M{base_x} {y + 28}H{base_x + step * (len(stages) - 1)}" stroke="{P["border"]}" stroke-width="2"/>')
+    for i, stage in enumerate(stages):
+        x = base_x + i * step
+        col = P["emerald"] if i % 2 == 0 else P["cyan"]
+        s.append(f'<g>{fade_in(.45 + i * .12, .45)}'
+                 f'<circle cx="{x}" cy="{y + 28}" r="19" fill="{P["panel_alt"]}" stroke="{col}" stroke-opacity=".65"/>'
+                 f'<text x="{x}" y="{y + 32}" text-anchor="middle" font-size="11" font-weight="700" fill="{col}">{i + 1:02d}</text>'
+                 f'<text x="{x}" y="{y + 66}" text-anchor="middle" font-size="11.5" fill="{P["text"]}" letter-spacing="1.4">{escape(stage)}</text></g>')
+    loop_end = base_x + step * (len(stages) - 1)
+    s.append(f'<circle r="5" fill="{P["emerald"]}" filter="url(#ovGlow)"><animateMotion path="M{base_x} {y + 28}H{loop_end}" dur="3.2s" repeatCount="indefinite"/></circle>')
+    s.append(f'<rect x="20" y="271" width="960" height="2" fill="url(#ovLine)"/>')
+    s.append('</svg>')
+    return "".join(s)
+
+
 def build_stack(cfg: dict, P: dict) -> str:
-    W = 560
-    size, ch, gap = 13, 30, 10
+    W = 1000
+    size, ch, gap = 11.5, 28, 8
     items = cfg["stack"]
-    x = y = 0
-    rows = []
-    cx, cy = 0, 30
+    cx, cy = 20, 42
     placed = []
     for i, it in enumerate(items):
-        w = len(it) * cw(size) + 34
-        if cx + w > W:
-            cx, cy = 0, cy + ch + gap
+        w = len(it) * cw(size) + 32
+        if cx + w > W - 20:
+            cx, cy = 20, cy + ch + gap
         placed.append((it, cx, cy, w, i))
         cx += w + gap
-    H = cy + ch + 6
+    H = cy + ch + 16
     s = [svg_open(W, int(H), "loadout")]
-    s.append(f'<text x="0" y="14" font-size="11" fill="{P["muted"]}" letter-spacing="2">LOADOUT</text>')
+    s.append(f'<rect width="{W}" height="{H}" rx="12" fill="{P["panel_alt"]}"/>'
+             f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="12" fill="none" stroke="{P["border"]}"/>')
+    s.append(f'<text x="20" y="24" font-size="10.5" fill="{P["cyan"]}" letter-spacing="2.1">ENGINEERING LOADOUT</text>'
+             f'<text x="980" y="24" text-anchor="end" font-size="10.5" fill="{P["muted"]}">toolchain / runtime / delivery</text>')
     for it, px, py, w, i in placed:
         col = P["emerald"] if i % 2 == 0 else P["cyan"]
         s.append(f'<g>{fade_in(0.08 * i, 0.4)}'
-                 f'<rect x="{f4(px + .5)}" y="{py + .5}" width="{f4(w)}" height="{ch}" rx="6" fill="{P["panel"]}" stroke="{col}" stroke-opacity=".55"/>'
-                 f'<rect x="{f4(px + 11)}" y="{py + 11}" width="8" height="8" fill="{col}" opacity=".9"/>'
-                 f'<text x="{f4(px + 26)}" y="{py + 20}" font-size="{size}" fill="{P["text"]}">{escape(it)}</text></g>')
+                 f'<rect x="{f4(px + .5)}" y="{py + .5}" width="{f4(w)}" height="{ch}" rx="6" fill="{P["panel"]}" stroke="{col}" stroke-opacity=".45"/>'
+                 f'<rect x="{f4(px + 10)}" y="{py + 10}" width="7" height="7" rx="1" fill="{col}" opacity=".9"/>'
+                 f'<text x="{f4(px + 24)}" y="{py + 18.5}" font-size="{size}" fill="{P["text"]}">{escape(it)}</text></g>')
     s.append('</svg>')
     return "".join(s)
 
@@ -573,8 +653,8 @@ def build_stats(cfg: dict, P: dict, gh: dict, host: dict, offline: bool, now: dt
     best = "n/a" if gh["streak_best"] is None else f'{gh["streak_best"]}d'
     pubs = "n/a" if gh["public_repos"] is None else str(gh["public_repos"])
     cards = [
-        ("PLUGIN REPOS", fmt(gh["plugin_repos"]), f"of {pubs} public repos", P["emerald"], "plugin"),
-        ("STARS EARNED", fmt(gh["stars"]), f'{fmt(gh["forks"])} forks · {fmt(gh["followers"])} followers', P["gold"], "star"),
+        ("JVM REPOSITORIES", fmt(gh["jvm_repos"]), f"Java / Kotlin · {pubs} total", P["emerald"], "plugin"),
+        ("PUBLIC STARS", fmt(gh["stars"]), f'{fmt(gh["forks"])} forks · {fmt(gh["followers"])} followers', P["gold"], "star"),
         ("COMMITS (ALL TIME)", fmt(gh["commits_total"]), f'{fmt(gh["commits_year"])} in last 12 months', P["cyan"], "commit"),
         ("CURRENT STREAK", streak_val, f"longest in 12 mo: {best}", P["lime"], "flame"),
     ]
@@ -672,16 +752,191 @@ def build_footer(cfg: dict, P: dict, now: dt.datetime) -> str:
     return "".join(s)
 
 
-def build_stub(name: str, P: dict) -> str:
-    W, H = 900, 200
-    s = [svg_open(W, H, f"{name} awaiting first sync")]
-    s.append(f'<rect width="{W}" height="{H}" rx="14" fill="{P["bg"]}"/><rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="14" fill="none" stroke="{P["border"]}"/>')
-    s.append(f'<text x="{W // 2}" y="86" font-size="13" fill="{P["muted"]}" text-anchor="middle" letter-spacing="3">{escape(name.upper())}</text>')
-    s.append(f'<text x="{W // 2}" y="116" font-size="18" font-weight="700" fill="{P["emerald"]}" text-anchor="middle">AWAITING FIRST SYNC'
-             f'<animate attributeName="opacity" values="1;.4;1" dur="2.2s" repeatCount="indefinite"/></text>')
-    s.append(f'<text x="{W // 2}" y="142" font-size="12" fill="{P["muted"]}" text-anchor="middle">run the &quot;profile-sync&quot; workflow to render this card</text>')
+def metric_shell(w: int, h: int, title: str, subtitle: str, P: dict, status: str = "PUBLIC DATA") -> list[str]:
+    s = [svg_open(w, h, f"{title}: {subtitle}", 'data-fallback="true"')]
+    s.append(f'''<defs>
+<linearGradient id="mAccent" x1="0" x2="1"><stop offset="0" stop-color="{P['emerald']}"/><stop offset=".6" stop-color="{P['cyan']}"/><stop offset="1" stop-color="{P['cyan']}" stop-opacity="0"/></linearGradient>
+<filter id="mGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="mGrid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="{P['grid']}" stroke-width="1"/></pattern>
+</defs>''')
+    s.append(f'<rect width="{w}" height="{h}" rx="14" fill="{P["bg"]}"/>'
+             f'<rect width="{w}" height="{h}" rx="14" fill="url(#mGrid)" opacity=".25"/>'
+             f'<rect x=".5" y=".5" width="{w - 1}" height="{h - 1}" rx="14" fill="none" stroke="{P["border"]}"/>')
+    s.append(f'<text x="20" y="28" font-size="11" font-weight="700" fill="{P["emerald"]}" letter-spacing="1.8">{escape(title)}</text>'
+             f'<text x="20" y="46" font-size="9.5" fill="{P["muted"]}">{escape(subtitle)}</text>')
+    pill_w = len(status) * 6.7 + 24
+    s.append(f'<rect x="{w - pill_w - 16}" y="15" width="{pill_w}" height="22" rx="11" fill="{P["panel_alt"]}" stroke="{P["cyan"]}" stroke-opacity=".35"/>'
+             f'<circle cx="{w - pill_w - 3}" cy="26" r="3" fill="{P["cyan"]}"><animate attributeName="opacity" values="1;.35;1" dur="1.8s" repeatCount="indefinite"/></circle>'
+             f'<text x="{w - pill_w + 7}" y="29.5" font-size="8.5" fill="{P["cyan"]}" letter-spacing="1.1">{escape(status)}</text>')
+    return s
+
+
+def build_calendar_fallback(gh: dict, P: dict) -> str:
+    W, H = 470, 250
+    s = metric_shell(W, H, "CONTRIBUTION MATRIX", "52-week public activity surface", P)
+    weeks = gh.get("weeks") or []
+    weeks = weeks[-52:]
+    shades = ["#161b22", "#0e4429", "#006d32", "#26a641", P["emerald"]]
+    cell, gap, x0, y0 = 6, 1.5, 38, 74
+    for ci in range(52):
+        col = weeks[ci - (52 - len(weeks))] if weeks and ci >= 52 - len(weeks) else []
+        for ri in range(7):
+            lvl = col[ri][2] if ri < len(col) else 0
+            delay = (ci + ri) * .006
+            s.append(f'<rect x="{f4(x0 + ci * (cell + gap))}" y="{f4(y0 + ri * (cell + gap))}" width="{cell}" height="{cell}" rx="1.5" fill="{shades[lvl]}" opacity=".95">'
+                     f'<animate attributeName="opacity" values=".15;.95" dur=".45s" begin="{f4(delay)}s" fill="freeze"/></rect>')
+    total = fmt(gh.get("contribs_year"))
+    commits = fmt(gh.get("commits_year"))
+    s.append(f'<text x="38" y="154" font-size="9" fill="{P["muted"]}">LESS</text>')
+    for i, col in enumerate(shades):
+        s.append(f'<rect x="{75 + i * 15}" y="146" width="10" height="10" rx="2" fill="{col}"/>')
+    s.append(f'<text x="154" y="154" font-size="9" fill="{P["muted"]}">MORE</text>')
+    s.append(f'<rect x="24" y="178" width="196" height="48" rx="8" fill="{P["panel"]}" stroke="{P["border"]}"/>'
+             f'<text x="38" y="198" font-size="9" fill="{P["muted"]}" letter-spacing="1.3">CONTRIBUTIONS</text>'
+             f'<text x="38" y="217" font-size="17" font-weight="700" fill="{P["emerald"]}">{total}</text>'
+             f'<rect x="250" y="178" width="196" height="48" rx="8" fill="{P["panel"]}" stroke="{P["border"]}"/>'
+             f'<text x="264" y="198" font-size="9" fill="{P["muted"]}" letter-spacing="1.3">COMMITS / 12 MO</text>'
+             f'<text x="264" y="217" font-size="17" font-weight="700" fill="{P["cyan"]}">{commits}</text>')
     s.append('</svg>')
     return "".join(s)
+
+
+def build_skyline_fallback(gh: dict, P: dict) -> str:
+    W, H = 470, 250
+    s = metric_shell(W, H, "ACTIVITY SKYLINE", "24-week contribution velocity", P)
+    weeks = (gh.get("weeks") or [])[-24:]
+    totals = [sum(day[1] for day in week) for week in weeks]
+    if len(totals) < 24:
+        totals = [0] * (24 - len(totals)) + totals
+    peak = max(totals) if totals and max(totals) else 1
+    x0, floor, bw, gap = 28, 196, 12, 5.5
+    points = []
+    for i, val in enumerate(totals):
+        height = 8 + (val / peak) * 108 if val else 5
+        x = x0 + i * (bw + gap)
+        y = floor - height
+        col = P["emerald"] if i > 18 else P["cyan"]
+        s.append(f'<rect x="{f4(x)}" y="{f4(y)}" width="{bw}" height="{f4(height)}" rx="2" fill="{col}" opacity=".28">'
+                 f'<animate attributeName="y" from="{floor}" to="{f4(y)}" dur=".65s" begin="{f4(i * .025)}s" fill="freeze"/>'
+                 f'<animate attributeName="height" from="0" to="{f4(height)}" dur=".65s" begin="{f4(i * .025)}s" fill="freeze"/></rect>')
+        s.append(f'<rect x="{f4(x)}" y="{f4(y)}" width="{bw}" height="2" fill="{col}" filter="url(#mGlow)"/>')
+        points.append(f"{f4(x + bw / 2)},{f4(y)}")
+    s.append(f'<polyline points="{" ".join(points)}" fill="none" stroke="{P["cyan"]}" stroke-width="1.2" opacity=".5"/>')
+    s.append(f'<path d="M24 {floor + 1}H446" stroke="{P["border"]}" stroke-width="1"/>'
+             f'<text x="24" y="224" font-size="9" fill="{P["muted"]}">-24 WEEKS</text>'
+             f'<text x="446" y="224" text-anchor="end" font-size="9" fill="{P["muted"]}">NOW</text>')
+    s.append('</svg>')
+    return "".join(s)
+
+
+def build_repositories_fallback(gh: dict, P: dict) -> str:
+    W, H = 900, 282
+    s = metric_shell(W, H, "SELECTED REPOSITORIES", "Public portfolio ranked by stars and recency", P)
+    repos = gh.get("top_repos") or []
+    while len(repos) < 6:
+        repos.append({"name": "Public repository", "stars": 0, "language": "—", "description": "Live repository data unavailable"})
+    for i, repo in enumerate(repos[:6]):
+        col, row = i % 2, i // 2
+        x, y = 20 + col * 440, 64 + row * 67
+        accent = P["emerald"] if i % 2 == 0 else P["cyan"]
+        s.append(f'<g>{fade_in(.08 * i, .4)}'
+                 f'<rect x="{x + .5}" y="{y + .5}" width="420" height="55" rx="8" fill="{P["panel"]}" stroke="{P["border"]}"/>'
+                 f'<text x="{x + 16}" y="{y + 22}" font-size="12" font-weight="700" fill="{P["text"]}">{escape(trunc(repo["name"], 28))}</text>'
+                 f'<text x="{x + 16}" y="{y + 41}" font-size="9.5" fill="{P["muted"]}">{escape(trunc(repo.get("description") or "Public project", 48))}</text>'
+                 f'<circle cx="{x + 330}" cy="{y + 20}" r="3.5" fill="{accent}"/>'
+                 f'<text x="{x + 340}" y="{y + 23}" font-size="9.5" fill="{P["muted"]}">{escape(repo.get("language") or "Other")}</text>'
+                 f'<text x="{x + 404}" y="{y + 42}" text-anchor="end" font-size="10" fill="{P["gold"]}">★ {fmt(repo.get("stars"))}</text></g>')
+    s.append('</svg>')
+    return "".join(s)
+
+
+def build_languages_fallback(gh: dict, P: dict) -> str:
+    W, H = 470, 250
+    s = metric_shell(W, H, "LANGUAGE FOOTPRINT", "Primary language across owned repositories", P)
+    languages = (gh.get("languages") or [])[:6]
+    if not languages:
+        languages = [("No public data", 1)]
+    peak = max(v for _, v in languages) or 1
+    colors = [P["emerald"], P["cyan"], P["gold"], P["lime"], P["gh_green"], P["muted"]]
+    for i, (name, value) in enumerate(languages):
+        y = 76 + i * 27
+        width = 250 * value / peak
+        col = colors[i % len(colors)]
+        s.append(f'<text x="24" y="{y + 10}" font-size="10.5" fill="{P["text"]}">{escape(name)}</text>'
+                 f'<rect x="132" y="{y}" width="270" height="12" rx="6" fill="{P["panel"]}"/>'
+                 f'<rect x="132" y="{y}" width="{f4(width)}" height="12" rx="6" fill="{col}" opacity=".75">'
+                 f'<animate attributeName="width" from="0" to="{f4(width)}" dur=".7s" begin="{f4(.08 * i)}s" fill="freeze"/></rect>'
+                 f'<text x="430" y="{y + 10}" text-anchor="end" font-size="9.5" fill="{P["muted"]}">{value} repos</text>')
+    s.append('</svg>')
+    return "".join(s)
+
+
+def build_activity_fallback(gh: dict, P: dict) -> str:
+    W, H = 900, 266
+    s = metric_shell(W, H, "RECENT ACTIVITY", "Public GitHub event stream", P)
+    events = gh.get("events") or [("--:--", "INFO", "No public activity available")]
+    colors = {"PUSH": P["cyan"], "CREATE": P["lime"], "PR": P["emerald"], "ISSUE": P["gold"],
+              "RELEASE": P["lime"], "STAR": P["gold"], "FORK": P["cyan"], "INFO": P["muted"]}
+    x_line = 44
+    s.append(f'<path d="M{x_line} 72V236" stroke="{P["border"]}" stroke-width="2"/>')
+    for i, (stamp, tag, message) in enumerate(events[:5]):
+        y = 76 + i * 34
+        col = colors.get(tag, P["muted"])
+        s.append(f'<g>{fade_in(.08 * i, .4)}'
+                 f'<circle cx="{x_line}" cy="{y}" r="6" fill="{P["bg"]}" stroke="{col}" stroke-width="2"/>'
+                 f'<circle cx="{x_line}" cy="{y}" r="2.5" fill="{col}"/>'
+                 f'<text x="66" y="{y + 4}" font-size="10" fill="{P["muted"]}">[{escape(stamp)}]</text>'
+                 f'<rect x="168" y="{y - 10}" width="74" height="20" rx="5" fill="{P["panel"]}" stroke="{col}" stroke-opacity=".4"/>'
+                 f'<text x="205" y="{y + 4}" text-anchor="middle" font-size="9.5" font-weight="700" fill="{col}">{escape(tag)}</text>'
+                 f'<text x="260" y="{y + 4}" font-size="11" fill="{P["text"]}">{escape(trunc(message, 72))}</text></g>')
+    s.append(f'<circle r="4" fill="{P["cyan"]}" filter="url(#mGlow)"><animateMotion path="M{x_line} 72V236" dur="3s" repeatCount="indefinite"/></circle>')
+    s.append('</svg>')
+    return "".join(s)
+
+
+def build_locked_fallback(name: str, P: dict) -> str:
+    W, H = 470, 230
+    detail = {
+        "habits": ("CODING RHYTHM", "30-day hourly and weekday patterns"),
+        "lines": ("CHANGE VOLUME", "Repository additions and removals"),
+        "achievements": ("ENGINEERING SIGNALS", "Achievement classification and milestones"),
+        "snake": ("CONTRIBUTION FLOW", "Animated contribution path"),
+    }.get(name, (name.upper(), "Extended analytics channel"))
+    s = metric_shell(W, H, detail[0], detail[1], P, "OPTIONAL CHANNEL")
+    # Deliberately designed data-channel state, not a blank placeholder.
+    for i, height in enumerate([28, 54, 38, 78, 48, 92, 64, 104, 70, 118, 84, 98]):
+        x = 28 + i * 29
+        y = 172 - height
+        col = P["emerald"] if i % 3 else P["cyan"]
+        s.append(f'<rect x="{x}" y="{y}" width="14" height="{height}" rx="3" fill="{col}" opacity=".12"/>'
+                 f'<rect x="{x}" y="{y}" width="14" height="2" fill="{col}" opacity=".45"/>')
+    s.append(f'<rect x="24" y="184" width="422" height="28" rx="7" fill="{P["panel"]}" stroke="{P["border"]}"/>'
+             f'<text x="235" y="202" text-anchor="middle" font-size="9.5" fill="{P["muted"]}" letter-spacing=".4">ADD METRICS_TOKEN TO ENABLE THE DEEP-DIVE RENDER</text>')
+    s.append('</svg>')
+    return "".join(s)
+
+
+def build_metric_fallback(name: str, gh: dict, P: dict) -> str:
+    builders = {
+        "isocalendar": build_calendar_fallback,
+        "skyline": build_skyline_fallback,
+        "repositories": build_repositories_fallback,
+        "languages": build_languages_fallback,
+        "activity": build_activity_fallback,
+    }
+    if name in builders:
+        return builders[name](gh, P)
+    return build_locked_fallback(name, P)
+
+
+def should_refresh_fallback(path: Path) -> bool:
+    if not path.exists():
+        return True
+    try:
+        head = path.read_text(encoding="utf-8")
+    except Exception:  # noqa: BLE001 - unreadable placeholder should be replaced
+        return True
+    return "AWAITING FIRST SYNC" in head or 'data-fallback="true"' in head
 
 
 # --------------------------------------------------------------------------------------
@@ -703,14 +958,15 @@ def main() -> int:
     write(A / "divider.svg", build_divider(P))
     for sec in cfg["sections"]:
         write(A / f"section-{sec['key']}.svg", build_section(sec, P))
+    write(A / "overview.svg", build_overview(cfg, P))
     write(A / "stack.svg", build_stack(cfg, P))
     write(A / "mc-stats.svg", build_stats(cfg, P, gh, host, args.offline, now))
     write(A / "footer.svg", build_footer(cfg, P, now))
 
     for name in METRIC_STUBS:
         p = ROOT / "metrics" / f"{name}.svg"
-        if not p.exists():
-            write(p, build_stub(name, P))
+        if should_refresh_fallback(p):
+            write(p, build_metric_fallback(name, gh, P))
     log("[done]")
     return 0
 

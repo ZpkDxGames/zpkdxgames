@@ -1,14 +1,34 @@
 {
   "username": "ZpkDxGames",
   "display_name": "ZpkDxGames",
-  "tagline": "Minecraft plugin engineer // Java backend // custom mechanics",
+  "tagline": "Minecraft systems engineering // Java backend // operations",
   "timezone": "America/Sao_Paulo",
 
   "boot_lines": [
-    "$ ./start.sh --profile zpkdxgames --nogui",
-    "[INFO] Loading modules: java, spigot-api, paper-api, backend",
-    "[INFO] Done (0.42s)! For help, type \"help\""
+    "$ ./launch --profile zpkdxgames --mode production",
+    "[BOOT] paper runtime · plugin platform · persistence · telemetry",
+    "[READY] systems nominal · tick budget protected"
   ],
+
+  "pillars": [
+    {
+      "title": "GAMEPLAY SYSTEMS",
+      "subtitle": "Native-feeling mechanics",
+      "detail": "Paper · Spigot · event-driven design"
+    },
+    {
+      "title": "RUNTIME & DATA",
+      "subtitle": "Predictable server behavior",
+      "detail": "Async I/O · persistence · APIs"
+    },
+    {
+      "title": "OPERATIONS",
+      "subtitle": "Observable delivery",
+      "detail": "Telemetry · tooling · CI/CD"
+    }
+  ],
+
+  "workflow": ["DESIGN", "BUILD", "OBSERVE", "ITERATE"],
 
   "stack": [
     "Java",

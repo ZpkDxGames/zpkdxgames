@@ -60,7 +60,6 @@ jobs:
           plugin_isocalendar_duration: full-year
 
       - name: Metrics - GitHub Skyline (3D)
-        if: env.METRICS_TOKEN != ''
         continue-on-error: true
         uses: lowlighter/metrics@latest
         with:
