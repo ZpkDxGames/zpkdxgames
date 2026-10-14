@@ -1,2 +1,0 @@
-def top_languages(languages,limit=7):
-    items=sorted(languages.items(),key=lambda kv:(-kv[1],kv[0])); head=items[:limit]; other=sum(v for _,v in items[limit:]); return head+([('Other',other)] if other else [])
