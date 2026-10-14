@@ -1,5 +1,5 @@
 {
-  "schema": 1,
+  "schema": 2,
   "owner": "ZpkDxGames",
   "as_of": "2026-10-13",
   "days": 90,
@@ -18,7 +18,8 @@
         "CSS": 16820,
         "Rust": 3443,
         "Python": 2747
-      }
+      },
+      "commits_30d": 162
     },
     {
       "name": "ConanGrayBot-Core",
@@ -26,7 +27,8 @@
       "commits": 17,
       "languages": {
         "Python": 430714
-      }
+      },
+      "commits_30d": 17
     },
     {
       "name": "ConanGrayBot-Page",
@@ -36,7 +38,8 @@
         "JavaScript": 111679,
         "HTML": 101968,
         "CSS": 64801
-      }
+      },
+      "commits_30d": 10
     },
     {
       "name": "DropsEditor",
@@ -44,7 +47,8 @@
       "commits": 0,
       "languages": {
         "Java": 73836
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "GhostBlocks",
@@ -53,7 +57,8 @@
       "languages": {
         "Java": 108439,
         "Python": 6371
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "Neural-Core-Dashboard",
@@ -63,7 +68,8 @@
         "TypeScript": 42336,
         "JavaScript": 2535,
         "PLpgSQL": 2054
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "Plexon-DailyRewards",
@@ -71,7 +77,8 @@
       "commits": 4,
       "languages": {
         "Java": 123239
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonBackpacks",
@@ -79,7 +86,8 @@
       "commits": 128,
       "languages": {
         "Java": 62382
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonBlacksmith",
@@ -87,7 +95,8 @@
       "commits": 49,
       "languages": {
         "Java": 206184
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonChats",
@@ -95,7 +104,8 @@
       "commits": 259,
       "languages": {
         "Java": 668279
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonCore",
@@ -103,7 +113,8 @@
       "commits": 165,
       "languages": {
         "Java": 286116
-      }
+      },
+      "commits_30d": 55
     },
     {
       "name": "PlexonCrates",
@@ -111,7 +122,8 @@
       "commits": 540,
       "languages": {
         "Java": 2014312
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonGPFlags",
@@ -119,7 +131,8 @@
       "commits": 63,
       "languages": {
         "Java": 210885
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonGriefPreventionAddon",
@@ -127,7 +140,8 @@
       "commits": 16,
       "languages": {
         "Java": 79161
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonHomes",
@@ -136,7 +150,8 @@
       "languages": {
         "Java": 217798,
         "Shell": 1607
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonJobs",
@@ -144,7 +159,8 @@
       "commits": 153,
       "languages": {
         "Java": 307730
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonKeys",
@@ -152,7 +168,8 @@
       "commits": 171,
       "languages": {
         "Java": 303391
-      }
+      },
+      "commits_30d": 37
     },
     {
       "name": "PlexonPanel",
@@ -162,7 +179,8 @@
         "Java": 1016877,
         "Python": 52541,
         "JavaScript": 2338
-      }
+      },
+      "commits_30d": 358
     },
     {
       "name": "PlexonPanel-Dashboard",
@@ -172,7 +190,8 @@
         "TypeScript": 235967,
         "JavaScript": 3464,
         "HTML": 443
-      }
+      },
+      "commits_30d": 322
     },
     {
       "name": "PlexonQuests",
@@ -180,7 +199,8 @@
       "commits": 302,
       "languages": {
         "Java": 926267
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonRanks",
@@ -188,7 +208,8 @@
       "commits": 112,
       "languages": {
         "Java": 452916
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonShops",
@@ -196,7 +217,8 @@
       "commits": 131,
       "languages": {
         "Java": 430123
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonSkills",
@@ -204,7 +226,8 @@
       "commits": 36,
       "languages": {
         "Java": 286497
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonSpawners",
@@ -213,7 +236,8 @@
       "languages": {
         "Java": 226299,
         "Python": 3846
-      }
+      },
+      "commits_30d": 12
     },
     {
       "name": "PlexonTools",
@@ -222,7 +246,8 @@
       "languages": {
         "Java": 755942,
         "Python": 11117
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonTravel",
@@ -231,7 +256,8 @@
       "languages": {
         "Java": 250509,
         "Shell": 6362
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "PlexonUtility",
@@ -239,7 +265,8 @@
       "commits": 257,
       "languages": {
         "Java": 561656
-      }
+      },
+      "commits_30d": 132
     },
     {
       "name": "Rankup-1.2Fixer",
@@ -247,7 +274,8 @@
       "commits": 27,
       "languages": {
         "Java": 37344
-      }
+      },
+      "commits_30d": 0
     },
     {
       "name": "Trabalho-III-Eng.-Prompt",
@@ -257,7 +285,8 @@
         "TypeScript": 88106,
         "CSS": 51371,
         "JavaScript": 380
-      }
+      },
+      "commits_30d": 7
     },
     {
       "name": "Triangle-Area",
@@ -265,7 +294,8 @@
       "commits": 3,
       "languages": {
         "HTML": 8774
-      }
+      },
+      "commits_30d": 0
     }
   ],
   "daily": [
