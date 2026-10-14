@@ -131,12 +131,14 @@ class ProfileMetricsTests(unittest.TestCase):
         data = metrics.collect("ZpkDxGames", date(2026, 8, 31), api)
         with tempfile.TemporaryDirectory() as temporary:
             outputs = metrics.render(data, Path(temporary))
-        self.assertEqual(len(outputs), 61)
+        self.assertEqual(sum(path.endswith('.svg') for path in outputs), 94)
         self.assertIn("No published releases", outputs["assets/profile/releases-dark.svg"])
 
     def test_svg_is_valid_accessible_and_deterministic(self):
         data = self.snapshot()
         data["projects"][1]["name"] = 'A & B <test>'
+        for row in data['releases']:
+            row['project'] = 'A & B <test>'
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
             first = metrics.render(data, root)
