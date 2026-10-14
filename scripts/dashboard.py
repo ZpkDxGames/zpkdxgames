@@ -23,8 +23,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
 SNAPSHOT = ROOT / "data" / "github.json"
-NAVY, PANEL, BORDER = "#070e1d", "#101e33", "#223b55"
-WHITE, MUTED, CYAN, BLUE = "#f0f7ff", "#afc4da", "#55e1ee", "#4b91ff"
+NAVY, PANEL, BORDER = "#080e1a", "#101d30", "#25364d"
+WHITE, MUTED, CYAN, BLUE = "#edf4ff", "#a5b6cc", "#67e8f9", "#5698ff"
 LANG_COLORS = [CYAN, BLUE, "#80b5ff", "#45bda9", "#ccdffe", "#527087"]
 
 
@@ -203,15 +203,20 @@ class Canvas:
         self.parts = [f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title desc">
 <title id="title">{escape(title)}</title><desc id="desc">{escape(description)}</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e35"/><stop offset=".5" stop-color="{NAVY}"/><stop offset="1" stop-color="#0d2136"/></linearGradient>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111e31"/><stop offset=".55" stop-color="{NAVY}"/><stop offset="1" stop-color="#102337"/></linearGradient>
   <linearGradient id="accent"><stop stop-color="{BLUE}"/><stop offset="1" stop-color="{CYAN}"/></linearGradient>
   <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="{CYAN}"/></linearGradient>
-  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".25"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".17"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#203c58"/><stop offset="1" stop-color="#112238"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22364f" stop-opacity=".75"/><stop offset="1" stop-color="#0b1526" stop-opacity=".9"/></linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#57829d" stop-opacity=".7"/><stop offset=".5" stop-color="#25364d"/><stop offset="1" stop-color="#315570"/></linearGradient>
+  <radialGradient id="sphere" cx=".3" cy=".2" r=".8"><stop stop-color="#e0fbff"/><stop offset=".3" stop-color="#67e8f9"/><stop offset="1" stop-color="#2064a3"/></radialGradient>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
   <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 H 0 V 32" fill="none" stroke="#1d3753" stroke-width=".65"/></pattern>
-  <clipPath id="panel"><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="22"/></clipPath>
+  <clipPath id="panel"><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="18"/></clipPath>
 </defs>
 <style>
-text{{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:{WHITE};}}
+text{{font-family:Arial,'Helvetica Neue',sans-serif;fill:{WHITE};}}
 .mono{{font-family:Consolas,'Liberation Mono',monospace;letter-spacing:.7px;}}
 .spin{{transform-box:fill-box;transform-origin:center;animation:orbit 48s linear infinite;}}
 .flow{{stroke-dasharray:28 180;animation:flow 8s linear infinite;}}
@@ -223,9 +228,12 @@ text{{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:{WHITE};}}
 @keyframes float{{0%,100%{{transform:translateY(0);}}50%{{transform:translateY(-4px);}}}}
 @media (prefers-reduced-motion:reduce){{.spin,.flow,.soft,.float{{animation:none;}}}}
 </style>
-<rect x="1" y="1" width="{width-2}" height="{height-2}" rx="22" fill="url(#bg)" stroke="{BORDER}"/>
-<g clip-path="url(#panel)"><rect width="{width}" height="{height}" fill="url(#grid)" opacity=".16"/>
-<ellipse cx="{width*.91}" cy="0" rx="{width*.47}" ry="{height*.88}" fill="url(#aura)"/></g>''']
+<rect x="1" y="1" width="{width-2}" height="{height-2}" rx="18" fill="url(#bg)" stroke="url(#edge)"/>
+<g clip-path="url(#panel)"><rect width="{width}" height="{height}" fill="url(#grid)" opacity=".045"/>
+<ellipse cx="{width*.91}" cy="0" rx="{width*.47}" ry="{height*.88}" fill="url(#aura)"/>
+<path d="M24,1 H{min(width-24, 225)}" stroke="url(#accent)" stroke-opacity=".7"/>
+<path d="M24,{height-1} H{width-24}" stroke="#15293c"/>
+</g>''']
 
     def add(self, content):
         self.parts.append(content)
@@ -251,75 +259,115 @@ text{{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:{WHITE};}}
         return "\n".join(self.parts) + "\n</svg>\n"
 
 
-def code_orbit(c, x, y, scale=1, opacity=1):
-    c.add(f'<g transform="translate({x},{y}) scale({scale})" opacity="{opacity}">')
-    c.circle(0, 0, 112, stroke="#315477", width=1.3)
-    c.circle(0, 0, 137, stroke=CYAN, extra='stroke-dasharray="2 20" class="spin" opacity=".55"')
-    c.add(f'<path d="M-94,-58 A111,111 0 0 1 75,-81" fill="none" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" class="soft"/>')
-    c.add(f'<path d="M0,-76 L66,-38 V38 L0,76 L-66,38 V-38 Z" fill="#0f243c" stroke="{BLUE}" stroke-width="2"/>')
-    c.add(f'<path d="M-12,-76 L54,-38 V38 L-12,76" fill="none" stroke="#244963" stroke-width="1"/>')
-    c.add(f'<path d="M-27,-18 L-45,0 L-27,18 M27,-18 L45,0 L27,18 M12,-26 L-12,26" fill="none" stroke="{CYAN}" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>')
-    for nx, ny in [(-96,-62),(105,41),(-41,103)]:
-        c.line(nx, ny, nx*.57, ny*.57, BLUE, 1.5)
-        c.circle(nx, ny, 9, NAVY, CYAN, 2)
-        c.circle(nx, ny, 3, CYAN, "none", extra='class="soft"')
+def polygon(c, points, fill, stroke="#47718b", width=1):
+    c.add('<polygon points="' + ' '.join(f"{x:.2f},{y:.2f}" for x,y in points) + f'" fill="{fill}" stroke="{stroke}" stroke-width="{width}" stroke-linejoin="round"/>')
+
+
+def iso(x, y, z):
+    """Shared 30-degree isometric projection for every architectural object."""
+    return (.8660254*(x-y), .5*(x+y)-z)
+
+
+def prism(c, x, y, z, dx, dy, dz, top="url(#surface)", left="#12243a", right="#19334c", stroke="#3c607c"):
+    p=lambda a,b,d: iso(x+a,y+b,z+d)
+    polygon(c, [p(0,dy,0),p(dx,dy,0),p(dx,dy,dz),p(0,dy,dz)], left, stroke)
+    polygon(c, [p(dx,0,0),p(dx,dy,0),p(dx,dy,dz),p(dx,0,dz)], right, stroke)
+    polygon(c, [p(0,0,dz),p(dx,0,dz),p(dx,dy,dz),p(0,dy,dz)], top, stroke)
+
+
+def architecture(c, x, y, scale=1):
+    c.add(f'<g transform="translate({x},{y}) scale({scale})">')
+    c.add('<ellipse cx="0" cy="67" rx="145" ry="72" fill="url(#aura)"/>')
+    for k in range(-3,4):
+        c.line(*iso(-150,k*45,-72), *iso(150,k*45,-72), "#25405b", .7, 'opacity=".5"')
+        c.line(*iso(k*45,-150,-72), *iso(k*45,150,-72), "#25405b", .7, 'opacity=".5"')
+    prism(c,-83,-83,-56,166,166,9,top="#0f2237",left="#0c1728",right="#142e45")
+    prism(c,-70,-70,-29,140,140,10,top="url(#surface)",stroke="#55829c")
+    for sign in [-1,1]:
+        for lane in [-27,0,27]:
+            pts=[iso(sign*51,lane,-18),iso(sign*60,lane,-18),iso(sign*60,lane+9,-18),iso(sign*70,lane+9,-18)]
+            c.add('<polyline points="'+' '.join(f"{xx:.2f},{yy:.2f}" for xx,yy in pts)+'" fill="none" stroke="#467a94" stroke-width="1"/>')
+    for a,b in [((-70,-70,-18),(70,-70,-18)),((70,-70,-18),(70,70,-18))]:
+        c.line(*iso(*a),*iso(*b),CYAN,2, 'class="flow"')
+    for x0,y0 in [(-58,-58),(58,-58),(-58,58),(58,58)]:
+        c.line(*iso(x0,y0,-18),*iso(x0,y0,13),"#3a7693",1,'stroke-dasharray="2 5"')
+    c.add('<g class="float">')
+    prism(c,-48,-48,16,96,96,30,top="url(#surface)",left="#12304a",right="#1d4960",stroke="#5c97b0")
+    for i in range(6):
+        px,py=iso(-35+i*14,48,26)
+        c.line(px,py,px,py+9,CYAN,2,'opacity=".7"')
+        px,py=iso(48,-35+i*14,26)
+        c.line(px,py,px,py+9,BLUE,2,'opacity=".8"')
+    c.add('<g transform="matrix(.8660254 .5 -.8660254 .5 0 -47)">')
+    c.rect(-34,-34,68,68,fill="#132f47",stroke="#5aa7bd",radius=8)
+    c.add(f'<path d="M-11,-11 L-23,0 L-11,11 M11,-11 L23,0 L11,11 M5,-17 L-5,17" fill="none" stroke="{CYAN}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>')
+    c.add('</g></g>')
+    for xx,yy in [(-132,18),(123,14),(0,131)]:
+        c.circle(xx,yy,9,fill=CYAN,stroke="none",extra='opacity=".3" filter="url(#glow)" class="soft"')
+        c.circle(xx,yy,3,fill=CYAN,stroke="none")
     c.add('</g>')
 
 
 def hero(config, mobile):
-    w, h = (420, 410) if mobile else (900, 352)
-    c = Canvas(w, h, "ZpkDxGames — Tonim's developer dashboard", "Minecraft systems, developer tools, and local-first interactive apps. Blue and cyan orbital code artwork is decorative.")
+    w,h=(420,625) if mobile else (900,420)
+    c=Canvas(w,h,"ZpkDxGames — Tonim's developer dashboard", "Minecraft systems, developer tools, and local-first interactive apps. Layered isometric computing architecture is decorative.")
+    pad=26 if mobile else 36
+    c.circle(pad+4,36,4,CYAN,"none",extra='class="soft"')
+    c.text(pad+19,42,"TONIM / DEVELOPER",20 if mobile else 16,CYAN,cls="mono")
+    if not mobile:
+        c.text(864,42,"BASED IN BRAZIL",16,MUTED,anchor="end")
+    c.line(pad,63,w-pad,63)
+    c.text(pad,125 if mobile else 145,config['username'],43 if mobile else 64,weight=700,spacing=-2)
+    c.text(pad,179 if mobile else 209,"Minecraft worlds.",34 if mobile else 41,weight=500,spacing=-1)
+    c.text(pad,220 if mobile else 260,"Real-world tools.",34 if mobile else 41,CYAN,weight=500,spacing=-1)
     if mobile:
-        code_orbit(c, 352, 182, .63, .23)
-        c.text(26, 40, "TONIM / DEVELOPER", 20, CYAN, cls="mono")
-        c.circle(380, 34, 5, CYAN, "none", extra='class="soft"')
-        c.text(26, 100, config["username"], 43, weight=700, spacing=-1.6)
-        c.text(26, 161, "Minecraft worlds.", 34, weight=600, spacing=-.8)
-        c.text(26, 206, "Real-world tools.", 34, CYAN, weight=600, spacing=-.8)
-        c.text(26, 259, "Minecraft systems, developer tools", 21, MUTED)
-        c.text(26, 290, "and local-first interactive apps.", 21, MUTED)
-        c.line(26, 326, 394, 326)
-        c.text(26, 362, "JAVA / TYPESCRIPT", 20, CYAN, cls="mono")
-        c.text(26, 389, "JAVASCRIPT / BRAZIL", 20, MUTED, cls="mono")
+        c.text(pad,262,"Systems, software, and interfaces",21,MUTED)
+        c.text(pad,291,"with purpose.",21,MUTED)
+        architecture(c,210,411,.85)
+        c.line(pad,548,w-pad,548)
+        c.text(pad,578,"JAVA / TYPESCRIPT",20,CYAN,cls="mono")
+        c.text(pad,605,"JAVASCRIPT / BRAZIL",20,MUTED,cls="mono")
     else:
-        code_orbit(c, 728, 187)
-        c.text(36, 39, "TONIM / DEVELOPER DASHBOARD", 16, CYAN, cls="mono")
-        c.text(860, 39, "PUBLIC GITHUB", 16, MUTED, cls="mono", anchor="end")
-        c.text(36, 111, config["username"], 60, weight=700, spacing=-2)
-        c.text(36, 174, "Minecraft worlds.", 43, weight=600, spacing=-1)
-        c.text(36, 227, "Real-world tools.", 43, CYAN, weight=600, spacing=-1)
-        c.text(36, 274, "Systems, software, and interfaces with purpose.", 21, MUTED)
-        c.line(36, 297, 524, 297)
-        c.text(36, 326, "JAVA / TYPESCRIPT / JAVASCRIPT", 16, CYAN, cls="mono")
-        c.text(860, 326, "BRAZIL", 16, MUTED, cls="mono", anchor="end")
+        c.text(pad,304,"Systems, software, and interfaces with purpose.",20,MUTED)
+        c.rect(605,83,259,255,fill="url(#glass)",stroke="#263c53",radius=14)
+        c.add('<defs><clipPath id="hero-art"><rect x="606" y="84" width="257" height="253" rx="13"/></clipPath></defs><g clip-path="url(#hero-art)">')
+        architecture(c,734,201,.78)
+        c.add('</g>')
+        c.line(pad,354,w-pad,354)
+        c.text(pad,391,"JAVA / TYPESCRIPT / JAVASCRIPT",16,CYAN,cls="mono")
+        c.text(864,391,"BUILD. REFINE. REPEAT.",16,MUTED,cls="mono",anchor="end")
     return c.finish()
 
 
+def metric_icon(c, x, y, index):
+    c.add(f'<g transform="translate({x},{y})" fill="none" stroke="{CYAN}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">')
+    icons=["M-7,-9 H5 L9,-5 V9 H-7 Z M5,-9 V-5 H9 M-3,-1 H5 M-3,3 H5", "M-8,-7 V6 Q-8,9 -5,9 H8 V-4 H-8 M-8,-7 H0 L3,-4", "M-10,1 H-6 L-2,-7 L2,8 L6,-2 H10", "M-8,-7 H8 V9 H-8 Z M-8,-2 H8 M-4,-10 V-5 M4,-10 V-5 M-4,3 H0"]
+    c.add(f'<path d="{icons[index]}"/></g>')
+
+
 def metrics(snapshot, mobile):
-    c = Canvas(420 if mobile else 900, 480 if mobile else 264,
-               "GitHub at a glance", f"{snapshot['public_repos']} public repositories; {snapshot['original_repos']} original repositories excluding the profile; {snapshot['contributions']} profile contributions and {snapshot['active_days']} active days in the last 365 calendar days. Snapshot {snapshot['captured_at']}.")
-    date = dt.date.fromisoformat(snapshot["calendar_end"]).strftime("%d %b %Y").upper()
-    c.text(26 if mobile else 36, 47 if mobile else 43, "GitHub at a glance", 28 if mobile else 26, weight=600)
-    c.text(26 if mobile else 864, 79 if mobile else 43, date + " / UTC", 20 if mobile else 16, MUTED, cls="mono", anchor="start" if mobile else "end")
-    labels = [("public_repos", "Public repos", "Owned + forks"), ("original_repos", "Original repos", "Excludes profile"),
-              ("contributions", "Contributions", "Past 365 days"), ("active_days", "Active days", "Past 365 days")]
-    for i, (key, label, sub) in enumerate(labels):
-        x = 24 + (i % 2) * 194 if mobile else 36 + i * 217
-        y = 108 + (i // 2) * 173 if mobile else 81
-        width, height = (178, 155) if mobile else (177, 149)
-        c.rect(x, y, width, height, fill="#0d1b2e")
-        c.line(x+16, y+1, x+width-16, y+1, CYAN if i % 2 == 0 else BLUE, 2)
-        c.text(x+16, y+58, pretty(snapshot[key]), 43 if mobile else 42, weight=650, spacing=-1.5)
-        c.text(x+16, y+98, label, 20 if mobile else 19, weight=600)
-        c.text(x+16, y+128, sub, 20 if mobile else 16, MUTED)
-    c.text(26 if mobile else 36, 466 if mobile else 252, "Dated GitHub snapshot" if mobile else "PUBLIC REPOSITORIES / PROFILE CONTRIBUTION CALENDAR", 20 if mobile else 16, MUTED, cls="" if mobile else "mono")
+    c=Canvas(420 if mobile else 900,492 if mobile else 276,"GitHub at a glance", f"{snapshot['public_repos']} public repositories; {snapshot['original_repos']} original repositories excluding the profile; {snapshot['contributions']} profile contributions and {snapshot['active_days']} active days in the last 365 calendar days. Snapshot {snapshot['captured_at']}.")
+    date=dt.date.fromisoformat(snapshot['calendar_end']).strftime('%d %b %Y').upper()
+    c.text(26 if mobile else 36,47 if mobile else 43,"GitHub at a glance",28 if mobile else 26,weight=600)
+    c.text(26 if mobile else 864,79 if mobile else 43,date+' / UTC',20 if mobile else 16,MUTED,cls='mono',anchor='start' if mobile else 'end')
+    labels=[('public_repos','Public repos','Owned + forks'),('original_repos','Original repos','Excludes profile'),('contributions','Contributions','Past 365 days'),('active_days','Active days','Past 365 days')]
+    for i,(key,label,sub) in enumerate(labels):
+        x=24+i%2*194 if mobile else 36+i*210
+        y=108+i//2*177 if mobile else 76
+        width,height=(178,161) if mobile else (198,163)
+        c.rect(x,y,width,height,fill='url(#glass)',stroke='url(#edge)',radius=10)
+        metric_icon(c,x+width-24,y+25,i)
+        c.text(x+16,y+65,pretty(snapshot[key]),40 if mobile else 45,weight=600,spacing=-1.7)
+        c.text(x+16,y+105,label,20,weight=500)
+        c.text(x+16,y+139,sub,20 if mobile else 16,MUTED)
+    c.text(26 if mobile else 36,477 if mobile else 261,'Dated GitHub snapshot' if mobile else 'PUBLIC REPOSITORIES / PROFILE CONTRIBUTION CALENDAR',20 if mobile else 16,MUTED,cls='' if mobile else 'mono')
     return c.finish()
 
 
 def activity(snapshot, mobile):
     weeks = weekly_activity(snapshot)
     total = sum(week["count"] for week in weeks)
-    c = Canvas(420 if mobile else 900, 595 if mobile else 378,
+    c = Canvas(420 if mobile else 900, 595 if mobile else 400,
                "Contribution rhythm", f"Twelve calendar weeks of real GitHub profile contributions, from {weeks[0]['date']} through {snapshot['calendar_end']}. {total} contributions in this interval. Current week is in progress. Weekly bars and daily heatmap use identical calendar data.")
     c.text(26 if mobile else 36, 47 if mobile else 43, "Contribution rhythm", 28 if mobile else 26, weight=600)
     c.text(26 if mobile else 36, 79 if mobile else 76, "12 weeks · current week in progress", 20 if mobile else 18, MUTED)
@@ -336,7 +384,7 @@ def activity(snapshot, mobile):
     cap = max(4, math.ceil(maximum / 4) * 4)
     for tick in range(5):
         gy = y + ph - ph * tick / 4
-        c.line(x, gy, x+pw, gy, BORDER, .8)
+        c.line(x, gy, x+pw, gy, BORDER, .8, 'stroke-dasharray="3 6"')
         value = round(cap * tick / 4)
         label = f"{value / 1000:.1f}k" if value >= 1000 else str(value)
         c.text(x-10, gy+6, label, 20 if mobile else 16, MUTED, anchor="end")
@@ -370,7 +418,7 @@ def activity(snapshot, mobile):
         c.rect((163 if mobile else 662)+i*21, ly-16, 16, 16, tone, "none", 3)
     c.text(276 if mobile else 776, ly, "More", 20 if mobile else 16, MUTED)
     if not mobile:
-        c.text(36, 355, f"{weeks[0]['date'].strftime('%d %b')} — {dt.date.fromisoformat(snapshot['calendar_end']).strftime('%d %b %Y')} / GitHub profile calendar", 16, MUTED)
+        c.text(36, 378, f"{weeks[0]['date'].strftime('%d %b')} — {dt.date.fromisoformat(snapshot['calendar_end']).strftime('%d %b %Y')} / GitHub profile calendar", 16, MUTED)
     return c.finish()
 
 
@@ -387,7 +435,8 @@ def languages(snapshot, mobile):
         c.circle(cx, cy, radius, stroke=LANG_COLORS[i], width=23,
                  extra=f'stroke-dasharray="{share*length:.4f} {length:.4f}" stroke-dashoffset="{-offset:.4f}" transform="rotate(-90 {cx} {cy})"')
         offset += share * length
-    c.circle(cx, cy, radius+27, stroke=BLUE, extra='stroke-dasharray="1 15" class="spin" opacity=".6"')
+    c.circle(cx, cy, radius+27, stroke=BLUE, extra='stroke-dasharray="1 9" opacity=".5"')
+    c.circle(cx, cy, radius-22, fill="url(#glass)", stroke="#29415a")
     c.text(cx, cy-6, "CODE", 22 if mobile else 19, MUTED, cls="mono", anchor="middle")
     c.text(cx, cy+31, "100%", 34, weight=600, anchor="middle")
     for i, (name, share) in enumerate(rows):
@@ -408,87 +457,96 @@ def languages(snapshot, mobile):
 
 def project_art(c, kind, x, y, scale=1):
     c.add(f'<g transform="translate({x},{y}) scale({scale})">')
-    c.circle(0, 0, 110, stroke=BLUE, extra='stroke-dasharray="2 15" class="spin" opacity=".35"')
-    c.circle(0, 0, 83, fill="url(#aura)", stroke="#21435f")
-    if kind == "servers":
-        for i in range(3):
-            sy = -76 + i*51
-            c.rect(-66, sy, 132, 37, fill="#0d2239", stroke="#356383", radius=7)
-            c.rect(-51, sy+11, 65, 5, fill="#356687", stroke="none", radius=2)
-            c.rect(-51, sy+22, 43, 4, fill="#203e5b", stroke="none", radius=2)
-            c.circle(46, sy+18, 4, CYAN, "none", extra='class="soft"')
-        for sign in [-1, 1]:
-            c.add(f'<path d="M{sign*66},-30 H{sign*101} V63 H{sign*43}" fill="none" stroke="#315779" stroke-width="2"/>')
-            c.add(f'<path d="M{sign*66},-30 H{sign*101} V63 H{sign*43}" fill="none" stroke="{CYAN}" stroke-width="2" class="flow"/>')
-        c.circle(0, 83, 7, CYAN, "none")
-    elif kind == "companion":
+    c.add('<ellipse cx="0" cy="78" rx="110" ry="36" fill="url(#aura)"/>')
+    if kind == 'servers':
+        prism(c,-65,-65,-65,130,130,7,top="#0d2238",stroke="#2a526f")
+        for z in [-38,5,48]:
+            prism(c,-45,-45,z,90,90,27,top='url(#surface)',left='#12273d',right='#1b3b53',stroke='#4e7791')
+            for v in [-21,-7,7,21]:
+                c.line(*iso(-24,v,z+27.5),*iso(24,v,z+27.5),'#3f6680',1.1)
+            for i in range(4):
+                a=iso(-28+i*15,45,z+11);b=iso(-22+i*15,45,z+11)
+                c.line(*a,*b,'#5883a0',3)
+            for i in range(2):
+                a=iso(45,-27+i*15,z+11)
+                c.circle(*a,2.6,CYAN,'none',extra='class="soft"')
+        for sign in [-1,1]:
+            c.add(f'<path d="M{sign*80},-7 L{sign*105},8 V71 L{sign*35},112" fill="none" stroke="#2c5771" stroke-width="1.5"/>')
+            c.add(f'<path d="M{sign*80},-7 L{sign*105},8 V71 L{sign*35},112" fill="none" stroke="{CYAN}" stroke-width="1.5" class="flow"/>')
+    elif kind == 'companion':
+        prism(c,-59,-45,-66,118,90,5,top='#102940',stroke='#36627f')
         c.add('<g class="float">')
-        c.add(f'<path d="M-28,-68 L0,-83 L31,-68 V-25 L0,-9 L-28,-25Z" fill="#194468" stroke="{CYAN}" stroke-width="1.7"/>')
-        c.add(f'<path d="M0,-83 V-40 L31,-25 M-28,-68 L0,-40 L31,-68" fill="none" stroke="#3c86a6"/>')
-        c.rect(-17, -51, 7, 7, CYAN, "none", 0)
-        c.rect(7, -51, 7, 7, CYAN, "none", 0)
-        c.add(f'<path d="M-33,-14 L0,-1 L33,-14 V46 L0,61 L-33,46Z" fill="#146985" stroke="{BLUE}" stroke-width="1.5"/>')
-        c.add(f'<path d="M-50,-13 L-35,-6 V41 L-50,34Z M36,-6 L54,-17 V30 L36,41Z" fill="#1a4d75" stroke="#67aec9"/>')
-        c.add(f'<path d="M-30,49 L-4,60 V91 L-30,80Z M4,60 L30,49 V80 L4,92Z" fill="#173956" stroke="#3d77a0"/>')
+        # One projection and shared coordinates keep all voxel faces aligned.
+        for xx in [-24,3]:
+            prism(c,xx,-13,-52,21,26,47,top='#315f86',left='#193a60',right='#25517b')
+        prism(c,-26,-16,-4,52,32,52,top='#318caa',left='#176180',right='#248ca5',stroke='#6ab0c5')
+        for xx in [-43,29]:
+            prism(c,xx,-14,1,14,28,44,top='#397894',left='#254960',right='#35748a')
+        prism(c,-24,-24,53,48,48,48,top='#2d5572',left='#1e3c57',right='#376984',stroke='#78b3c9')
+        for xx in [-13,7]:
+            polygon(c,[iso(xx,24,72),iso(xx+7,24,72),iso(xx+7,24,80),iso(xx,24,80)],CYAN,'none')
         c.add('</g>')
-        c.add(f'<ellipse cx="0" cy="101" rx="59" ry="9" fill="{CYAN}" opacity=".07"/>')
-    elif kind == "dashboard":
-        c.rect(-97, -64, 194, 123, fill="#0d2037", stroke="#477fa8", radius=9)
-        c.line(-97, -44, 97, -44, "#477fa8")
+        c.add(f'<path d="M-95,-36 V-64 H-73 M73,72 H95 V44" fill="none" stroke="{CYAN}" stroke-width="1.5" opacity=".65"/>')
+    elif kind == 'dashboard':
+        c.rect(-88,-87,193,130,fill='#0c1b2e',stroke='#2e5876',radius=7)
+        c.rect(-103,-69,193,142,fill='url(#surface)',stroke='#6594ae',radius=7)
+        c.line(-102,-44,89,-44,'#547a94')
+        for i in range(3): c.circle(-88+i*11,-56,2.5,CYAN if i==0 else '#47728f','none')
+        c.rect(-93,-33,33,94,fill='#11283f',stroke='none',radius=3)
+        for i in range(5): c.line(-85,-22+i*16,-70,-22+i*16,CYAN if i==0 else '#3a5e7b',2)
         for i in range(3):
-            c.circle(-81+i*12, -54, 2.7, CYAN if i==0 else "#477fa8", "none")
-        c.rect(-83, -32, 28, 78, fill="#17354e", stroke="none", radius=3)
-        for i in range(4):
-            c.line(-77, -21+i*15, -62, -21+i*15, BLUE if i==0 else "#38617d", 3)
-        for i in range(3):
-            c.rect(-42+i*43, -32, 34, 29, fill="#162e47", stroke="#365a76", radius=3)
-            c.line(-35+i*43, -22, -19+i*43, -22, CYAN, 2)
-            c.line(-35+i*43, -12, -25+i*43, -12, "#43698a", 2)
-        for i in range(3):
-            c.rect(-42, 8+i*12, 121, 7, fill="#1b3d59", stroke="none", radius=2)
-        c.line(-25, 70, 25, 70, BLUE, 4)
-        c.line(0, 59, 0, 70, BLUE, 4)
-        c.line(-63, 89, 63, 89, CYAN, 2, extra='class="flow"')
+            c.rect(-49+i*43,-33,35,26,fill='#183951',stroke='#365b76',radius=3)
+            c.line(-41+i*43,-20,-27+i*43,-20,CYAN,3)
+        c.rect(-49,4,121,57,fill='#10243b',stroke='#2d526c',radius=3)
+        for i in range(3): c.line(-42,17+i*15,64,17+i*15,'#25435b')
+        c.add(f'<path d="M-42,47 L-26,35 L-10,41 L6,23 L22,30 L38,13 L55,20 L64,11" fill="none" stroke="{CYAN}" stroke-width="2" stroke-linejoin="round"/>')
+        c.circle(64,11,3,CYAN,'none',extra='class="soft"')
+        c.add('<path d="M-21,74 V90 H21 V74 M-43,95 H43" fill="none" stroke="#537f9c" stroke-width="3"/>')
     else:
-        nodes = [(-65,-44),(-2,-79),(70,-36),(-81,26),(-30,75),(43,58),(3,-5),(82,38)]
-        for a, b in [(0,1),(0,3),(0,6),(1,2),(1,6),(2,6),(2,7),(3,4),(3,6),(4,5),(4,6),(5,6),(5,7),(6,7)]:
-            c.line(*nodes[a], *nodes[b], "#285976", 1.6)
-        for a, b in [(0,6),(6,5),(1,2)]:
-            c.line(*nodes[a], *nodes[b], CYAN, 2, extra='class="flow"')
-        for i, (nx,ny) in enumerate(nodes):
-            c.circle(nx,ny,10 if i==6 else 6, CYAN if i==6 else BLUE, "#92e8f5", 1.3)
-            if i in (1,5,6):
-                c.circle(nx,ny,17 if i==6 else 12, stroke=CYAN, extra='class="soft" opacity=".4"')
+        c.add('<ellipse cx="0" cy="5" rx="106" ry="38" transform="rotate(-28)" fill="none" stroke="#305873"/>')
+        c.add('<ellipse cx="0" cy="5" rx="106" ry="38" transform="rotate(55)" fill="none" stroke="#23415c"/>')
+        nodes=[(-76,-46),(-10,-89),(76,-43),(-90,33),(-34,83),(57,64),(0,0),(95,22)]
+        for a,b in [(0,1),(0,3),(0,6),(1,2),(1,6),(2,6),(2,7),(3,4),(3,6),(4,5),(4,6),(5,6),(5,7),(6,7)]:
+            c.line(*nodes[a],*nodes[b],'#365d7b',1.2)
+        for a,b in [(0,6),(6,5),(1,2)]: c.line(*nodes[a],*nodes[b],CYAN,1.7,'class="flow"')
+        for i,(nx,ny) in enumerate(nodes):
+            r=15 if i==6 else 7 if i%2 else 10
+            c.circle(nx,ny,r+5,fill=CYAN,stroke='none',extra='opacity=".12" filter="url(#glow)"')
+            c.circle(nx,ny,r,fill='url(#sphere)',stroke='#81d8ee',width=.7)
+        c.circle(0,0,25,stroke=CYAN,extra='class="soft" opacity=".4"')
     c.add('</g>')
 
 
 def project_card(config, project, mobile):
-    c = Canvas(420 if mobile else 900, 500 if mobile else 264,
-               project["title"], project["description"] + " Built with " + ", ".join(project["tags"]) + ". Conceptual vector illustration; open the card to see the source repository.")
-    c.text(26 if mobile else 36, 38, project["category"], 20 if mobile else 16, CYAN, cls="mono")
+    c=Canvas(420 if mobile else 900,560 if mobile else 300, project['title'],project['description']+' Built with '+', '.join(project['tags'])+'. Conceptual vector illustration; open the card to see the source repository.')
+    pad=26 if mobile else 36
+    c.text(pad,40,project['category'],20 if mobile else 16,CYAN,cls='mono')
     if mobile:
-        project_art(c, project["visual"], 210, 161, .84)
-        if len(project["title"]) > 20:
-            for i, line in enumerate(textwrap.wrap(project["title"], width=18)):
-                c.text(26, 270+i*36, line, 30, weight=600, spacing=-.7)
-            c.lines(26, 345, project["description"], 35, 20, 27)
+        c.rect(26,61,368,204,fill='url(#glass)',stroke='#294057',radius=10)
+        project_art(c,project['visual'],210,168,.78)
+        if len(project['title'])>20:
+            for i,line in enumerate(textwrap.wrap(project['title'],width=18)):
+                c.text(pad,309+i*36,line,31,weight=600,spacing=-.8)
+            desc_y=382
         else:
-            c.text(26, 287, project["title"], 30, weight=600, spacing=-.7)
-            c.lines(26, 326, project["description"], 35, 20, 27)
-        ty = 450
+            c.text(pad,318,project['title'],32,weight=600,spacing=-.8)
+            desc_y=358
+        c.lines(pad,desc_y,project['description'],35,20,27)
+        ty=507
     else:
-        project_art(c, project["visual"], 734, 151, .85)
-        c.text(36, 94, project["title"], 35, weight=600, spacing=-.8)
-        c.lines(36, 133, project["description"], 51, 20, 29)
-        ty = 215
-        c.circle(853, 35, 16, fill="#142c42", stroke="#345e78")
-        c.add(f'<path d="M847,41 L858,30 M847,30 H858 V41" fill="none" stroke="{CYAN}" stroke-width="1.7"/>')
-    tx = 26 if mobile else 36
-    for tag in project["tags"]:
-        width = len(tag) * (10 if mobile else 9) + 26
-        c.rect(tx, ty, width, 34 if mobile else 30, fill="#112a40", stroke="#28495f", radius=7)
-        c.text(tx+13, ty+(24 if mobile else 21), tag, 20 if mobile else 16, MUTED)
-        tx += width + 9
+        c.rect(601,60,263,210,fill='url(#glass)',stroke='#2c435a',radius=11)
+        project_art(c,project['visual'],733,163,.75)
+        c.text(pad,107,project['title'],35,weight=600,spacing=-1)
+        c.lines(pad,149,project['description'],50,20,29)
+        ty=237
+        c.text(818,40,'SOURCE',16,MUTED,cls='mono',anchor='end')
+        c.add(f'<path d="M844,42 L857,29 M845,29 H857 V41" fill="none" stroke="{CYAN}" stroke-width="1.5"/>')
+    tx=pad
+    for tag in project['tags']:
+        width=len(tag)*(10 if mobile else 9)+26
+        c.rect(tx,ty,width,30,fill='#102338',stroke='#29445c',radius=5)
+        c.text(tx+13,ty+(23 if mobile else 21),tag,20 if mobile else 16,MUTED)
+        tx+=width+9
     return c.finish()
 
 

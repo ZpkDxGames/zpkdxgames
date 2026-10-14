@@ -1,15 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="264" viewBox="0 0 900 264" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-labelledby="title desc">
 <title id="title">Plexon Command Center</title><desc id="desc">A responsive operations interface for server pairing, observability, and the PlexonPanel control plane. Built with TypeScript, React, Vite. Conceptual vector illustration; open the card to see the source repository.</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e35"/><stop offset=".5" stop-color="#070e1d"/><stop offset="1" stop-color="#0d2136"/></linearGradient>
-  <linearGradient id="accent"><stop stop-color="#4b91ff"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
-  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
-  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".25"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111e31"/><stop offset=".55" stop-color="#080e1a"/><stop offset="1" stop-color="#102337"/></linearGradient>
+  <linearGradient id="accent"><stop stop-color="#5698ff"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
+  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".17"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#203c58"/><stop offset="1" stop-color="#112238"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22364f" stop-opacity=".75"/><stop offset="1" stop-color="#0b1526" stop-opacity=".9"/></linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#57829d" stop-opacity=".7"/><stop offset=".5" stop-color="#25364d"/><stop offset="1" stop-color="#315570"/></linearGradient>
+  <radialGradient id="sphere" cx=".3" cy=".2" r=".8"><stop stop-color="#e0fbff"/><stop offset=".3" stop-color="#67e8f9"/><stop offset="1" stop-color="#2064a3"/></radialGradient>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
   <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 H 0 V 32" fill="none" stroke="#1d3753" stroke-width=".65"/></pattern>
-  <clipPath id="panel"><rect x="1" y="1" width="898" height="262" rx="22"/></clipPath>
+  <clipPath id="panel"><rect x="1" y="1" width="898" height="298" rx="18"/></clipPath>
 </defs>
 <style>
-text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#f0f7ff;}
+text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 .mono{font-family:Consolas,'Liberation Mono',monospace;letter-spacing:.7px;}
 .spin{transform-box:fill-box;transform-origin:center;animation:orbit 48s linear infinite;}
 .flow{stroke-dasharray:28 180;animation:flow 8s linear infinite;}
@@ -21,49 +26,52 @@ text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#f0f7ff;}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
 @media (prefers-reduced-motion:reduce){.spin,.flow,.soft,.float{animation:none;}}
 </style>
-<rect x="1" y="1" width="898" height="262" rx="22" fill="url(#bg)" stroke="#223b55"/>
-<g clip-path="url(#panel)"><rect width="900" height="264" fill="url(#grid)" opacity=".16"/>
-<ellipse cx="819.0" cy="0" rx="423.0" ry="232.32" fill="url(#aura)"/></g>
-<text x="36" y="38" font-size="16" font-weight="400" class="mono" text-anchor="start" style="fill:#55e1ee">WEB / OPERATIONS INTERFACE</text>
-<g transform="translate(734,151) scale(0.85)">
-<circle cx="0" cy="0" r="110" fill="none" stroke="#4b91ff" stroke-width="1" stroke-dasharray="2 15" class="spin" opacity=".35"/>
-<circle cx="0" cy="0" r="83" fill="url(#aura)" stroke="#21435f" stroke-width="1" />
-<rect x="-97" y="-64" width="194" height="123" rx="9" fill="#0d2037" stroke="#477fa8" />
-<path d="M-97,-44 L97,-44" fill="none" stroke="#477fa8" stroke-width="1" />
-<circle cx="-81" cy="-54" r="2.7" fill="#55e1ee" stroke="none" stroke-width="1" />
-<circle cx="-69" cy="-54" r="2.7" fill="#477fa8" stroke="none" stroke-width="1" />
-<circle cx="-57" cy="-54" r="2.7" fill="#477fa8" stroke="none" stroke-width="1" />
-<rect x="-83" y="-32" width="28" height="78" rx="3" fill="#17354e" stroke="none" />
-<path d="M-77,-21 L-62,-21" fill="none" stroke="#4b91ff" stroke-width="3" />
-<path d="M-77,-6 L-62,-6" fill="none" stroke="#38617d" stroke-width="3" />
-<path d="M-77,9 L-62,9" fill="none" stroke="#38617d" stroke-width="3" />
-<path d="M-77,24 L-62,24" fill="none" stroke="#38617d" stroke-width="3" />
-<rect x="-42" y="-32" width="34" height="29" rx="3" fill="#162e47" stroke="#365a76" />
-<path d="M-35,-22 L-19,-22" fill="none" stroke="#55e1ee" stroke-width="2" />
-<path d="M-35,-12 L-25,-12" fill="none" stroke="#43698a" stroke-width="2" />
-<rect x="1" y="-32" width="34" height="29" rx="3" fill="#162e47" stroke="#365a76" />
-<path d="M8,-22 L24,-22" fill="none" stroke="#55e1ee" stroke-width="2" />
-<path d="M8,-12 L18,-12" fill="none" stroke="#43698a" stroke-width="2" />
-<rect x="44" y="-32" width="34" height="29" rx="3" fill="#162e47" stroke="#365a76" />
-<path d="M51,-22 L67,-22" fill="none" stroke="#55e1ee" stroke-width="2" />
-<path d="M51,-12 L61,-12" fill="none" stroke="#43698a" stroke-width="2" />
-<rect x="-42" y="8" width="121" height="7" rx="2" fill="#1b3d59" stroke="none" />
-<rect x="-42" y="20" width="121" height="7" rx="2" fill="#1b3d59" stroke="none" />
-<rect x="-42" y="32" width="121" height="7" rx="2" fill="#1b3d59" stroke="none" />
-<path d="M-25,70 L25,70" fill="none" stroke="#4b91ff" stroke-width="4" />
-<path d="M0,59 L0,70" fill="none" stroke="#4b91ff" stroke-width="4" />
-<path d="M-63,89 L63,89" fill="none" stroke="#55e1ee" stroke-width="2" class="flow"/>
+<rect x="1" y="1" width="898" height="298" rx="18" fill="url(#bg)" stroke="url(#edge)"/>
+<g clip-path="url(#panel)"><rect width="900" height="300" fill="url(#grid)" opacity=".045"/>
+<ellipse cx="819.0" cy="0" rx="423.0" ry="264.0" fill="url(#aura)"/>
+<path d="M24,1 H225" stroke="url(#accent)" stroke-opacity=".7"/>
+<path d="M24,299 H876" stroke="#15293c"/>
 </g>
-<text x="36" y="94" font-size="35" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff" letter-spacing="-0.8">Plexon Command Center</text>
-<text x="36" y="133" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">A responsive operations interface for server</text>
-<text x="36" y="162" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">pairing, observability, and the PlexonPanel control</text>
-<text x="36" y="191" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">plane.</text>
-<circle cx="853" cy="35" r="16" fill="#142c42" stroke="#345e78" stroke-width="1" />
-<path d="M847,41 L858,30 M847,30 H858 V41" fill="none" stroke="#55e1ee" stroke-width="1.7"/>
-<rect x="36" y="215" width="116" height="30" rx="7" fill="#112a40" stroke="#28495f" />
-<text x="49" y="236" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">TypeScript</text>
-<rect x="161" y="215" width="71" height="30" rx="7" fill="#112a40" stroke="#28495f" />
-<text x="174" y="236" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">React</text>
-<rect x="241" y="215" width="62" height="30" rx="7" fill="#112a40" stroke="#28495f" />
-<text x="254" y="236" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Vite</text>
+<text x="36" y="40" font-size="16" font-weight="400" class="mono" text-anchor="start" style="fill:#67e8f9">WEB / OPERATIONS INTERFACE</text>
+<rect x="601" y="60" width="263" height="210" rx="11" fill="url(#glass)" stroke="#2c435a" />
+<g transform="translate(733,163) scale(0.75)">
+<ellipse cx="0" cy="78" rx="110" ry="36" fill="url(#aura)"/>
+<rect x="-88" y="-87" width="193" height="130" rx="7" fill="#0c1b2e" stroke="#2e5876" />
+<rect x="-103" y="-69" width="193" height="142" rx="7" fill="url(#surface)" stroke="#6594ae" />
+<path d="M-102,-44 L89,-44" fill="none" stroke="#547a94" stroke-width="1" />
+<circle cx="-88" cy="-56" r="2.5" fill="#67e8f9" stroke="none" stroke-width="1" />
+<circle cx="-77" cy="-56" r="2.5" fill="#47728f" stroke="none" stroke-width="1" />
+<circle cx="-66" cy="-56" r="2.5" fill="#47728f" stroke="none" stroke-width="1" />
+<rect x="-93" y="-33" width="33" height="94" rx="3" fill="#11283f" stroke="none" />
+<path d="M-85,-22 L-70,-22" fill="none" stroke="#67e8f9" stroke-width="2" />
+<path d="M-85,-6 L-70,-6" fill="none" stroke="#3a5e7b" stroke-width="2" />
+<path d="M-85,10 L-70,10" fill="none" stroke="#3a5e7b" stroke-width="2" />
+<path d="M-85,26 L-70,26" fill="none" stroke="#3a5e7b" stroke-width="2" />
+<path d="M-85,42 L-70,42" fill="none" stroke="#3a5e7b" stroke-width="2" />
+<rect x="-49" y="-33" width="35" height="26" rx="3" fill="#183951" stroke="#365b76" />
+<path d="M-41,-20 L-27,-20" fill="none" stroke="#67e8f9" stroke-width="3" />
+<rect x="-6" y="-33" width="35" height="26" rx="3" fill="#183951" stroke="#365b76" />
+<path d="M2,-20 L16,-20" fill="none" stroke="#67e8f9" stroke-width="3" />
+<rect x="37" y="-33" width="35" height="26" rx="3" fill="#183951" stroke="#365b76" />
+<path d="M45,-20 L59,-20" fill="none" stroke="#67e8f9" stroke-width="3" />
+<rect x="-49" y="4" width="121" height="57" rx="3" fill="#10243b" stroke="#2d526c" />
+<path d="M-42,17 L64,17" fill="none" stroke="#25435b" stroke-width="1" />
+<path d="M-42,32 L64,32" fill="none" stroke="#25435b" stroke-width="1" />
+<path d="M-42,47 L64,47" fill="none" stroke="#25435b" stroke-width="1" />
+<path d="M-42,47 L-26,35 L-10,41 L6,23 L22,30 L38,13 L55,20 L64,11" fill="none" stroke="#67e8f9" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="64" cy="11" r="3" fill="#67e8f9" stroke="none" stroke-width="1" class="soft"/>
+<path d="M-21,74 V90 H21 V74 M-43,95 H43" fill="none" stroke="#537f9c" stroke-width="3"/>
+</g>
+<text x="36" y="107" font-size="35" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff" letter-spacing="-1">Plexon Command Center</text>
+<text x="36" y="149" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">A responsive operations interface for server</text>
+<text x="36" y="178" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">pairing, observability, and the PlexonPanel</text>
+<text x="36" y="207" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">control plane.</text>
+<text x="818" y="40" font-size="16" font-weight="400" class="mono" text-anchor="end" style="fill:#a5b6cc">SOURCE</text>
+<path d="M844,42 L857,29 M845,29 H857 V41" fill="none" stroke="#67e8f9" stroke-width="1.5"/>
+<rect x="36" y="237" width="116" height="30" rx="5" fill="#102338" stroke="#29445c" />
+<text x="49" y="258" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">TypeScript</text>
+<rect x="161" y="237" width="71" height="30" rx="5" fill="#102338" stroke="#29445c" />
+<text x="174" y="258" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">React</text>
+<rect x="241" y="237" width="62" height="30" rx="5" fill="#102338" stroke="#29445c" />
+<text x="254" y="258" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Vite</text>
 </svg>

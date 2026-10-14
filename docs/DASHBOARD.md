@@ -1,6 +1,6 @@
 # Profile dashboard
 
-A complete replacement of the previous profile layout. The visual system uses midnight navy, electric blue, cyan, generous type, and rounded panels. Native Markdown provides the introduction, links, and text alternatives. Every graphic has a 900-unit desktop layout and a separately composed 420-unit mobile layout, selected through a GitHub-compatible `picture` element at 600px.
+A complete replacement of the previous profile layout. The visual system uses midnight navy, electric blue, cyan, a precise spacing system, layered glass surfaces, and restrained beveled edges. Native Markdown provides the introduction, links, and text alternatives. Every graphic has a 900-unit desktop layout and a separately composed 420-unit mobile layout, selected through a GitHub-compatible `picture` element at 600px.
 
 ## Maintain
 
@@ -25,9 +25,13 @@ Rendering without `--refresh` uses the committed, dated snapshot and needs no ne
 
 The collector paginates repositories, never includes private repositories, and checks full calendar coverage. It uses GraphQL when an Actions token is available; the public HTML contribution calendar is a validated fallback. Calendar tooltips supply exact counts, never inferred counts from color levels. An unavailable API or incomplete response fails the refresh before any generated assets are replaced. The last dated snapshot stays visible.
 
+## Geometry and composition
+
+Architectural illustrations use a shared 30-degree isometric projection. Hardware faces, stacked platforms, and voxel character parts derive from the same coordinates so perspective remains consistent. Project artwork occupies a separate framed area; text and badges use aligned margins across cards. The mobile hero has its own illustration space instead of placing graphics behind the biography.
+
 ## Rendering and motion
 
-SVGs contain only self-contained vector shapes, text, gradients, and CSS animations. There is no script, `foreignObject`, embedded HTML, external font, or external image. Fonts use Segoe UI/Helvetica/Arial with a monospace system fallback for labels. All meaningful values appear immediately; motion is limited to decorative paths, orbital graphics, and soft highlights. `prefers-reduced-motion: reduce` disables motion and preserves the full design.
+SVGs contain only self-contained vector shapes, text, gradients, and CSS animations. There is no script, `foreignObject`, embedded HTML, external font, or external image. Fonts use Arial/Helvetica with a monospace system fallback for labels. All meaningful values appear immediately; motion is limited to decorative signal paths, floating hardware, and soft highlights. `prefers-reduced-motion: reduce` disables motion and preserves the full design.
 
 Minimum mobile body size is 20 units on a 420-unit artboard (about 16px at 336px display width). Desktop labels are at least 16 units. Clickable project cards link to their actual repository. The README includes a native text version of the metrics and descriptions for accessibility.
 

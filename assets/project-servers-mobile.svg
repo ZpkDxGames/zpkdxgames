@@ -1,15 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="500" viewBox="0 0 420 500" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="560" viewBox="0 0 420 560" role="img" aria-labelledby="title desc">
 <title id="title">PlexonPanel</title><desc id="desc">A coordinated control plane for Paper servers: pairing, telemetry, host agents, and recovery tooling. Built with Java, Paper, Linux. Conceptual vector illustration; open the card to see the source repository.</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e35"/><stop offset=".5" stop-color="#070e1d"/><stop offset="1" stop-color="#0d2136"/></linearGradient>
-  <linearGradient id="accent"><stop stop-color="#4b91ff"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
-  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
-  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".25"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111e31"/><stop offset=".55" stop-color="#080e1a"/><stop offset="1" stop-color="#102337"/></linearGradient>
+  <linearGradient id="accent"><stop stop-color="#5698ff"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
+  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".17"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <linearGradient id="surface" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#203c58"/><stop offset="1" stop-color="#112238"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#22364f" stop-opacity=".75"/><stop offset="1" stop-color="#0b1526" stop-opacity=".9"/></linearGradient>
+  <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#57829d" stop-opacity=".7"/><stop offset=".5" stop-color="#25364d"/><stop offset="1" stop-color="#315570"/></linearGradient>
+  <radialGradient id="sphere" cx=".3" cy=".2" r=".8"><stop stop-color="#e0fbff"/><stop offset=".3" stop-color="#67e8f9"/><stop offset="1" stop-color="#2064a3"/></radialGradient>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
   <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 H 0 V 32" fill="none" stroke="#1d3753" stroke-width=".65"/></pattern>
-  <clipPath id="panel"><rect x="1" y="1" width="418" height="498" rx="22"/></clipPath>
+  <clipPath id="panel"><rect x="1" y="1" width="418" height="558" rx="18"/></clipPath>
 </defs>
 <style>
-text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#f0f7ff;}
+text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 .mono{font-family:Consolas,'Liberation Mono',monospace;letter-spacing:.7px;}
 .spin{transform-box:fill-box;transform-origin:center;animation:orbit 48s linear infinite;}
 .flow{stroke-dasharray:28 180;animation:flow 8s linear infinite;}
@@ -21,39 +26,71 @@ text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#f0f7ff;}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
 @media (prefers-reduced-motion:reduce){.spin,.flow,.soft,.float{animation:none;}}
 </style>
-<rect x="1" y="1" width="418" height="498" rx="22" fill="url(#bg)" stroke="#223b55"/>
-<g clip-path="url(#panel)"><rect width="420" height="500" fill="url(#grid)" opacity=".16"/>
-<ellipse cx="382.2" cy="0" rx="197.39999999999998" ry="440.0" fill="url(#aura)"/></g>
-<text x="26" y="38" font-size="20" font-weight="400" class="mono" text-anchor="start" style="fill:#55e1ee">MINECRAFT / SERVER SYSTEMS</text>
-<g transform="translate(210,161) scale(0.84)">
-<circle cx="0" cy="0" r="110" fill="none" stroke="#4b91ff" stroke-width="1" stroke-dasharray="2 15" class="spin" opacity=".35"/>
-<circle cx="0" cy="0" r="83" fill="url(#aura)" stroke="#21435f" stroke-width="1" />
-<rect x="-66" y="-76" width="132" height="37" rx="7" fill="#0d2239" stroke="#356383" />
-<rect x="-51" y="-65" width="65" height="5" rx="2" fill="#356687" stroke="none" />
-<rect x="-51" y="-54" width="43" height="4" rx="2" fill="#203e5b" stroke="none" />
-<circle cx="46" cy="-58" r="4" fill="#55e1ee" stroke="none" stroke-width="1" class="soft"/>
-<rect x="-66" y="-25" width="132" height="37" rx="7" fill="#0d2239" stroke="#356383" />
-<rect x="-51" y="-14" width="65" height="5" rx="2" fill="#356687" stroke="none" />
-<rect x="-51" y="-3" width="43" height="4" rx="2" fill="#203e5b" stroke="none" />
-<circle cx="46" cy="-7" r="4" fill="#55e1ee" stroke="none" stroke-width="1" class="soft"/>
-<rect x="-66" y="26" width="132" height="37" rx="7" fill="#0d2239" stroke="#356383" />
-<rect x="-51" y="37" width="65" height="5" rx="2" fill="#356687" stroke="none" />
-<rect x="-51" y="48" width="43" height="4" rx="2" fill="#203e5b" stroke="none" />
-<circle cx="46" cy="44" r="4" fill="#55e1ee" stroke="none" stroke-width="1" class="soft"/>
-<path d="M-66,-30 H-101 V63 H-43" fill="none" stroke="#315779" stroke-width="2"/>
-<path d="M-66,-30 H-101 V63 H-43" fill="none" stroke="#55e1ee" stroke-width="2" class="flow"/>
-<path d="M66,-30 H101 V63 H43" fill="none" stroke="#315779" stroke-width="2"/>
-<path d="M66,-30 H101 V63 H43" fill="none" stroke="#55e1ee" stroke-width="2" class="flow"/>
-<circle cx="0" cy="83" r="7" fill="#55e1ee" stroke="none" stroke-width="1" />
+<rect x="1" y="1" width="418" height="558" rx="18" fill="url(#bg)" stroke="url(#edge)"/>
+<g clip-path="url(#panel)"><rect width="420" height="560" fill="url(#grid)" opacity=".045"/>
+<ellipse cx="382.2" cy="0" rx="197.39999999999998" ry="492.8" fill="url(#aura)"/>
+<path d="M24,1 H225" stroke="url(#accent)" stroke-opacity=".7"/>
+<path d="M24,559 H396" stroke="#15293c"/>
 </g>
-<text x="26" y="287" font-size="30" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff" letter-spacing="-0.7">PlexonPanel</text>
-<text x="26" y="326" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">A coordinated control plane for</text>
-<text x="26" y="353" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Paper servers: pairing, telemetry,</text>
-<text x="26" y="380" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">host agents, and recovery tooling.</text>
-<rect x="26" y="450" width="66" height="34" rx="7" fill="#112a40" stroke="#28495f" />
-<text x="39" y="474" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Java</text>
-<rect x="101" y="450" width="76" height="34" rx="7" fill="#112a40" stroke="#28495f" />
-<text x="114" y="474" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Paper</text>
-<rect x="186" y="450" width="76" height="34" rx="7" fill="#112a40" stroke="#28495f" />
-<text x="199" y="474" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Linux</text>
+<text x="26" y="40" font-size="20" font-weight="400" class="mono" text-anchor="start" style="fill:#67e8f9">MINECRAFT / SERVER SYSTEMS</text>
+<rect x="26" y="61" width="368" height="204" rx="10" fill="url(#glass)" stroke="#294057" />
+<g transform="translate(210,168) scale(0.78)">
+<ellipse cx="0" cy="78" rx="110" ry="36" fill="url(#aura)"/>
+<polygon points="-112.58,65.00 0.00,130.00 0.00,123.00 -112.58,58.00" fill="#12243a" stroke="#2a526f" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="112.58,65.00 0.00,130.00 0.00,123.00 112.58,58.00" fill="#19334c" stroke="#2a526f" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="0.00,-7.00 112.58,58.00 0.00,123.00 -112.58,58.00" fill="#0d2238" stroke="#2a526f" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="-77.94,38.00 0.00,83.00 0.00,56.00 -77.94,11.00" fill="#12273d" stroke="#4e7791" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="77.94,38.00 0.00,83.00 0.00,56.00 77.94,11.00" fill="#1b3b53" stroke="#4e7791" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="0.00,-34.00 77.94,11.00 0.00,56.00 -77.94,11.00" fill="url(#surface)" stroke="#4e7791" stroke-width="1" stroke-linejoin="round"/>
+<path d="M-2.5980762,-12.0 L38.971143,12.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-14.722431799999999,-5.0 L26.846787399999997,19.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-26.846787399999997,2.0 L14.722431799999999,26.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-38.971143,9.0 L2.5980762,33.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-63.21985419999999,35.5 L-58.0237018,38.5" fill="none" stroke="#5883a0" stroke-width="3" />
+<path d="M-50.229473199999994,43.0 L-45.0333208,46.0" fill="none" stroke="#5883a0" stroke-width="3" />
+<path d="M-37.239092199999995,50.5 L-32.0429398,53.5" fill="none" stroke="#5883a0" stroke-width="3" />
+<path d="M-24.2487112,58.0 L-19.0525588,61.0" fill="none" stroke="#5883a0" stroke-width="3" />
+<circle cx="62.353828799999995" cy="36.0" r="2.6" fill="#67e8f9" stroke="none" stroke-width="1" class="soft"/>
+<circle cx="49.363447799999996" cy="43.5" r="2.6" fill="#67e8f9" stroke="none" stroke-width="1" class="soft"/>
+<polygon points="-77.94,-5.00 0.00,40.00 0.00,13.00 -77.94,-32.00" fill="#12273d" stroke="#4e7791" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="77.94,-5.00 0.00,40.00 0.00,13.00 77.94,-32.00" fill="#1b3b53" stroke="#4e7791" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="0.00,-77.00 77.94,-32.00 0.00,13.00 -77.94,-32.00" fill="url(#surface)" stroke="#4e7791" stroke-width="1" stroke-linejoin="round"/>
+<path d="M-2.5980762,-55.0 L38.971143,-31.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-14.722431799999999,-48.0 L26.846787399999997,-24.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-26.846787399999997,-41.0 L14.722431799999999,-17.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-38.971143,-34.0 L2.5980762,-10.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-63.21985419999999,-7.5 L-58.0237018,-4.5" fill="none" stroke="#5883a0" stroke-width="3" />
+<path d="M-50.229473199999994,0.0 L-45.0333208,3.0" fill="none" stroke="#5883a0" stroke-width="3" />
+<path d="M-37.239092199999995,7.5 L-32.0429398,10.5" fill="none" stroke="#5883a0" stroke-width="3" />
+<path d="M-24.2487112,15.0 L-19.0525588,18.0" fill="none" stroke="#5883a0" stroke-width="3" />
+<circle cx="62.353828799999995" cy="-7.0" r="2.6" fill="#67e8f9" stroke="none" stroke-width="1" class="soft"/>
+<circle cx="49.363447799999996" cy="0.5" r="2.6" fill="#67e8f9" stroke="none" stroke-width="1" class="soft"/>
+<polygon points="-77.94,-48.00 0.00,-3.00 0.00,-30.00 -77.94,-75.00" fill="#12273d" stroke="#4e7791" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="77.94,-48.00 0.00,-3.00 0.00,-30.00 77.94,-75.00" fill="#1b3b53" stroke="#4e7791" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="0.00,-120.00 77.94,-75.00 0.00,-30.00 -77.94,-75.00" fill="url(#surface)" stroke="#4e7791" stroke-width="1" stroke-linejoin="round"/>
+<path d="M-2.5980762,-98.0 L38.971143,-74.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-14.722431799999999,-91.0 L26.846787399999997,-67.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-26.846787399999997,-84.0 L14.722431799999999,-60.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-38.971143,-77.0 L2.5980762,-53.0" fill="none" stroke="#3f6680" stroke-width="1.1" />
+<path d="M-63.21985419999999,-50.5 L-58.0237018,-47.5" fill="none" stroke="#5883a0" stroke-width="3" />
+<path d="M-50.229473199999994,-43.0 L-45.0333208,-40.0" fill="none" stroke="#5883a0" stroke-width="3" />
+<path d="M-37.239092199999995,-35.5 L-32.0429398,-32.5" fill="none" stroke="#5883a0" stroke-width="3" />
+<path d="M-24.2487112,-28.0 L-19.0525588,-25.0" fill="none" stroke="#5883a0" stroke-width="3" />
+<circle cx="62.353828799999995" cy="-50.0" r="2.6" fill="#67e8f9" stroke="none" stroke-width="1" class="soft"/>
+<circle cx="49.363447799999996" cy="-42.5" r="2.6" fill="#67e8f9" stroke="none" stroke-width="1" class="soft"/>
+<path d="M-80,-7 L-105,8 V71 L-35,112" fill="none" stroke="#2c5771" stroke-width="1.5"/>
+<path d="M-80,-7 L-105,8 V71 L-35,112" fill="none" stroke="#67e8f9" stroke-width="1.5" class="flow"/>
+<path d="M80,-7 L105,8 V71 L35,112" fill="none" stroke="#2c5771" stroke-width="1.5"/>
+<path d="M80,-7 L105,8 V71 L35,112" fill="none" stroke="#67e8f9" stroke-width="1.5" class="flow"/>
+</g>
+<text x="26" y="318" font-size="32" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff" letter-spacing="-0.8">PlexonPanel</text>
+<text x="26" y="358" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">A coordinated control plane for</text>
+<text x="26" y="385" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Paper servers: pairing, telemetry,</text>
+<text x="26" y="412" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">host agents, and recovery tooling.</text>
+<rect x="26" y="507" width="66" height="30" rx="5" fill="#102338" stroke="#29445c" />
+<text x="39" y="530" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Java</text>
+<rect x="101" y="507" width="76" height="30" rx="5" fill="#102338" stroke="#29445c" />
+<text x="114" y="530" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Paper</text>
+<rect x="186" y="507" width="76" height="30" rx="5" fill="#102338" stroke="#29445c" />
+<text x="199" y="530" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Linux</text>
 </svg>
