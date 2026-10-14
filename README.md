@@ -10,8 +10,8 @@ I'm **Tonim** (ZpkDxGames), a programmer based in Brazil. I build Minecraft serv
 [Explore repositories](https://github.com/ZpkDxGames?tab=repositories) · [Portfolio](https://ajt-portfolio.vercel.app/) · [Follow the work](https://github.com/ZpkDxGames?tab=followers)
 
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-mobile.svg?v=51839626ab86">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-wide.svg?v=ee69049f1384" width="100%" alt="32 public repos · 30 original repos · 3,782 contributions · 54 active days. Profile calendar: 2025-10-15 through 2026-10-14.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-mobile.svg?v=86c03af54a01">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-wide.svg?v=32063eba53ac" width="100%" alt="32 public repos · 30 original repos · 3,782 contributions · 54 active days. Profile calendar: 2025-10-15 through 2026-10-14.">
 </picture>
 
 <picture>
@@ -59,7 +59,7 @@ Minecraft infrastructure, desktop interaction, and useful web interfaces. Open a
 <details>
 <summary>Dashboard data and project descriptions</summary>
 
-Snapshot: **2026-10-14T15:10:33Z**. Profile calendar: **2025-10-15–2026-10-14**.
+Snapshot: **2026-10-14T15:28:33Z**. Profile calendar: **2025-10-15–2026-10-14**.
 
 | Metric | Value |
 | :--- | ---: |
@@ -99,4 +99,4 @@ Make the interface clear. Keep state explicit. Validate the real behavior. Leave
 </picture>
 </a>
 
-<sub>GitHub snapshot · 2026-10-14T15:10:33Z · [Refresh status](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/dashboard-sync.yml)</sub>
+<sub>GitHub snapshot · 2026-10-14T15:28:33Z · [Refresh status](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/dashboard-sync.yml)</sub>
