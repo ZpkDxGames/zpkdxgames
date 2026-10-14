@@ -1,0 +1,52 @@
+name: Profile dashboard
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 6 * * *"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/profile_dashboard.py"
+      - "scripts/profile_dashboard/**"
+      - "data/project-editorial.json"
+      - "data/project-main-activity.json"
+      - "tests/**"
+      - ".github/workflows/profile-dashboard.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-dashboard
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate current snapshot and renderer
+        run: python -m unittest discover -s tests -v
+      - name: Collect and atomically render dashboard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/profile_dashboard.py
+      - name: Validate refreshed output
+        run: |
+          python -m unittest discover -s tests -v
+          git diff --check
+      - name: Commit snapshot and generated assets if changed
+        run: |
+          if git diff --quiet; then
+            echo "No dashboard changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md data/profile.json assets/profile-dashboard
+          git commit -m "chore(profile): refresh engineering dashboard snapshot"
+          git push

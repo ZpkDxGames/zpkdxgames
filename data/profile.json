@@ -1,2212 +1,1000 @@
 {
-  "schema": 2,
-  "owner": "ZpkDxGames",
   "as_of": "2026-10-13",
-  "days": 90,
-  "start": "2026-07-16",
-  "scope": "Public, owned, non-fork, non-archived projects; profile excluded",
-  "commit_scope": "All authors except bots; current branch histories deduplicated per repository; UTC committer date",
-  "language_scope": "GitHub Linguist byte counts on default branches; not a measure of proficiency",
+  "compatibility": {
+    "future_refresh": "The schema-3 collector emits project-wide daily_commits for every in-scope repository. When present, generated featured sparklines automatically use and label PROJECT-WIDE \u00b7 90D.",
+    "project_daily_timelines": "Unavailable in the legacy schema-2 snapshot. Aggregate 90-day daily totals remain exact; featured fallback sparklines are separately collected from each repository main branch and explicitly labeled MAIN BRANCH \u00b7 90D.",
+    "release_records": "The legacy source snapshot contained all 192 release records. This compatibility snapshot retains exact totals, weekly cadence, each project latest stable publication, and the 20 most recent records; the schema-3 collector emits the complete list on refresh.",
+    "source_schema": 2,
+    "source_snapshot_generated_at": "2026-10-13T14:28:56Z"
+  },
+  "daily": [
+    {
+      "commits": 0,
+      "date": "2026-07-16"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-17"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-18"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-19"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-20"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-21"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-22"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-23"
+    },
+    {
+      "commits": 4,
+      "date": "2026-07-24"
+    },
+    {
+      "commits": 4,
+      "date": "2026-07-25"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-26"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-27"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-28"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-29"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-30"
+    },
+    {
+      "commits": 0,
+      "date": "2026-07-31"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-01"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-02"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-03"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-04"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-05"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-06"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-07"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-08"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-09"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-10"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-11"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-12"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-13"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-14"
+    },
+    {
+      "commits": 11,
+      "date": "2026-08-15"
+    },
+    {
+      "commits": 9,
+      "date": "2026-08-16"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-17"
+    },
+    {
+      "commits": 3,
+      "date": "2026-08-18"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-19"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-20"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-21"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-22"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-23"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-24"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-25"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-26"
+    },
+    {
+      "commits": 0,
+      "date": "2026-08-27"
+    },
+    {
+      "commits": 11,
+      "date": "2026-08-28"
+    },
+    {
+      "commits": 8,
+      "date": "2026-08-29"
+    },
+    {
+      "commits": 12,
+      "date": "2026-08-30"
+    },
+    {
+      "commits": 33,
+      "date": "2026-08-31"
+    },
+    {
+      "commits": 19,
+      "date": "2026-09-01"
+    },
+    {
+      "commits": 20,
+      "date": "2026-09-02"
+    },
+    {
+      "commits": 77,
+      "date": "2026-09-03"
+    },
+    {
+      "commits": 7,
+      "date": "2026-09-04"
+    },
+    {
+      "commits": 67,
+      "date": "2026-09-05"
+    },
+    {
+      "commits": 48,
+      "date": "2026-09-06"
+    },
+    {
+      "commits": 354,
+      "date": "2026-09-07"
+    },
+    {
+      "commits": 235,
+      "date": "2026-09-08"
+    },
+    {
+      "commits": 651,
+      "date": "2026-09-09"
+    },
+    {
+      "commits": 209,
+      "date": "2026-09-10"
+    },
+    {
+      "commits": 457,
+      "date": "2026-09-11"
+    },
+    {
+      "commits": 711,
+      "date": "2026-09-12"
+    },
+    {
+      "commits": 357,
+      "date": "2026-09-13"
+    },
+    {
+      "commits": 269,
+      "date": "2026-09-14"
+    },
+    {
+      "commits": 65,
+      "date": "2026-09-15"
+    },
+    {
+      "commits": 23,
+      "date": "2026-09-16"
+    },
+    {
+      "commits": 88,
+      "date": "2026-09-17"
+    },
+    {
+      "commits": 124,
+      "date": "2026-09-18"
+    },
+    {
+      "commits": 63,
+      "date": "2026-09-19"
+    },
+    {
+      "commits": 0,
+      "date": "2026-09-20"
+    },
+    {
+      "commits": 0,
+      "date": "2026-09-21"
+    },
+    {
+      "commits": 0,
+      "date": "2026-09-22"
+    },
+    {
+      "commits": 0,
+      "date": "2026-09-23"
+    },
+    {
+      "commits": 0,
+      "date": "2026-09-24"
+    },
+    {
+      "commits": 0,
+      "date": "2026-09-25"
+    },
+    {
+      "commits": 2,
+      "date": "2026-09-26"
+    },
+    {
+      "commits": 7,
+      "date": "2026-09-27"
+    },
+    {
+      "commits": 0,
+      "date": "2026-09-28"
+    },
+    {
+      "commits": 0,
+      "date": "2026-09-29"
+    },
+    {
+      "commits": 0,
+      "date": "2026-09-30"
+    },
+    {
+      "commits": 43,
+      "date": "2026-10-01"
+    },
+    {
+      "commits": 38,
+      "date": "2026-10-02"
+    },
+    {
+      "commits": 10,
+      "date": "2026-10-03"
+    },
+    {
+      "commits": 17,
+      "date": "2026-10-04"
+    },
+    {
+      "commits": 11,
+      "date": "2026-10-05"
+    },
+    {
+      "commits": 4,
+      "date": "2026-10-06"
+    },
+    {
+      "commits": 6,
+      "date": "2026-10-07"
+    },
+    {
+      "commits": 15,
+      "date": "2026-10-08"
+    },
+    {
+      "commits": 0,
+      "date": "2026-10-09"
+    },
+    {
+      "commits": 5,
+      "date": "2026-10-10"
+    },
+    {
+      "commits": 24,
+      "date": "2026-10-11"
+    },
+    {
+      "commits": 246,
+      "date": "2026-10-12"
+    },
+    {
+      "commits": 52,
+      "date": "2026-10-13"
+    }
+  ],
+  "generated_at": "2026-10-13T14:28:56Z",
+  "languages": {
+    "CSS": 132992,
+    "HTML": 129201,
+    "Java": 9606182,
+    "JavaScript": 262514,
+    "PLpgSQL": 2054,
+    "Python": 507336,
+    "Rust": 3443,
+    "Shell": 7969,
+    "TypeScript": 366409
+  },
+  "legacy_release_index": {
+    "complete_list_available_in_source_snapshot": true,
+    "embedded_records": "20 most recent only",
+    "published_count": 192,
+    "reason": "schema-2 compatibility snapshot; generator collector emits complete records on refresh"
+  },
+  "owner": "ZpkDxGames",
   "projects": [
     {
-      "name": "AI-Desktop-Companion",
-      "url": "https://github.com/ZpkDxGames/AI-Desktop-Companion",
-      "commits": 162,
-      "languages": {
-        "JavaScript": 142118,
-        "HTML": 18016,
+      "commits_30d": 162,
+      "commits_90d": 162,
+      "language_bytes": {
         "CSS": 16820,
-        "Rust": 3443,
-        "Python": 2747
+        "HTML": 18016,
+        "JavaScript": 142118,
+        "Python": 2747,
+        "Rust": 3443
       },
-      "commits_30d": 162
+      "latest_stable_release": null,
+      "name": "AI-Desktop-Companion",
+      "primary_language": "JavaScript",
+      "url": "https://github.com/ZpkDxGames/AI-Desktop-Companion"
     },
     {
-      "name": "ConanGrayBot-Core",
-      "url": "https://github.com/ZpkDxGames/ConanGrayBot-Core",
-      "commits": 17,
-      "languages": {
+      "commits_30d": 17,
+      "commits_90d": 17,
+      "language_bytes": {
         "Python": 430714
       },
-      "commits_30d": 17
+      "latest_stable_release": null,
+      "name": "ConanGrayBot-Core",
+      "primary_language": "Python",
+      "url": "https://github.com/ZpkDxGames/ConanGrayBot-Core"
     },
     {
-      "name": "ConanGrayBot-Page",
-      "url": "https://github.com/ZpkDxGames/ConanGrayBot-Page",
-      "commits": 10,
-      "languages": {
-        "JavaScript": 111679,
+      "commits_30d": 10,
+      "commits_90d": 10,
+      "language_bytes": {
+        "CSS": 64801,
         "HTML": 101968,
-        "CSS": 64801
+        "JavaScript": 111679
       },
-      "commits_30d": 10
+      "latest_stable_release": null,
+      "name": "ConanGrayBot-Page",
+      "primary_language": "JavaScript",
+      "url": "https://github.com/ZpkDxGames/ConanGrayBot-Page"
     },
     {
-      "name": "DropsEditor",
-      "url": "https://github.com/ZpkDxGames/DropsEditor",
-      "commits": 0,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 0,
+      "language_bytes": {
         "Java": 73836
       },
-      "commits_30d": 0
+      "latest_stable_release": null,
+      "name": "DropsEditor",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/DropsEditor"
     },
     {
-      "name": "GhostBlocks",
-      "url": "https://github.com/ZpkDxGames/GhostBlocks",
-      "commits": 3,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 3,
+      "language_bytes": {
         "Java": 108439,
         "Python": 6371
       },
-      "commits_30d": 0
-    },
-    {
-      "name": "Neural-Core-Dashboard",
-      "url": "https://github.com/ZpkDxGames/Neural-Core-Dashboard",
-      "commits": 0,
-      "languages": {
-        "TypeScript": 42336,
-        "JavaScript": 2535,
-        "PLpgSQL": 2054
+      "latest_stable_release": {
+        "published_at": "2026-09-08T17:52:23Z",
+        "url": "https://github.com/ZpkDxGames/GhostBlocks/releases",
+        "version": "8.0.0"
       },
-      "commits_30d": 0
+      "name": "GhostBlocks",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/GhostBlocks"
     },
     {
-      "name": "Plexon-DailyRewards",
-      "url": "https://github.com/ZpkDxGames/Plexon-DailyRewards",
-      "commits": 4,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 0,
+      "language_bytes": {
+        "JavaScript": 2535,
+        "PLpgSQL": 2054,
+        "TypeScript": 42336
+      },
+      "latest_stable_release": null,
+      "name": "Neural-Core-Dashboard",
+      "primary_language": "TypeScript",
+      "url": "https://github.com/ZpkDxGames/Neural-Core-Dashboard"
+    },
+    {
+      "commits_30d": 0,
+      "commits_90d": 4,
+      "language_bytes": {
         "Java": 123239
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-07-25T03:32:57Z",
+        "url": "https://github.com/ZpkDxGames/Plexon-DailyRewards/releases",
+        "version": "1.2.0"
+      },
+      "name": "Plexon-DailyRewards",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/Plexon-DailyRewards"
     },
     {
-      "name": "PlexonBackpacks",
-      "url": "https://github.com/ZpkDxGames/PlexonBackpacks",
-      "commits": 128,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 128,
+      "language_bytes": {
         "Java": 62382
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-11T22:05:36Z",
+        "url": "https://github.com/ZpkDxGames/PlexonBackpacks/releases",
+        "version": "2.0.0"
+      },
+      "name": "PlexonBackpacks",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonBackpacks"
     },
     {
-      "name": "PlexonBlacksmith",
-      "url": "https://github.com/ZpkDxGames/PlexonBlacksmith",
-      "commits": 49,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 49,
+      "language_bytes": {
         "Java": 206184
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-11T22:45:20Z",
+        "url": "https://github.com/ZpkDxGames/PlexonBlacksmith/releases",
+        "version": "2.0.0"
+      },
+      "name": "PlexonBlacksmith",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonBlacksmith"
     },
     {
-      "name": "PlexonChats",
-      "url": "https://github.com/ZpkDxGames/PlexonChats",
-      "commits": 259,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 259,
+      "language_bytes": {
         "Java": 668279
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-13T18:08:27Z",
+        "url": "https://github.com/ZpkDxGames/PlexonChats/releases",
+        "version": "4.0.1"
+      },
+      "name": "PlexonChats",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonChats"
     },
     {
-      "name": "PlexonCore",
-      "url": "https://github.com/ZpkDxGames/PlexonCore",
-      "commits": 165,
-      "languages": {
+      "commits_30d": 55,
+      "commits_90d": 165,
+      "language_bytes": {
         "Java": 286116
       },
-      "commits_30d": 55
+      "latest_stable_release": {
+        "published_at": "2026-09-17T23:14:16Z",
+        "url": "https://github.com/ZpkDxGames/PlexonCore/releases",
+        "version": "2.1.0"
+      },
+      "name": "PlexonCore",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonCore"
     },
     {
-      "name": "PlexonCrates",
-      "url": "https://github.com/ZpkDxGames/PlexonCrates",
-      "commits": 540,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 540,
+      "language_bytes": {
         "Java": 2014312
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-13T00:39:10Z",
+        "url": "https://github.com/ZpkDxGames/PlexonCrates/releases",
+        "version": "6.5.0"
+      },
+      "name": "PlexonCrates",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonCrates"
     },
     {
-      "name": "PlexonGPFlags",
-      "url": "https://github.com/ZpkDxGames/PlexonGPFlags",
-      "commits": 63,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 63,
+      "language_bytes": {
         "Java": 210885
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-11T19:12:36Z",
+        "url": "https://github.com/ZpkDxGames/PlexonGPFlags/releases",
+        "version": "1.1.1"
+      },
+      "name": "PlexonGPFlags",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonGPFlags"
     },
     {
-      "name": "PlexonGriefPreventionAddon",
-      "url": "https://github.com/ZpkDxGames/PlexonGriefPreventionAddon",
-      "commits": 16,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 16,
+      "language_bytes": {
         "Java": 79161
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-08T02:01:52Z",
+        "url": "https://github.com/ZpkDxGames/PlexonGriefPreventionAddon/releases",
+        "version": "1.1.0"
+      },
+      "name": "PlexonGriefPreventionAddon",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonGriefPreventionAddon"
     },
     {
-      "name": "PlexonHomes",
-      "url": "https://github.com/ZpkDxGames/PlexonHomes",
-      "commits": 46,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 46,
+      "language_bytes": {
         "Java": 217798,
         "Shell": 1607
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-11T19:45:34Z",
+        "url": "https://github.com/ZpkDxGames/PlexonHomes/releases",
+        "version": "2.0.0"
+      },
+      "name": "PlexonHomes",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonHomes"
     },
     {
-      "name": "PlexonJobs",
-      "url": "https://github.com/ZpkDxGames/PlexonJobs",
-      "commits": 153,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 153,
+      "language_bytes": {
         "Java": 307730
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-12T20:43:13Z",
+        "url": "https://github.com/ZpkDxGames/PlexonJobs/releases",
+        "version": "2.5.0"
+      },
+      "name": "PlexonJobs",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonJobs"
     },
     {
-      "name": "PlexonKeys",
-      "url": "https://github.com/ZpkDxGames/PlexonKeys",
-      "commits": 171,
-      "languages": {
+      "commits_30d": 37,
+      "commits_90d": 171,
+      "language_bytes": {
         "Java": 303391
       },
-      "commits_30d": 37
+      "latest_stable_release": {
+        "published_at": "2026-09-11T21:42:46Z",
+        "url": "https://github.com/ZpkDxGames/PlexonKeys/releases",
+        "version": "2.0.0"
+      },
+      "name": "PlexonKeys",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonKeys"
     },
     {
-      "name": "PlexonPanel",
-      "url": "https://github.com/ZpkDxGames/PlexonPanel",
-      "commits": 592,
-      "languages": {
+      "commits_30d": 358,
+      "commits_90d": 592,
+      "language_bytes": {
         "Java": 1016877,
-        "Python": 52541,
-        "JavaScript": 2338
+        "JavaScript": 2338,
+        "Python": 52541
       },
-      "commits_30d": 358
+      "latest_stable_release": {
+        "published_at": "2026-09-13T18:48:04Z",
+        "url": "https://github.com/ZpkDxGames/PlexonPanel/releases",
+        "version": "3.4.0"
+      },
+      "name": "PlexonPanel",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonPanel"
     },
     {
-      "name": "PlexonPanel-Dashboard",
-      "url": "https://github.com/ZpkDxGames/PlexonPanel-Dashboard",
-      "commits": 582,
-      "languages": {
-        "TypeScript": 235967,
+      "commits_30d": 322,
+      "commits_90d": 582,
+      "language_bytes": {
+        "HTML": 443,
         "JavaScript": 3464,
-        "HTML": 443
+        "TypeScript": 235967
       },
-      "commits_30d": 322
+      "latest_stable_release": null,
+      "name": "PlexonPanel-Dashboard",
+      "primary_language": "TypeScript",
+      "url": "https://github.com/ZpkDxGames/PlexonPanel-Dashboard"
     },
     {
-      "name": "PlexonQuests",
-      "url": "https://github.com/ZpkDxGames/PlexonQuests",
-      "commits": 302,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 302,
+      "language_bytes": {
         "Java": 926267
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-13T00:09:53Z",
+        "url": "https://github.com/ZpkDxGames/PlexonQuests/releases",
+        "version": "4.2.2"
+      },
+      "name": "PlexonQuests",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonQuests"
     },
     {
-      "name": "PlexonRanks",
-      "url": "https://github.com/ZpkDxGames/PlexonRanks",
-      "commits": 112,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 112,
+      "language_bytes": {
         "Java": 452916
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-12T15:47:58Z",
+        "url": "https://github.com/ZpkDxGames/PlexonRanks/releases",
+        "version": "3.0.2"
+      },
+      "name": "PlexonRanks",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonRanks"
     },
     {
-      "name": "PlexonShops",
-      "url": "https://github.com/ZpkDxGames/PlexonShops",
-      "commits": 131,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 131,
+      "language_bytes": {
         "Java": 430123
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-11T20:59:43Z",
+        "url": "https://github.com/ZpkDxGames/PlexonShops/releases",
+        "version": "3.0.0"
+      },
+      "name": "PlexonShops",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonShops"
     },
     {
-      "name": "PlexonSkills",
-      "url": "https://github.com/ZpkDxGames/PlexonSkills",
-      "commits": 36,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 36,
+      "language_bytes": {
         "Java": 286497
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-11T21:21:11Z",
+        "url": "https://github.com/ZpkDxGames/PlexonSkills/releases",
+        "version": "2.0.0"
+      },
+      "name": "PlexonSkills",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonSkills"
     },
     {
-      "name": "PlexonSpawners",
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners",
-      "commits": 246,
-      "languages": {
+      "commits_30d": 12,
+      "commits_90d": 246,
+      "language_bytes": {
         "Java": 226299,
         "Python": 3846
       },
-      "commits_30d": 12
+      "latest_stable_release": {
+        "published_at": "2026-09-19T16:51:27Z",
+        "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases",
+        "version": "4.0.0"
+      },
+      "name": "PlexonSpawners",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonSpawners"
     },
     {
-      "name": "PlexonTools",
-      "url": "https://github.com/ZpkDxGames/PlexonTools",
-      "commits": 199,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 199,
+      "language_bytes": {
         "Java": 755942,
         "Python": 11117
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-11T19:26:41Z",
+        "url": "https://github.com/ZpkDxGames/PlexonTools/releases",
+        "version": "4.3.0"
+      },
+      "name": "PlexonTools",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonTools"
     },
     {
-      "name": "PlexonTravel",
-      "url": "https://github.com/ZpkDxGames/PlexonTravel",
-      "commits": 139,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 139,
+      "language_bytes": {
         "Java": 250509,
         "Shell": 6362
       },
-      "commits_30d": 0
+      "latest_stable_release": {
+        "published_at": "2026-09-12T21:00:58Z",
+        "url": "https://github.com/ZpkDxGames/PlexonTravel/releases",
+        "version": "3.1.1"
+      },
+      "name": "PlexonTravel",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonTravel"
     },
     {
-      "name": "PlexonUtility",
-      "url": "https://github.com/ZpkDxGames/PlexonUtility",
-      "commits": 257,
-      "languages": {
+      "commits_30d": 132,
+      "commits_90d": 257,
+      "language_bytes": {
         "Java": 561656
       },
-      "commits_30d": 132
+      "latest_stable_release": {
+        "published_at": "2026-09-19T12:31:20Z",
+        "url": "https://github.com/ZpkDxGames/PlexonUtility/releases",
+        "version": "3.5.0"
+      },
+      "name": "PlexonUtility",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/PlexonUtility"
     },
     {
-      "name": "Rankup-1.2Fixer",
-      "url": "https://github.com/ZpkDxGames/Rankup-1.2Fixer",
-      "commits": 27,
-      "languages": {
+      "commits_30d": 0,
+      "commits_90d": 27,
+      "language_bytes": {
         "Java": 37344
       },
-      "commits_30d": 0
-    },
-    {
-      "name": "Trabalho-III-Eng.-Prompt",
-      "url": "https://github.com/ZpkDxGames/Trabalho-III-Eng.-Prompt",
-      "commits": 7,
-      "languages": {
-        "TypeScript": 88106,
-        "CSS": 51371,
-        "JavaScript": 380
+      "latest_stable_release": {
+        "published_at": "2026-08-31T21:03:10Z",
+        "url": "https://github.com/ZpkDxGames/Rankup-1.2Fixer/releases",
+        "version": "1.2-Fixer"
       },
-      "commits_30d": 7
+      "name": "Rankup-1.2Fixer",
+      "primary_language": "Java",
+      "url": "https://github.com/ZpkDxGames/Rankup-1.2Fixer"
     },
     {
-      "name": "Triangle-Area",
-      "url": "https://github.com/ZpkDxGames/Triangle-Area",
-      "commits": 3,
-      "languages": {
+      "commits_30d": 7,
+      "commits_90d": 7,
+      "language_bytes": {
+        "CSS": 51371,
+        "JavaScript": 380,
+        "TypeScript": 88106
+      },
+      "latest_stable_release": null,
+      "name": "Trabalho-III-Eng.-Prompt",
+      "primary_language": "TypeScript",
+      "url": "https://github.com/ZpkDxGames/Trabalho-III-Eng.-Prompt"
+    },
+    {
+      "commits_30d": 0,
+      "commits_90d": 3,
+      "language_bytes": {
         "HTML": 8774
       },
-      "commits_30d": 0
+      "latest_stable_release": null,
+      "name": "Triangle-Area",
+      "primary_language": "HTML",
+      "url": "https://github.com/ZpkDxGames/Triangle-Area"
     }
   ],
-  "daily": [
+  "recent_releases": [
     {
-      "date": "2026-07-16",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-17",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-18",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-19",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-20",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-21",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-22",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-23",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-24",
-      "commits": 4
-    },
-    {
-      "date": "2026-07-25",
-      "commits": 4
-    },
-    {
-      "date": "2026-07-26",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-27",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-28",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-29",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-30",
-      "commits": 0
-    },
-    {
-      "date": "2026-07-31",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-01",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-02",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-03",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-04",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-05",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-06",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-07",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-08",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-09",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-10",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-11",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-12",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-13",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-14",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-15",
-      "commits": 11
-    },
-    {
-      "date": "2026-08-16",
-      "commits": 9
-    },
-    {
-      "date": "2026-08-17",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-18",
-      "commits": 3
-    },
-    {
-      "date": "2026-08-19",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-20",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-21",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-22",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-23",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-24",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-25",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-26",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-27",
-      "commits": 0
-    },
-    {
-      "date": "2026-08-28",
-      "commits": 11
-    },
-    {
-      "date": "2026-08-29",
-      "commits": 8
-    },
-    {
-      "date": "2026-08-30",
-      "commits": 12
-    },
-    {
-      "date": "2026-08-31",
-      "commits": 33
-    },
-    {
-      "date": "2026-09-01",
-      "commits": 19
-    },
-    {
-      "date": "2026-09-02",
-      "commits": 20
-    },
-    {
-      "date": "2026-09-03",
-      "commits": 77
-    },
-    {
-      "date": "2026-09-04",
-      "commits": 7
-    },
-    {
-      "date": "2026-09-05",
-      "commits": 67
-    },
-    {
-      "date": "2026-09-06",
-      "commits": 48
-    },
-    {
-      "date": "2026-09-07",
-      "commits": 354
-    },
-    {
-      "date": "2026-09-08",
-      "commits": 235
-    },
-    {
-      "date": "2026-09-09",
-      "commits": 651
-    },
-    {
-      "date": "2026-09-10",
-      "commits": 209
-    },
-    {
-      "date": "2026-09-11",
-      "commits": 457
-    },
-    {
-      "date": "2026-09-12",
-      "commits": 711
-    },
-    {
-      "date": "2026-09-13",
-      "commits": 357
-    },
-    {
-      "date": "2026-09-14",
-      "commits": 269
-    },
-    {
-      "date": "2026-09-15",
-      "commits": 65
-    },
-    {
-      "date": "2026-09-16",
-      "commits": 23
-    },
-    {
-      "date": "2026-09-17",
-      "commits": 88
-    },
-    {
-      "date": "2026-09-18",
-      "commits": 124
-    },
-    {
-      "date": "2026-09-19",
-      "commits": 63
-    },
-    {
-      "date": "2026-09-20",
-      "commits": 0
-    },
-    {
-      "date": "2026-09-21",
-      "commits": 0
-    },
-    {
-      "date": "2026-09-22",
-      "commits": 0
-    },
-    {
-      "date": "2026-09-23",
-      "commits": 0
-    },
-    {
-      "date": "2026-09-24",
-      "commits": 0
-    },
-    {
-      "date": "2026-09-25",
-      "commits": 0
-    },
-    {
-      "date": "2026-09-26",
-      "commits": 2
-    },
-    {
-      "date": "2026-09-27",
-      "commits": 7
-    },
-    {
-      "date": "2026-09-28",
-      "commits": 0
-    },
-    {
-      "date": "2026-09-29",
-      "commits": 0
-    },
-    {
-      "date": "2026-09-30",
-      "commits": 0
-    },
-    {
-      "date": "2026-10-01",
-      "commits": 43
-    },
-    {
-      "date": "2026-10-02",
-      "commits": 38
-    },
-    {
-      "date": "2026-10-03",
-      "commits": 10
-    },
-    {
-      "date": "2026-10-04",
-      "commits": 17
-    },
-    {
-      "date": "2026-10-05",
-      "commits": 11
-    },
-    {
-      "date": "2026-10-06",
-      "commits": 4
-    },
-    {
-      "date": "2026-10-07",
-      "commits": 6
-    },
-    {
-      "date": "2026-10-08",
-      "commits": 15
-    },
-    {
-      "date": "2026-10-09",
-      "commits": 0
-    },
-    {
-      "date": "2026-10-10",
-      "commits": 5
-    },
-    {
-      "date": "2026-10-11",
-      "commits": 24
-    },
-    {
-      "date": "2026-10-12",
-      "commits": 246
-    },
-    {
-      "date": "2026-10-13",
-      "commits": 52
-    }
-  ],
-  "languages": {
-    "Java": 9606182,
-    "Python": 507336,
-    "TypeScript": 366409,
-    "JavaScript": 262514,
-    "CSS": 132992,
-    "HTML": 129201,
-    "Shell": 7969,
-    "Rust": 3443,
-    "PLpgSQL": 2054
-  },
-  "releases": [
-    {
+      "prerelease": false,
       "project": "PlexonSpawners",
-      "version": "4.0.0",
-      "tag": "v4.0.0",
       "published_at": "2026-09-19T16:51:27Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v4.0.0"
+      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases",
+      "version": "4.0.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonUtility",
-      "version": "3.5.0",
-      "tag": "v3.5.0",
       "published_at": "2026-09-19T12:31:20Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v3.5.0"
+      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases",
+      "version": "3.5.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonCore",
-      "version": "2.1.0",
-      "tag": "v2.1.0",
       "published_at": "2026-09-17T23:14:16Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCore/releases/tag/v2.1.0"
+      "url": "https://github.com/ZpkDxGames/PlexonCore/releases",
+      "version": "2.1.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonPanel",
-      "version": "3.4.0",
-      "tag": "v3.4.0",
       "published_at": "2026-09-13T18:48:04Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.4.0"
+      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases",
+      "version": "3.4.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonChats",
-      "version": "4.0.1",
-      "tag": "v4.0.1",
       "published_at": "2026-09-13T18:08:27Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v4.0.1"
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases",
+      "version": "4.0.1"
     },
     {
+      "prerelease": false,
       "project": "PlexonChats",
-      "version": "4.0.0",
-      "tag": "v4.0.0",
       "published_at": "2026-09-13T16:57:05Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v4.0.0"
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases",
+      "version": "4.0.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonPanel",
-      "version": "3.3.0",
-      "tag": "v3.3.0",
       "published_at": "2026-09-13T16:54:07Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.3.0"
+      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases",
+      "version": "3.3.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonChats",
-      "version": "3.6.2",
-      "tag": "v3.6.2",
       "published_at": "2026-09-13T12:27:18Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.6.2"
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases",
+      "version": "3.6.2"
     },
     {
+      "prerelease": false,
       "project": "PlexonChats",
-      "version": "3.6.1",
-      "tag": "v3.6.1",
       "published_at": "2026-09-13T05:20:49Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.6.1"
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases",
+      "version": "3.6.1"
     },
     {
+      "prerelease": false,
       "project": "PlexonChats",
-      "version": "3.6.0",
-      "tag": "v3.6.0",
       "published_at": "2026-09-13T04:55:25Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.6.0"
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases",
+      "version": "3.6.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonChats",
-      "version": "3.5.0",
-      "tag": "v3.5.0",
       "published_at": "2026-09-13T03:28:52Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.5.0"
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases",
+      "version": "3.5.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonChats",
-      "version": "3.4.0",
-      "tag": "v3.4.0",
       "published_at": "2026-09-13T02:04:10Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.4.0"
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases",
+      "version": "3.4.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonCrates",
-      "version": "6.5.0",
-      "tag": "v6.5.0",
       "published_at": "2026-09-13T00:39:10Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v6.5.0"
+      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases",
+      "version": "6.5.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonQuests",
-      "version": "4.2.2",
-      "tag": "v4.2.2",
       "published_at": "2026-09-13T00:09:53Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v4.2.2"
+      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases",
+      "version": "4.2.2"
     },
     {
+      "prerelease": false,
       "project": "PlexonChats",
-      "version": "3.3.0",
-      "tag": "v3.3.0",
       "published_at": "2026-09-12T22:41:35Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.3.0"
+      "url": "https://github.com/ZpkDxGames/PlexonChats/releases",
+      "version": "3.3.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonSpawners",
-      "version": "3.4.0",
-      "tag": "v3.4.0",
       "published_at": "2026-09-12T22:14:56Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v3.4.0"
+      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases",
+      "version": "3.4.0"
     },
     {
+      "prerelease": false,
       "project": "PlexonQuests",
-      "version": "4.2.1",
-      "tag": "v4.2.1",
       "published_at": "2026-09-12T21:57:49Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v4.2.1"
+      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases",
+      "version": "4.2.1"
     },
     {
+      "prerelease": true,
       "project": "PlexonCrates",
-      "version": "6.0.0-rc.1",
-      "tag": "v6.0.0-rc.1",
       "published_at": "2026-09-12T21:08:09Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v6.0.0-rc.1"
+      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases",
+      "version": "6.0.0-rc.1"
     },
     {
+      "prerelease": false,
       "project": "PlexonTravel",
-      "version": "3.1.1",
-      "tag": "v3.1.1",
       "published_at": "2026-09-12T21:00:58Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTravel/releases/tag/v3.1.1"
+      "url": "https://github.com/ZpkDxGames/PlexonTravel/releases",
+      "version": "3.1.1"
     },
     {
+      "prerelease": false,
       "project": "PlexonJobs",
-      "version": "2.5.0",
-      "tag": "v2.5.0",
       "published_at": "2026-09-12T20:43:13Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonJobs/releases/tag/v2.5.0"
-    },
-    {
-      "project": "PlexonUtility",
-      "version": "3.4.0",
-      "tag": "v3.4.0",
-      "published_at": "2026-09-12T19:53:19Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v3.4.0"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "4.2.0",
-      "tag": "v4.2.0",
-      "published_at": "2026-09-12T19:47:28Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v4.2.0"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "3.3.0",
-      "tag": "v3.3.0",
-      "published_at": "2026-09-12T19:46:57Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v3.3.0"
-    },
-    {
-      "project": "PlexonUtility",
-      "version": "3.3.0",
-      "tag": "v3.3.0",
-      "published_at": "2026-09-12T18:55:53Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v3.3.0"
-    },
-    {
-      "project": "PlexonTravel",
-      "version": "3.1.0",
-      "tag": "v3.1.0",
-      "published_at": "2026-09-12T18:53:55Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTravel/releases/tag/v3.1.0"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "3.0.2",
-      "tag": "v3.0.2",
-      "published_at": "2026-09-12T15:47:58Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v3.0.2"
-    },
-    {
-      "project": "PlexonTravel",
-      "version": "3.0.2",
-      "tag": "v3.0.2",
-      "published_at": "2026-09-12T15:30:14Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTravel/releases/tag/v3.0.2"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "5.1.0-rc.1",
-      "tag": "v5.1.0-rc.1",
-      "published_at": "2026-09-12T15:13:47Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v5.1.0-rc.1"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "3.0.1",
-      "tag": "v3.0.1",
-      "published_at": "2026-09-12T15:12:32Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v3.0.1"
-    },
-    {
-      "project": "PlexonUtility",
-      "version": "3.2.0",
-      "tag": "v3.2.0",
-      "published_at": "2026-09-12T15:09:56Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v3.2.0"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "4.1.0",
-      "tag": "v4.1.0",
-      "published_at": "2026-09-12T15:05:44Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v4.1.0"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "3.2.0-rc.1",
-      "tag": "v3.2.0-rc.1",
-      "published_at": "2026-09-12T13:57:12Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v3.2.0-rc.1"
-    },
-    {
-      "project": "PlexonJobs",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-12T03:48:51Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonJobs/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "4.1.0-rc.1",
-      "tag": "v4.1.0-rc.1",
-      "published_at": "2026-09-12T03:44:05Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v4.1.0-rc.1"
-    },
-    {
-      "project": "PlexonTravel",
-      "version": "3.0.1",
-      "tag": "v3.0.1",
-      "published_at": "2026-09-12T03:43:38Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTravel/releases/tag/v3.0.1"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "3.1.1",
-      "tag": "v3.1.1",
-      "published_at": "2026-09-12T03:32:04Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v3.1.1"
-    },
-    {
-      "project": "PlexonUtility",
-      "version": "3.1.0",
-      "tag": "v3.1.0",
-      "published_at": "2026-09-12T03:29:25Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v3.1.0"
-    },
-    {
-      "project": "PlexonTravel",
-      "version": "3.0.0",
-      "tag": "v3.0.0",
-      "published_at": "2026-09-12T02:42:11Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTravel/releases/tag/v3.0.0"
-    },
-    {
-      "project": "PlexonUtility",
-      "version": "3.0.0",
-      "tag": "v3.0.0",
-      "published_at": "2026-09-12T02:28:14Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v3.0.0"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "3.1.0",
-      "tag": "v3.1.0",
-      "published_at": "2026-09-12T02:26:31Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v3.1.0"
-    },
-    {
-      "project": "PlexonJobs",
-      "version": "1.1.0",
-      "tag": "v1.1.0",
-      "published_at": "2026-09-12T01:45:40Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonJobs/releases/tag/v1.1.0"
-    },
-    {
-      "project": "PlexonUtility",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-12T01:07:59Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonJobs",
-      "version": "1.1.0-rc.1",
-      "tag": "v1.1.0-rc.1",
-      "published_at": "2026-09-12T01:04:40Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonJobs/releases/tag/v1.1.0-rc.1"
-    },
-    {
-      "project": "PlexonJobs",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-09-11T23:14:22Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonJobs/releases/tag/v1.0.0"
-    },
-    {
-      "project": "PlexonBlacksmith",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-11T22:45:20Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonBlacksmith/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "3.0.0",
-      "tag": "v3.0.0",
-      "published_at": "2026-09-11T22:25:29Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v3.0.0"
-    },
-    {
-      "project": "PlexonBackpacks",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-11T22:05:36Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonBackpacks/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonKeys",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-11T21:42:46Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonKeys/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonSkills",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-11T21:21:11Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSkills/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonShops",
-      "version": "3.0.0",
-      "tag": "v3.0.0",
-      "published_at": "2026-09-11T20:59:43Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonShops/releases/tag/v3.0.0"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "5.0.0",
-      "tag": "v5.0.0",
-      "published_at": "2026-09-11T20:32:02Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v5.0.0"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "4.0.0",
-      "tag": "v4.0.0",
-      "published_at": "2026-09-11T20:14:11Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v4.0.0"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "3.0.0",
-      "tag": "v3.0.0",
-      "published_at": "2026-09-11T20:02:44Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v3.0.0"
-    },
-    {
-      "project": "PlexonHomes",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-11T19:45:34Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonHomes/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonTravel",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-11T19:35:07Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTravel/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "4.3.0",
-      "tag": "v4.3.0",
-      "published_at": "2026-09-11T19:26:41Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v4.3.0"
-    },
-    {
-      "project": "PlexonGPFlags",
-      "version": "1.1.1",
-      "tag": "v1.1.1",
-      "published_at": "2026-09-11T19:12:36Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonGPFlags/releases/tag/v1.1.1"
-    },
-    {
-      "project": "PlexonGPFlags",
-      "version": "1.1.0",
-      "tag": "v1.1.0",
-      "published_at": "2026-09-11T19:05:07Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonGPFlags/releases/tag/v1.1.0"
-    },
-    {
-      "project": "PlexonChats",
-      "version": "3.2.0",
-      "tag": "v3.2.0",
-      "published_at": "2026-09-11T18:52:23Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.2.0"
-    },
-    {
-      "project": "PlexonPanel",
-      "version": "3.2.0",
-      "tag": "v3.2.0",
-      "published_at": "2026-09-11T18:42:53Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.2.0"
-    },
-    {
-      "project": "PlexonUtility",
-      "version": "1.0.1",
-      "tag": "v1.0.1",
-      "published_at": "2026-09-11T18:34:49Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v1.0.1"
-    },
-    {
-      "project": "PlexonCore",
-      "version": "2.0.5",
-      "tag": "v2.0.5",
-      "published_at": "2026-09-11T18:20:14Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCore/releases/tag/v2.0.5"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "5.0.0-rc.4",
-      "tag": "v5.0.0-rc.4",
-      "published_at": "2026-09-11T17:33:51Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v5.0.0-rc.4"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "4.0.0-rc.3",
-      "tag": "v4.0.0-rc.3",
-      "published_at": "2026-09-11T17:29:58Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v4.0.0-rc.3"
-    },
-    {
-      "project": "PlexonGPFlags",
-      "version": "1.1.0-rc.3",
-      "tag": "v1.1.0-rc.3",
-      "published_at": "2026-09-11T06:39:11Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonGPFlags/releases/tag/v1.1.0-rc.3"
-    },
-    {
-      "project": "PlexonGPFlags",
-      "version": "1.1.0-rc.2",
-      "tag": "v1.1.0-rc.2",
-      "published_at": "2026-09-11T06:36:03Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonGPFlags/releases/tag/v1.1.0-rc.2"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "5.0.0-rc.3",
-      "tag": "v5.0.0-rc.3",
-      "published_at": "2026-09-11T06:34:58Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v5.0.0-rc.3"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "3.0.0-rc.2",
-      "tag": "v3.0.0-rc.2",
-      "published_at": "2026-09-11T06:30:35Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v3.0.0-rc.2"
-    },
-    {
-      "project": "PlexonBlacksmith",
-      "version": "2.0.0-rc.2",
-      "tag": "v2.0.0-rc.2",
-      "published_at": "2026-09-11T06:29:25Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonBlacksmith/releases/tag/v2.0.0-rc.2"
-    },
-    {
-      "project": "PlexonHomes",
-      "version": "2.0.0-rc.2",
-      "tag": "v2.0.0-rc.2",
-      "published_at": "2026-09-11T06:27:25Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonHomes/releases/tag/v2.0.0-rc.2"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "4.0.0-rc.2",
-      "tag": "v4.0.0-rc.2",
-      "published_at": "2026-09-11T06:26:46Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v4.0.0-rc.2"
-    },
-    {
-      "project": "PlexonShops",
-      "version": "3.0.0-rc.2",
-      "tag": "v3.0.0-rc.2",
-      "published_at": "2026-09-11T06:23:04Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonShops/releases/tag/v3.0.0-rc.2"
-    },
-    {
-      "project": "PlexonSkills",
-      "version": "2.0.0-rc.2",
-      "tag": "v2.0.0-rc.2",
-      "published_at": "2026-09-11T06:22:40Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonSkills/releases/tag/v2.0.0-rc.2"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "4.3.0-rc.3",
-      "tag": "v4.3.0-rc.3",
-      "published_at": "2026-09-11T06:22:07Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v4.3.0-rc.3"
-    },
-    {
-      "project": "PlexonBackpacks",
-      "version": "2.0.0-rc.2",
-      "tag": "v2.0.0-rc.2",
-      "published_at": "2026-09-11T06:21:33Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonBackpacks/releases/tag/v2.0.0-rc.2"
-    },
-    {
-      "project": "PlexonUtility",
-      "version": "1.0.1-rc.2",
-      "tag": "v1.0.1-rc.2",
-      "published_at": "2026-09-11T06:21:18Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v1.0.1-rc.2"
-    },
-    {
-      "project": "PlexonCore",
-      "version": "2.0.5-rc.1",
-      "tag": "v2.0.5-rc.1",
-      "published_at": "2026-09-11T06:21:11Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonCore/releases/tag/v2.0.5-rc.1"
-    },
-    {
-      "project": "PlexonPanel",
-      "version": "3.2.0-rc.3",
-      "tag": "v3.2.0-rc.3",
-      "published_at": "2026-09-11T03:29:29Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.2.0-rc.3"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "5.0.0-rc.2",
-      "tag": "v5.0.0-rc.2",
-      "published_at": "2026-09-11T02:52:24Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v5.0.0-rc.2"
-    },
-    {
-      "project": "PlexonKeys",
-      "version": "2.0.0-rc.2",
-      "tag": "v2.0.0-rc.2",
-      "published_at": "2026-09-11T02:04:29Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonKeys/releases/tag/v2.0.0-rc.2"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "3.0.0-rc.2",
-      "tag": "v3.0.0-rc.2",
-      "published_at": "2026-09-11T01:38:02Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v3.0.0-rc.2"
-    },
-    {
-      "project": "PlexonUtility",
-      "version": "1.0.1-rc.1",
-      "tag": "v1.0.1-rc.1",
-      "published_at": "2026-09-10T22:59:06Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v1.0.1-rc.1"
-    },
-    {
-      "project": "PlexonJobs",
-      "version": "1.0.0-rc.2",
-      "tag": "v1.0.0-rc.2",
-      "published_at": "2026-09-10T22:33:25Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonJobs/releases/tag/v1.0.0-rc.2"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "4.3.0-rc.2",
-      "tag": "v4.3.0-rc.2",
-      "published_at": "2026-09-10T21:57:01Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v4.3.0-rc.2"
-    },
-    {
-      "project": "PlexonGPFlags",
-      "version": "1.1.0-rc.1",
-      "tag": "v1.1.0-rc.1",
-      "published_at": "2026-09-10T21:10:26Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonGPFlags/releases/tag/v1.1.0-rc.1"
-    },
-    {
-      "project": "PlexonPanel",
-      "version": "3.2.0-rc.2",
-      "tag": "v3.2.0-rc.2",
-      "published_at": "2026-09-10T20:20:45Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.2.0-rc.2"
-    },
-    {
-      "project": "PlexonPanel",
-      "version": "3.2.0-rc.1",
-      "tag": "v3.2.0-rc.1",
-      "published_at": "2026-09-10T19:39:08Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.2.0-rc.1"
-    },
-    {
-      "project": "PlexonHomes",
-      "version": "2.0.0-rc.1",
-      "tag": "v2.0.0-rc.1",
-      "published_at": "2026-09-10T19:18:41Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonHomes/releases/tag/v2.0.0-rc.1"
-    },
-    {
-      "project": "PlexonTravel",
-      "version": "2.0.0-rc.1",
-      "tag": "v2.0.0-rc.1",
-      "published_at": "2026-09-10T18:11:20Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonTravel/releases/tag/v2.0.0-rc.1"
-    },
-    {
-      "project": "PlexonChats",
-      "version": "3.2.0-rc.1",
-      "tag": "v3.2.0-rc.1",
-      "published_at": "2026-09-10T17:45:02Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.2.0-rc.1"
-    },
-    {
-      "project": "PlexonKeys",
-      "version": "2.0.0-rc.1",
-      "tag": "v2.0.0-rc.1",
-      "published_at": "2026-09-10T16:50:21Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonKeys/releases/tag/v2.0.0-rc.1"
-    },
-    {
-      "project": "PlexonShops",
-      "version": "3.0.0-rc.1",
-      "tag": "v3.0.0-rc.1",
-      "published_at": "2026-09-10T15:44:25Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonShops/releases/tag/v3.0.0-rc.1"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "4.0.0-rc.1",
-      "tag": "v4.0.0-rc.1",
-      "published_at": "2026-09-10T05:13:23Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v4.0.0-rc.1"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "3.0.0-rc.1",
-      "tag": "v3.0.0-rc.1",
-      "published_at": "2026-09-10T03:52:21Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v3.0.0-rc.1"
-    },
-    {
-      "project": "PlexonBackpacks",
-      "version": "2.0.0-rc.1",
-      "tag": "v2.0.0-rc.1",
-      "published_at": "2026-09-10T02:45:16Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonBackpacks/releases/tag/v2.0.0-rc.1"
-    },
-    {
-      "project": "PlexonBlacksmith",
-      "version": "2.0.0-rc.1",
-      "tag": "v2.0.0-rc.1",
-      "published_at": "2026-09-10T01:09:42Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonBlacksmith/releases/tag/v2.0.0-rc.1"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "5.0.0-rc.1",
-      "tag": "v5.0.0-rc.1",
-      "published_at": "2026-09-10T00:49:36Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v5.0.0-rc.1"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "3.0.0-rc.1",
-      "tag": "v3.0.0-rc.1",
-      "published_at": "2026-09-10T00:18:33Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v3.0.0-rc.1"
-    },
-    {
-      "project": "PlexonSkills",
-      "version": "2.0.0-rc.1",
-      "tag": "v2.0.0-rc.1",
-      "published_at": "2026-09-09T23:36:30Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonSkills/releases/tag/v2.0.0-rc.1"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "2.3.1",
-      "tag": "v2.3.1",
-      "published_at": "2026-09-09T21:22:34Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v2.3.1"
-    },
-    {
-      "project": "PlexonGPFlags",
-      "version": "1.0.1",
-      "tag": "v1.0.1",
-      "published_at": "2026-09-09T21:22:12Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonGPFlags/releases/tag/v1.0.1"
-    },
-    {
-      "project": "PlexonTravel",
-      "version": "1.0.1",
-      "tag": "v1.0.1",
-      "published_at": "2026-09-09T21:20:57Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTravel/releases/tag/v1.0.1"
-    },
-    {
-      "project": "PlexonPanel",
-      "version": "3.1.1",
-      "tag": "v3.1.1",
-      "published_at": "2026-09-09T21:03:56Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.1.1"
-    },
-    {
-      "project": "PlexonHomes",
-      "version": "1.0.1",
-      "tag": "v1.0.1",
-      "published_at": "2026-09-09T20:42:50Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonHomes/releases/tag/v1.0.1"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "4.2.1",
-      "tag": "v4.2.1",
-      "published_at": "2026-09-09T20:35:32Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v4.2.1"
-    },
-    {
-      "project": "PlexonShops",
-      "version": "2.2.1",
-      "tag": "v2.2.1",
-      "published_at": "2026-09-09T20:29:11Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonShops/releases/tag/v2.2.1"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "3.3.1",
-      "tag": "v3.3.1",
-      "published_at": "2026-09-09T20:28:43Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v3.3.1"
-    },
-    {
-      "project": "PlexonKeys",
-      "version": "1.4.1",
-      "tag": "v1.4.1",
-      "published_at": "2026-09-09T20:28:42Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonKeys/releases/tag/v1.4.1"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "4.6.0",
-      "tag": "v4.6.0",
-      "published_at": "2026-09-09T20:23:49Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v4.6.0"
-    },
-    {
-      "project": "PlexonBackpacks",
-      "version": "1.2.1",
-      "tag": "v1.2.1",
-      "published_at": "2026-09-09T20:10:32Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonBackpacks/releases/tag/v1.2.1"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "2.2.1",
-      "tag": "v2.2.1",
-      "published_at": "2026-09-09T19:58:04Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v2.2.1"
-    },
-    {
-      "project": "PlexonChats",
-      "version": "3.1.1",
-      "tag": "v3.1.1",
-      "published_at": "2026-09-09T19:57:32Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.1.1"
-    },
-    {
-      "project": "PlexonBlacksmith",
-      "version": "1.4.1",
-      "tag": "v1.4.1",
-      "published_at": "2026-09-09T19:53:17Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonBlacksmith/releases/tag/v1.4.1"
-    },
-    {
-      "project": "PlexonCore",
-      "version": "2.0.4",
-      "tag": "v2.0.4",
-      "published_at": "2026-09-09T19:24:44Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCore/releases/tag/v2.0.4"
-    },
-    {
-      "project": "PlexonJobs",
-      "version": "1.0.0-rc.1",
-      "tag": "v1.0.0-rc.1",
-      "published_at": "2026-09-09T18:59:26Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonJobs/releases/tag/v1.0.0-rc.1"
-    },
-    {
-      "project": "PlexonUtility",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-09-09T18:55:59Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonUtility/releases/tag/v1.0.0"
-    },
-    {
-      "project": "PlexonSkills",
-      "version": "1.0.0-rc.1",
-      "tag": "v1.0.0-rc.1",
-      "published_at": "2026-09-09T18:52:21Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonSkills/releases/tag/v1.0.0-rc.1"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "3.3.0",
-      "tag": "v3.3.0",
-      "published_at": "2026-09-09T18:52:11Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v3.3.0"
-    },
-    {
-      "project": "PlexonHomes",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-09-09T18:47:18Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonHomes/releases/tag/v1.0.0"
-    },
-    {
-      "project": "PlexonTravel",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-09-09T18:44:18Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonTravel/releases/tag/v1.0.0"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "3.3.0-rc.1",
-      "tag": "v3.3.0-rc.1",
-      "published_at": "2026-09-09T18:40:58Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v3.3.0-rc.1"
-    },
-    {
-      "project": "PlexonCore",
-      "version": "2.0.3",
-      "tag": "v2.0.3",
-      "published_at": "2026-09-09T18:36:43Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCore/releases/tag/v2.0.3"
-    },
-    {
-      "project": "PlexonKeys",
-      "version": "1.4.0",
-      "tag": "v1.4.0",
-      "published_at": "2026-09-09T18:34:01Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonKeys/releases/tag/v1.4.0"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "4.6.0-rc.1",
-      "tag": "v4.6.0-rc.1",
-      "published_at": "2026-09-09T18:27:52Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v4.6.0-rc.1"
-    },
-    {
-      "project": "PlexonCore",
-      "version": "2.0.2",
-      "tag": "v2.0.2",
-      "published_at": "2026-09-09T18:23:48Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCore/releases/tag/v2.0.2"
-    },
-    {
-      "project": "PlexonCore",
-      "version": "2.0.1",
-      "tag": "v2.0.1",
-      "published_at": "2026-09-09T18:18:08Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCore/releases/tag/v2.0.1"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "4.3.0-rc.1",
-      "tag": "v4.3.0-rc.1",
-      "published_at": "2026-09-09T18:02:31Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v4.3.0-rc.1"
-    },
-    {
-      "project": "PlexonCore",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-09T17:36:53Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCore/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonGPFlags",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-09-09T16:16:50Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonGPFlags/releases/tag/v1.0.0"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "2.2.0",
-      "tag": "v2.2.0",
-      "published_at": "2026-09-09T15:09:14Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v2.2.0"
-    },
-    {
-      "project": "PlexonShops",
-      "version": "2.2.0",
-      "tag": "v2.2.0",
-      "published_at": "2026-09-09T15:08:34Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonShops/releases/tag/v2.2.0"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "3.2.0",
-      "tag": "v3.2.0",
-      "published_at": "2026-09-09T15:08:16Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v3.2.0"
-    },
-    {
-      "project": "PlexonKeys",
-      "version": "1.3.0",
-      "tag": "v1.3.0",
-      "published_at": "2026-09-09T15:03:41Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonKeys/releases/tag/v1.3.0"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "2.3.0",
-      "tag": "v2.3.0",
-      "published_at": "2026-09-09T15:02:46Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v2.3.0"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "4.5.0",
-      "tag": "v4.5.0",
-      "published_at": "2026-09-09T04:55:20Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v4.5.0"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "4.2.0",
-      "tag": "v4.2.0",
-      "published_at": "2026-09-09T04:45:46Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v4.2.0"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "3.0.0",
-      "tag": "v3.0.0",
-      "published_at": "2026-09-09T04:40:44Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v3.0.0"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "4.1.1",
-      "tag": "v4.1.1",
-      "published_at": "2026-09-09T04:04:22Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v4.1.1"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "4.1.1-preview3",
-      "tag": "v4.1.1-preview3",
-      "published_at": "2026-09-09T03:15:09Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v4.1.1-preview3"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "4.1.1-preview2",
-      "tag": "v4.1.1-preview2",
-      "published_at": "2026-09-08T21:04:17Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v4.1.1-preview2"
-    },
-    {
-      "project": "GhostBlocks",
-      "version": "8.0.0",
-      "tag": "v8.0.0",
-      "published_at": "2026-09-08T17:52:23Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/GhostBlocks/releases/tag/v8.0.0"
-    },
-    {
-      "project": "PlexonPanel",
-      "version": "3.1.0",
-      "tag": "v3.1.0",
-      "published_at": "2026-09-08T15:45:57Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.1.0"
-    },
-    {
-      "project": "PlexonPanel",
-      "version": "3.1.0-rc.1",
-      "tag": "v3.1.0-rc.1",
-      "published_at": "2026-09-08T04:51:30Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.1.0-rc.1"
-    },
-    {
-      "project": "PlexonPanel",
-      "version": "3.0.2-rc.1",
-      "tag": "v3.0.2-rc.1",
-      "published_at": "2026-09-08T03:43:51Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v3.0.2-rc.1"
-    },
-    {
-      "project": "PlexonChats",
-      "version": "3.1.0",
-      "tag": "v3.1.0",
-      "published_at": "2026-09-08T02:59:44Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.1.0"
-    },
-    {
-      "project": "PlexonGriefPreventionAddon",
-      "version": "1.1.0",
-      "tag": "v1.1.0",
-      "published_at": "2026-09-08T02:01:52Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonGriefPreventionAddon/releases/tag/v1.1.0"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "2.2.0",
-      "tag": "v2.2.0",
-      "published_at": "2026-09-08T01:00:08Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v2.2.0"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "3.1.0",
-      "tag": "v3.1.0",
-      "published_at": "2026-09-07T23:53:18Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v3.1.0"
-    },
-    {
-      "project": "PlexonKeys",
-      "version": "1.2.0",
-      "tag": "v1.2.0",
-      "published_at": "2026-09-07T23:53:04Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonKeys/releases/tag/v1.2.0"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "2.1.0",
-      "tag": "v2.1.0",
-      "published_at": "2026-09-07T23:53:01Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v2.1.0"
-    },
-    {
-      "project": "PlexonBackpacks",
-      "version": "1.2.0",
-      "tag": "v1.2.0",
-      "published_at": "2026-09-07T23:52:17Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonBackpacks/releases/tag/v1.2.0"
-    },
-    {
-      "project": "PlexonBlacksmith",
-      "version": "1.4.0",
-      "tag": "v1.4.0",
-      "published_at": "2026-09-07T22:18:38Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonBlacksmith/releases/tag/v1.4.0"
-    },
-    {
-      "project": "PlexonShops",
-      "version": "2.1.0",
-      "tag": "v2.1.0",
-      "published_at": "2026-09-07T21:05:57Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonShops/releases/tag/v2.1.0"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "4.1.0",
-      "tag": "v4.1.0",
-      "published_at": "2026-09-07T20:18:06Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v4.1.0"
-    },
-    {
-      "project": "PlexonCore",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-09-07T02:45:47Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCore/releases/tag/v1.0.0"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "3.0.0",
-      "tag": "v3.0.0",
-      "published_at": "2026-09-07T01:04:51Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v3.0.0"
-    },
-    {
-      "project": "PlexonPanel",
-      "version": "2.0.0-rc.1",
-      "tag": "v2.0.0-rc.1",
-      "published_at": "2026-09-06T00:21:17Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v2.0.0-rc.1"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "2.0.3",
-      "tag": "v2.0.3",
-      "published_at": "2026-09-05T05:27:35Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v2.0.3"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "2.0.1",
-      "tag": "v2.0.1",
-      "published_at": "2026-09-05T01:41:37Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v2.0.1"
-    },
-    {
-      "project": "PlexonGriefPreventionAddon",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-09-03T21:14:36Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonGriefPreventionAddon/releases/tag/v1.0.0"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "2.1.0",
-      "tag": "v2.1.0",
-      "published_at": "2026-09-03T16:57:17Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v2.1.0"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "2.0.2",
-      "tag": "v2.0.2",
-      "published_at": "2026-09-03T16:22:42Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v2.0.2"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "2.0.1",
-      "tag": "v2.0.1",
-      "published_at": "2026-09-03T15:42:07Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v2.0.1"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-03T04:58:41Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonSpawners",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-09-03T04:07:26Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonSpawners/releases/tag/v1.0.0"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-02T15:45:23Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-02T03:45:18Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonQuests",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-09-02T02:49:01Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonQuests/releases/tag/v1.0.0"
-    },
-    {
-      "project": "PlexonCrates",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-09-01T16:45:20Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonCrates/releases/tag/v1.0.0"
-    },
-    {
-      "project": "PlexonShops",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-01T15:07:59Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonShops/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "2.0.2",
-      "tag": "v2.0.2",
-      "published_at": "2026-09-01T02:28:36Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v2.0.2"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "2.0.1",
-      "tag": "v2.0.1",
-      "published_at": "2026-09-01T01:43:17Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v2.0.1"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-09-01T01:00:51Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonRanks",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-08-31T23:03:01Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonRanks/releases/tag/v1.0.0"
-    },
-    {
-      "project": "Rankup-1.2Fixer",
-      "version": "1.2-Fixer",
-      "tag": "v1.2-Fixer",
-      "published_at": "2026-08-31T21:03:10Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/Rankup-1.2Fixer/releases/tag/v1.2-Fixer"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "3.6.0",
-      "tag": "v3.6.0",
-      "published_at": "2026-08-31T11:26:10Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v3.6.0"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "3.5.1",
-      "tag": "v3.5.1",
-      "published_at": "2026-08-31T11:26:06Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v3.5.1"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "3.5.0",
-      "tag": "v3.5.0",
-      "published_at": "2026-08-31T11:26:04Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v3.5.0"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "3.0.0",
-      "tag": "v3.0.0",
-      "published_at": "2026-08-31T11:26:02Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v3.0.0"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "2.0.0",
-      "tag": "v2.0.0",
-      "published_at": "2026-08-31T11:25:59Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v2.0.0"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "1.0.0-beta.2",
-      "tag": "v1.0.0-beta.2",
-      "published_at": "2026-08-31T11:25:57Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v1.0.0-beta.2"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "1.0.0-beta.1",
-      "tag": "v1.0.0-beta.1",
-      "published_at": "2026-08-31T11:25:54Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v1.0.0-beta.1"
-    },
-    {
-      "project": "PlexonTools",
-      "version": "3.6.1",
-      "tag": "v3.6.1",
-      "published_at": "2026-08-31T03:32:19Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonTools/releases/tag/v3.6.1"
-    },
-    {
-      "project": "GhostBlocks",
-      "version": "7.0.0",
-      "tag": "v7.0.0",
-      "published_at": "2026-08-31T02:51:32Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/GhostBlocks/releases/tag/v7.0.0"
-    },
-    {
-      "project": "PlexonKeys",
-      "version": "1.1.0",
-      "tag": "v1.1.0",
-      "published_at": "2026-08-30T21:54:30Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonKeys/releases/tag/v1.1.0"
-    },
-    {
-      "project": "PlexonKeys",
-      "version": "1.0.0",
-      "tag": "v1.0.0",
-      "published_at": "2026-08-30T21:54:13Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonKeys/releases/tag/v1.0.0"
-    },
-    {
-      "project": "PlexonChats",
-      "version": "3.0",
-      "tag": "v3.0",
-      "published_at": "2026-08-30T18:04:38Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonChats/releases/tag/v3.0"
-    },
-    {
-      "project": "PlexonShops",
-      "version": "1.0.0",
-      "tag": "Beta-1.0",
-      "published_at": "2026-08-28T05:30:12Z",
-      "prerelease": true,
-      "url": "https://github.com/ZpkDxGames/PlexonShops/releases/tag/Beta-1.0"
-    },
-    {
-      "project": "PlexonPanel",
-      "version": "0.1.0",
-      "tag": "v0.1.0",
-      "published_at": "2026-08-15T14:21:56Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonPanel/releases/tag/v0.1.0"
-    },
-    {
-      "project": "Plexon-DailyRewards",
-      "version": "1.2.0",
-      "tag": "Enhancements",
-      "published_at": "2026-07-25T03:32:57Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/Plexon-DailyRewards/releases/tag/Enhancements"
-    },
-    {
-      "project": "Plexon-DailyRewards",
-      "version": "1.1.0",
-      "tag": "Release",
-      "published_at": "2026-07-25T02:54:56Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/Plexon-DailyRewards/releases/tag/Release"
-    },
-    {
-      "project": "PlexonBackpacks",
-      "version": "1.1.0",
-      "tag": "Release",
-      "published_at": "2026-07-25T02:30:27Z",
-      "prerelease": false,
-      "url": "https://github.com/ZpkDxGames/PlexonBackpacks/releases/tag/Release"
+      "url": "https://github.com/ZpkDxGames/PlexonJobs/releases",
+      "version": "2.5.0"
     }
-  ]
-}
+  ],
+  "release_cadence_weekly": [
+    {
+      "prerelease": 0,
+      "stable": 3,
+      "week": "2026-07-20"
+    },
+    {
+      "prerelease": 0,
+      "stable": 1,
+      "week": "2026-08-10"
+    },
+    {
+      "prerelease": 1,
+      "stable": 3,
+      "week": "2026-08-24"
+    },
+    {
+      "prerelease": 3,
+      "stable": 25,
+      "week": "2026-08-31"
+    },
+    {
+      "prerelease": 52,
+      "stable": 101,
+      "week": "2026-09-07"
+    },
+    {
+      "prerelease": 0,
+      "stable": 3,

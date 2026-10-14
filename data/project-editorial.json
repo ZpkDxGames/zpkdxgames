@@ -1,0 +1,62 @@
+{
+  "featured": [
+    {
+      "repo": "PlexonPanel",
+      "category": "Server operations",
+      "state": "5.0 source · rollout gated",
+      "tagline": "Coordinates Paper, per-instance Linux hosts, relay/worker coordination, and a browser dashboard under a signed fleet protocol.",
+      "preview": "panel-topology",
+      "notes": "Conceptual system preview. Current README documents Paper/Host authority boundaries and explicitly gates stable publication and production rollout."
+    },
+    {
+      "repo": "PlexonTools",
+      "category": "Progression engine",
+      "state": "Stable line",
+      "tagline": "Persistent tool identity and progression with in-memory authority, event contracts, natural-block provenance, and bounded asynchronous SQLite persistence.",
+      "preview": "tool-pipeline"
+    },
+    {
+      "repo": "PlexonQuests",
+      "category": "Progression / quests",
+      "state": "Published line",
+      "tagline": "Join-based Daily, Weekly, and Milestone quest board with guarded progress, claim state, history, and asynchronous persistence.",
+      "preview": "quest-state"
+    },
+    {
+      "repo": "PlexonChats",
+      "category": "Communication",
+      "state": "Stable line",
+      "tagline": "Routes local/global chat, private messages, chat events, and Bingo with an optional presentation bridge through DiscordSRV.",
+      "preview": "chat-routing"
+    },
+    {
+      "repo": "AI-Desktop-Companion",
+      "category": "Desktop experiment",
+      "state": "Alpha.6 draft",
+      "tagline": "Local-first Minecraft-skin desktop companion using a deterministic behavior controller, skinview3d/Three.js rendering, and workspace/overlay surfaces.",
+      "preview": "companion-state",
+      "notes": "AI, screen capture, shell, process enumeration, and accessibility actions remain absent and are shown as disabled."
+    },
+    {
+      "repo": "PlexonCore",
+      "category": "Shared runtime",
+      "state": "Published line",
+      "tagline": "Shared runtime services for event routing, immutable contexts, origin state, persistence helpers, lifecycle reporting, and diagnostics.",
+      "preview": "core-runtime"
+    }
+  ],
+  "history": {
+    "PlexonCrates": "Abandoned / maintenance ended; retained as historical reference.",
+    "PlexonGriefPreventionAddon": "Deprecated; replaced by PlexonGPFlags."
+  },
+  "known_surfaces": {
+    "PlexonPanel-Dashboard": "Browser dashboard component for PlexonPanel Protocol 3.",
+    "PlexonGPFlags": "Replacement project for the deprecated GriefPrevention add-on."
+  },
+  "technology_groups": {
+    "Server runtime": ["Java", "Paper", "SQLite", "MiniMessage"],
+    "Web interfaces": ["TypeScript", "JavaScript", "HTML", "CSS", "React/Vite"],
+    "Desktop": ["Rust", "Tauri", "Three.js", "skinview3d"],
+    "Build / delivery": ["Gradle", "Maven", "GitHub Actions"]
+  }
+}
