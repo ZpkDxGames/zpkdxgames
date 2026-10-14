@@ -29,7 +29,7 @@ class RenderTests(unittest.TestCase):
     def test_readme_references_resolve(self):
         text=(ROOT/'README.md').read_text()
         refs=set(re.findall(r'assets/profile-dashboard/([^"\s>]+\.svg)',text))
-        self.assertGreater(len(refs),50)
+        self.assertGreaterEqual(len(refs),32)
         for r in refs:self.assertTrue((self.assets/r).exists(),r)
     def test_picture_source_order(self):
         text=(ROOT/'README.md').read_text(); first=text[text.index('<picture>'):text.index('</picture>')]

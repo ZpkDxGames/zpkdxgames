@@ -8,18 +8,23 @@
 </picture>
 
 <p align="center">
-  <a href="#featured-systems">Projects</a> ·
-  <a href="#system-topology">Systems</a> ·
-  <a href="#project-observatory">Activity</a> ·
-  <a href="#project-observatory">Releases</a> ·
-  <a href="#technology-topology">Stack</a> ·
-  <a href="#engineering-approach">About</a> ·
+  <a href="#overview">Overview</a> ·
+  <a href="#selected-work">Selected work</a> ·
+  <a href="#ecosystem">Ecosystem</a> ·
+  <a href="#repository-signals">Repository signals</a> ·
+  <a href="#technology-map">Technology map</a> ·
   <a href="#contact">Contact</a>
 </p>
 
-> **Snapshot context:** generated repository data is dated **2026-10-13** and covers **2026-07-16 → 2026-10-13 UTC**. Activity is project-wide across public repositories in scope; it is not realtime telemetry and not a personal contribution streak.
+<p align="center">
+  <strong>Systems engineering · Minecraft infrastructure · desktop & web tooling</strong>
+</p>
 
-## Engineering status
+<p align="center">
+  I’m Tonim (<strong>ZpkDxGames</strong>). I build reliable server systems, control surfaces, local-first desktop experiments and developer tooling—with a focus on clear state, practical UX and maintainable boundaries.
+</p>
+
+## Overview
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/status-mobile-dark.svg">
@@ -28,11 +33,13 @@
   <img width="100%" src="assets/profile-dashboard/status-light.svg" alt="Compact engineering status snapshot with public project, commit, activity, publication, language-volume and recency metrics.">
 </picture>
 
-## Featured systems
+<sub>Repository snapshot: <strong>2026-10-13</strong> · Activity window: 2026-07-16 → 2026-10-13 UTC · Project-wide public-repository data, not realtime telemetry.</sub>
 
-Card totals are project-wide snapshot metrics. The small activity heartbeat always labels its own scope; this frozen compatibility snapshot uses verified `MAIN BRANCH · 90D` histories, while native schema-3 refreshes use `PROJECT-WIDE · 90D`.
+## Selected work
 
 ### [PlexonPanel](https://github.com/ZpkDxGames/PlexonPanel)
+
+<sub>SERVER OPERATIONS · 5.0 SOURCE · ROLLOUT GATED</sub>
 
 Coordinates Paper, per-instance Linux hosts, relay/worker coordination, and a browser dashboard under a signed fleet protocol.
 
@@ -42,37 +49,10 @@ Coordinates Paper, per-instance Linux hosts, relay/worker coordination, and a br
   <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/project-plexonpanel-dark.svg">
   <img width="100%" src="assets/profile-dashboard/project-plexonpanel-light.svg" alt="PlexonPanel engineering dashboard module with source-backed statistics and conceptual system preview.">
 </picture>
-### [PlexonTools](https://github.com/ZpkDxGames/PlexonTools)
 
-Persistent tool identity and progression with in-memory authority, event contracts, natural-block provenance, and bounded asynchronous SQLite persistence.
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/project-plexontools-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/project-plexontools-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/project-plexontools-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/project-plexontools-light.svg" alt="PlexonTools engineering dashboard module with source-backed statistics and conceptual system preview.">
-</picture>
-### [PlexonQuests](https://github.com/ZpkDxGames/PlexonQuests)
-
-Join-based Daily, Weekly, and Milestone quest board with guarded progress, claim state, history, and asynchronous persistence.
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/project-plexonquests-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/project-plexonquests-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/project-plexonquests-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/project-plexonquests-light.svg" alt="PlexonQuests engineering dashboard module with source-backed statistics and conceptual system preview.">
-</picture>
-### [PlexonChats](https://github.com/ZpkDxGames/PlexonChats)
-
-Routes local/global chat, private messages, chat events, and Bingo with an optional presentation bridge through DiscordSRV.
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/project-plexonchats-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/project-plexonchats-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/project-plexonchats-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/project-plexonchats-light.svg" alt="PlexonChats engineering dashboard module with source-backed statistics and conceptual system preview.">
-</picture>
 ### [AI-Desktop-Companion](https://github.com/ZpkDxGames/AI-Desktop-Companion)
+
+<sub>DESKTOP EXPERIMENT · ALPHA.6 DRAFT</sub>
 
 Local-first Minecraft-skin desktop companion using a deterministic behavior controller, skinview3d/Three.js rendering, and workspace/overlay surfaces.
 
@@ -82,7 +62,10 @@ Local-first Minecraft-skin desktop companion using a deterministic behavior cont
   <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/project-ai-desktop-companion-dark.svg">
   <img width="100%" src="assets/profile-dashboard/project-ai-desktop-companion-light.svg" alt="AI-Desktop-Companion engineering dashboard module with source-backed statistics and conceptual system preview.">
 </picture>
+
 ### [PlexonCore](https://github.com/ZpkDxGames/PlexonCore)
+
+<sub>SHARED RUNTIME · PUBLISHED LINE</sub>
 
 Shared runtime services for event routing, immutable contexts, origin state, persistence helpers, lifecycle reporting, and diagnostics.
 
@@ -93,21 +76,11 @@ Shared runtime services for event routing, immutable contexts, origin state, per
   <img width="100%" src="assets/profile-dashboard/project-plexoncore-light.svg" alt="PlexonCore engineering dashboard module with source-backed statistics and conceptual system preview.">
 </picture>
 
+> **Current experiment:** [Neural-Core-Dashboard](https://github.com/ZpkDxGames/Neural-Core-Dashboard) — a local-first personal knowledge network for ChatGPT, Claude and Gemini conversation archives.
 
-## Project matrix
+## Ecosystem
 
-A compact, source-backed view of every repository in the snapshot. Sorting reflects **90-day activity only**, never quality or maturity.
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/project-matrix-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/project-matrix-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/project-matrix-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/project-matrix-light.svg" alt="Repository matrix covering all in-scope public projects, with 90-day and 30-day commits, stable publication and source language.">
-</picture>
-
-## System topology
-
-The Plexon view below is an **organizational overview by responsibility**. Grouping does not assert dependency edges unless project documentation explicitly does so; historical and deprecated repositories remain visible.
+The Plexon projects are organized as a modular Minecraft server ecosystem: shared runtime services, gameplay modules, operations tooling and a browser-facing control plane. Historical and deprecated repositories stay visible without being presented as active dependencies.
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/ecosystem-mobile-dark.svg">
@@ -116,9 +89,16 @@ The Plexon view below is an **organizational overview by responsibility**. Group
   <img width="100%" src="assets/profile-dashboard/ecosystem-light.svg" alt="Plexon public repository ecosystem grouped by responsibility, with historical projects differentiated.">
 </picture>
 
-## Project observatory
+## Repository signals
 
-All charts below share the same dated repository snapshot. Release publication is **not deployment status**. Language totals are **source volume, not proficiency**.
+A compact project inventory first, followed by the activity timeline. These views are generated from the same dated snapshot so the profile stays informative without turning into a wall of charts.
+
+<picture>
+  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/project-matrix-mobile-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/project-matrix-mobile-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/project-matrix-dark.svg">
+  <img width="100%" src="assets/profile-dashboard/project-matrix-light.svg" alt="Repository matrix covering all in-scope public projects, with 90-day and 30-day commits, stable publication and source language.">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/activity-mobile-dark.svg">
@@ -127,63 +107,7 @@ All charts below share the same dated repository snapshot. Release publication i
   <img width="100%" src="assets/profile-dashboard/activity-light.svg" alt="90-day project-wide commit timeline with seven-day arithmetic mean.">
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/leaderboard-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/leaderboard-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/leaderboard-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/leaderboard-light.svg" alt="Project activity leaderboard using exact project-wide 90-day commit counts.">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/velocity-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/velocity-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/velocity-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/velocity-light.svg" alt="Ninety-day versus thirty-day repository activity matrix.">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/languages-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/languages-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/languages-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/languages-light.svg" alt="GitHub Linguist source-byte volume; source volume, not proficiency.">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/cadence-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/cadence-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/cadence-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/cadence-light.svg" alt="Published release cadence split into stable releases and prereleases.">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/versions-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/versions-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/versions-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/versions-light.svg" alt="Latest stable publication shelf for featured projects.">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/heatmap-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/heatmap-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/heatmap-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/heatmap-light.svg" alt="Monday-first project activity heatmap; not a personal contribution streak.">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/publication-radar-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/publication-radar-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/publication-radar-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/publication-radar-light.svg" alt="Recent publication radar with stable and prerelease markers.">
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/activity-window-mobile-dark.svg">
-  <source media="(max-width: 600px)" srcset="assets/profile-dashboard/activity-window-mobile-light.svg">
-  <source media="(prefers-color-scheme: dark)" srcset="assets/profile-dashboard/activity-window-dark.svg">
-  <img width="100%" src="assets/profile-dashboard/activity-window-light.svg" alt="Repository activity-window board; not a health score.">
-</picture>
-
-## Technology topology
+## Technology map
 
 <picture>
   <source media="(prefers-color-scheme: dark) and (max-width: 600px)" srcset="assets/profile-dashboard/stack-topology-mobile-dark.svg">
@@ -194,12 +118,12 @@ All charts below share the same dated repository snapshot. Release publication i
 
 ## Engineering approach
 
-I build around explicit state, bounded ownership and observable interfaces. In the Minecraft systems, that usually means keeping server authority separate from host operations and browser presentation; in desktop work, it means deterministic local behavior before adding external agency. Generated profile metrics follow the same rule: **snapshot first, presentation second**.
+I prefer explicit state over hidden behavior, narrow ownership boundaries over tightly coupled systems, and observable interfaces over guesswork. On server projects that means separating runtime authority, host operations and presentation; on desktop work it means deterministic local behavior before adding external agency.
 
-The dashboard itself is built with GitHub-safe Markdown/HTML and repository-hosted SVG. It does not require JavaScript, client-side API calls, iframes, canvas, or external statistics services. Animated assets keep a complete static final state for reduced-motion users.
+The profile follows the same principle: repository data is collected ahead of render time, transformed into GitHub-safe SVG, and committed as a static snapshot. No client-side scripts, iframes or external statistics services are required to render it.
 
 ## Contact
 
 [Portfolio](https://ajt-portfolio.vercel.app/) · [Creator hub](https://tonim-lp.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/antoniojtneto) · [SpigotMC](https://www.spigotmc.org/members/tonim.2373504/) · [Modrinth](https://modrinth.com/user/ZpkDxGames) · [Email](mailto:antoniojtneto.corp@gmail.com)
 
-<sub>Dashboard data is generated ahead of render time from GitHub repository/API data. Static assets intentionally avoid “live” or “realtime” claims.</sub>
+<sub>Dashboard assets support light/dark themes, responsive layouts and reduced-motion rendering. Snapshot metrics describe public repository activity and publication metadata, not personal contribution streaks or production health.</sub>
