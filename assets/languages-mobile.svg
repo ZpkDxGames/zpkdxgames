@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="620" viewBox="0 0 420 620" role="img" aria-labelledby="title desc">
+<title id="title">Repository language mix</title><desc id="desc">Language bytes from public original repositories, excluding this profile. Java: 85.9%; Python: 4.5%; JavaScript: 3.7%; TypeScript: 3.3%; CSS: 1.2%; Other: 1.4%. This is code share, not proficiency.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e35"/><stop offset=".5" stop-color="#070e1d"/><stop offset="1" stop-color="#0d2136"/></linearGradient>
+  <linearGradient id="accent"><stop stop-color="#4b91ff"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".25"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 H 0 V 32" fill="none" stroke="#1d3753" stroke-width=".65"/></pattern>
+  <clipPath id="panel"><rect x="1" y="1" width="418" height="618" rx="22"/></clipPath>
+</defs>
+<style>
+text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#f0f7ff;}
+.mono{font-family:Consolas,'Liberation Mono',monospace;letter-spacing:.7px;}
+.spin{transform-box:fill-box;transform-origin:center;animation:orbit 48s linear infinite;}
+.flow{stroke-dasharray:28 180;animation:flow 8s linear infinite;}
+.soft{animation:soft 5s ease-in-out infinite;}
+.float{animation:float 6s ease-in-out infinite;}
+@keyframes orbit{to{transform:rotate(360deg);}}
+@keyframes flow{to{stroke-dashoffset:-416;}}
+@keyframes soft{0%,100%{opacity:.45;}50%{opacity:1;}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+@media (prefers-reduced-motion:reduce){.spin,.flow,.soft,.float{animation:none;}}
+</style>
+<rect x="1" y="1" width="418" height="618" rx="22" fill="url(#bg)" stroke="#223b55"/>
+<g clip-path="url(#panel)"><rect width="420" height="620" fill="url(#grid)" opacity=".16"/>
+<ellipse cx="382.2" cy="0" rx="197.39999999999998" ry="545.6" fill="url(#aura)"/></g>
+<text x="26" y="47" font-size="27" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff">Repository language mix</text>
+<text x="26" y="80" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Code bytes · public original repos</text>
+<circle cx="210" cy="192" r="79" fill="none" stroke="#162c44" stroke-width="23" />
+<circle cx="210" cy="192" r="79" fill="none" stroke="#55e1ee" stroke-width="23" stroke-dasharray="426.4706 496.3716" stroke-dashoffset="0.0000" transform="rotate(-90 210 192)"/>
+<circle cx="210" cy="192" r="79" fill="none" stroke="#4b91ff" stroke-width="23" stroke-dasharray="22.5234 496.3716" stroke-dashoffset="-426.4706" transform="rotate(-90 210 192)"/>
+<circle cx="210" cy="192" r="79" fill="none" stroke="#80b5ff" stroke-width="23" stroke-dasharray="18.2901 496.3716" stroke-dashoffset="-448.9939" transform="rotate(-90 210 192)"/>
+<circle cx="210" cy="192" r="79" fill="none" stroke="#45bda9" stroke-width="23" stroke-dasharray="16.2669 496.3716" stroke-dashoffset="-467.2841" transform="rotate(-90 210 192)"/>
+<circle cx="210" cy="192" r="79" fill="none" stroke="#ccdffe" stroke-width="23" stroke-dasharray="5.9644 496.3716" stroke-dashoffset="-483.5510" transform="rotate(-90 210 192)"/>
+<circle cx="210" cy="192" r="79" fill="none" stroke="#527087" stroke-width="23" stroke-dasharray="6.8563 496.3716" stroke-dashoffset="-489.5154" transform="rotate(-90 210 192)"/>
+<circle cx="210" cy="192" r="106" fill="none" stroke="#4b91ff" stroke-width="1" stroke-dasharray="1 15" class="spin" opacity=".6"/>
+<text x="210" y="186" font-size="22" font-weight="400" class="mono" text-anchor="middle" style="fill:#afc4da">CODE</text>
+<text x="210" y="223" font-size="34" font-weight="600" class="" text-anchor="middle" style="fill:#f0f7ff">100%</text>
+<circle cx="31" cy="317" r="5" fill="#55e1ee" stroke="none" stroke-width="1" />
+<text x="46" y="324" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#f0f7ff">Java</text>
+<text x="394" y="324" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">85.9%</text>
+<rect x="26" y="333" width="368" height="5" rx="2" fill="#193149" stroke="none" />
+<rect x="26" y="333" width="316.17673215783674" height="5" rx="2" fill="#55e1ee" stroke="none" />
+<circle cx="31" cy="360" r="5" fill="#4b91ff" stroke="none" stroke-width="1" />
+<text x="46" y="367" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#f0f7ff">Python</text>
+<text x="394" y="367" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">4.5%</text>
+<rect x="26" y="376" width="368" height="5" rx="2" fill="#193149" stroke="none" />
+<rect x="26" y="376" width="16.698396780950876" height="5" rx="2" fill="#4b91ff" stroke="none" />
+<circle cx="31" cy="403" r="5" fill="#80b5ff" stroke="none" stroke-width="1" />
+<text x="46" y="410" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#f0f7ff">JavaScript</text>
+<text x="394" y="410" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">3.7%</text>
+<rect x="26" y="419" width="368" height="5" rx="2" fill="#193149" stroke="none" />
+<rect x="26" y="419" width="13.559926562691597" height="5" rx="2" fill="#80b5ff" stroke="none" />
+<circle cx="31" cy="446" r="5" fill="#45bda9" stroke="none" stroke-width="1" />
+<text x="46" y="453" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#f0f7ff">TypeScript</text>
+<text x="394" y="453" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">3.3%</text>
+<rect x="26" y="462" width="368" height="5" rx="2" fill="#193149" stroke="none" />
+<rect x="26" y="462" width="12.059942259393045" height="5" rx="2" fill="#45bda9" stroke="none" />
+<circle cx="31" cy="489" r="5" fill="#ccdffe" stroke="none" stroke-width="1" />
+<text x="46" y="496" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#f0f7ff">CSS</text>
+<text x="394" y="496" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">1.2%</text>
+<rect x="26" y="505" width="368" height="5" rx="2" fill="#193149" stroke="none" />
+<rect x="26" y="505" width="4.42191409781129" height="5" rx="2" fill="#ccdffe" stroke="none" />
+<circle cx="31" cy="532" r="5" fill="#527087" stroke="none" stroke-width="1" />
+<text x="46" y="539" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#f0f7ff">Other</text>
+<text x="394" y="539" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">1.4%</text>
+<rect x="26" y="548" width="368" height="5" rx="2" fill="#193149" stroke="none" />
+<rect x="26" y="548" width="5.083088141316464" height="5" rx="2" fill="#527087" stroke="none" />
+<text x="26" y="599" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Language share, not proficiency.</text>
+</svg>

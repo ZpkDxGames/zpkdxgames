@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="500" viewBox="0 0 420 500" role="img" aria-labelledby="title desc">
+<title id="title">Desktop Companion</title><desc id="desc">A local-first Windows companion that brings Minecraft skins to life with 3D animation and expressive eyes. Built with JavaScript, Three.js, Tauri. Conceptual vector illustration; open the card to see the source repository.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e35"/><stop offset=".5" stop-color="#070e1d"/><stop offset="1" stop-color="#0d2136"/></linearGradient>
+  <linearGradient id="accent"><stop stop-color="#4b91ff"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".25"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 H 0 V 32" fill="none" stroke="#1d3753" stroke-width=".65"/></pattern>
+  <clipPath id="panel"><rect x="1" y="1" width="418" height="498" rx="22"/></clipPath>
+</defs>
+<style>
+text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#f0f7ff;}
+.mono{font-family:Consolas,'Liberation Mono',monospace;letter-spacing:.7px;}
+.spin{transform-box:fill-box;transform-origin:center;animation:orbit 48s linear infinite;}
+.flow{stroke-dasharray:28 180;animation:flow 8s linear infinite;}
+.soft{animation:soft 5s ease-in-out infinite;}
+.float{animation:float 6s ease-in-out infinite;}
+@keyframes orbit{to{transform:rotate(360deg);}}
+@keyframes flow{to{stroke-dashoffset:-416;}}
+@keyframes soft{0%,100%{opacity:.45;}50%{opacity:1;}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+@media (prefers-reduced-motion:reduce){.spin,.flow,.soft,.float{animation:none;}}
+</style>
+<rect x="1" y="1" width="418" height="498" rx="22" fill="url(#bg)" stroke="#223b55"/>
+<g clip-path="url(#panel)"><rect width="420" height="500" fill="url(#grid)" opacity=".16"/>
+<ellipse cx="382.2" cy="0" rx="197.39999999999998" ry="440.0" fill="url(#aura)"/></g>
+<text x="26" y="38" font-size="20" font-weight="400" class="mono" text-anchor="start" style="fill:#55e1ee">DESKTOP / 3D INTERACTION</text>
+<g transform="translate(210,161) scale(0.84)">
+<circle cx="0" cy="0" r="110" fill="none" stroke="#4b91ff" stroke-width="1" stroke-dasharray="2 15" class="spin" opacity=".35"/>
+<circle cx="0" cy="0" r="83" fill="url(#aura)" stroke="#21435f" stroke-width="1" />
+<g class="float">
+<path d="M-28,-68 L0,-83 L31,-68 V-25 L0,-9 L-28,-25Z" fill="#194468" stroke="#55e1ee" stroke-width="1.7"/>
+<path d="M0,-83 V-40 L31,-25 M-28,-68 L0,-40 L31,-68" fill="none" stroke="#3c86a6"/>
+<rect x="-17" y="-51" width="7" height="7" rx="0" fill="#55e1ee" stroke="none" />
+<rect x="7" y="-51" width="7" height="7" rx="0" fill="#55e1ee" stroke="none" />
+<path d="M-33,-14 L0,-1 L33,-14 V46 L0,61 L-33,46Z" fill="#146985" stroke="#4b91ff" stroke-width="1.5"/>
+<path d="M-50,-13 L-35,-6 V41 L-50,34Z M36,-6 L54,-17 V30 L36,41Z" fill="#1a4d75" stroke="#67aec9"/>
+<path d="M-30,49 L-4,60 V91 L-30,80Z M4,60 L30,49 V80 L4,92Z" fill="#173956" stroke="#3d77a0"/>
+</g>
+<ellipse cx="0" cy="101" rx="59" ry="9" fill="#55e1ee" opacity=".07"/>
+</g>
+<text x="26" y="287" font-size="30" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff" letter-spacing="-0.7">Desktop Companion</text>
+<text x="26" y="326" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">A local-first Windows companion</text>
+<text x="26" y="353" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">that brings Minecraft skins to life</text>
+<text x="26" y="380" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">with 3D animation and expressive</text>
+<text x="26" y="407" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">eyes.</text>
+<rect x="26" y="450" width="126" height="34" rx="7" fill="#112a40" stroke="#28495f" />
+<text x="39" y="474" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">JavaScript</text>
+<rect x="161" y="450" width="106" height="34" rx="7" fill="#112a40" stroke="#28495f" />
+<text x="174" y="474" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Three.js</text>
+<rect x="276" y="450" width="76" height="34" rx="7" fill="#112a40" stroke="#28495f" />
+<text x="289" y="474" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Tauri</text>
+</svg>

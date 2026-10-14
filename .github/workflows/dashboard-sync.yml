@@ -1,0 +1,51 @@
+name: Dashboard sync
+
+on:
+  schedule:
+    - cron: "17 6,18 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "config/**"
+      - "scripts/**"
+      - "tests/**"
+      - ".github/workflows/dashboard-sync.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-dashboard
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout current source
+        uses: actions/checkout@v6
+
+      - name: Test data handling
+        run: python3 -m unittest discover -s tests -v
+
+      - name: Fetch public GitHub data and render dashboard
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/dashboard.py --refresh
+
+      - name: Validate SVGs and README references
+        run: python3 scripts/dashboard.py --check
+
+      - name: Commit refreshed dashboard
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets data
+          if git diff --cached --quiet; then
+            echo "Dashboard is current."
+            exit 0
+          fi
+          git commit -m "chore: refresh dashboard statistics"
+          git push origin HEAD:main

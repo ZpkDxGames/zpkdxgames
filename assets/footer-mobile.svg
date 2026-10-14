@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="151" viewBox="0 0 420 151" role="img" aria-labelledby="title desc">
+<title id="title">Let&#x27;s build something useful</title><desc id="desc">Explore the source. Follow the build.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e35"/><stop offset=".5" stop-color="#070e1d"/><stop offset="1" stop-color="#0d2136"/></linearGradient>
+  <linearGradient id="accent"><stop stop-color="#4b91ff"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".25"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 H 0 V 32" fill="none" stroke="#1d3753" stroke-width=".65"/></pattern>
+  <clipPath id="panel"><rect x="1" y="1" width="418" height="149" rx="22"/></clipPath>
+</defs>
+<style>
+text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#f0f7ff;}
+.mono{font-family:Consolas,'Liberation Mono',monospace;letter-spacing:.7px;}
+.spin{transform-box:fill-box;transform-origin:center;animation:orbit 48s linear infinite;}
+.flow{stroke-dasharray:28 180;animation:flow 8s linear infinite;}
+.soft{animation:soft 5s ease-in-out infinite;}
+.float{animation:float 6s ease-in-out infinite;}
+@keyframes orbit{to{transform:rotate(360deg);}}
+@keyframes flow{to{stroke-dashoffset:-416;}}
+@keyframes soft{0%,100%{opacity:.45;}50%{opacity:1;}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+@media (prefers-reduced-motion:reduce){.spin,.flow,.soft,.float{animation:none;}}
+</style>
+<rect x="1" y="1" width="418" height="149" rx="22" fill="url(#bg)" stroke="#223b55"/>
+<g clip-path="url(#panel)"><rect width="420" height="151" fill="url(#grid)" opacity=".16"/>
+<ellipse cx="382.2" cy="0" rx="197.39999999999998" ry="132.88" fill="url(#aura)"/></g>
+<text x="26" y="51" font-size="27" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff" letter-spacing="-0.5">Let&#x27;s build something</text>
+<text x="26" y="87" font-size="27" font-weight="600" class="" text-anchor="start" style="fill:#55e1ee">useful.</text>
+<text x="26" y="126" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Explore the source. Follow the build.</text>
+</svg>

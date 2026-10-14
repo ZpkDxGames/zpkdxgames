@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="595" viewBox="0 0 420 595" role="img" aria-labelledby="title desc">
+<title id="title">Contribution rhythm</title><desc id="desc">Twelve calendar weeks of real GitHub profile contributions, from 2026-07-27 through 2026-10-14. 3734 contributions in this interval. Current week is in progress. Weekly bars and daily heatmap use identical calendar data.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e35"/><stop offset=".5" stop-color="#070e1d"/><stop offset="1" stop-color="#0d2136"/></linearGradient>
+  <linearGradient id="accent"><stop stop-color="#4b91ff"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".25"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 H 0 V 32" fill="none" stroke="#1d3753" stroke-width=".65"/></pattern>
+  <clipPath id="panel"><rect x="1" y="1" width="418" height="593" rx="22"/></clipPath>
+</defs>
+<style>
+text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#f0f7ff;}
+.mono{font-family:Consolas,'Liberation Mono',monospace;letter-spacing:.7px;}
+.spin{transform-box:fill-box;transform-origin:center;animation:orbit 48s linear infinite;}
+.flow{stroke-dasharray:28 180;animation:flow 8s linear infinite;}
+.soft{animation:soft 5s ease-in-out infinite;}
+.float{animation:float 6s ease-in-out infinite;}
+@keyframes orbit{to{transform:rotate(360deg);}}
+@keyframes flow{to{stroke-dashoffset:-416;}}
+@keyframes soft{0%,100%{opacity:.45;}50%{opacity:1;}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+@media (prefers-reduced-motion:reduce){.spin,.flow,.soft,.float{animation:none;}}
+</style>
+<rect x="1" y="1" width="418" height="593" rx="22" fill="url(#bg)" stroke="#223b55"/>
+<g clip-path="url(#panel)"><rect width="420" height="595" fill="url(#grid)" opacity=".16"/>
+<ellipse cx="382.2" cy="0" rx="197.39999999999998" ry="523.6" fill="url(#aura)"/></g>
+<text x="26" y="47" font-size="28" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff">Contribution rhythm</text>
+<text x="26" y="79" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">12 weeks · current week in progress</text>
+<text x="26" y="130" font-size="36" font-weight="650" class="" text-anchor="start" style="fill:#55e1ee">3,734</text>
+<text x="394" y="130" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">contributions</text>
+<text x="26" y="165" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Weekly contributions</text>
+<path d="M75,333.0 L387,333.0" fill="none" stroke="#223b55" stroke-width="0.8" />
+<text x="65" y="339.0" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">0</text>
+<path d="M75,296.5 L387,296.5" fill="none" stroke="#223b55" stroke-width="0.8" />
+<text x="65" y="302.5" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">664</text>
+<path d="M75,260.0 L387,260.0" fill="none" stroke="#223b55" stroke-width="0.8" />
+<text x="65" y="266.0" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">1.3k</text>
+<path d="M75,223.5 L387,223.5" fill="none" stroke="#223b55" stroke-width="0.8" />
+<text x="65" y="229.5" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">2.0k</text>
+<path d="M75,187.0 L387,187.0" fill="none" stroke="#223b55" stroke-width="0.8" />
+<text x="65" y="193.0" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">2.7k</text>
+<rect x="80.0" y="333.0" width="16" height="0.0" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<text x="88.0" y="363" font-size="20" font-weight="400" class="" text-anchor="middle" style="fill:#afc4da">27 Jul</text>
+<rect x="106.0" y="332.72515060240966" width="16" height="0.2748493975903614" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<rect x="132.0" y="331.46084337349396" width="16" height="1.5391566265060241" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<rect x="158.0" y="332.8350903614458" width="16" height="0.16490963855421686" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<rect x="184.0" y="331.13102409638554" width="16" height="1.8689759036144578" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<text x="192.0" y="363" font-size="20" font-weight="400" class="" text-anchor="middle" style="fill:#afc4da">24 Aug</text>
+<rect x="210.0" y="317.3335843373494" width="16" height="15.666415662650602" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<rect x="236.0" y="187.1649096385542" width="16" height="145.8350903614458" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<rect x="262.0" y="316.28915662650604" width="16" height="16.710843373493976" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<rect x="288.0" y="332.1754518072289" width="16" height="0.8245481927710844" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<text x="296.0" y="363" font-size="20" font-weight="400" class="" text-anchor="middle" style="fill:#afc4da">21 Sep</text>
+<rect x="314.0" y="326.953313253012" width="16" height="6.046686746987952" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<rect x="340.0" y="329.97665662650604" width="16" height="3.023343373493976" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<rect x="366.0" y="319.6972891566265" width="16" height="13.302710843373495" rx="3" fill="url(#bar)" stroke="none" opacity=".85"/>
+<text x="374.0" y="363" font-size="20" font-weight="400" class="" text-anchor="middle" style="fill:#afc4da">12 Oct</text>
+<polyline points="88.00,333.00 114.00,332.73 140.00,331.46 166.00,332.84 192.00,331.13 218.00,317.33 244.00,187.16 270.00,316.29 296.00,332.18 322.00,326.95 348.00,329.98 374.00,319.70" fill="none" stroke="#55e1ee" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="374.0" cy="319.6972891566265" r="5" fill="#55e1ee" stroke="#070e1d" stroke-width="2" class="soft"/>
+<text x="26" y="394" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Daily density</text>
+<rect x="112" y="411" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="112" y="433" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="112" y="455" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="112" y="477" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="112" y="499" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="112" y="521" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="112" y="543" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="134" y="411" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="134" y="433" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="134" y="455" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="134" y="477" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="134" y="499" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="134" y="521" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="134" y="543" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="156" y="411" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="156" y="433" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="156" y="455" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="156" y="477" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="156" y="499" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="156" y="521" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="156" y="543" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="178" y="411" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="178" y="433" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="178" y="455" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="178" y="477" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="178" y="499" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="178" y="521" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="178" y="543" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="200" y="411" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="200" y="433" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="200" y="455" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="200" y="477" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="200" y="499" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="200" y="521" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="200" y="543" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="222" y="411" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="222" y="433" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="222" y="455" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="222" y="477" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="222" y="499" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="222" y="521" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="222" y="543" width="17" height="17" rx="3" fill="#35accd" stroke="none" />
+<rect x="244" y="411" width="17" height="17" rx="3" fill="#35accd" stroke="none" />
+<rect x="244" y="433" width="17" height="17" rx="3" fill="#35accd" stroke="none" />
+<rect x="244" y="455" width="17" height="17" rx="3" fill="#35accd" stroke="none" />
+<rect x="244" y="477" width="17" height="17" rx="3" fill="#35accd" stroke="none" />
+<rect x="244" y="499" width="17" height="17" rx="3" fill="#35accd" stroke="none" />
+<rect x="244" y="521" width="17" height="17" rx="3" fill="#55e1ee" stroke="none" />
+<rect x="244" y="543" width="17" height="17" rx="3" fill="#35accd" stroke="none" />
+<rect x="266" y="411" width="17" height="17" rx="3" fill="#35accd" stroke="none" />
+<rect x="266" y="433" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="266" y="455" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="266" y="477" width="17" height="17" rx="3" fill="#35accd" stroke="none" />
+<rect x="266" y="499" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="266" y="521" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="266" y="543" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="288" y="411" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="288" y="433" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="288" y="455" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="288" y="477" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="288" y="499" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="288" y="521" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="288" y="543" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="310" y="411" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="310" y="433" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="310" y="455" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="310" y="477" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="310" y="499" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="310" y="521" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="310" y="543" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="332" y="411" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="332" y="433" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="332" y="455" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="332" y="477" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="332" y="499" width="17" height="17" rx="3" fill="#12233a" stroke="none" />
+<rect x="332" y="521" width="17" height="17" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="332" y="543" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="354" y="411" width="17" height="17" rx="3" fill="#35accd" stroke="none" />
+<rect x="354" y="433" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="354" y="455" width="17" height="17" rx="3" fill="#2779a8" stroke="none" />
+<rect x="354" y="477" width="17" height="17" rx="3" fill="#070e1d" stroke="#223b55" />
+<rect x="354" y="499" width="17" height="17" rx="3" fill="#070e1d" stroke="#223b55" />
+<rect x="354" y="521" width="17" height="17" rx="3" fill="#070e1d" stroke="#223b55" />
+<rect x="354" y="543" width="17" height="17" rx="3" fill="#070e1d" stroke="#223b55" />
+<text x="98" y="426" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">M</text>
+<text x="98" y="470" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">W</text>
+<text x="98" y="514" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#afc4da">F</text>
+<text x="112" y="582" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Less</text>
+<rect x="163" y="566" width="16" height="16" rx="3" fill="#12233a" stroke="none" />
+<rect x="184" y="566" width="16" height="16" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="205" y="566" width="16" height="16" rx="3" fill="#2779a8" stroke="none" />
+<rect x="226" y="566" width="16" height="16" rx="3" fill="#35accd" stroke="none" />
+<rect x="247" y="566" width="16" height="16" rx="3" fill="#55e1ee" stroke="none" />
+<text x="276" y="582" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">More</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="264" viewBox="0 0 900 264" role="img" aria-labelledby="title desc">
+<title id="title">GitHub at a glance</title><desc id="desc">32 public repositories; 30 original repositories excluding the profile; 3782 profile contributions and 54 active days in the last 365 calendar days. Snapshot 2026-10-14T15:10:33Z.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e35"/><stop offset=".5" stop-color="#070e1d"/><stop offset="1" stop-color="#0d2136"/></linearGradient>
+  <linearGradient id="accent"><stop stop-color="#4b91ff"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".25"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 H 0 V 32" fill="none" stroke="#1d3753" stroke-width=".65"/></pattern>
+  <clipPath id="panel"><rect x="1" y="1" width="898" height="262" rx="22"/></clipPath>
+</defs>
+<style>
+text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#f0f7ff;}
+.mono{font-family:Consolas,'Liberation Mono',monospace;letter-spacing:.7px;}
+.spin{transform-box:fill-box;transform-origin:center;animation:orbit 48s linear infinite;}
+.flow{stroke-dasharray:28 180;animation:flow 8s linear infinite;}
+.soft{animation:soft 5s ease-in-out infinite;}
+.float{animation:float 6s ease-in-out infinite;}
+@keyframes orbit{to{transform:rotate(360deg);}}
+@keyframes flow{to{stroke-dashoffset:-416;}}
+@keyframes soft{0%,100%{opacity:.45;}50%{opacity:1;}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+@media (prefers-reduced-motion:reduce){.spin,.flow,.soft,.float{animation:none;}}
+</style>
+<rect x="1" y="1" width="898" height="262" rx="22" fill="url(#bg)" stroke="#223b55"/>
+<g clip-path="url(#panel)"><rect width="900" height="264" fill="url(#grid)" opacity=".16"/>
+<ellipse cx="819.0" cy="0" rx="423.0" ry="232.32" fill="url(#aura)"/></g>
+<text x="36" y="43" font-size="26" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff">GitHub at a glance</text>
+<text x="864" y="43" font-size="16" font-weight="400" class="mono" text-anchor="end" style="fill:#afc4da">14 OCT 2026 / UTC</text>
+<rect x="36" y="81" width="177" height="149" rx="12" fill="#0d1b2e" stroke="#223b55" />
+<path d="M52,82 L197,82" fill="none" stroke="#55e1ee" stroke-width="2" />
+<text x="52" y="139" font-size="42" font-weight="650" class="" text-anchor="start" style="fill:#f0f7ff" letter-spacing="-1.5">32</text>
+<text x="52" y="179" font-size="19" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff">Public repos</text>
+<text x="52" y="209" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Owned + forks</text>
+<rect x="253" y="81" width="177" height="149" rx="12" fill="#0d1b2e" stroke="#223b55" />
+<path d="M269,82 L414,82" fill="none" stroke="#4b91ff" stroke-width="2" />
+<text x="269" y="139" font-size="42" font-weight="650" class="" text-anchor="start" style="fill:#f0f7ff" letter-spacing="-1.5">30</text>
+<text x="269" y="179" font-size="19" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff">Original repos</text>
+<text x="269" y="209" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Excludes profile</text>
+<rect x="470" y="81" width="177" height="149" rx="12" fill="#0d1b2e" stroke="#223b55" />
+<path d="M486,82 L631,82" fill="none" stroke="#55e1ee" stroke-width="2" />
+<text x="486" y="139" font-size="42" font-weight="650" class="" text-anchor="start" style="fill:#f0f7ff" letter-spacing="-1.5">3,782</text>
+<text x="486" y="179" font-size="19" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff">Contributions</text>
+<text x="486" y="209" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Past 365 days</text>
+<rect x="687" y="81" width="177" height="149" rx="12" fill="#0d1b2e" stroke="#223b55" />
+<path d="M703,82 L848,82" fill="none" stroke="#4b91ff" stroke-width="2" />
+<text x="703" y="139" font-size="42" font-weight="650" class="" text-anchor="start" style="fill:#f0f7ff" letter-spacing="-1.5">54</text>
+<text x="703" y="179" font-size="19" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff">Active days</text>
+<text x="703" y="209" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Past 365 days</text>
+<text x="36" y="252" font-size="16" font-weight="400" class="mono" text-anchor="start" style="fill:#afc4da">PUBLIC REPOSITORIES / PROFILE CONTRIBUTION CALENDAR</text>
+</svg>

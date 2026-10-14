@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="500" viewBox="0 0 420 500" role="img" aria-labelledby="title desc">
+<title id="title">PlexonPanel</title><desc id="desc">A coordinated control plane for Paper servers: pairing, telemetry, host agents, and recovery tooling. Built with Java, Paper, Linux. Conceptual vector illustration; open the card to see the source repository.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e35"/><stop offset=".5" stop-color="#070e1d"/><stop offset="1" stop-color="#0d2136"/></linearGradient>
+  <linearGradient id="accent"><stop stop-color="#4b91ff"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#255795"/><stop offset="1" stop-color="#55e1ee"/></linearGradient>
+  <radialGradient id="aura"><stop stop-color="#2386b5" stop-opacity=".25"/><stop offset="1" stop-color="#2386b5" stop-opacity="0"/></radialGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M 32 0 H 0 V 32" fill="none" stroke="#1d3753" stroke-width=".65"/></pattern>
+  <clipPath id="panel"><rect x="1" y="1" width="418" height="498" rx="22"/></clipPath>
+</defs>
+<style>
+text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;fill:#f0f7ff;}
+.mono{font-family:Consolas,'Liberation Mono',monospace;letter-spacing:.7px;}
+.spin{transform-box:fill-box;transform-origin:center;animation:orbit 48s linear infinite;}
+.flow{stroke-dasharray:28 180;animation:flow 8s linear infinite;}
+.soft{animation:soft 5s ease-in-out infinite;}
+.float{animation:float 6s ease-in-out infinite;}
+@keyframes orbit{to{transform:rotate(360deg);}}
+@keyframes flow{to{stroke-dashoffset:-416;}}
+@keyframes soft{0%,100%{opacity:.45;}50%{opacity:1;}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-4px);}}
+@media (prefers-reduced-motion:reduce){.spin,.flow,.soft,.float{animation:none;}}
+</style>
+<rect x="1" y="1" width="418" height="498" rx="22" fill="url(#bg)" stroke="#223b55"/>
+<g clip-path="url(#panel)"><rect width="420" height="500" fill="url(#grid)" opacity=".16"/>
+<ellipse cx="382.2" cy="0" rx="197.39999999999998" ry="440.0" fill="url(#aura)"/></g>
+<text x="26" y="38" font-size="20" font-weight="400" class="mono" text-anchor="start" style="fill:#55e1ee">MINECRAFT / SERVER SYSTEMS</text>
+<g transform="translate(210,161) scale(0.84)">
+<circle cx="0" cy="0" r="110" fill="none" stroke="#4b91ff" stroke-width="1" stroke-dasharray="2 15" class="spin" opacity=".35"/>
+<circle cx="0" cy="0" r="83" fill="url(#aura)" stroke="#21435f" stroke-width="1" />
+<rect x="-66" y="-76" width="132" height="37" rx="7" fill="#0d2239" stroke="#356383" />
+<rect x="-51" y="-65" width="65" height="5" rx="2" fill="#356687" stroke="none" />
+<rect x="-51" y="-54" width="43" height="4" rx="2" fill="#203e5b" stroke="none" />
+<circle cx="46" cy="-58" r="4" fill="#55e1ee" stroke="none" stroke-width="1" class="soft"/>
+<rect x="-66" y="-25" width="132" height="37" rx="7" fill="#0d2239" stroke="#356383" />
+<rect x="-51" y="-14" width="65" height="5" rx="2" fill="#356687" stroke="none" />
+<rect x="-51" y="-3" width="43" height="4" rx="2" fill="#203e5b" stroke="none" />
+<circle cx="46" cy="-7" r="4" fill="#55e1ee" stroke="none" stroke-width="1" class="soft"/>
+<rect x="-66" y="26" width="132" height="37" rx="7" fill="#0d2239" stroke="#356383" />
+<rect x="-51" y="37" width="65" height="5" rx="2" fill="#356687" stroke="none" />
+<rect x="-51" y="48" width="43" height="4" rx="2" fill="#203e5b" stroke="none" />
+<circle cx="46" cy="44" r="4" fill="#55e1ee" stroke="none" stroke-width="1" class="soft"/>
+<path d="M-66,-30 H-101 V63 H-43" fill="none" stroke="#315779" stroke-width="2"/>
+<path d="M-66,-30 H-101 V63 H-43" fill="none" stroke="#55e1ee" stroke-width="2" class="flow"/>
+<path d="M66,-30 H101 V63 H43" fill="none" stroke="#315779" stroke-width="2"/>
+<path d="M66,-30 H101 V63 H43" fill="none" stroke="#55e1ee" stroke-width="2" class="flow"/>
+<circle cx="0" cy="83" r="7" fill="#55e1ee" stroke="none" stroke-width="1" />
+</g>
+<text x="26" y="287" font-size="30" font-weight="600" class="" text-anchor="start" style="fill:#f0f7ff" letter-spacing="-0.7">PlexonPanel</text>
+<text x="26" y="326" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">A coordinated control plane for</text>
+<text x="26" y="353" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Paper servers: pairing, telemetry,</text>
+<text x="26" y="380" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">host agents, and recovery tooling.</text>
+<rect x="26" y="450" width="66" height="34" rx="7" fill="#112a40" stroke="#28495f" />
+<text x="39" y="474" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Java</text>
+<rect x="101" y="450" width="76" height="34" rx="7" fill="#112a40" stroke="#28495f" />
+<text x="114" y="474" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Paper</text>
+<rect x="186" y="450" width="76" height="34" rx="7" fill="#112a40" stroke="#28495f" />
+<text x="199" y="474" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#afc4da">Linux</text>
+</svg>

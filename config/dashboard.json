@@ -1,0 +1,41 @@
+{
+  "username": "ZpkDxGames",
+  "name": "Tonim",
+  "bio": "I build Minecraft server systems, developer tools, and local-first interactive apps. My projects connect gameplay, useful automation, and interfaces that make complex systems easier to understand.",
+  "portfolio": "https://ajt-portfolio.vercel.app/",
+  "exclude_languages": ["zpkdxgames"],
+  "projects": [
+    {
+      "repo": "PlexonPanel",
+      "title": "PlexonPanel",
+      "category": "MINECRAFT / SERVER SYSTEMS",
+      "description": "A coordinated control plane for Paper servers: pairing, telemetry, host agents, and recovery tooling.",
+      "tags": ["Java", "Paper", "Linux"],
+      "visual": "servers"
+    },
+    {
+      "repo": "AI-Desktop-Companion",
+      "title": "Desktop Companion",
+      "category": "DESKTOP / 3D INTERACTION",
+      "description": "A local-first Windows companion that brings Minecraft skins to life with 3D animation and expressive eyes.",
+      "tags": ["JavaScript", "Three.js", "Tauri"],
+      "visual": "companion"
+    },
+    {
+      "repo": "PlexonPanel-Dashboard",
+      "title": "Plexon Command Center",
+      "category": "WEB / OPERATIONS INTERFACE",
+      "description": "A responsive operations interface for server pairing, observability, and the PlexonPanel control plane.",
+      "tags": ["TypeScript", "React", "Vite"],
+      "visual": "dashboard"
+    },
+    {
+      "repo": "Neural-Core-Dashboard",
+      "title": "Neural Core",
+      "category": "LOCAL-FIRST / KNOWLEDGE GRAPH",
+      "description": "A personal knowledge network for conversation archives, with an interactive 3D graph and browser-local storage.",
+      "tags": ["TypeScript", "Next.js", "WebGL"],
+      "visual": "network"
+    }
+  ]
+}

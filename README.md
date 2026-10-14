@@ -1,80 +1,102 @@
-<!-- ZpkDxGames profile · responsive edition · generated visuals live in assets/ -->
+<!-- Generated from config/dashboard.json and the dated public snapshot. -->
 
-<div align="center">
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/hero-mobile.svg?v=165f5828c123">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/hero-wide.svg?v=0b01f55aa843" width="100%" alt="ZpkDxGames — Tonim. Minecraft worlds. Real-world tools.">
+</picture>
 
-<img src="assets/hero.svg" alt="ZpkDxGames — engineering reliable systems for persistent worlds" width="100%">
+I'm **Tonim** (ZpkDxGames), a programmer based in Brazil. I build Minecraft server systems, developer tools, and local-first interactive apps. My projects connect gameplay, useful automation, and interfaces that make complex systems easier to understand.
 
-<br>
+[Explore repositories](https://github.com/ZpkDxGames?tab=repositories) · [Portfolio](https://ajt-portfolio.vercel.app/) · [Follow the work](https://github.com/ZpkDxGames?tab=followers)
 
-<a href="https://github.com/ZpkDxGames?tab=followers"><img alt="Follow ZpkDxGames" src="https://img.shields.io/github/followers/ZpkDxGames?style=for-the-badge&logo=github&label=FOLLOW&color=6C63FF"></a>
-<a href="https://github.com/ZpkDxGames?tab=repositories"><img alt="Explore repositories" src="https://img.shields.io/badge/EXPLORE-REPOSITORIES-25C2D8?style=for-the-badge&logo=github&logoColor=white"></a>
-<a href="https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/profile-sync.yml"><img alt="Profile sync status" src="https://img.shields.io/github/actions/workflow/status/ZpkDxGames/zpkdxgames/profile-sync.yml?style=for-the-badge&logo=githubactions&label=PROFILE"></a>
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-mobile.svg?v=51839626ab86">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-wide.svg?v=ee69049f1384" width="100%" alt="32 public repos · 30 original repos · 3,782 contributions · 54 active days. Profile calendar: 2025-10-15 through 2026-10-14.">
+</picture>
 
-</div>
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-mobile.svg?v=ffca4a365bea">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-wide.svg?v=bc5e2a2d27a4" width="100%" alt="Real GitHub contributions: twelve weekly totals and a matching daily heatmap. Current week is in progress.">
+</picture>
 
-## Engineering that survives contact with production
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/languages-mobile.svg?v=b59bc05eab24">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/languages-wide.svg?v=0b9f21e481ad" width="100%" alt="Code language share across public original repositories: Java 85.9%, Python 4.5%, JavaScript 3.7%, TypeScript 3.3%, CSS 1.2%, Other 1.4%.">
+</picture>
 
-I build Minecraft server systems, backend services, and operational tooling with a simple goal: make complex behavior feel clear to players and predictable to operators.
+## Selected projects
 
-My work sits where gameplay, distributed state, and real-world operations meet—event-driven mechanics, persistent data, secure control planes, telemetry, deployment, and recovery.
+Minecraft infrastructure, desktop interaction, and useful web interfaces. Open a card to explore its source.
 
-<img src="assets/capabilities.svg" alt="Three engineering capabilities: gameplay systems, runtime and data, and operations" width="100%">
+<a href="https://github.com/ZpkDxGames/PlexonPanel">
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/project-servers-mobile.svg?v=67ab0166fab6">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/project-servers-wide.svg?v=a108454db9ab" width="100%" alt="PlexonPanel — A coordinated control plane for Paper servers: pairing, telemetry, host agents, and recovery tooling.">
+</picture>
+</a>
 
-## Live engineering pulse
+<a href="https://github.com/ZpkDxGames/AI-Desktop-Companion">
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/project-companion-mobile.svg?v=5af59c9ba396">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/project-companion-wide.svg?v=dd8bfaca8d1a" width="100%" alt="Desktop Companion — A local-first Windows companion that brings Minecraft skins to life with 3D animation and expressive eyes.">
+</picture>
+</a>
 
-This snapshot is rebuilt automatically from public GitHub data. It is intentionally compact: the important numbers remain legible on a phone without zooming.
+<a href="https://github.com/ZpkDxGames/PlexonPanel-Dashboard">
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/project-dashboard-mobile.svg?v=83ab409b5918">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/project-dashboard-wide.svg?v=cbc26c2b8270" width="100%" alt="Plexon Command Center — A responsive operations interface for server pairing, observability, and the PlexonPanel control plane.">
+</picture>
+</a>
 
-<img src="assets/pulse.svg" alt="Live profile metrics including repositories, contributions, commits and current streak" width="100%">
+<a href="https://github.com/ZpkDxGames/Neural-Core-Dashboard">
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/project-network-mobile.svg?v=638405614765">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/project-network-wide.svg?v=c460127f64fc" width="100%" alt="Neural Core — A personal knowledge network for conversation archives, with an interactive 3D graph and browser-local storage.">
+</picture>
+</a>
 
-<img src="assets/activity.svg" alt="Animated twelve-month contribution rhythm" width="100%">
+<details>
+<summary>Dashboard data and project descriptions</summary>
 
-## Selected work
+Snapshot: **2026-10-14T15:10:33Z**. Profile calendar: **2025-10-15–2026-10-14**.
 
-### [PlexonPanel](https://github.com/ZpkDxGames/PlexonPanel)
+| Metric | Value |
+| :--- | ---: |
+| Public repositories (including forks/profile) | 32 |
+| Original repositories (excluding profile) | 30 |
+| Profile contributions (365 days) | 3,782 |
+| Active days (365 days) | 54 |
 
-A coordinated operations system for multiple Paper servers, with signed protocol contracts, per-instance identity, telemetry, pairing, backups, and recovery controls.
+| Language | Share of code bytes |
+| :--- | ---: |
+| Java | 85.9% |
+| Python | 4.5% |
+| JavaScript | 3.7% |
+| TypeScript | 3.3% |
+| CSS | 1.2% |
+| Other | 1.4% |
 
-`Java` · `Paper` · `Linux operations` · `Fleet coordination`
+Language share measures checked-in code, not proficiency. The calendar uses GitHub's contribution definition, which may include anonymized private activity displayed on the public profile. The current activity week is incomplete. Project artwork is conceptual.
 
-### [AI Desktop Companion](https://github.com/ZpkDxGames/AI-Desktop-Companion)
+- **[PlexonPanel](https://github.com/ZpkDxGames/PlexonPanel):** A coordinated control plane for Paper servers: pairing, telemetry, host agents, and recovery tooling.
+- **[Desktop Companion](https://github.com/ZpkDxGames/AI-Desktop-Companion):** A local-first Windows companion that brings Minecraft skins to life with 3D animation and expressive eyes.
+- **[Plexon Command Center](https://github.com/ZpkDxGames/PlexonPanel-Dashboard):** A responsive operations interface for server pairing, observability, and the PlexonPanel control plane.
+- **[Neural Core](https://github.com/ZpkDxGames/Neural-Core-Dashboard):** A personal knowledge network for conversation archives, with an interactive 3D graph and browser-local storage.
 
-A local-first Windows desktop companion that renders a Minecraft skin as an expressive 3D character, with a carefully controlled animation and desktop-overlay foundation.
+[Metric definitions and maintenance](docs/DASHBOARD.md)
 
-`JavaScript` · `Three.js` · `Tauri` · `Local-first`
+</details>
 
-### [Neural Core Dashboard](https://github.com/ZpkDxGames/Neural-Core-Dashboard)
+## Build philosophy
 
-A local-first personal knowledge network for conversation archives, with an interactive 3D graph, browser-local persistence, and an optional private backend path.
+Make the interface clear. Keep state explicit. Validate the real behavior. Leave a path to recover.
 
-`TypeScript` · `Next.js` · `WebGL` · `IndexedDB`
+<a href="https://github.com/ZpkDxGames?tab=repositories">
+<picture>
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/footer-mobile.svg?v=6b8ebcbb5961">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/footer-wide.svg?v=7a69d89a8a2a" width="100%" alt="Let&#x27;s build something useful. Explore the source. Follow the build.">
+</picture>
+</a>
 
-### [PlexonPanel Command Center](https://github.com/ZpkDxGames/PlexonPanel-Dashboard)
-
-A responsive operations dashboard for the PlexonPanel control plane, designed around live server state, pairing, observability, and safe operator workflows.
-
-`TypeScript` · `React` · `Vite` · `Realtime UI`
-
-## Working principles
-
-- **Native before novel.** Features should feel as though they belong in the platform.
-- **Explicit state.** Ownership, transitions, failure modes, and recovery paths should be visible.
-- **Observe the real system.** Telemetry and diagnostics are part of the product—not an afterthought.
-- **Ship with a way back.** Changes need validation, bounded rollout, and a credible rollback path.
-
-## Toolchain
-
-`Java` · `Paper API` · `Spigot API` · `TypeScript` · `React` · `Node.js` · `Python` · `SQL` · `REST` · `WebSocket` · `Gradle` · `Maven` · `GitHub Actions` · `Linux`
-
-## Connect
-
-The best place to explore the work is the repository list. For project-specific problems, open an issue with the version, reproduction steps, logs, and the expected behavior.
-
-<div align="center">
-
-[GitHub](https://github.com/ZpkDxGames) · [Portfolio](https://ajt-portfolio.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/antoniojtneto) · [Modrinth](https://modrinth.com/user/ZpkDxGames) · [SpigotMC](https://www.spigotmc.org/members/tonim.2373504/)
-
-<br>
-
-<img src="assets/footer.svg" alt="ZpkDxGames — systems online" width="100%">
-
-</div>
+<sub>GitHub snapshot · 2026-10-14T15:10:33Z · [Refresh status](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/dashboard-sync.yml)</sub>
