@@ -199,6 +199,10 @@ jobs:
           shopt -s nullglob
           echo "--- /metrics_renders ---"; sudo ls -la /metrics_renders 2>/dev/null || echo "(empty or missing)"
           for f in /metrics_renders/*.svg; do
+            if sudo grep -Eqi 'class="field error"|Unexpected error|TimeoutError' "$f"; then
+              echo "rejected $(basename "$f"): generated render contains an error state"
+              continue
+            fi
             sudo cp "$f" "metrics/$(basename "$f")"
             echo "collected $(basename "$f")"
           done
