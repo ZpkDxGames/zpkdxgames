@@ -2,6 +2,7 @@
 import datetime as dt
 import importlib.util
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 spec = importlib.util.spec_from_file_location("dashboard", Path(__file__).resolve().parents[1]/"scripts/dashboard.py")
@@ -49,6 +50,35 @@ class DataTests(unittest.TestCase):
         self.assertEqual(weeks[-1]["date"],dt.date(2026,10,12))
         self.assertEqual(weeks[-1]["days"],[4,7,0,None,None,None,None])
         self.assertEqual(weeks[-1]["count"],11)
+
+    def test_collect_reaches_calendar_api_with_graphics_loaded(self):
+        repo={"name":"Example","owner":{"login":"ZpkDxGames"},"private":False,
+              "fork":False,"archived":False,"language":"Java","stargazers_count":0,
+              "html_url":"https://github.com/ZpkDxGames/Example","pushed_at":"2026-01-01T00:00:00Z"}
+        def fake_fetch(url, token=None, body=None, as_text=False):
+            if url.endswith('/users/ZpkDxGames'):
+                return {"login":"ZpkDxGames"}
+            if '/repos?per_page=' in url:
+                return [repo]
+            if url.endswith('/languages'):
+                return {"Java":100}
+            if url=='https://api.github.com/graphql':
+                start=dt.date.fromisoformat(body['variables']['from'][:10])
+                end=dt.date.fromisoformat(body['variables']['to'][:10])
+                days=[{"date":(start+dt.timedelta(days=i)).isoformat(),"contributionCount":1}
+                      for i in range((end-start).days+1)]
+                return {"data":{"user":{"contributionsCollection":{"contributionCalendar":
+                        {"weeks":[{"contributionDays":days}]}}}}}
+            raise AssertionError(f'Unexpected request: {url}')
+        config={"username":"ZpkDxGames","exclude_languages":["zpkdxgames"],
+                "projects":[{"repo":"Example"}]}
+        with patch.object(dashboard,'fetch',side_effect=fake_fetch), patch.dict(dashboard.os.environ,{'GITHUB_TOKEN':'test-token'}):
+            snapshot=dashboard.collect(config)
+        self.assertEqual(snapshot['contributions'],365)
+        self.assertEqual(snapshot['active_days'],365)
+        self.assertEqual(snapshot['calendar_source'],'GitHub GraphQL contributionCalendar')
+        self.assertEqual(snapshot['language_bytes'],{'Java':100})
+        self.assertIn('<svg',dashboard.calendar_graphic(snapshot,False))
 
     def test_weekday_totals_cross_year_and_preserve_calendar_sum(self):
         snapshot={"days":[{"date":"2025-12-28","count":8},

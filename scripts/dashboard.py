@@ -88,7 +88,7 @@ def validate_calendar(days: dict[str, int], start: dt.date, end: dt.date):
     return [{"date": date, "count": filtered[date]} for date in sorted(filtered)]
 
 
-def calendar(login: str, now: dt.datetime, token: str | None):
+def collect_calendar(login: str, now: dt.datetime, token: str | None):
     end, start = now.date(), now.date() - dt.timedelta(days=364)
     if token:
         try:
@@ -150,7 +150,7 @@ def collect(config: dict):
                 if type(size) is not int or size < 0:
                     raise ValueError("Invalid repository language count")
                 languages[language] = languages.get(language, 0) + size
-    days, source = calendar(login, now, token)
+    days, source = collect_calendar(login, now, token)
     if not sum(languages.values()):
         raise ValueError("No code-language data returned; keep the last valid snapshot.")
     public = [{"name": repo["name"], "url": repo["html_url"], "fork": repo["fork"],
@@ -418,7 +418,7 @@ def activity(snapshot, mobile):
     return c.finish()
 
 
-def calendar(snapshot, mobile):
+def calendar_graphic(snapshot, mobile):
     weeks=weekly_activity(snapshot)
     observed=[v for w in weeks for v in w['days'] if v is not None]
     active=sum(v>0 for v in observed)
@@ -675,7 +675,7 @@ def render(snapshot, config):
     for mobile in [False, True]:
         variant = "mobile" if mobile else "wide"
         for name, builder in [("hero",lambda:hero(config,mobile)), ("metrics",lambda:metrics(snapshot,mobile)),
-                              ("activity",lambda:activity(snapshot,mobile)), ("calendar",lambda:calendar(snapshot,mobile)),
+                              ("activity",lambda:activity(snapshot,mobile)), ("calendar",lambda:calendar_graphic(snapshot,mobile)),
                               ("weekdays",lambda:weekdays(snapshot,mobile)), ("languages",lambda:languages(snapshot,mobile)),
                               ("footer",lambda:footer(mobile))]:
             all_assets[f"{name}-{variant}.svg"] = builder()
