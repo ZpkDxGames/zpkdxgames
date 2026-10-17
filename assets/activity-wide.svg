@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="428" viewBox="0 0 900 428" role="img" aria-labelledby="title desc">
-<title id="title">Weekly contribution totals</title><desc id="desc">Twelve calendar weeks through 2026-10-16: 3781 contributions. Columns only, with a linear zero-based scale. Current week is incomplete.</desc>
+<title id="title">Weekly contribution totals</title><desc id="desc">Twelve calendar weeks through 2026-10-17: 3786 contributions. Columns only, with a linear zero-based scale. Current week is incomplete.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111e31"/><stop offset=".55" stop-color="#080e1a"/><stop offset="1" stop-color="#102337"/></linearGradient>
   <linearGradient id="accent"><stop stop-color="#5698ff"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
@@ -42,7 +42,7 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 </g>
 <text x="36" y="43" font-size="26" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff">Weekly contributions</text>
 <text x="36" y="76" font-size="18" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">12 weeks · current week in progress</text>
-<text x="864" y="76" font-size="23" font-weight="600" class="" text-anchor="end" style="fill:#67e8f9">3,781 contributions</text>
+<text x="864" y="76" font-size="23" font-weight="600" class="" text-anchor="end" style="fill:#67e8f9">3,786 contributions</text>
 <rect x="36" y="104" width="828" height="252" rx="12" fill="url(#glass)" stroke="url(#edge)" />
 <path d="M100,310.0 L840,310.0" fill="none" stroke="#30465f" stroke-width="0.8" stroke-dasharray="2 6"/>
 <text x="88" y="316.0" font-size="16" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">0</text>
@@ -107,10 +107,10 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <rect x="734.5" y="306.5625" width="26" height="2" rx="1" fill="#b7f5ff" stroke="none" opacity=".65" class="soft"/>
 <text x="747.5" y="296.5625" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">55</text>
 <text x="747.5" y="342" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">05 Oct</text>
-<rect x="794.1666666666666" y="291.9375" width="30" height="18.0625" rx="3" fill="url(#bar)" stroke="none" data-count="289" data-cap="2656" data-scale="166"/>
-<rect x="821.1666666666666" y="291.9375" width="3" height="18.0625" rx="0" fill="#0a2948" stroke="none" opacity=".3"/>
-<rect x="796.1666666666666" y="291.9375" width="26" height="2" rx="1" fill="#b7f5ff" stroke="none" opacity=".65" class="soft"/>
-<text x="809.1666666666666" y="281.9375" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">289</text>
+<rect x="794.1666666666666" y="291.625" width="30" height="18.375" rx="3" fill="url(#bar)" stroke="none" data-count="294" data-cap="2656" data-scale="166"/>
+<rect x="821.1666666666666" y="291.625" width="3" height="18.375" rx="0" fill="#0a2948" stroke="none" opacity=".3"/>
+<rect x="796.1666666666666" y="291.625" width="26" height="2" rx="1" fill="#b7f5ff" stroke="none" opacity=".65" class="soft"/>
+<text x="809.1666666666666" y="281.625" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">294</text>
 <text x="809.1666666666666" y="342" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">12 Oct</text>
 <text x="36" y="398" font-size="18" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Peak week: 2,653 contributions</text>
 </svg>
