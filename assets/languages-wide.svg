@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="496" viewBox="0 0 900 496" role="img" aria-labelledby="title desc">
-<title id="title">Repository language mix</title><desc id="desc">Language bytes from public original repositories, excluding this profile. Java: 81.6%; JavaScript: 5.9%; TypeScript: 4.7%; Python: 4.4%; CSS: 2.1%; Other: 1.4%. Ring angles and bar lengths encode exact shares; motion is decorative.</desc>
+<title id="title">Repository language mix</title><desc id="desc">Language bytes from public original repositories, excluding this profile. Java: 83.3%; JavaScript: 4.9%; TypeScript: 4.8%; Python: 4.4%; CSS: 1.2%; Other: 1.4%. Ring angles and bar lengths encode exact shares; motion is decorative.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111e31"/><stop offset=".55" stop-color="#080e1a"/><stop offset="1" stop-color="#102337"/></linearGradient>
   <linearGradient id="accent"><stop stop-color="#5698ff"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
@@ -47,12 +47,12 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <circle cx="182" cy="254" r="115" fill="none" stroke="#2d465e" stroke-width="1" />
 <circle cx="182" cy="254" r="73" fill="url(#glass)" stroke="#35536d" stroke-width="1" />
 <circle cx="182" cy="254" r="94" fill="none" stroke="#172c43" stroke-width="26" />
-<circle cx="182" cy="254" r="94" fill="none" stroke="#67e8f9" stroke-width="26" data-share="0.8159591657803776" stroke-dasharray="481.921328 590.619419" stroke-dashoffset="0.000000" transform="rotate(-90 182 254)"/>
-<circle cx="182" cy="254" r="94" fill="none" stroke="#5698ff" stroke-width="26" data-share="0.05870929869188238" stroke-dasharray="34.674852 590.619419" stroke-dashoffset="-481.921328" transform="rotate(-90 182 254)"/>
-<circle cx="182" cy="254" r="94" fill="none" stroke="#80b5ff" stroke-width="26" data-share="0.04681135128381174" stroke-dasharray="27.647693 590.619419" stroke-dashoffset="-516.596180" transform="rotate(-90 182 254)"/>
-<circle cx="182" cy="254" r="94" fill="none" stroke="#45bda9" stroke-width="26" data-share="0.043938220337248236" stroke-dasharray="25.950766 590.619419" stroke-dashoffset="-544.243873" transform="rotate(-90 182 254)"/>
-<circle cx="182" cy="254" r="94" fill="none" stroke="#ccdffe" stroke-width="26" data-share="0.020586991907071774" stroke-dasharray="12.159077 590.619419" stroke-dashoffset="-570.194639" transform="rotate(-90 182 254)"/>
-<circle cx="182" cy="254" r="94" fill="none" stroke="#527087" stroke-width="26" data-share="0.013994971999608252" stroke-dasharray="8.265702 590.619419" stroke-dashoffset="-582.353717" transform="rotate(-90 182 254)"/>
+<circle cx="182" cy="254" r="94" fill="none" stroke="#67e8f9" stroke-width="26" data-share="0.8328848922815449" stroke-dasharray="491.917991 590.619419" stroke-dashoffset="0.000000" transform="rotate(-90 182 254)"/>
+<circle cx="182" cy="254" r="94" fill="none" stroke="#5698ff" stroke-width="26" data-share="0.04945818816606633" stroke-dasharray="29.210966 590.619419" stroke-dashoffset="-491.917991" transform="rotate(-90 182 254)"/>
+<circle cx="182" cy="254" r="94" fill="none" stroke="#80b5ff" stroke-width="26" data-share="0.0475181835057825" stroke-dasharray="28.065162 590.619419" stroke-dashoffset="-521.128957" transform="rotate(-90 182 254)"/>
+<circle cx="182" cy="254" r="94" fill="none" stroke="#45bda9" stroke-width="26" data-share="0.04387394492164736" stroke-dasharray="25.912804 590.619419" stroke-dashoffset="-549.194119" transform="rotate(-90 182 254)"/>
+<circle cx="182" cy="254" r="94" fill="none" stroke="#ccdffe" stroke-width="26" data-share="0.012110105020056019" stroke-dasharray="7.152463 590.619419" stroke-dashoffset="-575.106923" transform="rotate(-90 182 254)"/>
+<circle cx="182" cy="254" r="94" fill="none" stroke="#527087" stroke-width="26" data-share="0.014154686104902902" stroke-dasharray="8.360032 590.619419" stroke-dashoffset="-582.259386" transform="rotate(-90 182 254)"/>
 <defs><mask id="ring-face"><circle cx="182" cy="254" r="94" fill="none" stroke="white" stroke-width="26"/></mask></defs>
 <circle cx="182" cy="254" r="108" fill="url(#polish)" stroke="none" stroke-width="1" mask="url(#ring-face)" class="reveal"/>
 <circle cx="182" cy="254" r="108" fill="none" stroke="#b9efff" stroke-width="0.7" opacity=".35"/>
@@ -60,49 +60,49 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <circle cx="0" cy="0" r="115" fill="none" stroke="#67e8f9" stroke-width="2" stroke-dasharray="30 692.5663103256525" opacity=".8"/>
 </g></g>
 <text x="182" y="245" font-size="22" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">Java</text>
-<text x="182" y="286" font-size="36" font-weight="600" class="" text-anchor="middle" style="fill:#edf4ff" letter-spacing="-1">81.6%</text>
+<text x="182" y="286" font-size="36" font-weight="600" class="" text-anchor="middle" style="fill:#edf4ff" letter-spacing="-1">83.3%</text>
 <text x="182" y="394" font-size="16" font-weight="400" class="mono" text-anchor="middle" style="fill:#a5b6cc">LEADING LANGUAGE</text>
 <rect x="352" y="104" width="512" height="46" rx="7" fill="url(#glass)" stroke="#263c53" />
 <circle cx="368" cy="122" r="4.5" fill="#67e8f9" stroke="none" stroke-width="1" />
 <text x="382" y="129" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">Java</text>
-<text x="850" y="129" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">81.6%</text>
+<text x="850" y="129" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">83.3%</text>
 <rect x="366" y="139" width="484" height="5" rx="2" fill="#071322" stroke="none" />
-<rect x="366" y="139" width="394.92423623770276" height="5" rx="2" fill="#67e8f9" stroke="none" data-language-share="0.8159591657803776"/>
-<rect x="366" y="139" width="394.92423623770276" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
+<rect x="366" y="139" width="403.11628786426775" height="5" rx="2" fill="#67e8f9" stroke="none" data-language-share="0.8328848922815449"/>
+<rect x="366" y="139" width="403.11628786426775" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
 <rect x="352" y="158" width="512" height="46" rx="7" fill="url(#glass)" stroke="#263c53" />
 <circle cx="368" cy="176" r="4.5" fill="#5698ff" stroke="none" stroke-width="1" />
 <text x="382" y="183" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">JavaScript</text>
-<text x="850" y="183" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">5.9%</text>
+<text x="850" y="183" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">4.9%</text>
 <rect x="366" y="193" width="484" height="5" rx="2" fill="#071322" stroke="none" />
-<rect x="366" y="193" width="28.41530056687107" height="5" rx="2" fill="#5698ff" stroke="none" data-language-share="0.05870929869188238"/>
-<rect x="366" y="193" width="28.41530056687107" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
+<rect x="366" y="193" width="23.937763072376104" height="5" rx="2" fill="#5698ff" stroke="none" data-language-share="0.04945818816606633"/>
+<rect x="366" y="193" width="23.937763072376104" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
 <rect x="352" y="212" width="512" height="46" rx="7" fill="url(#glass)" stroke="#263c53" />
 <circle cx="368" cy="230" r="4.5" fill="#80b5ff" stroke="none" stroke-width="1" />
 <text x="382" y="237" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">TypeScript</text>
-<text x="850" y="237" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">4.7%</text>
+<text x="850" y="237" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">4.8%</text>
 <rect x="366" y="247" width="484" height="5" rx="2" fill="#071322" stroke="none" />
-<rect x="366" y="247" width="22.65669402136488" height="5" rx="2" fill="#80b5ff" stroke="none" data-language-share="0.04681135128381174"/>
-<rect x="366" y="247" width="22.65669402136488" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
+<rect x="366" y="247" width="22.998800816798727" height="5" rx="2" fill="#80b5ff" stroke="none" data-language-share="0.0475181835057825"/>
+<rect x="366" y="247" width="22.998800816798727" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
 <rect x="352" y="266" width="512" height="46" rx="7" fill="url(#glass)" stroke="#263c53" />
 <circle cx="368" cy="284" r="4.5" fill="#45bda9" stroke="none" stroke-width="1" />
 <text x="382" y="291" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">Python</text>
 <text x="850" y="291" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">4.4%</text>
 <rect x="366" y="301" width="484" height="5" rx="2" fill="#071322" stroke="none" />
-<rect x="366" y="301" width="21.266098643228148" height="5" rx="2" fill="#45bda9" stroke="none" data-language-share="0.043938220337248236"/>
-<rect x="366" y="301" width="21.266098643228148" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
+<rect x="366" y="301" width="21.234989342077323" height="5" rx="2" fill="#45bda9" stroke="none" data-language-share="0.04387394492164736"/>
+<rect x="366" y="301" width="21.234989342077323" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
 <rect x="352" y="320" width="512" height="46" rx="7" fill="url(#glass)" stroke="#263c53" />
 <circle cx="368" cy="338" r="4.5" fill="#ccdffe" stroke="none" stroke-width="1" />
 <text x="382" y="345" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">CSS</text>
-<text x="850" y="345" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">2.1%</text>
+<text x="850" y="345" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">1.2%</text>
 <rect x="366" y="355" width="484" height="5" rx="2" fill="#071322" stroke="none" />
-<rect x="366" y="355" width="9.964104083022738" height="5" rx="2" fill="#ccdffe" stroke="none" data-language-share="0.020586991907071774"/>
-<rect x="366" y="355" width="9.964104083022738" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
+<rect x="366" y="355" width="5.861290829707113" height="5" rx="2" fill="#ccdffe" stroke="none" data-language-share="0.012110105020056019"/>
+<rect x="366" y="355" width="5.861290829707113" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
 <rect x="352" y="374" width="512" height="46" rx="7" fill="url(#glass)" stroke="#263c53" />
 <circle cx="368" cy="392" r="4.5" fill="#527087" stroke="none" stroke-width="1" />
 <text x="382" y="399" font-size="20" font-weight="500" class="" text-anchor="start" style="fill:#edf4ff">Other</text>
 <text x="850" y="399" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">1.4%</text>
 <rect x="366" y="409" width="484" height="5" rx="2" fill="#071322" stroke="none" />
-<rect x="366" y="409" width="6.773566447810394" height="5" rx="2" fill="#527087" stroke="none" data-language-share="0.013994971999608252"/>
-<rect x="366" y="409" width="6.773566447810394" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
+<rect x="366" y="409" width="6.850868074773005" height="5" rx="2" fill="#527087" stroke="none" data-language-share="0.014154686104902902"/>
+<rect x="366" y="409" width="6.850868074773005" height="1.2" rx="1" fill="#e0faff" stroke="none" opacity=".35"/>
 <text x="36" y="468" font-size="16" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Language share, not proficiency.</text>
 </svg>
