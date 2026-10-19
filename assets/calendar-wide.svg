@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" role="img" aria-labelledby="title desc">
-<title id="title">Daily contribution calendar</title><desc id="desc">Daily contributions across twelve calendar weeks through 2026-10-18. 49 of 84 elapsed days have contributions. Future dates are unfilled. Color intensity uses a logarithmic scale.</desc>
+<title id="title">Daily contribution calendar</title><desc id="desc">Daily contributions across twelve calendar weeks through 2026-10-19. 49 of 78 elapsed days have contributions. Future dates are unfilled. Color intensity uses a logarithmic scale.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111e31"/><stop offset=".55" stop-color="#080e1a"/><stop offset="1" stop-color="#102337"/></linearGradient>
   <linearGradient id="accent"><stop stop-color="#5698ff"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
@@ -46,13 +46,13 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <text x="36" y="166" font-size="56" font-weight="600" class="" text-anchor="start" style="fill:#67e8f9" letter-spacing="-1">49</text>
 <text x="36" y="201" font-size="22" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">active days</text>
 <path d="M36,229 L268,229" fill="none" stroke="#25364d" stroke-width="1" />
-<text x="36" y="271" font-size="40" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff">84</text>
+<text x="36" y="271" font-size="40" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff">78</text>
 <text x="36" y="305" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">elapsed days</text>
 <rect x="392" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="392" y="152" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="392" y="152" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M395,153.5 L408,153.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="392" y="179" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="392" y="177" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="392" y="177" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M395,178.5 L408,178.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="392" y="204" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="392" y="202" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
@@ -69,12 +69,12 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <rect x="392" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="392" y="302" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M395,303.5 L408,303.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
-<text x="405.0" y="134" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">27 Jul</text>
+<text x="405.0" y="134" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">03 Aug</text>
 <rect x="428" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="428" y="152" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="428" y="152" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M431,153.5 L444,153.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="428" y="179" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="428" y="177" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="428" y="177" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M431,178.5 L444,178.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="428" y="204" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="428" y="202" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
@@ -83,19 +83,19 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <rect x="428" y="227" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M431,228.5 L444,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="428" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="428" y="252" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="428" y="252" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M431,253.5 L444,253.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="428" y="279" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="428" y="277" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="428" y="277" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M431,278.5 L444,278.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="428" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="428" y="302" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="428" y="302" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M431,303.5 L444,303.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="464" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="464" y="152" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="464" y="152" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M467,153.5 L480,153.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="464" y="179" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="464" y="177" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="464" y="177" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M467,178.5 L480,178.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="464" y="204" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="464" y="202" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
@@ -104,19 +104,19 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <rect x="464" y="227" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M467,228.5 L480,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="464" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="464" y="252" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="464" y="252" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M467,253.5 L480,253.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="464" y="279" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="464" y="277" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="464" y="277" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M467,278.5 L480,278.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="464" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="464" y="302" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="464" y="302" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M467,303.5 L480,303.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="500" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="500" y="152" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="500" y="152" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M503,153.5 L516,153.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="500" y="179" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="500" y="177" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="500" y="177" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M503,178.5 L516,178.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="500" y="204" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="500" y="202" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
@@ -125,25 +125,25 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <rect x="500" y="227" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M503,228.5 L516,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="500" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="500" y="252" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="500" y="252" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M503,253.5 L516,253.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="500" y="279" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="500" y="277" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="500" y="277" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M503,278.5 L516,278.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="500" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="500" y="302" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="500" y="302" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M503,303.5 L516,303.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="536" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="536" y="152" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="536" y="152" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M539,153.5 L552,153.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="536" y="179" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="536" y="177" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="536" y="177" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M539,178.5 L552,178.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="536" y="204" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="536" y="202" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="536" y="202" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M539,203.5 L552,203.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="536" y="229" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="536" y="227" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="536" y="227" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M539,228.5 L552,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="536" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="536" y="252" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
@@ -152,26 +152,26 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <rect x="536" y="277" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M539,278.5 L552,278.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="536" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="536" y="302" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="536" y="302" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
 <path d="M539,303.5 L552,303.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
-<text x="549.0" y="134" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">24 Aug</text>
+<text x="549.0" y="134" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">31 Aug</text>
 <rect x="572" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="572" y="152" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="572" y="152" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
 <path d="M575,153.5 L588,153.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="572" y="179" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="572" y="177" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="572" y="177" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
 <path d="M575,178.5 L588,178.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="572" y="204" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="572" y="202" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="572" y="202" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
 <path d="M575,203.5 L588,203.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="572" y="229" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="572" y="227" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="572" y="227" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
 <path d="M575,228.5 L588,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="572" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="572" y="252" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="572" y="252" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
 <path d="M575,253.5 L588,253.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="572" y="279" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="572" y="277" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="572" y="277" width="19" height="19" rx="3" fill="#67e8f9" stroke="none" />
 <path d="M575,278.5 L588,278.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="572" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="572" y="302" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
@@ -180,43 +180,43 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <rect x="608" y="152" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
 <path d="M611,153.5 L624,153.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="608" y="179" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="608" y="177" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
+<rect x="608" y="177" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M611,178.5 L624,178.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="608" y="204" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="608" y="202" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
+<rect x="608" y="202" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M611,203.5 L624,203.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="608" y="229" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="608" y="227" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
 <path d="M611,228.5 L624,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="608" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="608" y="252" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
+<rect x="608" y="252" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M611,253.5 L624,253.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="608" y="279" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="608" y="277" width="19" height="19" rx="3" fill="#67e8f9" stroke="none" />
+<rect x="608" y="277" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M611,278.5 L624,278.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="608" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="608" y="302" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
+<rect x="608" y="302" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M611,303.5 L624,303.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="644" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="644" y="152" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
+<rect x="644" y="152" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M647,153.5 L660,153.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="644" y="179" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="644" y="177" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="644" y="177" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M647,178.5 L660,178.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="644" y="204" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="644" y="202" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="644" y="202" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M647,203.5 L660,203.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="644" y="229" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="644" y="227" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
+<rect x="644" y="227" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M647,228.5 L660,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="644" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="644" y="252" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="644" y="252" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M647,253.5 L660,253.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="644" y="279" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="644" y="277" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="644" y="277" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M647,278.5 L660,278.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="644" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="644" y="302" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="644" y="302" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M647,303.5 L660,303.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="680" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="680" y="152" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
@@ -228,82 +228,76 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <rect x="680" y="202" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M683,203.5 L696,203.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="680" y="229" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="680" y="227" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="680" y="227" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M683,228.5 L696,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="680" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="680" y="252" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="680" y="252" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M683,253.5 L696,253.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="680" y="279" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="680" y="277" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="680" y="277" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M683,278.5 L696,278.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="680" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="680" y="302" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M683,303.5 L696,303.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
-<text x="693.0" y="134" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">21 Sep</text>
+<text x="693.0" y="134" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">28 Sep</text>
 <rect x="716" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="716" y="152" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="716" y="152" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M719,153.5 L732,153.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="716" y="179" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="716" y="177" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="716" y="177" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M719,178.5 L732,178.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="716" y="204" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="716" y="202" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="716" y="202" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M719,203.5 L732,203.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="716" y="229" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="716" y="227" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="716" y="227" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M719,228.5 L732,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="716" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="716" y="252" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="716" y="252" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M719,253.5 L732,253.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="716" y="279" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="716" y="277" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="716" y="277" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M719,278.5 L732,278.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="716" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="716" y="302" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M719,303.5 L732,303.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="752" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="752" y="152" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="752" y="152" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
 <path d="M755,153.5 L768,153.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="752" y="179" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="752" y="177" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="752" y="177" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M755,178.5 L768,178.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="752" y="204" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="752" y="202" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M755,203.5 L768,203.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="752" y="229" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="752" y="227" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="752" y="227" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M755,228.5 L768,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="752" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="752" y="252" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<rect x="752" y="252" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M755,253.5 L768,253.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="752" y="279" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="752" y="277" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
+<rect x="752" y="277" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
 <path d="M755,278.5 L768,278.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="752" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="752" y="302" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
+<rect x="752" y="302" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
 <path d="M755,303.5 L768,303.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="788" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="788" y="152" width="19" height="19" rx="3" fill="#35accd" stroke="none" />
+<rect x="788" y="152" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M791,153.5 L804,153.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="788" y="179" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="788" y="177" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
-<path d="M791,178.5 L804,178.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
+<rect x="788" y="177" width="19" height="19" rx="3" fill="#080e1a" stroke="#25364d" />
 <rect x="788" y="204" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="788" y="202" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
-<path d="M791,203.5 L804,203.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
+<rect x="788" y="202" width="19" height="19" rx="3" fill="#080e1a" stroke="#25364d" />
 <rect x="788" y="229" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="788" y="227" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
-<path d="M791,228.5 L804,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
+<rect x="788" y="227" width="19" height="19" rx="3" fill="#080e1a" stroke="#25364d" />
 <rect x="788" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="788" y="252" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
-<path d="M791,253.5 L804,253.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
+<rect x="788" y="252" width="19" height="19" rx="3" fill="#080e1a" stroke="#25364d" />
 <rect x="788" y="279" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="788" y="277" width="19" height="19" rx="3" fill="#2779a8" stroke="none" />
-<path d="M791,278.5 L804,278.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
+<rect x="788" y="277" width="19" height="19" rx="3" fill="#080e1a" stroke="#25364d" />
 <rect x="788" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="788" y="302" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
-<path d="M791,303.5 L804,303.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
-<text x="801.0" y="134" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">12 Oct</text>
+<rect x="788" y="302" width="19" height="19" rx="3" fill="#080e1a" stroke="#25364d" />
+<text x="801.0" y="134" font-size="16" font-weight="400" class="" text-anchor="middle" style="fill:#a5b6cc">19 Oct</text>
 <text x="378" y="167" font-size="16" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">Mon</text>
 <text x="378" y="192" font-size="16" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">Tue</text>
 <text x="378" y="217" font-size="16" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">Wed</text>

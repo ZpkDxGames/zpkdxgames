@@ -13,29 +13,29 @@ I'm **Tonim** (ZpkDxGames), a programmer based in Brazil. I build Minecraft serv
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-mobile.svg?v=5f60004b8093">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-wide.svg?v=eb2a81a3b773" width="100%" alt="33 public repos · 31 original repos · 3,847 contributions · 58 active days. Profile calendar: 2025-10-19 through 2026-10-18.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-mobile.svg?v=18048b6d6b28">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-wide.svg?v=f2dcc593885a" width="100%" alt="33 public repos · 31 original repos · 3,849 contributions · 58 active days. Profile calendar: 2025-10-20 through 2026-10-19.">
 </picture>
 </p>
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-mobile.svg?v=949c27e7e9d9">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-wide.svg?v=4eef305e0c86" width="100%" alt="Weekly contribution totals: twelve columns on a linear scale. Current week is in progress.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-mobile.svg?v=bb6b369c7fbe">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-wide.svg?v=50ab098bb794" width="100%" alt="Weekly contribution totals: twelve columns on a linear scale. Current week is in progress.">
 </picture>
 </p>
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-mobile.svg?v=41aed4c787af">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-wide.svg?v=5d1d18871801" width="100%" alt="Daily contribution calendar: one tile per day, with future dates unfilled.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-mobile.svg?v=cc4a11c661f2">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-wide.svg?v=9eb4dd1967de" width="100%" alt="Daily contribution calendar: one tile per day, with future dates unfilled.">
 </picture>
 </p>
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/weekdays-mobile.svg?v=e8bb46764037">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/weekdays-wide.svg?v=c50587cccfb9" width="100%" alt="Contributions by weekday: seven dots comparing totals across the past 365 days.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/weekdays-mobile.svg?v=47a21b1661d3">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/weekdays-wide.svg?v=a49a38034737" width="100%" alt="Contributions by weekday: seven dots comparing totals across the past 365 days.">
 </picture>
 </p>
 
@@ -89,13 +89,13 @@ Minecraft infrastructure, desktop interaction, and useful web interfaces. Open a
 <details>
 <summary>Dashboard data and project descriptions</summary>
 
-Snapshot: **2026-10-18T20:51:51Z**. Profile calendar: **2025-10-19–2026-10-18**.
+Snapshot: **2026-10-19T13:30:36Z**. Profile calendar: **2025-10-20–2026-10-19**.
 
 | Metric | Value |
 | :--- | ---: |
 | Public repositories (including forks/profile) | 33 |
 | Original repositories (excluding profile) | 31 |
-| Profile contributions (365 days) | 3,847 |
+| Profile contributions (365 days) | 3,849 |
 | Active days (365 days) | 58 |
 
 | Language | Share of code bytes |
@@ -115,7 +115,7 @@ Snapshot: **2026-10-18T20:51:51Z**. Profile calendar: **2025-10-19–2026-10-18*
 | Thursday | 458 |
 | Friday | 667 |
 | Saturday | 761 |
-| Sunday | 546 |
+| Sunday | 548 |
 
 Language share measures checked-in code, not proficiency. The calendar uses GitHub's contribution definition, which may include anonymized private activity displayed on the public profile. The current activity week is incomplete. Project artwork is conceptual.
 
@@ -141,4 +141,4 @@ Make the interface clear. Keep state explicit. Validate the real behavior. Leave
 </a>
 </p>
 
-<sub>GitHub snapshot · 2026-10-18T20:51:51Z · [Refresh status](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/dashboard-sync.yml)</sub>
+<sub>GitHub snapshot · 2026-10-19T13:30:36Z · [Refresh status](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/dashboard-sync.yml)</sub>
