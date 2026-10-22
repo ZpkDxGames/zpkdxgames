@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="420" height="524" viewBox="0 0 420 524" role="img" aria-labelledby="title desc">
-<title id="title">Contributions by weekday</title><desc id="desc">Contribution totals grouped by weekday across the same 365-day calendar as the headline metrics. Monday: 662; Tuesday: 325; Wednesday: 445; Thursday: 458; Friday: 667; Saturday: 761; Sunday: 548. Dot positions use a linear scale starting at zero; these are contributions, not hours worked.</desc>
+<title id="title">Contributions by weekday</title><desc id="desc">Contribution totals grouped by weekday across the same 365-day calendar as the headline metrics. Monday: 662; Tuesday: 325; Wednesday: 446; Thursday: 458; Friday: 667; Saturday: 761; Sunday: 548. Dot positions use a linear scale starting at zero; these are contributions, not hours worked.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111e31"/><stop offset=".55" stop-color="#080e1a"/><stop offset="1" stop-color="#102337"/></linearGradient>
   <linearGradient id="accent"><stop stop-color="#5698ff"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
@@ -59,8 +59,8 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <text x="374" y="208" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">325</text>
 <text x="46" y="246" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Wed</text>
 <path d="M106,240 L298,240" fill="none" stroke="#2a4058" stroke-width="1" />
-<circle cx="217.8324607329843" cy="240" r="6" fill="url(#sphere)" stroke="#b8f5ff" stroke-width="0.8" data-weekday="2" data-count="445" data-cap="764"/>
-<text x="374" y="246" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">445</text>
+<circle cx="218.08376963350787" cy="240" r="6" fill="url(#sphere)" stroke="#b8f5ff" stroke-width="0.8" data-weekday="2" data-count="446" data-cap="764"/>
+<text x="374" y="246" font-size="20" font-weight="400" class="" text-anchor="end" style="fill:#a5b6cc">446</text>
 <text x="46" y="284" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">Thu</text>
 <path d="M106,278 L298,278" fill="none" stroke="#2a4058" stroke-width="1" />
 <circle cx="221.09947643979058" cy="278" r="6" fill="url(#sphere)" stroke="#b8f5ff" stroke-width="0.8" data-weekday="3" data-count="458" data-cap="764"/>
