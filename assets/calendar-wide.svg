@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" role="img" aria-labelledby="title desc">
-<title id="title">Daily contribution calendar</title><desc id="desc">Daily contributions across twelve calendar weeks through 2026-10-22. 52 of 81 elapsed days have contributions. Future dates are unfilled. Color intensity uses a logarithmic scale.</desc>
+<title id="title">Daily contribution calendar</title><desc id="desc">Daily contributions across twelve calendar weeks through 2026-10-23. 52 of 82 elapsed days have contributions. Future dates are unfilled. Color intensity uses a logarithmic scale.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111e31"/><stop offset=".55" stop-color="#080e1a"/><stop offset="1" stop-color="#102337"/></linearGradient>
   <linearGradient id="accent"><stop stop-color="#5698ff"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
@@ -46,7 +46,7 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <text x="36" y="166" font-size="56" font-weight="600" class="" text-anchor="start" style="fill:#67e8f9" letter-spacing="-1">52</text>
 <text x="36" y="201" font-size="22" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">active days</text>
 <path d="M36,229 L268,229" fill="none" stroke="#25364d" stroke-width="1" />
-<text x="36" y="271" font-size="40" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff">81</text>
+<text x="36" y="271" font-size="40" font-weight="600" class="" text-anchor="start" style="fill:#edf4ff">82</text>
 <text x="36" y="305" font-size="20" font-weight="400" class="" text-anchor="start" style="fill:#a5b6cc">elapsed days</text>
 <rect x="392" y="154" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="392" y="152" width="19" height="19" rx="3" fill="#1c4f77" stroke="none" />
@@ -295,7 +295,8 @@ text{font-family:Arial,'Helvetica Neue',sans-serif;fill:#edf4ff;}
 <rect x="788" y="227" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
 <path d="M791,228.5 L804,228.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="788" y="254" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
-<rect x="788" y="252" width="19" height="19" rx="3" fill="#080e1a" stroke="#25364d" />
+<rect x="788" y="252" width="19" height="19" rx="3" fill="#20334a" stroke="none" />
+<path d="M791,253.5 L804,253.5" fill="none" stroke="#d9f7ff" stroke-width="0.8" opacity=".18"/>
 <rect x="788" y="279" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
 <rect x="788" y="277" width="19" height="19" rx="3" fill="#080e1a" stroke="#25364d" />
 <rect x="788" y="304" width="19" height="19" rx="3" fill="#050b14" stroke="none" />
