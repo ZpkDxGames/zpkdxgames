@@ -13,36 +13,36 @@ I'm **Tonim** (ZpkDxGames), a programmer based in Brazil. I build Minecraft serv
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-mobile.svg?v=e69991f654ec">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-wide.svg?v=9e09375461b0" width="100%" alt="33 public repos · 31 original repos · 3,867 contributions · 61 active days. Profile calendar: 2025-10-25 through 2026-10-24.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-mobile.svg?v=ffa68eeb1c79">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-wide.svg?v=feba656cc16c" width="100%" alt="33 public repos · 31 original repos · 3,870 contributions · 62 active days. Profile calendar: 2025-10-26 through 2026-10-25.">
 </picture>
 </p>
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-mobile.svg?v=a2069209255b">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-wide.svg?v=5d1305e5ef46" width="100%" alt="Weekly contribution totals: twelve columns on a linear scale. Current week is in progress.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-mobile.svg?v=cc51d908909c">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-wide.svg?v=76ad7979fefc" width="100%" alt="Weekly contribution totals: twelve columns on a linear scale. Current week is in progress.">
 </picture>
 </p>
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-mobile.svg?v=48809c46adac">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-wide.svg?v=5b53258e17de" width="100%" alt="Daily contribution calendar: one tile per day, with future dates unfilled.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-mobile.svg?v=f5d6462f3906">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-wide.svg?v=138fb553311d" width="100%" alt="Daily contribution calendar: one tile per day, with future dates unfilled.">
 </picture>
 </p>
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/weekdays-mobile.svg?v=a2e83b4f5892">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/weekdays-wide.svg?v=07c27968db7a" width="100%" alt="Contributions by weekday: seven dots comparing totals across the past 365 days.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/weekdays-mobile.svg?v=2bcfbb3ee6a5">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/weekdays-wide.svg?v=6fb793ebb842" width="100%" alt="Contributions by weekday: seven dots comparing totals across the past 365 days.">
 </picture>
 </p>
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/languages-mobile.svg?v=faba67143dad">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/languages-wide.svg?v=0a3af1901e87" width="100%" alt="Code language share across public original repositories: Java 82.0%, TypeScript 5.6%, JavaScript 5.0%, Python 4.3%, CSS 1.7%, Other 1.4%.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/languages-mobile.svg?v=4639b51e1f9a">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/languages-wide.svg?v=914ca2737c70" width="100%" alt="Code language share across public original repositories: Java 81.2%, TypeScript 6.3%, JavaScript 4.9%, Python 4.2%, CSS 1.9%, Other 1.4%.">
 </picture>
 </p>
 
@@ -89,22 +89,22 @@ Minecraft infrastructure, desktop interaction, and useful web interfaces. Open a
 <details>
 <summary>Dashboard data and project descriptions</summary>
 
-Snapshot: **2026-10-24T20:56:32Z**. Profile calendar: **2025-10-25–2026-10-24**.
+Snapshot: **2026-10-25T11:41:54Z**. Profile calendar: **2025-10-26–2026-10-25**.
 
 | Metric | Value |
 | :--- | ---: |
 | Public repositories (including forks/profile) | 33 |
 | Original repositories (excluding profile) | 31 |
-| Profile contributions (365 days) | 3,867 |
-| Active days (365 days) | 61 |
+| Profile contributions (365 days) | 3,870 |
+| Active days (365 days) | 62 |
 
 | Language | Share of code bytes |
 | :--- | ---: |
-| Java | 82.0% |
-| TypeScript | 5.6% |
-| JavaScript | 5.0% |
-| Python | 4.3% |
-| CSS | 1.7% |
+| Java | 81.2% |
+| TypeScript | 6.3% |
+| JavaScript | 4.9% |
+| Python | 4.2% |
+| CSS | 1.9% |
 | Other | 1.4% |
 
 | Weekday | Contributions (365 days) |
@@ -115,7 +115,7 @@ Snapshot: **2026-10-24T20:56:32Z**. Profile calendar: **2025-10-25–2026-10-24*
 | Thursday | 458 |
 | Friday | 667 |
 | Saturday | 761 |
-| Sunday | 548 |
+| Sunday | 551 |
 
 Language share measures checked-in code, not proficiency. The calendar uses GitHub's contribution definition, which may include anonymized private activity displayed on the public profile. The current activity week is incomplete. Project artwork is conceptual.
 
@@ -141,4 +141,4 @@ Make the interface clear. Keep state explicit. Validate the real behavior. Leave
 </a>
 </p>
 
-<sub>GitHub snapshot · 2026-10-24T20:56:32Z · [Refresh status](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/dashboard-sync.yml)</sub>
+<sub>GitHub snapshot · 2026-10-25T11:41:54Z · [Refresh status](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/dashboard-sync.yml)</sub>
