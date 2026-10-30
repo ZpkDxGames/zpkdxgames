@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="428" viewBox="0 0 900 428" role="img" aria-labelledby="title desc">
-<title id="title">Weekly contribution totals</title><desc id="desc">Twelve calendar weeks through 2026-10-29: 3818 contributions. Columns only, with a linear zero-based scale. Current week is incomplete.</desc>
+<title id="title">Weekly contribution totals</title><desc id="desc">Twelve calendar weeks through 2026-10-30: 3818 contributions. Columns only, with a linear zero-based scale. Current week is incomplete.</desc>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#111e31"/><stop offset=".55" stop-color="#080e1a"/><stop offset="1" stop-color="#102337"/></linearGradient>
   <linearGradient id="accent"><stop stop-color="#5698ff"/><stop offset="1" stop-color="#67e8f9"/></linearGradient>
