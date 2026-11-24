@@ -13,22 +13,22 @@ I'm **Tonim** (ZpkDxGames), a programmer based in Brazil. I build Minecraft serv
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-mobile.svg?v=66cc0c5be482">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-wide.svg?v=88439796877b" width="100%" alt="33 public repos · 31 original repos · 3,873 contributions · 63 active days. Profile calendar: 2025-11-24 through 2026-11-23.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-mobile.svg?v=440bd97a5305">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/metrics-wide.svg?v=9a74cac5044d" width="100%" alt="33 public repos · 31 original repos · 3,873 contributions · 63 active days. Profile calendar: 2025-11-25 through 2026-11-24.">
 </picture>
 </p>
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-mobile.svg?v=f36fc249d14d">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-wide.svg?v=699bba9da5cb" width="100%" alt="Weekly contribution totals: twelve columns on a linear scale. Current week is in progress.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-mobile.svg?v=fe3bc20fc402">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/activity-wide.svg?v=5e911d01d4fd" width="100%" alt="Weekly contribution totals: twelve columns on a linear scale. Current week is in progress.">
 </picture>
 </p>
 
 <p align="center">
 <picture>
-  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-mobile.svg?v=e8052a20f564">
-  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-wide.svg?v=8f5de60285c4" width="100%" alt="Daily contribution calendar: one tile per day, with future dates unfilled.">
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-mobile.svg?v=96886c023b47">
+  <img src="https://raw.githubusercontent.com/ZpkDxGames/zpkdxgames/main/assets/calendar-wide.svg?v=7ff888450b63" width="100%" alt="Daily contribution calendar: one tile per day, with future dates unfilled.">
 </picture>
 </p>
 
@@ -89,7 +89,7 @@ Minecraft infrastructure, desktop interaction, and useful web interfaces. Open a
 <details>
 <summary>Dashboard data and project descriptions</summary>
 
-Snapshot: **2026-11-23T18:23:25Z**. Profile calendar: **2025-11-24–2026-11-23**.
+Snapshot: **2026-11-24T17:53:39Z**. Profile calendar: **2025-11-25–2026-11-24**.
 
 | Metric | Value |
 | :--- | ---: |
@@ -141,4 +141,4 @@ Make the interface clear. Keep state explicit. Validate the real behavior. Leave
 </a>
 </p>
 
-<sub>GitHub snapshot · 2026-11-23T18:23:25Z · [Refresh status](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/dashboard-sync.yml)</sub>
+<sub>GitHub snapshot · 2026-11-24T17:53:39Z · [Refresh status](https://github.com/ZpkDxGames/zpkdxgames/actions/workflows/dashboard-sync.yml)</sub>
